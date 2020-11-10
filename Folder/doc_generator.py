@@ -49,7 +49,7 @@ for item in ast.walk(parse_file("demo.py")):
             s,
             parsed_doc['returns'],
         )
-        md_export += markdown
+        md_export += '\n {}'.format(markdown)
 
 with open('doc.md', 'w') as f:
     f.write(md_export)
