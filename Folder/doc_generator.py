@@ -36,7 +36,7 @@ for item in ast.walk(parse_file("demo.py")):
         # For the table:
         s = ''
         for element in parsed_doc['params']:
-            st = '|'.join([element["name"],str(element["type"]),str(element["doc"])])
+            st = '|'.join(['**'+element["name"]+'**', element["type"], element["doc"]])
             st = '|{}|'.format(st)
             s += '{}\n'.format(st)
 

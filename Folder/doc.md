@@ -11,7 +11,7 @@ Sample class long documentation
 
 | **Arguments** | **Datatype** | **Description** |
 |:--:|:--:|:--|
-|count|int|Counts the number of samples|
+|**count**|int|Counts the number of samples|
 
 
 ## Returns
@@ -28,8 +28,8 @@ sample function long documentaiton
 
 | **Arguments** | **Datatype** | **Description** |
 |:--:|:--:|:--|
-|name|str|name of people|
-|count|int|count of people|
+|**name**|str|name of people|
+|**count**|int|count of people|
 
 
 ## Returns
