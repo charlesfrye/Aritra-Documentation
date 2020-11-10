@@ -1,0 +1,20 @@
+---
+description: Static
+---
+
+# {}
+
+[![](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L{}-L{})
+
+## Short Description
+{}
+
+## Long Description
+{}
+
+| **Arguments** | **Datatype** | **Description** |
+|:--:|:--:|:--|
+{}
+
+## Returns
+{}

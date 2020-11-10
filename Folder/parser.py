@@ -1,5 +1,6 @@
 import re
 import sys
+import ast
 
 # Used to demarcate the description from :param: or :returns:
 PARAM_OR_RETURNS_REGEX = re.compile(":(?:param|returns)")
@@ -98,3 +99,12 @@ def parse_docstring(docstring):
         "params": params,
         "returns": returns
     }
+
+def compute_interval(node):
+    min_lineno = node.lineno
+    max_lineno = node.lineno
+    for node in ast.walk(node):
+        if hasattr(node, "lineno"):
+            min_lineno = min(min_lineno, node.lineno)
+            max_lineno = max(max_lineno, node.lineno)
+    return (min_lineno, max_lineno + 1)

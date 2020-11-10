@@ -1,10 +1,23 @@
-def sample():
-    """Start benchmark task.
+class Sample:
+    '''
+    Sample class short documentation
 
-    Implement sample function's long description.
+    Sample class long documentation
 
-    :param parameter1: :type int: Path to the input task file.
-    :param deployment: :type str: UUID or name of the deployment
+    :param count: :type int: Counts the number of samples
 
-    :returns: An object of type lol.
-    """
+    :returns: An object of type Sample 
+
+    '''
+
+    def sample():
+        '''
+        sample function short documentation
+
+        sample function long documentaiton
+
+        :param name: :type str: name of people
+        :param count: :type int: count of people
+
+        :returns: returns void
+        '''
