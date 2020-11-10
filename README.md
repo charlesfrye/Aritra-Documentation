@@ -1,11 +1,12 @@
 ---
-description: 'I learn with a learning rate of 1e-10'
+description: I learn with a learning rate of 1e-10
 ---
 
-# Aritra Roy Gosthipaty
+# Aritra Roy Goathipaty
+
+A little change to see what's up!
 
 Weights & Biases helps you keep track of your machine learning projects. Use our tool to log hyperparameters and output metrics from your runs, then visualize and compare results and quickly share findings with your colleagues.
-
 
 Our tools work with your machine learning infrastructure: AWS, GCP, Kubernetes, Azure, and on-prem machines.
 
@@ -29,7 +30,6 @@ Easily add our Python library `wandb` to your machine learning script.
 * Jupyter notebook integration
 
 Here's a sample screenshot from a [Species Identification project](https://app.wandb.ai/stacey/curr_learn/reports?view=stacey%2FSpecies%20Identification) in W&B.
-
 
 ## Examples
 
