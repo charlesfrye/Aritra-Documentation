@@ -1,7 +1,3 @@
----
-description: Static
----
-
 # Sample
 
 [![](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L1-L23)
@@ -18,11 +14,7 @@ Sample class long documentation
 
 
 ## Returns
-An object of type Sample---
-description: Static
----
-
-# sample
+An object of type Sample# sample
 
 [![](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L13-L23)
 
