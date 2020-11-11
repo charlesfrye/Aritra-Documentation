@@ -55,11 +55,16 @@ md_source = open('template.txt').read()
 
 for element in info_name_line:
     if element['has_doc']:
+        # Has docstring
         h1 = element['name']
         line = element['line']
-
         query = element['name']
         doc_dict = extract.extract(filestr='demo.py',query=query)
+        c_m = ''
+        if doc_dict['class'] != '':
+            c_m = 'class'
+        else:
+            c_m = 'def'
         sig = doc_dict['signature']
         google_doc = parse.GoogleDocString(doc_dict['docstring'])
         parsed_list = google_doc.parse(mark_code_blocks=True)
@@ -82,7 +87,7 @@ for element in info_name_line:
             "# {}".format(h1),
             line[0],
             line[1],
-            '`{}`'.format(sig),
+            '`{} {}{}`'.format(c_m, h1, sig),
             summary,
             '',
             '',
