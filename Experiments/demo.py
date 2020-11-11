@@ -45,6 +45,7 @@ def online_status(*args, **kwargs):
 
 
 class _WandbInit(object):
+    
     def __init__(self):
         self.kwargs = None
         self.settings = None
