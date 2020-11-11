@@ -1,7 +1,7 @@
 ---
 description: Automating the documentation
 ---
-
+```bash
 ├── Experiments
 │   ├── demo.py [The source code file]
 │   ├── doc_generator.py [The generator]
@@ -14,6 +14,7 @@ description: Automating the documentation
 │   ├── README.md
 │   └── template.txt [template of the md]
 └── README.md
+```
 
-Usage: $ python doc_generator
+Usage: `$ python doc_generator`
 Generates the markdown `doc.md`
