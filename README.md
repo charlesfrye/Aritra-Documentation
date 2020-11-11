@@ -2,8 +2,18 @@
 description: Automating the documentation
 ---
 
-# Files:
-1. **demo.py** - The file holds sample class and function the documentation of which needs to be extracted and hosted to GitBook.
-2. **parser.py** - This is the script that parses the doc string.
-3. **doc_generator.py** - The script that generates the doc.
-4. **template.txt** - The template of the markdown.
+├── Experiments
+│   ├── demo.py [The source code file]
+│   ├── doc_generator.py [The generator]
+│   ├── doc.md [The markdown generated]
+│   ├── Parser
+│   │   ├── extract.py [Extracts docstring]
+│   │   ├── __init__.py
+│   │   ├── parse.py [Parses the docstring]
+│   │   └── script.py [Not necessary]
+│   ├── README.md
+│   └── template.txt [template of the md]
+└── README.md
+
+Usage: $ python doc_generator
+Generates the markdown `doc.md`
