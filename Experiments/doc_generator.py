@@ -84,11 +84,11 @@ for element in info_name_line:
             line[1],
             '`{}`'.format(sig),
             summary,
-            None,
-            None,
-            None,
-            None,
-            None
+            '',
+            '',
+            '',
+            '',
+            ''
         )
         markdown += temp
         # Check for children
@@ -104,13 +104,13 @@ for element in info_name_line:
             "# {}".format(h1),
             line[0],
             line[1],
-            None,
-            None,
-            None,
-            None,
-            None,
-            None,
-            None
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            ''
         )
         markdown += temp
 
