@@ -8,43 +8,43 @@ Configure module logger.
 
 | **Arguments** | **Datatype** | **Description** |
 |:--:|:--:|:--|
-None
+
 
 | **Arguments** | **Datatype** | **Description** |
 |:--:|:--:|:--|
-None
+
 
 **Hints**
-None
+
 
 **Returns**
-None
+
 
 **Example**
-None
+
 # _WandbInit
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L47-L440)
 
-None
 
-None
 
-| **Arguments** | **Datatype** | **Description** |
-|:--:|:--:|:--|
-None
+
 
 | **Arguments** | **Datatype** | **Description** |
 |:--:|:--:|:--|
-None
+
+
+| **Arguments** | **Datatype** | **Description** |
+|:--:|:--:|:--|
+
 
 **Hints**
-None
+
 
 **Returns**
-None
+
 
 **Example**
-None
+
 # init
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L449-L608)
 
@@ -58,17 +58,17 @@ wandb server. Should be called before any calls to wandb.log.
 
 | **Arguments** | **Datatype** | **Description** |
 |:--:|:--:|:--|
-None
+
 
 | **Arguments** | **Datatype** | **Description** |
 |:--:|:--:|:--|
-None
+
 
 **Hints**
-None
+
 
 **Returns**
-None
+
 
 **Example**
-None
+
