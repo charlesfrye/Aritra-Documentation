@@ -26,4 +26,7 @@ description: Automating the documentation
 └── template.txt
 ```
 
-Usage: `$ python doc_generator` Generates the markdown `doc.md`
+## USAGE: 
+```bash
+$ python doc_generator.py <Source code.py> <Markdown file.md>
+```
