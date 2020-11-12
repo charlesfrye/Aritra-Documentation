@@ -91,7 +91,7 @@ for element in info_name_line:
                     )
                 
             if item["header"] == "Attributes":
-                table_arg = """| **Arguments** | **Datatype** | **Description** |\n|:--:|:--:|:--|\n"""
+                table_att = """| **Attributes** | **Datatype** | **Description** |\n|:--:|:--:|:--|\n"""
                 for arg in item["args"]:
                     table_att += """|{}|{}|{}|\n""".format(
                         arg['field'],

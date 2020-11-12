@@ -35,10 +35,10 @@ There is a parallel Run object in wandb's API, eventually it will be merged
 with this object.
 
 
-| **Arguments** | **Datatype** | **Description** |
+
+
+| **Attributes** | **Datatype** | **Description** |
 |:--:|:--:|:--|
-
-
 |summary|(Summary)|summary statistics collected as training code runs.|
 |history|(History)|history of data logged with wandb.log associated with run.|
 
