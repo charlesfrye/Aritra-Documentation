@@ -1,5 +1,5 @@
 # Artifact
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L69-L326)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Experiments/CODE/wandb_artifacts.py#L69-L326)
 
 `class Artifact(object)`
 
@@ -16,7 +16,7 @@ An artifact object you can write files into, and pass to log_artifact.
 
 
 ## Artifact.add
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L229-L277)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Experiments/CODE/wandb_artifacts.py#L229-L277)
 
 `class Artifact.add(self, obj, name)`
 
@@ -35,7 +35,7 @@ the artifact to retrieve this object.
 
 
 ## Artifact.get_added_local_path_name
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L278-L284)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Experiments/CODE/wandb_artifacts.py#L278-L284)
 
 `class Artifact.get_added_local_path_name(self, local_path)`
 
@@ -52,7 +52,7 @@ If local_path was already added to artifact, return its internal name.
 
 
 # ArtifactManifestV1
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L328-L403)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Experiments/CODE/wandb_artifacts.py#L328-L403)
 
 
 
@@ -68,7 +68,7 @@ If local_path was already added to artifact, return its internal name.
 
 
 ## ArtifactManifestV1.to_manifest_json
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L368-L395)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Experiments/CODE/wandb_artifacts.py#L368-L395)
 
 `class ArtifactManifestV1.to_manifest_json(self)`
 
@@ -91,7 +91,7 @@ contents.
 
 
 # TrackingHandler
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L636-L677)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Experiments/CODE/wandb_artifacts.py#L636-L677)
 
 
 
@@ -107,7 +107,7 @@ contents.
 
 
 ## TrackingHandler.__init__
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L637-L647)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Experiments/CODE/wandb_artifacts.py#L637-L647)
 
 `class TrackingHandler.__init__(self, scheme=None)`
 
@@ -127,7 +127,7 @@ are expanded to create an entry for each file contained within.
 
 
 # LocalFileHandler
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L682-L772)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Experiments/CODE/wandb_artifacts.py#L682-L772)
 
 `class LocalFileHandler(StorageHandler)`
 
@@ -144,7 +144,7 @@ Handles file:// references
 
 
 ## LocalFileHandler.__init__
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L686-L693)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Experiments/CODE/wandb_artifacts.py#L686-L693)
 
 `class LocalFileHandler.__init__(self, scheme=None)`
 
@@ -164,7 +164,7 @@ are expanded to create an entry for each file contained within.
 
 
 # WBArtifactHandler
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L1172-L1234)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Experiments/CODE/wandb_artifacts.py#L1172-L1234)
 
 `class WBArtifactHandler(StorageHandler)`
 
