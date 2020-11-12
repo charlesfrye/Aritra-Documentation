@@ -78,7 +78,7 @@ for element in info_name_line:
                     table_arg += """|{}|{}|{}|\n""".format(
                         arg['field'],
                         arg['signature'],
-                        arg['description']
+                        extract.format_txt(arg['description'])
                     )
                 
             if item["header"] == "Attributes":
