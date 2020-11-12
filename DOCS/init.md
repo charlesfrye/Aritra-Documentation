@@ -1,5 +1,5 @@
 # _set_logger
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Experiments/CODE/wandb_init.py#L37-L41)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_init.py#L37-L41)
 
 `def _set_logger(log_object)`
 
@@ -16,7 +16,7 @@ Configure module logger.
 
 
 # _WandbInit
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Experiments/CODE/wandb_init.py#L47-L440)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_init.py#L47-L440)
 
 
 
@@ -32,7 +32,7 @@ Configure module logger.
 
 
 ## _WandbInit.setup
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Experiments/CODE/wandb_init.py#L59-L158)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_init.py#L59-L158)
 
 `class _WandbInit.setup(self, kwargs)`
 
@@ -54,7 +54,7 @@ logging.
 
 
 ## _WandbInit._enable_logging
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Experiments/CODE/wandb_init.py#L166-L200)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_init.py#L166-L200)
 
 `class _WandbInit._enable_logging(self, log_fname, run_id=None)`
 
@@ -75,7 +75,7 @@ Currently no way to disable logging after it's enabled.
 
 
 ## _WandbInit._jupyter_teardown
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Experiments/CODE/wandb_init.py#L231-L245)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_init.py#L231-L245)
 
 `class _WandbInit._jupyter_teardown(self)`
 
@@ -92,7 +92,7 @@ Teardown hooks and display saving, called with wandb.finish
 
 
 ## _WandbInit._jupyter_setup
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Experiments/CODE/wandb_init.py#L246-L269)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_init.py#L246-L269)
 
 `class _WandbInit._jupyter_setup(self, settings)`
 
@@ -109,7 +109,7 @@ Add magic, hooks, and session history saving
 
 
 ## _WandbInit._log_setup
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Experiments/CODE/wandb_init.py#L270-L304)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_init.py#L270-L304)
 
 `class _WandbInit._log_setup(self, settings)`
 
@@ -126,7 +126,7 @@ Setup logging from settings.
 
 
 # init
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Experiments/CODE/wandb_init.py#L449-L608)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_init.py#L449-L608)
 
 `def init( job_type: Optional[str] = None, dir=None, config: Union[Dict, str, None] = None, project: Optional[str] = None, entity: Optional[str] = None, reinit: bool = None, tags: Optional[Sequence] = None, group: Optional[str] = None, name: Optional[str] = None, notes: Optional[str] = None, magic: Union[dict, str, bool] = None, config_exclude_keys=None, config_include_keys=None, anonymous: Optional[str] = None, mode: Optional[str] = None, allow_val_change: Optional[bool] = None, resume: Optional[Union[bool, str]] = None, force: Optional[bool] = None, tensorboard=None, # alias for sync_tensorboard sync_tensorboard=None, monitor_gym=None, save_code=None, id=None, settings: Union[Settings, Dict[str, Any], None] = None, ) -> Union[Run, Dummy]`
 

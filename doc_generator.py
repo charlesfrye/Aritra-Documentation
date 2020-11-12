@@ -113,7 +113,7 @@ for element in info_name_line:
         
         temp = md_source.format(
             "# {}".format(h1), #header
-            'Experiments/{}'.format(source_code_file),
+            source_code_file,
             line[0], #line begin
             line[1], #line end
             '`{} {}{}`'.format(c_m, h1, sig), #signature
@@ -179,7 +179,7 @@ for element in info_name_line:
                 
                 temp = md_source.format(
                     "## {}".format(h2), #header
-                    'Experiments/{}'.format(source_code_file),
+                    source_code_file,
                     line[0], #line begin
                     line[1], #line end
                     '`{} {}{}`'.format(c_m, h2, sig), #signature
@@ -199,7 +199,7 @@ for element in info_name_line:
 
         temp = md_source.format(
             "# {}".format(h1), #heading
-            'Experiments/{}'.format(source_code_file),
+            source_code_file,
             line[0], #line begin
             line[1], #line end
             '', 
@@ -265,7 +265,7 @@ for element in info_name_line:
             
             temp = md_source.format(
                 "## {}".format(h2), #header
-                'Experiments/{}'.format(source_code_file),
+                source_code_file,
                 line[0], #line begin
                 line[1], #line end
                 '`{} {}{}`'.format(c_m, h2, sig), #signature

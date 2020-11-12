@@ -5,19 +5,25 @@ description: Automating the documentation
 # README
 
 ```bash
-├── Experiments
-│   ├── demo.py [The source code file]
-│   ├── doc_generator.py [The generator]
-│   ├── doc.md [The markdown generated]
-│   ├── Parser
-│   │   ├── extract.py [Extracts docstring]
-│   │   ├── __init__.py
-│   │   ├── parse.py [Parses the docstring]
-│   │   └── script.py [Not necessary]
-│   ├── README.md
-│   └── template.txt [template of the md]
-└── README.md
+├── CODE
+│   ├── wandb_artifacts.py
+│   ├── wandb_config.py
+│   ├── wandb_init.py
+│   └── wandb_run.py
+├── demo.py
+├── doc_generator.py
+├── DOCS
+│   ├── artifacts.md
+│   ├── config.md
+│   ├── init.md
+│   └── run.md
+├── Parser
+│   ├── extract.py
+│   ├── __init__.py
+│   ├── parse.py
+│   └── script.py
+├── README.md
+└── template.txt
 ```
 
 Usage: `$ python doc_generator` Generates the markdown `doc.md`
-
