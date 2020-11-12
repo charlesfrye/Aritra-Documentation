@@ -124,12 +124,17 @@ def create_md(query, line, header, has_doc=True, signature=None, config=None):
                 returns = '**Reutrns**\n\n'
                 returns += item['text']
         
+        if extracted['source'] == '':
+            sig = '`{}`'.format(query)
+        else:
+            sig = '`{}`'.format(extracted['source'].split('\n')[0])
+
         return TEMPLATE_FILE.format(
                 header, #header
                 SOURCE_CODE, #source file in repo: https://github.com/ariG23498/Aritra-Documentation/blob/master/____
                 line[0], #line begin
                 line[1], #line end
-                '`{}`'.format(extracted['source'].split('\n')[0]), #function signature: extract['source']
+                sig, #function signature: extract['source']
                 docstr[0]['text'].lstrip('\n'), #summary
                 table_arg, #table_args 
                 table_att, #table_att

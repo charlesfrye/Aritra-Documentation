@@ -1,7 +1,7 @@
 # ExampleOldClass
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/demo.py#L25-L63)
 
-``
+`ExampleOldClass`
 
 An example of a docstring for an old-style class.
 
@@ -75,7 +75,7 @@ Some more details.
 # ExampleNewClass
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/demo.py#L65-L85)
 
-``
+`ExampleNewClass`
 
 An example of a docstring for a new-style class.
 
