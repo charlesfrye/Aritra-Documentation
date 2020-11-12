@@ -16,7 +16,7 @@ Configure module logger.
 
 
 # _WandbInit
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L47-L441)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L47-L440)
 
 
 
@@ -32,7 +32,7 @@ Configure module logger.
 
 
 ## _WandbInit.setup
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L60-L159)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L59-L158)
 
 `class _WandbInit.setup(self, kwargs)`
 
@@ -54,7 +54,7 @@ logging.
 
 
 ## _WandbInit._enable_logging
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L167-L201)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L166-L200)
 
 `class _WandbInit._enable_logging(self, log_fname, run_id=None)`
 
@@ -75,7 +75,7 @@ Currently no way to disable logging after it's enabled.
 
 
 ## _WandbInit._jupyter_teardown
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L232-L246)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L231-L245)
 
 `class _WandbInit._jupyter_teardown(self)`
 
@@ -92,7 +92,7 @@ Teardown hooks and display saving, called with wandb.finish
 
 
 ## _WandbInit._jupyter_setup
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L247-L270)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L246-L269)
 
 `class _WandbInit._jupyter_setup(self, settings)`
 
@@ -109,7 +109,7 @@ Add magic, hooks, and session history saving
 
 
 ## _WandbInit._log_setup
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L271-L305)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L270-L304)
 
 `class _WandbInit._log_setup(self, settings)`
 
@@ -126,7 +126,7 @@ Setup logging from settings.
 
 
 # init
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L450-L609)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L449-L608)
 
 `def init( job_type: Optional[str] = None, dir=None, config: Union[Dict, str, None] = None, project: Optional[str] = None, entity: Optional[str] = None, reinit: bool = None, tags: Optional[Sequence] = None, group: Optional[str] = None, name: Optional[str] = None, notes: Optional[str] = None, magic: Union[dict, str, bool] = None, config_exclude_keys=None, config_include_keys=None, anonymous: Optional[str] = None, mode: Optional[str] = None, allow_val_change: Optional[bool] = None, resume: Optional[Union[bool, str]] = None, force: Optional[bool] = None, tensorboard=None, # alias for sync_tensorboard sync_tensorboard=None, monitor_gym=None, save_code=None, id=None, settings: Union[Settings, Dict[str, Any], None] = None, ) -> Union[Run, Dummy]`
 

@@ -65,7 +65,7 @@ for element in info_name_line:
         h1 = element['name']
         line = element['line']
         query = element['name']
-        doc_dict = extract.extract(filestr='demo.py',query=query)
+        doc_dict = extract.extract(filestr=source_code_file,query=query)
         c_m = ''
         if doc_dict['class'] != '':
             c_m = 'class'
@@ -130,7 +130,7 @@ for element in info_name_line:
                 h2 = child['name']
                 line = child['line']
                 query = child['name']
-                doc_dict = extract.extract(filestr='demo.py',query=query)
+                doc_dict = extract.extract(filestr=source_code_file,query=query)
                 c_m = ''
                 if doc_dict['class'] != '':
                     c_m = 'class'
@@ -214,7 +214,7 @@ for element in info_name_line:
             h2 = child['name']
             line = child['line']
             query = child['name']
-            doc_dict = extract.extract(filestr='demo.py',query=query)
+            doc_dict = extract.extract(filestr=source_code_file,query=query)
             c_m = ''
             if doc_dict['class'] != '':
                 c_m = 'class'
