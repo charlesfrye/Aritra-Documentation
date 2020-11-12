@@ -1,3 +1,4 @@
+# USAGE: $ python doc_generator.py <Source code.py> <Markdown file.md>
 import sys
 source_code_file = sys.argv[1]
 markdown_file = sys.argv[2]
