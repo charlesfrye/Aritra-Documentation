@@ -1,4 +1,4 @@
-# USAGE $python test.py CODE/code.py DOCS/docs.md
+# USAGE $python doc_gen.py CODE/code.py DOCS/docs.md
 import ast
 import _ast
 import sys

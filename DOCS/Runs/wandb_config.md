@@ -1,8 +1,7 @@
 # Config
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_config.py#L28-L244)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_config.py#L28-L243)
 
-`class Config(object)`
-
+`Config`
 
 Config object
 
@@ -78,11 +77,11 @@ flags.DEFINE_integer('batch_size', 128, 'Batch size.')
 wandb.config.update(flags.FLAGS)  # adds all of the tensorflow flags to config
 ```
 
-## Config.persist
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_config.py#L163-L167)
 
-`def Config.persist(self)`
+## persist
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_config.py#L163-L166)
 
+`def persist(self):`
 
 Calls the callback if it's set
 
@@ -95,13 +94,14 @@ Calls the callback if it's set
 
 
 
-## Config._sanitize_val
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_config.py#L222-L244)
 
-`def Config._sanitize_val(self, val)`
+## _sanitize_val
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_config.py#L222-L243)
 
+`def _sanitize_val(self, val):`
 
 Turn all non-builtin values into something safe for YAML
+
 
 
 

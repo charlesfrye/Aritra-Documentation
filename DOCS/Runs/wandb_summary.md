@@ -1,8 +1,7 @@
 # SummaryDict
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_summary.py#L16-L61)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_summary.py#L16-L60)
 
-`class SummaryDict(object)`
-
+`SummaryDict`
 
 dict-like which wraps all nested dictionraries in a SummarySubDict,
  and triggers self._root._callback on property changes.
@@ -16,11 +15,11 @@ dict-like which wraps all nested dictionraries in a SummarySubDict,
 
 
 
+
 # Summary
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_summary.py#L62-L106)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_summary.py#L62-L105)
 
-`class Summary(SummaryDict)`
-
+`Summary`
 
 Summary
 
@@ -60,14 +59,15 @@ if (test_accuracy > best_accuracy):
     best_accuracy = test_accuracy
 ```
 
+
 # SummarySubDict
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_summary.py#L107-L121)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_summary.py#L107-L120)
 
-`class SummarySubDict(SummaryDict)`
-
+`SummarySubDict`
 
 Non-root node of the summary data structure. Contains a path to itself
 from the root.
+
 
 
 
