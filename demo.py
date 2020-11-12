@@ -59,7 +59,6 @@ class ExampleOldClass:
         Arguments:
             arg1(type) : description for arg1.
             arg2 : description for arg1.
-
         """
         pass
     

@@ -129,7 +129,7 @@ def create_md(query, line, header, has_doc=True, signature=None, config=None):
                 SOURCE_CODE, #source file in repo: https://github.com/ariG23498/Aritra-Documentation/blob/master/____
                 line[0], #line begin
                 line[1], #line end
-                extracted['source'].split('\n')[0], #function signature: extract['source']
+                '`{}`'.format(extracted['source'].split('\n')[0]), #function signature: extract['source']
                 docstr[0]['text'].lstrip('\n'), #summary
                 table_arg, #table_args 
                 table_att, #table_att

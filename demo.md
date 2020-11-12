@@ -1,5 +1,5 @@
 # ExampleOldClass
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/demo.py#L25-L64)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/demo.py#L25-L63)
 
 ``
 
@@ -49,7 +49,7 @@ print('hello world')
 
 
 ## method_with_docstring
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/demo.py#L53-L64)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/demo.py#L53-L63)
 
 `def method_with_docstring(self, arg1, arg2):`
 
@@ -73,7 +73,7 @@ Some more details.
 
 
 # ExampleNewClass
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/demo.py#L66-L86)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/demo.py#L65-L85)
 
 ``
 
@@ -94,7 +94,7 @@ Some more details.
 
 
 ## __init__
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/demo.py#L73-L79)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/demo.py#L72-L78)
 
 `def __init__(self):`
 
@@ -114,7 +114,7 @@ Some more details.
 
 
 ## method_with_new_line_before_self
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/demo.py#L81-L86)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/demo.py#L80-L85)
 
 `def method_with_new_line_before_self( self):`
 
