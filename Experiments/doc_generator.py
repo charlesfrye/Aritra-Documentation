@@ -71,6 +71,9 @@ for element in info_name_line:
         summary = parsed_list[0]['text']
         table_arg = ''
         table_att = ''
+        hint = ''
+        returns=''
+        example = ''
         for item in parsed_list:
             if item["header"] == "Args":
                 table_arg = """| **Arguments** | **Datatype** | **Description** |\n|:--:|:--:|:--|\n"""
@@ -82,26 +85,36 @@ for element in info_name_line:
                     )
                 
             if item["header"] == "Attributes":
-                # Need attributes
-                pass
+                table_arg = """| **Arguments** | **Datatype** | **Description** |\n|:--:|:--:|:--|\n"""
+                for arg in item["args"]:
+                    table_att += """|{}|{}|{}|\n""".format(
+                        arg['field'],
+                        arg['signature'],
+                        extract.format_txt(arg['description'])
+                    )
+
             if item["header"] == "Raises":
-                # Need hints
-                pass
+                for arg in  item['args']:
+                    hint='{% hint style="info" %}\n'
+                    hint += arg['signature']+':'+arg['description']+'\n'
+                    hint += '{% endhint %}'
             if item["header"] == "Examples":
-                # Need examples
-                pass
+                example = item['text']
+            if item["header"] == "Returns":
+                returns = '**Reutrns**\n'
+                returns += item['text']
         
         temp = md_source.format(
-            "# {}".format(h1),
-            line[0],
-            line[1],
-            '`{} {}{}`'.format(c_m, h1, sig),
-            summary,
-            table_arg,
-            table_att,
-            '',
-            '',
-            ''
+            "# {}".format(h1), #header
+            line[0], #line begin
+            line[1], #line end
+            '`{} {}{}`'.format(c_m, h1, sig), #signature
+            summary, #summary
+            table_arg, # arguments
+            table_att, # attributes
+            hint, #hint
+            returns, #returns
+            example #example
         )
         markdown += temp
         # Check for children
@@ -114,10 +127,10 @@ for element in info_name_line:
         line = element['line']
 
         temp = md_source.format(
-            "# {}".format(h1),
-            line[0],
-            line[1],
-            '',
+            "# {}".format(h1), #heading
+            line[0], #line begin
+            line[1], #line end
+            '', 
             '',
             '',
             '',

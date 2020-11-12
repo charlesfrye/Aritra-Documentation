@@ -9,11 +9,8 @@
 
 {}
 
-**Hints**
 {}
 
-**Returns**
 {}
 
-**Example**
 {}

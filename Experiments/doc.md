@@ -10,13 +10,10 @@ Configure module logger.
 
 
 
-**Hints**
 
 
-**Returns**
 
 
-**Example**
 
 # _WandbInit
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L47-L441)
@@ -29,13 +26,10 @@ Configure module logger.
 
 
 
-**Hints**
 
 
-**Returns**
 
 
-**Example**
 
 # init
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L450-L609)
@@ -76,11 +70,24 @@ wandb server. Should be called before any calls to wandb.log.
 
 
 
-**Hints**
+{% hint style="info" %}
+:if problem.
+{% endhint %}
+
+**Reutrns**
+A :obj:`Run` object.
 
 
-**Returns**
 
+Basic usage
+```
+wandb.init()
+```
 
-**Example**
+Launch multiple runs from the same script
+```
+for x in range(10):
+    with wandb.init(project="my-projo") as run:
+        for y in range(100):
+```
 
