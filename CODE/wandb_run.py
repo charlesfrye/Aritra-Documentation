@@ -145,9 +145,9 @@ class Run(object):
     with this object.
 
     Attributes:
-        summary (#Summary): summary statistics collected as training code
+        summary (Summary): summary statistics collected as training code
             runs.
-        history (#History): history of data logged with wandb.log associated
+        history (History): history of data logged with wandb.log associated
             with run.
     """
 

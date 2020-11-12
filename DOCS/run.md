@@ -39,8 +39,8 @@ with this object.
 |:--:|:--:|:--|
 
 
-|summary|(#Summary)|summary statistics collected as training code runs.|
-|history|(#History)|history of data logged with wandb.log associated with run.|
+|summary|(Summary)|summary statistics collected as training code runs.|
+|history|(History)|history of data logged with wandb.log associated with run.|
 
 
 
