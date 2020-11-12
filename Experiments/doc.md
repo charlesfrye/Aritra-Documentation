@@ -80,6 +80,8 @@ A :obj:`Run` object.
 
 
 
+**Example**
+
 Basic usage
 ```
 wandb.init()

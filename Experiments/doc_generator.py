@@ -99,9 +99,10 @@ for element in info_name_line:
                     hint += arg['signature']+':'+arg['description']+'\n'
                     hint += '{% endhint %}'
             if item["header"] == "Examples":
-                example = item['text']
+                example='**Example**\n\n'
+                example += item['text']
             if item["header"] == "Returns":
-                returns = """**Reutrns**\n\n"""
+                returns = '**Reutrns**\n\n'
                 returns += item['text']
         
         temp = md_source.format(
