@@ -101,7 +101,7 @@ for element in info_name_line:
             if item["header"] == "Examples":
                 example = item['text']
             if item["header"] == "Returns":
-                returns = '**Reutrns**\n'
+                returns = """**Reutrns**\n\n"""
                 returns += item['text']
         
         temp = md_source.format(

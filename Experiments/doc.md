@@ -75,6 +75,7 @@ wandb server. Should be called before any calls to wandb.log.
 {% endhint %}
 
 **Reutrns**
+
 A :obj:`Run` object.
 
 
