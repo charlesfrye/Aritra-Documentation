@@ -3,30 +3,24 @@ description: Automating the documentation
 ---
 
 # README
-
-```bash
-├── CODE
-│   ├── wandb_artifacts.py
-│   ├── wandb_config.py
-│   ├── wandb_init.py
-│   └── wandb_run.py
-├── demo.py
-├── doc_generator.py
-├── DOCS
-│   ├── artifacts.md
-│   ├── config.md
-│   ├── init.md
-│   └── run.md
-├── Parser
-│   ├── extract.py
-│   ├── __init__.py
-│   ├── parse.py
-│   └── script.py
-├── README.md
-└── template.txt
+```
+.
+├── CODE [houses the source code files]
+|
+├── doc_gen.py [THE GENERATOR]
+|
+├── DOCS [houses the docs files]
+|
+├── run_script.py [THE RUN SCRIPT]
+├── template.txt [template]
 ```
 
-## USAGE: 
+## Usage
+Put all of the code in the `CODE directory`
+Run the `run_script.py` as follows:
 ```bash
-$ python doc_generator.py <Source code.py> <Markdown file.md>
+$ pip install mydocstring
+$ python run_script
 ```
+
+The generated text pops up in the `DOCS` folder
