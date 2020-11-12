@@ -132,11 +132,7 @@ for element in info_name_line:
                 line = child['line']
                 query = child['name']
                 doc_dict = extract.extract(filestr=source_code_file,query=query)
-                c_m = ''
-                if doc_dict['class'] != '':
-                    c_m = 'class'
-                else:
-                    c_m = 'def'
+                c_m = 'def'
                 sig = doc_dict['signature']
                 google_doc = parse.GoogleDocString(doc_dict['docstring'])
                 parsed_list = google_doc.parse(mark_code_blocks=True)
@@ -218,11 +214,7 @@ for element in info_name_line:
             line = child['line']
             query = child['name']
             doc_dict = extract.extract(filestr=source_code_file,query=query)
-            c_m = ''
-            if doc_dict['class'] != '':
-                c_m = 'class'
-            else:
-                c_m = 'def'
+            c_m = 'def'
             sig = doc_dict['signature']
             google_doc = parse.GoogleDocString(doc_dict['docstring'])
             parsed_list = google_doc.parse(mark_code_blocks=True)

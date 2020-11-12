@@ -725,7 +725,7 @@ class Run(object):
 
         Examples:
             Basic usage
-            ```
+            ```python
             wandb.log({'accuracy': 0.9, 'epoch': 5})
             ```
 

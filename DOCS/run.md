@@ -51,7 +51,7 @@ with this object.
 ## Run._telemetry_get_framework
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L263-L288)
 
-`class Run._telemetry_get_framework(self)`
+`def Run._telemetry_get_framework(self)`
 
 
 Get telemetry data for internal config structure.
@@ -68,7 +68,7 @@ Get telemetry data for internal config structure.
 ## Run._make_proto_run
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L305-L326)
 
-`class Run._make_proto_run(self, run)`
+`def Run._make_proto_run(self, run)`
 
 
 Populate protocol buffer RunData for interface/interface.
@@ -85,7 +85,7 @@ Populate protocol buffer RunData for interface/interface.
 ## Run.dir
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L334-L340)
 
-`class Run.dir(self)`
+`def Run.dir(self)`
 
 
 str: The directory where all of the files associated with the run are
@@ -104,7 +104,7 @@ placed.
 ## Run.config
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L341-L347)
 
-`class Run.config(self)`
+`def Run.config(self)`
 
 
 (:obj:`Config`): A config object (similar to a nested dict) of key
@@ -123,7 +123,7 @@ value pairs associated with the hyperparameters of the run.
 ## Run.name
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L352-L361)
 
-`class Run.name(self)`
+`def Run.name(self)`
 
 
 str: the display name of the run. It does not need to be unique
@@ -141,7 +141,7 @@ and ideally is descriptive.
 ## Run.notes
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L368-L377)
 
-`class Run.notes(self)`
+`def Run.notes(self)`
 
 
 str: notes associated with the run. Notes can be a multiline string
@@ -159,7 +159,7 @@ and can also use markdown and latex equations inside $$ like $\\{x}
 ## Run.tags
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L384-L391)
 
-`class Run.tags(self) -> Optional[Tuple]: """Tuple[str]: tags associated with the run""" if self._tags: return self._tags run_obj = self._run_obj or self._run_obj_offline return run_obj.tags @tags.setter def tags(self, tags: Sequence): self._tags = tuple(tags) if self._backend: self._backend.interface.publish_run(self) @property def id(self)`
+`def Run.tags(self) -> Optional[Tuple]: """Tuple[str]: tags associated with the run""" if self._tags: return self._tags run_obj = self._run_obj or self._run_obj_offline return run_obj.tags @tags.setter def tags(self, tags: Sequence): self._tags = tuple(tags) if self._backend: self._backend.interface.publish_run(self) @property def id(self)`
 
 
 str: the run_id associated with the run
@@ -176,7 +176,7 @@ str: the run_id associated with the run
 ## Run.id
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L398-L402)
 
-`class Run.id(self)`
+`def Run.id(self)`
 
 
 str: the run_id associated with the run
@@ -193,7 +193,7 @@ str: the run_id associated with the run
 ## Run.sweep_id
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L403-L409)
 
-`class Run.sweep_id(self)`
+`def Run.sweep_id(self)`
 
 
 (str, optional): the sweep id associated with the run or None
@@ -210,7 +210,7 @@ str: the run_id associated with the run
 ## Run.path
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L410-L418)
 
-`class Run.path(self)`
+`def Run.path(self)`
 
 
 str: the path to the run [entity]/[project]/[run_id]
@@ -227,7 +227,7 @@ str: the path to the run [entity]/[project]/[run_id]
 ## Run.start_time
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L419-L426)
 
-`class Run.start_time(self)`
+`def Run.start_time(self)`
 
 
 int: the unix time stamp in seconds when the run started
@@ -244,7 +244,7 @@ int: the unix time stamp in seconds when the run started
 ## Run.starting_step
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L427-L434)
 
-`class Run.starting_step(self)`
+`def Run.starting_step(self)`
 
 
 int: the first step of the run
@@ -261,7 +261,7 @@ int: the first step of the run
 ## Run.resumed
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L435-L442)
 
-`class Run.resumed(self)`
+`def Run.resumed(self)`
 
 
 bool: whether or not the run was resumed
@@ -278,7 +278,7 @@ bool: whether or not the run was resumed
 ## Run.step
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L443-L451)
 
-`class Run.step(self)`
+`def Run.step(self)`
 
 
 int: step counter
@@ -299,7 +299,7 @@ counter.
 ## Run.mode
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L456-L460)
 
-`class Run.mode(self)`
+`def Run.mode(self)`
 
 
 For compatibility with 0.9.x and earlier, deprecate eventually.
@@ -316,7 +316,7 @@ For compatibility with 0.9.x and earlier, deprecate eventually.
 ## Run.group
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L465-L478)
 
-`class Run.group(self)`
+`def Run.group(self)`
 
 
 str: name of W&B group associated with run.
@@ -338,7 +338,7 @@ runs in the training the same group.
 ## Run.project
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L484-L488)
 
-`class Run.project(self)`
+`def Run.project(self)`
 
 
 str: name of W&B project associated with run. 
@@ -355,7 +355,7 @@ str: name of W&B project associated with run.
 ## Run.get_url
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L489-L496)
 
-`class Run.get_url(self)`
+`def Run.get_url(self)`
 
 is offline
 
@@ -373,7 +373,7 @@ is offline
 ## Run.get_project_url
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L497-L504)
 
-`class Run.get_project_url(self)`
+`def Run.get_project_url(self)`
 
 the run or None if the run is offline
 
@@ -391,7 +391,7 @@ the run or None if the run is offline
 ## Run.get_sweep_url
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L505-L512)
 
-`class Run.get_sweep_url(self)`
+`def Run.get_sweep_url(self)`
 
 or None if there is no associated sweep or the run is offline.
 
@@ -409,7 +409,7 @@ or None if there is no associated sweep or the run is offline.
 ## Run.url
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L513-L517)
 
-`class Run.url(self)`
+`def Run.url(self)`
 
 
 str: name of W&B url associated with run.
@@ -426,7 +426,7 @@ str: name of W&B url associated with run.
 ## Run.entity
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L518-L523)
 
-`class Run.entity(self)`
+`def Run.entity(self)`
 
 
 str: name of W&B entity associated with run. Entity is either
@@ -444,7 +444,7 @@ a user name or an organization name.
 ## Run._add_singleton
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L647-L672)
 
-`class Run._add_singleton(self, type, key, value)`
+`def Run._add_singleton(self, type, key, value)`
 
 
 Stores a singleton item to wandb config.
@@ -471,7 +471,7 @@ persisted to the server
 ## Run.log
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L673-L807)
 
-`class Run.log(self, data, step=None, commit=None, sync=None)`
+`def Run.log(self, data, step=None, commit=None, sync=None)`
 
 
 Log a dict to the global run's history.
@@ -497,7 +497,7 @@ and matplotlib plots.
 **Example**
 
 Basic usage
-```
+```python
 ```
 
 Incremental logging
@@ -538,7 +538,7 @@ For more examples, see https://docs.wandb.com/library/log
 ## Run.save
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L808-L893)
 
-`class Run.save( self, glob_str: Optional[str] = None, base_path: Optional[str] = None, policy: str = "live", )`
+`def Run.save( self, glob_str: Optional[str] = None, base_path: Optional[str] = None, policy: str = "live", )`
 
 
  Ensure all files matching *glob_str* are synced to wandb with the policy specified.
@@ -561,7 +561,7 @@ For more examples, see https://docs.wandb.com/library/log
 ## Run.finish
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L903-L916)
 
-`class Run.finish(self, exit_code=None)`
+`def Run.finish(self, exit_code=None)`
 
 
 Marks a run as finished, and finishes uploading all data.  This is
@@ -581,7 +581,7 @@ call this method when your script exits.
 ## Run.join
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L917-L920)
 
-`class Run.join(self, exit_code=None)`
+`def Run.join(self, exit_code=None)`
 
 
 Deprecated alias for finish() - please use finish
@@ -598,7 +598,7 @@ Deprecated alias for finish() - please use finish
 ## Run.plot_table
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L921-L937)
 
-`class Run.plot_table(self, vega_spec_name, data_table, fields, string_fields=None)`
+`def Run.plot_table(self, vega_spec_name, data_table, fields, string_fields=None)`
 
 
 Creates a custom plot on a table.
@@ -622,7 +622,7 @@ Creates a custom plot on a table.
 ## Run._get_sweep_url
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L973-L993)
 
-`class Run._get_sweep_url(self)`
+`def Run._get_sweep_url(self)`
 
 
 Generate a url for a sweep.
@@ -644,7 +644,7 @@ None - if the run is not part of the sweep
 ## Run.use_artifact
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L1553-L1606)
 
-`class Run.use_artifact(self, artifact_or_name, type=None, aliases=None)`
+`def Run.use_artifact(self, artifact_or_name, type=None, aliases=None)`
 
 
  Declare an artifact as an input to a run, call `download` or `file` on \
@@ -671,7 +671,7 @@ A #Artifact object.
 ## Run.log_artifact
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L1608-L1661)
 
-`class Run.log_artifact(self, artifact_or_path, name=None, type=None, aliases=None)`
+`def Run.log_artifact(self, artifact_or_path, name=None, type=None, aliases=None)`
 
 
  Declare an artifact as output of a run.
@@ -698,7 +698,7 @@ A :obj:`Artifact` object.
 ## Run.alert
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/wandb_run.py#L1662-L1692)
 
-`class Run.alert(self, title, text, level=None, wait_duration=None)`
+`def Run.alert(self, title, text, level=None, wait_duration=None)`
 
 
 Launch an alert with the given title and text.
