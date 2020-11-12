@@ -69,10 +69,18 @@ for element in info_name_line:
         google_doc = parse.GoogleDocString(doc_dict['docstring'])
         parsed_list = google_doc.parse(mark_code_blocks=True)
         summary = parsed_list[0]['text']
+        table_arg = ''
+        table_att = ''
         for item in parsed_list:
-            if item["header"] == "Arguments":
-                # Need args
-                pass
+            if item["header"] == "Args":
+                table_arg = """| **Arguments** | **Datatype** | **Description** |\n|:--:|:--:|:--|\n"""
+                for arg in item["args"]:
+                    table_arg += """|{}|{}|{}|\n""".format(
+                        arg['field'],
+                        arg['signature'],
+                        arg['description']
+                    )
+                
             if item["header"] == "Attributes":
                 # Need attributes
                 pass
@@ -89,8 +97,8 @@ for element in info_name_line:
             line[1],
             '`{} {}{}`'.format(c_m, h1, sig),
             summary,
-            '',
-            '',
+            table_arg,
+            table_att,
             '',
             '',
             ''

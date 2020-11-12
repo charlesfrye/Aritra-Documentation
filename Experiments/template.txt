@@ -5,12 +5,8 @@
 
 {}
 
-| **Arguments** | **Datatype** | **Description** |
-|:--:|:--:|:--|
 {}
 
-| **Arguments** | **Datatype** | **Description** |
-|:--:|:--:|:--|
 {}
 
 **Hints**
