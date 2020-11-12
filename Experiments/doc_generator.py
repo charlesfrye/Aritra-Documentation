@@ -1,3 +1,7 @@
+import sys
+source_code_file = sys.argv[1]
+markdown_file = sys.argv[2]
+
 # Builtin
 import ast
 import tokenize
@@ -16,6 +20,7 @@ def parse_file(filename):
     with tokenize.open(filename) as f:
         return ast.parse(f.read(), filename=filename, mode='exec')
 
+
 def compute_interval(node):
     min_lineno = node.lineno
     max_lineno = node.lineno
@@ -26,8 +31,11 @@ def compute_interval(node):
     return (min_lineno, max_lineno + 1)
 
 # Take the root node
-root = parse_file("demo.py")
+root = parse_file(source_code_file)
 info_name_line = []
+
+markdown = ''
+md_source = open('template.txt').read()
 
 for node in ast.iter_child_nodes(root):
     if isinstance(node, (ast.FunctionDef, ast.ClassDef)):
@@ -49,9 +57,6 @@ for node in ast.iter_child_nodes(root):
                     # info_name_line.append({"name":name_var, "line":compute_interval(child)})
         parent_dict = {"name":name, "line": line, "has_doc": has_doc, "children": children}
         info_name_line.append(parent_dict)
-
-markdown = ''
-md_source = open('template.txt').read()
 
 for element in info_name_line:
     if element['has_doc']:
@@ -268,6 +273,5 @@ for element in info_name_line:
             )
             markdown += temp
 
-
-with open('doc.md', 'w') as f:
+with open(markdown_file, 'w') as f:
     f.write(markdown)
