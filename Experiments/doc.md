@@ -31,6 +31,100 @@ Configure module logger.
 
 
 
+## _WandbInit.setup
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L60-L159)
+
+`class _WandbInit.setup(self, kwargs)`
+
+
+Complete setup for wandb.init().
+
+This includes parsing all arguments, applying them with settings and enabling
+logging.
+
+
+
+
+
+
+
+
+
+
+
+
+## _WandbInit._enable_logging
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L167-L201)
+
+`class _WandbInit._enable_logging(self, log_fname, run_id=None)`
+
+
+Enable logging to the global debug log.  This adds a run_id to the log,
+in case of muliple processes on the same machine.
+
+Currently no way to disable logging after it's enabled.
+
+
+
+
+
+
+
+
+
+
+
+## _WandbInit._jupyter_teardown
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L232-L246)
+
+`class _WandbInit._jupyter_teardown(self)`
+
+
+Teardown hooks and display saving, called with wandb.finish
+
+
+
+
+
+
+
+
+
+
+## _WandbInit._jupyter_setup
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L247-L270)
+
+`class _WandbInit._jupyter_setup(self, settings)`
+
+
+Add magic, hooks, and session history saving
+
+
+
+
+
+
+
+
+
+
+## _WandbInit._log_setup
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L271-L305)
+
+`class _WandbInit._log_setup(self, settings)`
+
+
+Setup logging from settings.
+
+
+
+
+
+
+
+
+
+
 # init
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Folder/demo.py#L450-L609)
 

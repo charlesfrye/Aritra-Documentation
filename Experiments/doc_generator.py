@@ -120,7 +120,69 @@ for element in info_name_line:
         markdown += temp
         # Check for children
         if element['children']:
-            pass
+            for child in element['children']:
+                h2 = child['name']
+                line = child['line']
+                query = child['name']
+                doc_dict = extract.extract(filestr='demo.py',query=query)
+                c_m = ''
+                if doc_dict['class'] != '':
+                    c_m = 'class'
+                else:
+                    c_m = 'def'
+                sig = doc_dict['signature']
+                google_doc = parse.GoogleDocString(doc_dict['docstring'])
+                parsed_list = google_doc.parse(mark_code_blocks=True)
+                summary = parsed_list[0]['text']
+                table_arg = ''
+                table_att = ''
+                hint = ''
+                returns=''
+                example = ''
+                for item in parsed_list:
+                    if item["header"] == "Args":
+                        table_arg = """| **Arguments** | **Datatype** | **Description** |\n|:--:|:--:|:--|\n"""
+                        for arg in item["args"]:
+                            table_arg += """|{}|{}|{}|\n""".format(
+                                arg['field'],
+                                arg['signature'],
+                                extract.format_txt(arg['description'])
+                            )
+                        
+                    if item["header"] == "Attributes":
+                        table_arg = """| **Arguments** | **Datatype** | **Description** |\n|:--:|:--:|:--|\n"""
+                        for arg in item["args"]:
+                            table_att += """|{}|{}|{}|\n""".format(
+                                arg['field'],
+                                arg['signature'],
+                                extract.format_txt(arg['description'])
+                            )
+
+                    if item["header"] == "Raises":
+                        for arg in  item['args']:
+                            hint='{% hint style="info" %}\n'
+                            hint += arg['signature']+':'+arg['description']+'\n'
+                            hint += '{% endhint %}'
+                    if item["header"] == "Examples":
+                        example='**Example**\n\n'
+                        example += item['text']
+                    if item["header"] == "Returns":
+                        returns = '**Reutrns**\n\n'
+                        returns += item['text']
+                
+                temp = md_source.format(
+                    "## {}".format(h2), #header
+                    line[0], #line begin
+                    line[1], #line end
+                    '`{} {}{}`'.format(c_m, h2, sig), #signature
+                    summary, #summary
+                    table_arg, # arguments
+                    table_att, # attributes
+                    hint, #hint
+                    returns, #returns
+                    example #example
+                )
+                markdown += temp
 
         
     elif element['children']:
@@ -142,6 +204,69 @@ for element in info_name_line:
         markdown += temp
 
         # Get into children
+        for child in element['children']:
+            h2 = child['name']
+            line = child['line']
+            query = child['name']
+            doc_dict = extract.extract(filestr='demo.py',query=query)
+            c_m = ''
+            if doc_dict['class'] != '':
+                c_m = 'class'
+            else:
+                c_m = 'def'
+            sig = doc_dict['signature']
+            google_doc = parse.GoogleDocString(doc_dict['docstring'])
+            parsed_list = google_doc.parse(mark_code_blocks=True)
+            summary = parsed_list[0]['text']
+            table_arg = ''
+            table_att = ''
+            hint = ''
+            returns=''
+            example = ''
+            for item in parsed_list:
+                if item["header"] == "Args":
+                    table_arg = """| **Arguments** | **Datatype** | **Description** |\n|:--:|:--:|:--|\n"""
+                    for arg in item["args"]:
+                        table_arg += """|{}|{}|{}|\n""".format(
+                            arg['field'],
+                            arg['signature'],
+                            extract.format_txt(arg['description'])
+                        )
+                    
+                if item["header"] == "Attributes":
+                    table_arg = """| **Arguments** | **Datatype** | **Description** |\n|:--:|:--:|:--|\n"""
+                    for arg in item["args"]:
+                        table_att += """|{}|{}|{}|\n""".format(
+                            arg['field'],
+                            arg['signature'],
+                            extract.format_txt(arg['description'])
+                        )
+
+                if item["header"] == "Raises":
+                    for arg in  item['args']:
+                        hint='{% hint style="info" %}\n'
+                        hint += arg['signature']+':'+arg['description']+'\n'
+                        hint += '{% endhint %}'
+                if item["header"] == "Examples":
+                    example='**Example**\n\n'
+                    example += item['text']
+                if item["header"] == "Returns":
+                    returns = '**Reutrns**\n\n'
+                    returns += item['text']
+            
+            temp = md_source.format(
+                "## {}".format(h2), #header
+                line[0], #line begin
+                line[1], #line end
+                '`{} {}{}`'.format(c_m, h2, sig), #signature
+                summary, #summary
+                table_arg, # arguments
+                table_att, # attributes
+                hint, #hint
+                returns, #returns
+                example #example
+            )
+            markdown += temp
 
 
 with open('doc.md', 'w') as f:
