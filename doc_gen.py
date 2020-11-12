@@ -110,7 +110,7 @@ def create_md(query, line, header, has_doc=True, signature=None, config=None):
             # CHECK FOR RAISES
             if item["header"] == "Raises":
                 for arg in  item['args']:
-                    hint='{% hint style="info" %}\n'
+                    hint +='\n{% hint style="info" %}\n'
                     hint += arg['signature']+':'+arg['description']+'\n'
                     hint += '{% endhint %}'
             
@@ -166,7 +166,7 @@ for class_item, method_items in module_classes:
     class_line = class_item[1]
     class_has_doc = class_item[2]
     header = "# {}".format(class_name)
-    md = create_md(class_name, class_line, header, class_has_doc)
+    md = create_md(class_name, class_line, header, class_has_doc, config={'code':None})
     markdown += '{}\n'.format(md)
     # print("{} {} {}".format(class_name, class_line, class_has_doc))
     for method_item in method_items:

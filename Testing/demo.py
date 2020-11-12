@@ -39,14 +39,25 @@ class ExampleOldClass:
 
         Arguments:
             arg2 : description for arg2.
-
-        Raises:
-            NameError: Error will occur
         
         Examples:
+            Basic usage
             ```
-            print('hello world')
+            wandb.log({"accuracy":0.9, "epoch":5})
             ```
+
+            Heading2
+            ```
+            wandb.log({"accuracy":0.9})
+            ```
+
+            Heading3
+            ```
+            wandb.log({"accuracy":0.9})
+            ```
+        Raises:
+            wandb.Error: if called before wandb.init
+            ValueError: if invalid data is passed
         """
         pass
 

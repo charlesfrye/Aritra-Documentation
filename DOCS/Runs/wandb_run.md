@@ -19,7 +19,7 @@ For now, we just use this to figure out if the user has requested a stop.
 
 
 # Run
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L136-L1704)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L136-L1703)
 
 `Run`
 
@@ -472,7 +472,7 @@ persisted to the server
 
 
 ## log
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L673-L806)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L673-L805)
 
 `def log(self, data, step=None, commit=None, sync=None):`
 
@@ -480,6 +480,40 @@ Log a dict to the global run's history.
 
 wandb.log can be used to log everything from scalars to histograms, media
 and matplotlib plots.
+
+The most basic usage is wandb.log({'train-loss': 0.5, 'accuracy': 0.9}).
+This will save a history row associated with the run with train-loss=0.5
+and accuracy=0.9. The history values can be plotted on app.wandb.ai or
+on a local server. The history values can also be downloaded through
+the wandb API.
+
+Logging a value will update the summary values for any metrics logged.
+The summary values will appear in the run table at app.wandb.ai or
+a local server. If a summary value is manually set with for example
+wandb.run.summary["accuracy"] = 0.9 wandb.log will no longer automatically
+update the run's accuracy.
+
+Logging values don't have to be scalars. Logging any wandb object is supported.
+For example wandb.log({"example": wandb.Image("myimage.jpg")}) will log an
+example image which will be displayed nicely in the wandb UI. See
+https://docs.wandb.com/library/reference/data_types for all of the different
+supported types.
+
+Logging nested metrics is encouraged and is supported in the wandb API, so
+you could log multiple accuracy values with wandb.log({'dataset-1':
+{'acc':0.9, 'loss':0.3} ,'dataset-2':{'acc':0.8, 'loss':0.2}})
+and the metrics will be organized in the wandb UI.
+
+W&B keeps track of a global step so logging related metrics together is
+encouraged, so by default each time wandb.log is called a global step
+is incremented. If it's inconvenient to log related metrics together
+calling wandb.log({'train-loss':0.5, commit=False}) and then
+wandb.log({'accuracy':0.9}) is equivalent to calling
+wandb.log({'train-loss':0.5, 'accuracy':0.9})
+
+wandb.log is not intended to be called more than a few times per second.
+If you want to log more frequently than that it's better to aggregate
+the data on the client side or you may get degraded performance.
 
 
 | **Arguments** | **Datatype** | **Description** |
@@ -493,6 +527,12 @@ and matplotlib plots.
 
 
 
+{% hint style="info" %}
+:if called before wandb.init
+{% endhint %}
+{% hint style="info" %}
+:if invalid data is passed
+{% endhint %}
 
 
 
@@ -500,31 +540,40 @@ and matplotlib plots.
 
 Basic usage
 ```
+wandb.log({'accuracy':0.9, 'epoch':5})
 ```
 
 Incremental logging
 ```
+wandb.log({'loss':0.2}, commit=False)
 # Somewhere else when I'm ready to report this step:
+wandb.log({'accuracy':0.8})
 ```
 
 Histogram
 ```
+wandb.log({"gradients":wandb.Histogram(numpy_array_or_sequence)})
 ```
 
 Image
 ```
+wandb.log({"examples":[wandb.Image(numpy_array_or_pil, caption="Label")]})
 ```
 
 Video
 ```
+wandb.log({"video":wandb.Video(numpy_array_or_video_path, fps=4,
+    format="gif")})
 ```
 
 Matplotlib Plot
 ```
+wandb.log({"chart":plt})
 ```
 
 PR Curve
 ```
+wandb.log({'pr':wandb.plots.precision_recall(y_test, y_probas, labels)})
 ```
 
 3D Object
@@ -539,7 +588,7 @@ For more examples, see https://docs.wandb.com/library/log
 
 
 ## save
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L808-L892)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L807-L891)
 
 `def save( self, glob_str: Optional[str] = None, base_path: Optional[str] = None, policy: str = "live", ):`
 
@@ -562,7 +611,7 @@ For more examples, see https://docs.wandb.com/library/log
 
 
 ## finish
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L903-L915)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L902-L914)
 
 `def finish(self, exit_code=None):`
 
@@ -582,7 +631,7 @@ call this method when your script exits.
 
 
 ## join
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L917-L919)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L916-L918)
 
 `def join(self, exit_code=None):`
 
@@ -599,7 +648,7 @@ Deprecated alias for finish() - please use finish
 
 
 ## plot_table
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L921-L936)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L920-L935)
 
 `def plot_table(self, vega_spec_name, data_table, fields, string_fields=None):`
 
@@ -623,7 +672,7 @@ Creates a custom plot on a table.
 
 
 ## _get_sweep_url
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L973-L992)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L972-L991)
 
 `def _get_sweep_url(self):`
 
@@ -645,7 +694,7 @@ None - if the run is not part of the sweep
 
 
 ## use_artifact
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L1553-L1605)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L1552-L1604)
 
 `def use_artifact(self, artifact_or_name, type=None, aliases=None):`
 
@@ -672,7 +721,7 @@ A #Artifact object.
 
 
 ## log_artifact
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L1608-L1660)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L1607-L1659)
 
 `def log_artifact(self, artifact_or_path, name=None, type=None, aliases=None):`
 
@@ -699,7 +748,7 @@ A `Artifact` object.
 
 
 ## alert
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L1662-L1691)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L1661-L1690)
 
 `def alert(self, title, text, level=None, wait_duration=None):`
 
@@ -723,7 +772,7 @@ Launch an alert with the given title and text.
 
 
 # WriteSerializingFile
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L1776-L1797)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L1775-L1796)
 
 `WriteSerializingFile`
 
@@ -741,7 +790,7 @@ Wrapper for a file object that serializes writes.
 
 
 # restore
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L1708-L1757)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L1707-L1756)
 
 `def restore( name: str, run_path: Optional[str] = None, replace: bool = False, root: Optional[str] = None, ):`
 

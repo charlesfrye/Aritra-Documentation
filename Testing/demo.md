@@ -1,5 +1,5 @@
 # ExampleOldClass
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/demo.py#L25-L63)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Testing/demo.py#L25-L74)
 
 `ExampleOldClass`
 
@@ -19,7 +19,7 @@ Some more details
 
 
 ## __init__
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/demo.py#L32-L51)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Testing/demo.py#L32-L62)
 
 `def __init__(self, arg1, arg2):`
 
@@ -35,21 +35,35 @@ Some more details. Documentation for `arg1` is missing on purpose.
 
 
 
+
 {% hint style="info" %}
-:Error will occur
+:if called before wandb.init
+{% endhint %}
+{% hint style="info" %}
+:if invalid data is passed
 {% endhint %}
 
 
 
 **Example**
 
+Basic usage
 ```
-print('hello world')
+wandb.log({"accuracy":0.9, "epoch":5})
 ```
 
+Heading2
+```
+wandb.log({"accuracy":0.9})
+```
+
+Heading3
+```
+wandb.log({"accuracy":0.9})
+```
 
 ## method_with_docstring
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/demo.py#L53-L63)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Testing/demo.py#L64-L74)
 
 `def method_with_docstring(self, arg1, arg2):`
 
@@ -73,7 +87,7 @@ Some more details.
 
 
 # ExampleNewClass
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/demo.py#L65-L85)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Testing/demo.py#L76-L96)
 
 `ExampleNewClass`
 
@@ -94,7 +108,7 @@ Some more details.
 
 
 ## __init__
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/demo.py#L72-L78)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Testing/demo.py#L83-L89)
 
 `def __init__(self):`
 
@@ -114,7 +128,7 @@ Some more details.
 
 
 ## method_with_new_line_before_self
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/demo.py#L80-L85)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Testing/demo.py#L91-L96)
 
 `def method_with_new_line_before_self( self):`
 
@@ -132,7 +146,7 @@ Method with a new line before `self`.
 
 
 # function_with_docstring
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/demo.py#L5-L23)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/Testing/demo.py#L5-L23)
 
 `def function_with_docstring(arg1, arg2=True):`
 
