@@ -133,7 +133,7 @@ def create_md(
 
         return TEMPLATE_FILE.format(
                 header, #header
-                source_code, #source file in repo: https://github.com/ariG23498/Aritra-Documentation/blob/master/____
+                '{}.py'.format(source_code), #source file in repo: https://github.com/ariG23498/Aritra-Documentation/blob/master/____
                 line[0], #line begin
                 line[1], #line end
                 sig, #function signature: extract['source']
@@ -147,7 +147,7 @@ def create_md(
     else:
         return TEMPLATE_FILE.format(
             header, #header
-            source_code, #source file in repo: https://github.com/ariG23498/Aritra-Documentation/blob/master/____
+            '{}.py'.format(source_code), #source file in repo: https://github.com/ariG23498/Aritra-Documentation/blob/master/____
             line[0], #line begin
             line[1], #line end
             '', #function signature: extract['source']

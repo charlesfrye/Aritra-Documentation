@@ -1,5 +1,5 @@
 # RunStatusChecker
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L97-L133)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L97-L133)
 
 `RunStatusChecker`
 
@@ -19,7 +19,7 @@ For now, we just use this to figure out if the user has requested a stop.
 
 
 # Run
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L136-L1703)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L136-L1703)
 
 `Run`
 
@@ -49,7 +49,7 @@ with this object.
 
 
 ## Run._telemetry_get_framework
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L263-L287)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L263-L287)
 
 `def _telemetry_get_framework(self):`
 
@@ -66,7 +66,7 @@ Get telemetry data for internal config structure.
 
 
 ## Run._make_proto_run
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L305-L325)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L305-L325)
 
 `def _make_proto_run(self, run):`
 
@@ -83,7 +83,7 @@ Populate protocol buffer RunData for interface/interface.
 
 
 ## Run.dir
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L334-L339)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L334-L339)
 
 `def dir(self):`
 
@@ -102,7 +102,7 @@ placed.
 
 
 ## Run.config
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L341-L346)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L341-L346)
 
 `def config(self):`
 
@@ -121,7 +121,7 @@ value pairs associated with the hyperparameters of the run.
 
 
 ## Run.name
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L352-L360)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L352-L360)
 
 `def name(self):`
 
@@ -139,7 +139,7 @@ and ideally is descriptive.
 
 
 ## Run.notes
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L368-L376)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L368-L376)
 
 `def notes(self):`
 
@@ -157,7 +157,7 @@ and can also use markdown and latex equations inside $$ like $\\{x}
 
 
 ## Run.tags
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L384-L390)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L384-L390)
 
 `def tags(self) -> Optional[Tuple]: """Tuple[str]: tags associated with the run""" if self._tags: return self._tags run_obj = self._run_obj or self._run_obj_offline return run_obj.tags @tags.setter def tags(self, tags: Sequence): self._tags = tuple(tags) if self._backend: self._backend.interface.publish_run(self) @property def id(self):`
 
@@ -174,7 +174,7 @@ str: the run_id associated with the run
 
 
 ## Run.id
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L398-L401)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L398-L401)
 
 `def id(self):`
 
@@ -191,7 +191,7 @@ str: the run_id associated with the run
 
 
 ## Run.sweep_id
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L403-L408)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L403-L408)
 
 `def sweep_id(self):`
 
@@ -208,7 +208,7 @@ str: the run_id associated with the run
 
 
 ## Run.path
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L410-L417)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L410-L417)
 
 `def path(self):`
 
@@ -225,7 +225,7 @@ str: the path to the run [entity]/[project]/[run_id]
 
 
 ## Run.start_time
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L419-L425)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L419-L425)
 
 `def start_time(self):`
 
@@ -242,7 +242,7 @@ int: the unix time stamp in seconds when the run started
 
 
 ## Run.starting_step
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L427-L433)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L427-L433)
 
 `def starting_step(self):`
 
@@ -259,7 +259,7 @@ int: the first step of the run
 
 
 ## Run.resumed
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L435-L441)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L435-L441)
 
 `def resumed(self):`
 
@@ -276,7 +276,7 @@ bool: whether or not the run was resumed
 
 
 ## Run.step
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L443-L450)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L443-L450)
 
 `def step(self):`
 
@@ -297,7 +297,7 @@ counter.
 
 
 ## Run.mode
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L456-L459)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L456-L459)
 
 `def mode(self):`
 
@@ -314,7 +314,7 @@ For compatibility with 0.9.x and earlier, deprecate eventually.
 
 
 ## Run.group
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L465-L477)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L465-L477)
 
 `def group(self):`
 
@@ -336,7 +336,7 @@ runs in the training the same group.
 
 
 ## Run.project
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L484-L487)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L484-L487)
 
 `def project(self):`
 
@@ -353,7 +353,7 @@ str: name of W&B project associated with run.
 
 
 ## Run.get_url
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L489-L495)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L489-L495)
 
 `def get_url(self):`
 
@@ -372,7 +372,7 @@ is offline
 
 
 ## Run.get_project_url
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L497-L503)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L497-L503)
 
 `def get_project_url(self):`
 
@@ -391,7 +391,7 @@ the run or None if the run is offline
 
 
 ## Run.get_sweep_url
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L505-L511)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L505-L511)
 
 `def get_sweep_url(self):`
 
@@ -410,7 +410,7 @@ or None if there is no associated sweep or the run is offline.
 
 
 ## Run.url
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L513-L516)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L513-L516)
 
 `def url(self):`
 
@@ -427,7 +427,7 @@ str: name of W&B url associated with run.
 
 
 ## Run.entity
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L518-L522)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L518-L522)
 
 `def entity(self):`
 
@@ -445,7 +445,7 @@ a user name or an organization name.
 
 
 ## Run._add_singleton
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L647-L671)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L647-L671)
 
 `def _add_singleton(self, type, key, value):`
 
@@ -472,7 +472,7 @@ persisted to the server
 
 
 ## Run.log
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L673-L805)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L673-L805)
 
 `def log(self, data, step=None, commit=None, sync=None):`
 
@@ -588,7 +588,7 @@ For more examples, see https://docs.wandb.com/library/log
 
 
 ## Run.save
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L807-L891)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L807-L891)
 
 `def save( self, glob_str: Optional[str] = None, base_path: Optional[str] = None, policy: str = "live", ):`
 
@@ -611,7 +611,7 @@ For more examples, see https://docs.wandb.com/library/log
 
 
 ## Run.finish
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L902-L914)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L902-L914)
 
 `def finish(self, exit_code=None):`
 
@@ -631,7 +631,7 @@ call this method when your script exits.
 
 
 ## Run.join
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L916-L918)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L916-L918)
 
 `def join(self, exit_code=None):`
 
@@ -648,7 +648,7 @@ Deprecated alias for finish() - please use finish
 
 
 ## Run.plot_table
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L920-L935)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L920-L935)
 
 `def plot_table(self, vega_spec_name, data_table, fields, string_fields=None):`
 
@@ -672,7 +672,7 @@ Creates a custom plot on a table.
 
 
 ## Run._get_sweep_url
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L972-L991)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L972-L991)
 
 `def _get_sweep_url(self):`
 
@@ -694,7 +694,7 @@ None - if the run is not part of the sweep
 
 
 ## Run.use_artifact
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L1552-L1604)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L1552-L1604)
 
 `def use_artifact(self, artifact_or_name, type=None, aliases=None):`
 
@@ -721,7 +721,7 @@ A #Artifact object.
 
 
 ## Run.log_artifact
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L1607-L1659)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L1607-L1659)
 
 `def log_artifact(self, artifact_or_path, name=None, type=None, aliases=None):`
 
@@ -748,7 +748,7 @@ A `Artifact` object.
 
 
 ## Run.alert
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L1661-L1690)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L1661-L1690)
 
 `def alert(self, title, text, level=None, wait_duration=None):`
 
@@ -772,7 +772,7 @@ Launch an alert with the given title and text.
 
 
 # restore
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L1707-L1756)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L1707-L1756)
 
 `def restore( name: str, run_path: Optional[str] = None, replace: bool = False, root: Optional[str] = None, ):`
 
@@ -801,7 +801,7 @@ None if it can't find the file, otherwise a file object open for reading
 
 
 # WriteSerializingFile
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run#L1775-L1796)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_run.py#L1775-L1796)
 
 `WriteSerializingFile`
 
@@ -819,7 +819,7 @@ Wrapper for a file object that serializes writes.
 
 
 # History
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_history#L14-L64)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_history.py#L14-L64)
 
 `History`
 
@@ -838,7 +838,7 @@ dict is a set of summary statistics logged.
 
 
 ## History._update_step
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_history#L38-L40)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/CODE/Runs/wandb_history.py#L38-L40)
 
 `def _update_step(self):`
 
