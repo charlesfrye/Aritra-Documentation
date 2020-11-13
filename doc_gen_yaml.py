@@ -7,9 +7,8 @@ import tokenize
 import yaml
 import os
 
-from mydocstring.extract import extract, format_txt
-from mydocstring import parse
-
+from Mydocstring.extract import extract, format_txt
+from Mydocstring import parse
 
 yaml_filename = sys.argv[1]
 yaml_file = open(yaml_filename)
