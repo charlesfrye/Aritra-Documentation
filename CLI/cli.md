@@ -91,7 +91,8 @@ Get a reference to the internal api with cling settings.
 # prompt_for_project
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/cli.py#L114)
 
-`def prompt_for_project(ctx, entity):`
+`def prompt_for_project(ctx,
+entity):`
 
 Ask the user for a project, creating one if necessary.
 
@@ -121,7 +122,9 @@ Ask the user for a project, creating one if necessary.
 ## get_command
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/cli.py#L153)
 
-`def get_command(self, ctx, cmd_name):`
+`def get_command(self,
+ctx,
+cmd_name):`
 
 
 
@@ -155,7 +158,8 @@ Ask the user for a project, creating one if necessary.
 # projects
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/cli.py#L179)
 
-`def projects(entity, display):`
+`def projects(entity,
+display):`
 
 
 
@@ -174,7 +178,12 @@ Ask the user for a project, creating one if necessary.
 # login
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/cli.py#L210)
 
-`def login(key, host, cloud, relogin, anonymously, no_offline):`
+`def login(key,
+host,
+cloud,
+relogin,
+anonymously,
+no_offline):`
 
 
 
@@ -197,7 +206,8 @@ Ask the user for a project, creating one if necessary.
 # grpc_server
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/cli.py#L246)
 
-`def grpc_server(project, entity):`
+`def grpc_server(project,
+entity):`
 
 
 
@@ -215,7 +225,9 @@ Ask the user for a project, creating one if necessary.
 # superagent
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/cli.py#L261)
 
-`def superagent(project, entity, agent_spec):`
+`def superagent(project,
+entity,
+agent_spec):`
 
 
 
@@ -236,7 +248,11 @@ Ask the user for a project, creating one if necessary.
 # init
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/cli.py#L281)
 
-`def init(ctx, project, entity, reset, mode):`
+`def init(ctx,
+project,
+entity,
+reset,
+mode):`
 
 
 
@@ -258,7 +274,25 @@ Ask the user for a project, creating one if necessary.
 # sync
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/cli.py#L457)
 
-`def sync(ctx, path, view, verbose, run_id, project, entity, include_globs, exclude_globs, include_online, include_offline, include_synced, mark_synced, sync_all, ignore, show, clean, clean_old_hours, clean_force):`
+`def sync(ctx,
+path,
+view,
+verbose,
+run_id,
+project,
+entity,
+include_globs,
+exclude_globs,
+include_online,
+include_offline,
+include_synced,
+mark_synced,
+sync_all,
+ignore,
+show,
+clean,
+clean_old_hours,
+clean_force):`
 
 
 
@@ -294,7 +328,16 @@ Ask the user for a project, creating one if necessary.
 # sweep
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/cli.py#L641)
 
-`def sweep(ctx, project, entity, controller, verbose, name, program, settings, update, config_yaml):`
+`def sweep(ctx,
+project,
+entity,
+controller,
+verbose,
+name,
+program,
+settings,
+update,
+config_yaml):`
 
 
 
@@ -321,7 +364,11 @@ Ask the user for a project, creating one if necessary.
 # agent
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/cli.py#L798)
 
-`def agent(ctx, project, entity, count, sweep_id):`
+`def agent(ctx,
+project,
+entity,
+count,
+sweep_id):`
 
 
 
@@ -343,7 +390,8 @@ Ask the user for a project, creating one if necessary.
 # controller
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/cli.py#L817)
 
-`def controller(verbose, sweep_id):`
+`def controller(verbose,
+sweep_id):`
 
 
 
@@ -363,7 +411,9 @@ Ask the user for a project, creating one if necessary.
 # docker_run
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/cli.py#L832)
 
-`def docker_run(ctx, docker_run_args, help):`
+`def docker_run(ctx,
+docker_run_args,
+help):`
 
 Simple wrapper for `docker run` which sets W&B environment
 Adds WANDB_API_KEY and WANDB_DOCKER to any docker run command.
@@ -386,7 +436,18 @@ and --runtime wasn't set.
 # docker
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/cli.py#L900)
 
-`def docker(ctx, docker_run_args, docker_image, nvidia, digest, jupyter, dir, no_dir, shell, port, cmd, no_tty):`
+`def docker(ctx,
+docker_run_args,
+docker_image,
+nvidia,
+digest,
+jupyter,
+dir,
+no_dir,
+shell,
+port,
+cmd,
+no_tty):`
 
 W&B docker lets you run your code in a docker image ensuring wandb is configured. It adds the WANDB_DOCKER and WANDB_API_KEY
 environment variables to your container and mounts the current directory in /app by default.  You can pass additional
@@ -427,7 +488,12 @@ command.
 # local
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/cli.py#L1024)
 
-`def local(ctx, port, env, daemon, upgrade, edge):`
+`def local(ctx,
+port,
+env,
+daemon,
+upgrade,
+edge):`
 
 
 
@@ -468,7 +534,11 @@ command.
 # put
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/cli.py#L1114)
 
-`def put(path, name, description, type, alias):`
+`def put(path,
+name,
+description,
+type,
+alias):`
 
 
 
@@ -491,7 +561,9 @@ command.
 # get
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/cli.py#L1185)
 
-`def get(path, root, type):`
+`def get(path,
+root,
+type):`
 
 
 
@@ -512,7 +584,8 @@ command.
 # ls
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/cli.py#L1219)
 
-`def ls(path, type):`
+`def ls(path,
+type):`
 
 
 
@@ -532,7 +605,9 @@ command.
 # pull
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/cli.py#L1262)
 
-`def pull(run, project, entity):`
+`def pull(run,
+project,
+entity):`
 
 
 
@@ -553,7 +628,12 @@ command.
 # restore
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/cli.py#L1313)
 
-`def restore(ctx, run, no_git, branch, project, entity):`
+`def restore(ctx,
+run,
+no_git,
+branch,
+project,
+entity):`
 
 
 
@@ -576,7 +656,9 @@ command.
 # magic
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/ariG23498/Aritra-Documentation/blob/master/cli.py#L1451)
 
-`def magic(ctx, program, args):`
+`def magic(ctx,
+program,
+args):`
 
 
 

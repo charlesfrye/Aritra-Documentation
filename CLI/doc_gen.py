@@ -56,7 +56,7 @@ def parse_func(func_member, filename, module_name, level=1):
     func_name = func_member["name"]
     name = f'# {func_name}' if level==1 else f'## {func_name}'
     func_location = func_member["location"]["lineno"]
-    func_arg = ', '.join([x["name"] for x in func_member["args"]])
+    func_arg = ',\n'.join([x["name"] for x in func_member["args"]])
     doc = ""
     if "docstring" in func_member.keys():
         doc = func_member["docstring"]
