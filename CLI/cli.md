@@ -21,7 +21,7 @@
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 
 
 
@@ -53,7 +53,7 @@
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 
 
 
@@ -70,7 +70,7 @@
 Function decorator for catching common errors and re-raising as wandb.Error
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 
 
 
@@ -87,7 +87,7 @@ Function decorator for catching common errors and re-raising as wandb.Error
 Get a reference to the internal api with cling settings.
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 
 
 
@@ -104,7 +104,7 @@ Get a reference to the internal api with cling settings.
 Ask the user for a project, creating one if necessary.
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 
 
 
@@ -136,7 +136,7 @@ Ask the user for a project, creating one if necessary.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 
 
 
@@ -153,7 +153,7 @@ Ask the user for a project, creating one if necessary.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |cls=RunGroup||
 |version=wandb.__version_||
 
@@ -172,7 +172,7 @@ Ask the user for a project, creating one if necessary.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |context_settings=CONTEXT|List projects|
 |"--entity"|The entity to scope the listing to.|
 
@@ -191,7 +191,7 @@ Ask the user for a project, creating one if necessary.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |context_settings=CONTEXT|Login to Weights & Biases|
 |"key"||
 |"--cloud"|Login to the cloud instead of local|
@@ -214,7 +214,7 @@ Ask the user for a project, creating one if necessary.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |context_settings=CONTEXT|Run a grpc server|
 
 
@@ -232,7 +232,7 @@ Ask the user for a project, creating one if necessary.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |context_settings=CONTEXT|Run a SUPER agent|
 |"--project"|The project use.|
 |"--entity"|The entity to use.|
@@ -253,7 +253,7 @@ Ask the user for a project, creating one if necessary.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |context_settings=CONTEXT|Configure a directory with Weights & Biases|
 |"--project"|The project to use.|
 |"--entity"|The entity to scope the project to.|
@@ -275,7 +275,7 @@ Ask the user for a project, creating one if necessary.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |context_settings=CONTEXT|Upload an offline training directory to W&B|
 |"path"||
 |"--view"|View runs|
@@ -311,7 +311,7 @@ Ask the user for a project, creating one if necessary.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |context_settings=CONTEXT|Create a sweep|
 |"--project"|The project of the sweep.|
 |"--entity"|The entity scope for the project.|
@@ -338,7 +338,7 @@ Ask the user for a project, creating one if necessary.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |context_settings=CONTEXT|Run the W&B agent|
 |"--project"|The project of the sweep.|
 |"--entity"|The entity scope for the project.|
@@ -360,7 +360,7 @@ Ask the user for a project, creating one if necessary.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |context_settings=CONTEXT|Run the W&B local sweep controller|
 |"--verbose"|Display verbose output|
 |"sweep_id||
@@ -383,7 +383,7 @@ This will also set the runtime to nvidia if the nvidia-docker executable is pres
 and --runtime wasn't set.
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |context_settings=RUN_CONTEXT||
 |"docker_run_args"||
 |"--help"||
@@ -415,7 +415,7 @@ the nvidia runtime.  If you just want wandb to set environment variable to an ex
 command.
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |context_settings=RUN_CONTEX||
 |"docker_run_args"||
 |"docker_image"||
@@ -444,7 +444,7 @@ command.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |context_settings=RUN_CONTEXT|Launch local W&B container (Experimental)|
 |"--port"|The host port to bind W&B local on|
 |"--env"|Env vars to pass to wandb/local|
@@ -467,7 +467,7 @@ command.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |help="Commands for interacting with artifacts|Commands for interacting with artifacts|
 
 
@@ -485,7 +485,7 @@ command.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |context_settings=CONTEXT|Upload an artifact to wandb|
 |"path||
 |"--name"|The name of the artifact to push: project/artifact_name|
@@ -508,7 +508,7 @@ command.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |context_settings=CONTEXT|Download an artifact from wandb|
 |"path||
 |"--root"|The directory you want to download the artifact to|
@@ -529,7 +529,7 @@ command.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |context_settings=CONTEXT|List all artifacts in a wandb project|
 |"path||
 |"--type"|The type of artifacts to list|
@@ -549,7 +549,7 @@ command.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |context_settings=CONTEXT|Pull files from Weights & Biases|
 |"run"||
 |"--project"|The project you want to download.|
@@ -570,7 +570,7 @@ command.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |context_settings=CONTEXT|Restore code, config and docker state for a run|
 |"run"||
 |"--no-git"|Skupp|
@@ -593,7 +593,7 @@ command.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |context_settings=CONTEXT|Run any script with wandb|
 |"program||
 |"args"||
@@ -613,7 +613,7 @@ command.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |"online"|Enable W&B sync|
 
 
@@ -631,7 +631,7 @@ command.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |"offline"|Disable W&B sync|
 
 
@@ -649,7 +649,7 @@ command.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |"on"||
 
 
@@ -667,7 +667,7 @@ command.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |"off"||
 
 
@@ -685,7 +685,7 @@ command.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |"status"|Show configuration settings|
 |"--settings/--no-settings"|Show the current settings|
 
@@ -704,7 +704,7 @@ command.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |"disabled"|Disable W&B.|
 
 
@@ -722,7 +722,7 @@ command.
 
 
 | **Options** | **Help** |
-|:--:|:--|
+|:--|:--|
 |"enabled"|Enable W&B.|
 
 

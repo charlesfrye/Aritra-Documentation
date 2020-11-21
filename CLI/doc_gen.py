@@ -62,7 +62,7 @@ def parse_func(func_member, filename, module_name, level=1):
         doc = func_member["docstring"]
     help_table = ""
     if "decorations" in func_member.keys():
-        help_table = """| **Options** | **Help** |\n|:--:|:--|\n"""
+        help_table = """| **Options** | **Help** |\n|:--|:--|\n"""
         decorations = func_member["decorations"]
         for decoration in decorations:
             help_name = ""
