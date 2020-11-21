@@ -20,8 +20,6 @@
 
 
 
-| **Options** | **Help** |
-|:--|:--|
 
 
 
@@ -52,8 +50,6 @@
 
 
 
-| **Options** | **Help** |
-|:--|:--|
 
 
 
@@ -69,8 +65,6 @@
 
 Function decorator for catching common errors and re-raising as wandb.Error
 
-| **Options** | **Help** |
-|:--|:--|
 
 
 
@@ -86,8 +80,6 @@ Function decorator for catching common errors and re-raising as wandb.Error
 
 Get a reference to the internal api with cling settings.
 
-| **Options** | **Help** |
-|:--|:--|
 
 
 
@@ -103,8 +95,6 @@ Get a reference to the internal api with cling settings.
 
 Ask the user for a project, creating one if necessary.
 
-| **Options** | **Help** |
-|:--|:--|
 
 
 
@@ -135,8 +125,6 @@ Ask the user for a project, creating one if necessary.
 
 
 
-| **Options** | **Help** |
-|:--|:--|
 
 
 

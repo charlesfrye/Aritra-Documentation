@@ -62,7 +62,7 @@ def parse_func(func_member, filename, module_name, level=1):
         doc = func_member["docstring"]
     help_table = ""
     if "decorations" in func_member.keys():
-        help_table = """| **Options** | **Help** |\n|:--|:--|\n"""
+        help_table = ""
         decorations = func_member["decorations"]
         for decoration in decorations:
             help_name = ""
@@ -73,6 +73,8 @@ def parse_func(func_member, filename, module_name, level=1):
                     help_name = ""
                 help_desc = ' '.join(PATTERN.findall(decoration["args"]))
                 help_table += """|{}|{}|\n""".format(help_name,help_desc)
+        if help_table != "":
+            help_table = """| **Options** | **Help** |\n|:--|:--|\n""" + help_table
     with open(f'{module_name}.md', 'a') as fp:
         text = TEMPLATE.format(
             f'{name}', #header
