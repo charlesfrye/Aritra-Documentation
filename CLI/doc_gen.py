@@ -8,12 +8,19 @@ SOURCE_CODE = "https://github.com/ariG23498/Aritra-Documentation/blob/master/"
 TEMPLATE = """
 {}
 [![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)]({})
+
 {}
+
 {}
+
 {}
+
 {}
+
 {}
+
 {}
+
 {}
 """.strip()
 
@@ -62,7 +69,7 @@ def parse_func(func_member, filename, module_name, level=1):
             help_desc=""
             if "args" in decoration.keys():
                 help_desc = PATTERN.findall(decoration["args"])
-            help_table += """|{}|{}|""".format(help_name,help_desc)
+            help_table += """|{}|{}|\n""".format(help_name,help_desc)
     with open(f'{module_name}.md', 'a') as fp:
         text = TEMPLATE.format(
             f'{name}', #header
