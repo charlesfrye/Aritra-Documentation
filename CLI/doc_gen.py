@@ -68,7 +68,7 @@ def parse_func(func_member, filename, module_name, level=1):
             help_name = ""
             help_desc=""
             if "args" in decoration.keys():
-                help_name = decoration["args"][1:-2].split(',')[0].strip()
+                help_name = decoration["args"][1:-2].split(',')[0].strip().replace('"','`')
                 help_desc = ' '.join(PATTERN.findall(decoration["args"]))
                 help_table += """|{}|{}|\n""".format(help_name,help_desc)
     with open(f'{module_name}.md', 'a') as fp:
