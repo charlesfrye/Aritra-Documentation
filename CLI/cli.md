@@ -137,7 +137,6 @@ Ask the user for a project, creating one if necessary.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['display_error']||
 
 
 
@@ -155,9 +154,8 @@ Ask the user for a project, creating one if necessary.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['click', 'command']|[]|
-|['click', 'version_option']|[]|
-|['click', 'pass_context']||
+|cls=RunGroup||
+|version=wandb.__version_||
 
 
 
@@ -175,9 +173,8 @@ Ask the user for a project, creating one if necessary.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'command']|['List projects']|
-|['click', 'option']|['The entity to scope the listing to.']|
-|['display_error']||
+|context_settings=CONTEXT|List projects|
+|"--entity"|The entity to scope the listing to.|
 
 
 
@@ -195,13 +192,12 @@ Ask the user for a project, creating one if necessary.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'command']|['Login to Weights & Biases']|
-|['click', 'argument']|[]|
-|['click', 'option']|['Login to the cloud instead of local']|
-|['click', 'option']|['Login to a specific instance of W&B']|
-|['click', 'option']|['Force relogin if already logged in.']|
-|['click', 'option']|['Log in anonymously']|
-|['display_error']||
+|context_settings=CONTEXT|Login to Weights & Biases|
+|"key"||
+|"--cloud"|Login to the cloud instead of local|
+|"--host"|Login to a specific instance of W&B|
+|"--relogin"|Force relogin if already logged in.|
+|"--anonymously"|Log in anonymously|
 
 
 
@@ -219,8 +215,7 @@ Ask the user for a project, creating one if necessary.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'command']|['Run a grpc server']|
-|['display_error']||
+|context_settings=CONTEXT|Run a grpc server|
 
 
 
@@ -238,11 +233,10 @@ Ask the user for a project, creating one if necessary.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'command']|['Run a SUPER agent']|
-|['click', 'option']|['The project use.']|
-|['click', 'option']|['The entity to use.']|
-|['click', 'argument']|[]|
-|['display_error']||
+|context_settings=CONTEXT|Run a SUPER agent|
+|"--project"|The project use.|
+|"--entity"|The entity to use.|
+|"agent_spec"||
 
 
 
@@ -260,13 +254,11 @@ Ask the user for a project, creating one if necessary.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'command']|['Configure a directory with Weights & Biases']|
-|['click', 'option']|['The project to use.']|
-|['click', 'option']|['The entity to scope the project to.']|
-|['click', 'option']|['Reset settings']|
-|['click', 'option']|[]|
-|['click', 'pass_context']||
-|['display_error']||
+|context_settings=CONTEXT|Configure a directory with Weights & Biases|
+|"--project"|The project to use.|
+|"--entity"|The entity to scope the project to.|
+|"--reset"|Reset settings|
+|"--mode"||
 
 
 
@@ -284,27 +276,25 @@ Ask the user for a project, creating one if necessary.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'command']|['Upload an offline training directory to W&B']|
-|['click', 'pass_context']||
-|['click', 'argument']|[]|
-|['click', 'option']|['View runs']|
-|['click', 'option']|['Verbose']|
-|['click', 'option']|['The run you want to upload to.']|
-|['click', 'option']|['The project you want to upload to.']|
-|['click', 'option']|['The entity to scope to.']|
-|['click', 'option']|['Comma seperated list of globs to include.']|
-|['click', 'option']|['Comma seperated list of globs to exclude.']|
-|['click', 'option']|['Include online runs']|
-|['click', 'option']|['Include offline runs']|
-|['click', 'option']|['Include synced runs']|
-|['click', 'option']|['Mark runs as synced']|
-|['click', 'option']|['Sync all runs']|
-|['click', 'option']|['Delete synced runs']|
-|['click', 'option']|['Delete runs created before this many hours. To be used alongside --clean flag.']|
-|['click', 'option']|['Clean without confirmation prompt.']|
-|['click', 'option']|[]|
-|['click', 'option']|['Number of runs to show']|
-|['display_error']||
+|context_settings=CONTEXT|Upload an offline training directory to W&B|
+|"path"||
+|"--view"|View runs|
+|"--verbose"|Verbose|
+|"--id"|The run you want to upload to.|
+|"--project"|The project you want to upload to.|
+|"--entity"|The entity to scope to.|
+|"--include-globs"|Comma seperated list of globs to include.|
+|"--exclude-globs"|Comma seperated list of globs to exclude.|
+|"--include-online/--no-include-online"|Include online runs|
+|"--include-offline/--no-include-offline"|Include offline runs|
+|"--include-synced/--no-include-synced"|Include synced runs|
+|"--mark-synced/--no-mark-synced"|Mark runs as synced|
+|"--sync-all"|Sync all runs|
+|"--clean"|Delete synced runs|
+|"--clean-old-hours"|Delete runs created before this many hours. To be used alongside --clean flag.|
+|"--clean-force"|Clean without confirmation prompt.|
+|"--ignore"||
+|"--show"|Number of runs to show|
 
 
 
@@ -322,18 +312,16 @@ Ask the user for a project, creating one if necessary.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'command']|['Create a sweep']|
-|['click', 'pass_context']||
-|['click', 'option']|['The project of the sweep.']|
-|['click', 'option']|['The entity scope for the project.']|
-|['click', 'option']|['Run local controller']|
-|['click', 'option']|['Display verbose output']|
-|['click', 'option']|['Set sweep name']|
-|['click', 'option']|['Set sweep program']|
-|['click', 'option']|['Set sweep settings']|
-|['click', 'option']|['Update pending sweep']|
-|['click', 'argument']|[]|
-|['display_error']||
+|context_settings=CONTEXT|Create a sweep|
+|"--project"|The project of the sweep.|
+|"--entity"|The entity scope for the project.|
+|"--controller"|Run local controller|
+|"--verbose"|Display verbose output|
+|"--name"|Set sweep name|
+|"--program"|Set sweep program|
+|"--settings"|Set sweep settings|
+|"--update"|Update pending sweep|
+|"config_yaml||
 
 
 
@@ -351,13 +339,11 @@ Ask the user for a project, creating one if necessary.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'command']|['Run the W&B agent']|
-|['click', 'pass_context']||
-|['click', 'option']|['The project of the sweep.']|
-|['click', 'option']|['The entity scope for the project.']|
-|['click', 'option']|['The max number of runs for this agent.']|
-|['click', 'argument']|[]|
-|['display_error']||
+|context_settings=CONTEXT|Run the W&B agent|
+|"--project"|The project of the sweep.|
+|"--entity"|The entity scope for the project.|
+|"--count"|The max number of runs for this agent.|
+|"sweep_id||
 
 
 
@@ -375,10 +361,9 @@ Ask the user for a project, creating one if necessary.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'command']|['Run the W&B local sweep controller']|
-|['click', 'option']|['Display verbose output']|
-|['click', 'argument']|[]|
-|['display_error']||
+|context_settings=CONTEXT|Run the W&B local sweep controller|
+|"--verbose"|Display verbose output|
+|"sweep_id||
 
 
 
@@ -399,10 +384,9 @@ and --runtime wasn't set.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'command']|[]|
-|['click', 'pass_context']||
-|['click', 'argument']|[]|
-|['click', 'option']|[]|
+|context_settings=RUN_CONTEXT||
+|"docker_run_args"||
+|"--help"||
 
 
 
@@ -432,20 +416,18 @@ command.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'command']|[]|
-|['click', 'pass_context']||
-|['click', 'argument']|[]|
-|['click', 'argument']|[]|
-|['click', 'option']|['Use the nvidia runtime, defaults to nvidia if nvidia-docker is present']|
-|['click', 'option']|['Output the image digest and exit']|
-|['click', 'option']|['Run jupyter lab in the container']|
-|['click', 'option']|['Which directory to mount the code in the container']|
-|['click', 'option']|["Don't mount the current directory"]|
-|['click', 'option']|['The shell to start the container with']|
-|['click', 'option']|['The host port to bind jupyter on']|
-|['click', 'option']|['The command to run in the container']|
-|['click', 'option']|['Run the command without a tty']|
-|['display_error']||
+|context_settings=RUN_CONTEX||
+|"docker_run_args"||
+|"docker_image"||
+|"--nvidia/--no-nvidia"|Use the nvidia runtime, defaults to nvidia if nvidia-docker is present|
+|"--digest"|Output the image digest and exit|
+|"--jupyter/--no-jupyter"|Run jupyter lab in the container|
+|"--dir"|Which directory to mount the code in the container|
+|"--no-dir"|Don't mount the current directory|
+|"--shell"|The shell to start the container with|
+|"--port"|The host port to bind jupyter on|
+|"--cmd"|The command to run in the container|
+|"--no-tty"|Run the command without a tty|
 
 
 
@@ -463,14 +445,12 @@ command.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'command']|['Launch local W&B container (Experimental)']|
-|['click', 'pass_context']||
-|['click', 'option']|['The host port to bind W&B local on']|
-|['click', 'option']|['Env vars to pass to wandb/local']|
-|['click', 'option']|["Run or don't run in daemon mode"]|
-|['click', 'option']|['Upgrade to the most recent version']|
-|['click', 'option']|['Run the bleading edge']|
-|['display_error']||
+|context_settings=RUN_CONTEXT|Launch local W&B container (Experimental)|
+|"--port"|The host port to bind W&B local on|
+|"--env"|Env vars to pass to wandb/local|
+|"--daemon/--no-daemon"|Run or don't run in daemon mode|
+|"--upgrade"|Upgrade to the most recent version|
+|"--edge"|Run the bleading edge|
 
 
 
@@ -488,7 +468,7 @@ command.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'group']|['Commands for interacting with artifacts']|
+|help="Commands for interacting with artifacts|Commands for interacting with artifacts|
 
 
 
@@ -506,13 +486,12 @@ command.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['artifact', 'command']|['Upload an artifact to wandb']|
-|['click', 'argument']|[]|
-|['click', 'option']|['The name of the artifact to push: project/artifact_name']|
-|['click', 'option']|['A description of this artifact']|
-|['click', 'option']|['The type of the artifact']|
-|['click', 'option']|['An alias to apply to this artifact']|
-|['display_error']||
+|context_settings=CONTEXT|Upload an artifact to wandb|
+|"path||
+|"--name"|The name of the artifact to push: project/artifact_name|
+|"--description"|A description of this artifact|
+|"--type"|The type of the artifact|
+|"--alias"|An alias to apply to this artifact|
 
 
 
@@ -530,11 +509,10 @@ command.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['artifact', 'command']|['Download an artifact from wandb']|
-|['click', 'argument']|[]|
-|['click', 'option']|['The directory you want to download the artifact to']|
-|['click', 'option']|['The type of artifact you are downloading']|
-|['display_error']||
+|context_settings=CONTEXT|Download an artifact from wandb|
+|"path||
+|"--root"|The directory you want to download the artifact to|
+|"--type"|The type of artifact you are downloading|
 
 
 
@@ -552,10 +530,9 @@ command.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['artifact', 'command']|['List all artifacts in a wandb project']|
-|['click', 'argument']|[]|
-|['click', 'option']|['The type of artifacts to list']|
-|['display_error']||
+|context_settings=CONTEXT|List all artifacts in a wandb project|
+|"path||
+|"--type"|The type of artifacts to list|
 
 
 
@@ -573,11 +550,10 @@ command.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'command']|['Pull files from Weights & Biases']|
-|['click', 'argument']|[]|
-|['click', 'option']|['The project you want to download.']|
-|['click', 'option']|['The entity to scope the listing to.']|
-|['display_error']||
+|context_settings=CONTEXT|Pull files from Weights & Biases|
+|"run"||
+|"--project"|The project you want to download.|
+|"--entity"|The entity to scope the listing to.|
 
 
 
@@ -595,14 +571,12 @@ command.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'command']|['Restore code, config and docker state for a run']|
-|['click', 'pass_context']||
-|['click', 'argument']|[]|
-|['click', 'option']|['Skupp']|
-|['click', 'option']|['Whether to create a branch or checkout detached']|
-|['click', 'option']|['The project you wish to upload to.']|
-|['click', 'option']|['The entity to scope the listing to.']|
-|['display_error']||
+|context_settings=CONTEXT|Restore code, config and docker state for a run|
+|"run"||
+|"--no-git"|Skupp|
+|"--branch/--no-branch"|Whether to create a branch or checkout detached|
+|"--project"|The project you wish to upload to.|
+|"--entity"|The entity to scope the listing to.|
 
 
 
@@ -620,11 +594,9 @@ command.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'command']|['Run any script with wandb']|
-|['click', 'pass_context']||
-|['click', 'argument']|[]|
-|['click', 'argument']|[]|
-|['display_error']||
+|context_settings=CONTEXT|Run any script with wandb|
+|"program||
+|"args"||
 
 
 
@@ -642,8 +614,7 @@ command.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'command']|['Enable W&B sync']|
-|['display_error']||
+|"online"|Enable W&B sync|
 
 
 
@@ -661,8 +632,7 @@ command.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'command']|['Disable W&B sync']|
-|['display_error']||
+|"offline"|Disable W&B sync|
 
 
 
@@ -680,9 +650,7 @@ command.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'command']|[]|
-|['click', 'pass_context']||
-|['display_error']||
+|"on"||
 
 
 
@@ -700,9 +668,7 @@ command.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'command']|[]|
-|['click', 'pass_context']||
-|['display_error']||
+|"off"||
 
 
 
@@ -720,8 +686,8 @@ command.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'command']|['Show configuration settings']|
-|['click', 'option']|['Show the current settings']|
+|"status"|Show configuration settings|
+|"--settings/--no-settings"|Show the current settings|
 
 
 
@@ -739,7 +705,7 @@ command.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'command']|['Disable W&B.']|
+|"disabled"|Disable W&B.|
 
 
 
@@ -757,7 +723,7 @@ command.
 
 | **Options** | **Help** |
 |:--:|:--|
-|['cli', 'command']|['Enable W&B.']|
+|"enabled"|Enable W&B.|
 
 
 
