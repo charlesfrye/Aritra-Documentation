@@ -174,7 +174,7 @@ Ask the user for a project, creating one if necessary.
 | **Options** | **Help** |
 |:--|:--|
 |context_settings=CONTEXT|List projects|
-|`--entity`|The entity to scope the listing to.|
+|"--entity"|The entity to scope the listing to.|
 
 
 
@@ -193,11 +193,11 @@ Ask the user for a project, creating one if necessary.
 | **Options** | **Help** |
 |:--|:--|
 |context_settings=CONTEXT|Login to Weights & Biases|
-|`key`||
-|`--cloud`|Login to the cloud instead of local|
-|`--host`|Login to a specific instance of W&B|
-|`--relogin`|Force relogin if already logged in.|
-|`--anonymously`|Log in anonymously|
+|"key"||
+|"--cloud"|Login to the cloud instead of local|
+|"--host"|Login to a specific instance of W&B|
+|"--relogin"|Force relogin if already logged in.|
+|"--anonymously"|Log in anonymously|
 
 
 
@@ -234,9 +234,9 @@ Ask the user for a project, creating one if necessary.
 | **Options** | **Help** |
 |:--|:--|
 |context_settings=CONTEXT|Run a SUPER agent|
-|`--project`|The project use.|
-|`--entity`|The entity to use.|
-|`agent_spec`||
+|"--project"|The project use.|
+|"--entity"|The entity to use.|
+|"agent_spec"||
 
 
 
@@ -255,10 +255,10 @@ Ask the user for a project, creating one if necessary.
 | **Options** | **Help** |
 |:--|:--|
 |context_settings=CONTEXT|Configure a directory with Weights & Biases|
-|`--project`|The project to use.|
-|`--entity`|The entity to scope the project to.|
-|`--reset`|Reset settings|
-|`--mode`||
+|"--project"|The project to use.|
+|"--entity"|The entity to scope the project to.|
+|"--reset"|Reset settings|
+|"--mode"||
 
 
 
@@ -277,24 +277,24 @@ Ask the user for a project, creating one if necessary.
 | **Options** | **Help** |
 |:--|:--|
 |context_settings=CONTEXT|Upload an offline training directory to W&B|
-|`path`||
-|`--view`|View runs|
-|`--verbose`|Verbose|
-|`--id`|The run you want to upload to.|
-|`--project`|The project you want to upload to.|
-|`--entity`|The entity to scope to.|
-|`--include-globs`|Comma seperated list of globs to include.|
-|`--exclude-globs`|Comma seperated list of globs to exclude.|
-|`--include-online/--no-include-online`|Include online runs|
-|`--include-offline/--no-include-offline`|Include offline runs|
-|`--include-synced/--no-include-synced`|Include synced runs|
-|`--mark-synced/--no-mark-synced`|Mark runs as synced|
-|`--sync-all`|Sync all runs|
-|`--clean`|Delete synced runs|
-|`--clean-old-hours`|Delete runs created before this many hours. To be used alongside --clean flag.|
-|`--clean-force`|Clean without confirmation prompt.|
-|`--ignore`||
-|`--show`|Number of runs to show|
+|"path"||
+|"--view"|View runs|
+|"--verbose"|Verbose|
+|"--id"|The run you want to upload to.|
+|"--project"|The project you want to upload to.|
+|"--entity"|The entity to scope to.|
+|"--include-globs"|Comma seperated list of globs to include.|
+|"--exclude-globs"|Comma seperated list of globs to exclude.|
+|"--include-online/--no-include-online"|Include online runs|
+|"--include-offline/--no-include-offline"|Include offline runs|
+|"--include-synced/--no-include-synced"|Include synced runs|
+|"--mark-synced/--no-mark-synced"|Mark runs as synced|
+|"--sync-all"|Sync all runs|
+|"--clean"|Delete synced runs|
+|"--clean-old-hours"|Delete runs created before this many hours. To be used alongside --clean flag.|
+|"--clean-force"|Clean without confirmation prompt.|
+|"--ignore"||
+|"--show"|Number of runs to show|
 
 
 
@@ -313,15 +313,15 @@ Ask the user for a project, creating one if necessary.
 | **Options** | **Help** |
 |:--|:--|
 |context_settings=CONTEXT|Create a sweep|
-|`--project`|The project of the sweep.|
-|`--entity`|The entity scope for the project.|
-|`--controller`|Run local controller|
-|`--verbose`|Display verbose output|
-|`--name`|Set sweep name|
-|`--program`|Set sweep program|
-|`--settings`|Set sweep settings|
-|`--update`|Update pending sweep|
-|`config_yaml||
+|"--project"|The project of the sweep.|
+|"--entity"|The entity scope for the project.|
+|"--controller"|Run local controller|
+|"--verbose"|Display verbose output|
+|"--name"|Set sweep name|
+|"--program"|Set sweep program|
+|"--settings"|Set sweep settings|
+|"--update"|Update pending sweep|
+|"config_yaml||
 
 
 
@@ -340,10 +340,10 @@ Ask the user for a project, creating one if necessary.
 | **Options** | **Help** |
 |:--|:--|
 |context_settings=CONTEXT|Run the W&B agent|
-|`--project`|The project of the sweep.|
-|`--entity`|The entity scope for the project.|
-|`--count`|The max number of runs for this agent.|
-|`sweep_id||
+|"--project"|The project of the sweep.|
+|"--entity"|The entity scope for the project.|
+|"--count"|The max number of runs for this agent.|
+|"sweep_id||
 
 
 
@@ -362,8 +362,8 @@ Ask the user for a project, creating one if necessary.
 | **Options** | **Help** |
 |:--|:--|
 |context_settings=CONTEXT|Run the W&B local sweep controller|
-|`--verbose`|Display verbose output|
-|`sweep_id||
+|"--verbose"|Display verbose output|
+|"sweep_id||
 
 
 
@@ -385,8 +385,8 @@ and --runtime wasn't set.
 | **Options** | **Help** |
 |:--|:--|
 |context_settings=RUN_CONTEXT||
-|`docker_run_args`||
-|`--help`||
+|"docker_run_args"||
+|"--help"||
 
 
 
@@ -417,17 +417,17 @@ command.
 | **Options** | **Help** |
 |:--|:--|
 |context_settings=RUN_CONTEX||
-|`docker_run_args`||
-|`docker_image`||
-|`--nvidia/--no-nvidia`|Use the nvidia runtime, defaults to nvidia if nvidia-docker is present|
-|`--digest`|Output the image digest and exit|
-|`--jupyter/--no-jupyter`|Run jupyter lab in the container|
-|`--dir`|Which directory to mount the code in the container|
-|`--no-dir`|Don't mount the current directory|
-|`--shell`|The shell to start the container with|
-|`--port`|The host port to bind jupyter on|
-|`--cmd`|The command to run in the container|
-|`--no-tty`|Run the command without a tty|
+|"docker_run_args"||
+|"docker_image"||
+|"--nvidia/--no-nvidia"|Use the nvidia runtime, defaults to nvidia if nvidia-docker is present|
+|"--digest"|Output the image digest and exit|
+|"--jupyter/--no-jupyter"|Run jupyter lab in the container|
+|"--dir"|Which directory to mount the code in the container|
+|"--no-dir"|Don't mount the current directory|
+|"--shell"|The shell to start the container with|
+|"--port"|The host port to bind jupyter on|
+|"--cmd"|The command to run in the container|
+|"--no-tty"|Run the command without a tty|
 
 
 
@@ -446,11 +446,11 @@ command.
 | **Options** | **Help** |
 |:--|:--|
 |context_settings=RUN_CONTEXT|Launch local W&B container (Experimental)|
-|`--port`|The host port to bind W&B local on|
-|`--env`|Env vars to pass to wandb/local|
-|`--daemon/--no-daemon`|Run or don't run in daemon mode|
-|`--upgrade`|Upgrade to the most recent version|
-|`--edge`|Run the bleading edge|
+|"--port"|The host port to bind W&B local on|
+|"--env"|Env vars to pass to wandb/local|
+|"--daemon/--no-daemon"|Run or don't run in daemon mode|
+|"--upgrade"|Upgrade to the most recent version|
+|"--edge"|Run the bleading edge|
 
 
 
@@ -468,7 +468,7 @@ command.
 
 | **Options** | **Help** |
 |:--|:--|
-|help=`Commands for interacting with artifacts|Commands for interacting with artifacts|
+|help="Commands for interacting with artifacts|Commands for interacting with artifacts|
 
 
 
@@ -487,11 +487,11 @@ command.
 | **Options** | **Help** |
 |:--|:--|
 |context_settings=CONTEXT|Upload an artifact to wandb|
-|`path||
-|`--name`|The name of the artifact to push: project/artifact_name|
-|`--description`|A description of this artifact|
-|`--type`|The type of the artifact|
-|`--alias`|An alias to apply to this artifact|
+|"path||
+|"--name"|The name of the artifact to push: project/artifact_name|
+|"--description"|A description of this artifact|
+|"--type"|The type of the artifact|
+|"--alias"|An alias to apply to this artifact|
 
 
 
@@ -510,9 +510,9 @@ command.
 | **Options** | **Help** |
 |:--|:--|
 |context_settings=CONTEXT|Download an artifact from wandb|
-|`path||
-|`--root`|The directory you want to download the artifact to|
-|`--type`|The type of artifact you are downloading|
+|"path||
+|"--root"|The directory you want to download the artifact to|
+|"--type"|The type of artifact you are downloading|
 
 
 
@@ -531,8 +531,8 @@ command.
 | **Options** | **Help** |
 |:--|:--|
 |context_settings=CONTEXT|List all artifacts in a wandb project|
-|`path||
-|`--type`|The type of artifacts to list|
+|"path||
+|"--type"|The type of artifacts to list|
 
 
 
@@ -551,9 +551,9 @@ command.
 | **Options** | **Help** |
 |:--|:--|
 |context_settings=CONTEXT|Pull files from Weights & Biases|
-|`run`||
-|`--project`|The project you want to download.|
-|`--entity`|The entity to scope the listing to.|
+|"run"||
+|"--project"|The project you want to download.|
+|"--entity"|The entity to scope the listing to.|
 
 
 
@@ -572,11 +572,11 @@ command.
 | **Options** | **Help** |
 |:--|:--|
 |context_settings=CONTEXT|Restore code, config and docker state for a run|
-|`run`||
-|`--no-git`|Skupp|
-|`--branch/--no-branch`|Whether to create a branch or checkout detached|
-|`--project`|The project you wish to upload to.|
-|`--entity`|The entity to scope the listing to.|
+|"run"||
+|"--no-git"|Skupp|
+|"--branch/--no-branch"|Whether to create a branch or checkout detached|
+|"--project"|The project you wish to upload to.|
+|"--entity"|The entity to scope the listing to.|
 
 
 
@@ -595,8 +595,8 @@ command.
 | **Options** | **Help** |
 |:--|:--|
 |context_settings=CONTEXT|Run any script with wandb|
-|`program||
-|`args`||
+|"program||
+|"args"||
 
 
 
@@ -614,7 +614,7 @@ command.
 
 | **Options** | **Help** |
 |:--|:--|
-|`online`|Enable W&B sync|
+|"online"|Enable W&B sync|
 
 
 
@@ -632,7 +632,7 @@ command.
 
 | **Options** | **Help** |
 |:--|:--|
-|`offline`|Disable W&B sync|
+|"offline"|Disable W&B sync|
 
 
 
@@ -650,7 +650,7 @@ command.
 
 | **Options** | **Help** |
 |:--|:--|
-|`on`||
+|"on"||
 
 
 
@@ -668,7 +668,7 @@ command.
 
 | **Options** | **Help** |
 |:--|:--|
-|`off`||
+|"off"||
 
 
 
@@ -686,8 +686,8 @@ command.
 
 | **Options** | **Help** |
 |:--|:--|
-|`status`|Show configuration settings|
-|`--settings/--no-settings`|Show the current settings|
+|"status"|Show configuration settings|
+|"--settings/--no-settings"|Show the current settings|
 
 
 
@@ -705,7 +705,7 @@ command.
 
 | **Options** | **Help** |
 |:--|:--|
-|`disabled`|Disable W&B.|
+|"disabled"|Disable W&B.|
 
 
 
@@ -723,7 +723,7 @@ command.
 
 | **Options** | **Help** |
 |:--|:--|
-|`enabled`|Enable W&B.|
+|"enabled"|Enable W&B.|
 
 
 
