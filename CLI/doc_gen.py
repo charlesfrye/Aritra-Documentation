@@ -27,7 +27,7 @@ def parse_class(class_member, filename, module_name):
     parent = ""
     if "bases" in class_member.keys():
         parent = ', '.join(class_member["bases"])
-    with open(f'{module_name}.txt', 'a') as fp:
+    with open(f'{module_name}.md', 'a') as fp:
         text = TEMPLATE.format(
             f'# {class_name}', #header
             f'{SOURCE_CODE}{filename}#L{class_location}', #source file in repo: https://github.com/ariG23498/Aritra-Documentation/blob/master/____
@@ -63,7 +63,7 @@ def parse_func(func_member, filename, module_name, level=1):
             if "args" in decoration.keys():
                 help_desc = PATTERN.findall(decoration["args"])
             help_table += """|{}|{}|""".format(help_name,help_desc)
-    with open(f'{module_name}.txt', 'a') as fp:
+    with open(f'{module_name}.md', 'a') as fp:
         text = TEMPLATE.format(
             f'{name}', #header
             f'{SOURCE_CODE}{filename}#L{func_location}', #source file in repo: https://github.com/ariG23498/Aritra-Documentation/blob/master/____
@@ -89,7 +89,7 @@ def main(filename):
     doc = ""
     if "docstring" in module_dict.keys():
         doc = module_dict["docstring"]
-    with open(f'{module_name}.txt', 'w') as fp:
+    with open(f'{module_name}.md', 'w') as fp:
         text = TEMPLATE.format(
             f'# {module_name}', #header
             f'{SOURCE_CODE}{filename}#L{module_location}', #source file in repo: https://github.com/ariG23498/Aritra-Documentation/blob/master/____
