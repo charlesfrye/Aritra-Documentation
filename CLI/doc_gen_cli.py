@@ -72,16 +72,17 @@ def cli_process(rw='w',param=''):
             op = False
         if commands and co:
             commands = """| **Commands** | **Description** |\n|:--|:--|\n""" + commands
-    with open("cli.md", rw) as fp:
-        fp.write(
-            TEMPLATE.format(
-                f"# {param}", # Heading
-                usage, # Usage
-                summary,
-                options, # Options
-                commands  # Commands
+    if usage or summary or options or commands:
+        with open("cli.md", rw) as fp:
+            fp.write(
+                TEMPLATE.format(
+                    f"# {param}", # Heading
+                    usage, # Usage
+                    summary,
+                    options, # Options
+                    commands  # Commands
+                )
             )
-        )
     return parsed_dict
 
 parsed_dict = cli_process()

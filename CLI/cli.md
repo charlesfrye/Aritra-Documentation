@@ -1,4 +1,4 @@
-# 
+# wandb
 
 ## Usage
 ` wandb [OPTIONS] COMMAND [ARGS]...`
@@ -126,14 +126,6 @@ command, see the wandb docker-run command.
 |--cmd|TEXT                The command to run in the container|
 |--no-tty|Run the command without a tty|
 |--help|Show this message and exit.|
-
-
-# docker-run
-
-
-
-
-
 
 
 # enabled
