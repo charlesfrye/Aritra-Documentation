@@ -68,10 +68,10 @@ def cli_process(rw='w',param=''):
             elif k == "Commands:":
                 commands += """|{}|{}|\n""".format(element[0],element[1])
         if options and op:
-            options = """| **Options** | **Description** |\n|:--|:--|\n""" + options
+            options = """## Options\n| **Options** | **Description** |\n|:--|:--|\n""" + options
             op = False
         if commands and co:
-            commands = """| **Commands** | **Description** |\n|:--|:--|\n""" + commands
+            commands = """## Commands\n| **Commands** | **Description** |\n|:--|:--|\n""" + commands
     if usage or summary or options or commands:
         with open("cli.md", rw) as fp:
             fp.write(

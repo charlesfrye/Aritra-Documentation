@@ -1,16 +1,18 @@
-# wandb
+# 
 
 ## Usage
 ` wandb [OPTIONS] COMMAND [ARGS]...`
 
 
 
+## Options
 | **Options** | **Description** |
 |:--|:--|
 |--version|Show the version and exit.|
 |--help|Show this message and exit.|
 
 
+## Commands
 | **Commands** | **Description** |
 |:--|:--|
 |agent|Run the W&B agent|
@@ -38,6 +40,7 @@
 ## Summary
  Run the W&B agent
 
+## Options
 | **Options** | **Description** |
 |:--|:--|
 |-p, --project|TEXT  The project of the sweep.|
@@ -54,11 +57,13 @@
 ## Summary
  Commands for interacting with artifacts
 
+## Options
 | **Options** | **Description** |
 |:--|:--|
 |--help|Show this message and exit.|
 
 
+## Commands
 | **Commands** | **Description** |
 |:--|:--|
 |get|Download an artifact from wandb|
@@ -72,6 +77,7 @@
 ## Summary
  Run the W&B local sweep controller
 
+## Options
 | **Options** | **Description** |
 |:--|:--|
 |--verbose|Display verbose output|
@@ -86,6 +92,7 @@
 ## Summary
  Disable W&B.
 
+## Options
 | **Options** | **Description** |
 |:--|:--|
 |--help|Show this message and exit.|
@@ -113,6 +120,7 @@ detect nvidia-docker on your system we will use the nvidia runtime.  If
 you just want wandb to set environment variable to an existing docker run
 command, see the wandb docker-run command.
 
+## Options
 | **Options** | **Description** |
 |:--|:--|
 |--nvidia|/ --no-nvidia    Use the nvidia runtime, defaults to nvidia if|
@@ -136,6 +144,7 @@ command, see the wandb docker-run command.
 ## Summary
  Enable W&B.
 
+## Options
 | **Options** | **Description** |
 |:--|:--|
 |--help|Show this message and exit.|
@@ -149,6 +158,7 @@ command, see the wandb docker-run command.
 ## Summary
  Configure a directory with Weights & Biases
 
+## Options
 | **Options** | **Description** |
 |:--|:--|
 |-p, --project|TEXT  The project to use.|
@@ -166,6 +176,7 @@ command, see the wandb docker-run command.
 ## Summary
  Launch local W&B container (Experimental)
 
+## Options
 | **Options** | **Description** |
 |:--|:--|
 |-p, --port|TEXT         The host port to bind W&B local on|
@@ -183,6 +194,7 @@ command, see the wandb docker-run command.
 ## Summary
  Login to Weights & Biases
 
+## Options
 | **Options** | **Description** |
 |:--|:--|
 |--cloud|Login to the cloud instead of local|
@@ -200,6 +212,7 @@ command, see the wandb docker-run command.
 ## Summary
  Disable W&B sync
 
+## Options
 | **Options** | **Description** |
 |:--|:--|
 |--help|Show this message and exit.|
@@ -213,6 +226,7 @@ command, see the wandb docker-run command.
 ## Summary
  Enable W&B sync
 
+## Options
 | **Options** | **Description** |
 |:--|:--|
 |--help|Show this message and exit.|
@@ -226,6 +240,7 @@ command, see the wandb docker-run command.
 ## Summary
  Pull files from Weights & Biases
 
+## Options
 | **Options** | **Description** |
 |:--|:--|
 |-p, --project|TEXT  The project you want to download.|
@@ -241,6 +256,7 @@ command, see the wandb docker-run command.
 ## Summary
  Restore code, config and docker state for a run
 
+## Options
 | **Options** | **Description** |
 |:--|:--|
 |--no-git|Skupp|
@@ -258,6 +274,7 @@ command, see the wandb docker-run command.
 ## Summary
  Show configuration settings
 
+## Options
 | **Options** | **Description** |
 |:--|:--|
 |--settings|/ --no-settings  Show the current settings|
@@ -272,6 +289,7 @@ command, see the wandb docker-run command.
 ## Summary
  Create a sweep
 
+## Options
 | **Options** | **Description** |
 |:--|:--|
 |-p, --project|TEXT  The project of the sweep.|
@@ -292,6 +310,7 @@ command, see the wandb docker-run command.
 ## Summary
  Upload an offline training directory to W&B
 
+## Options
 | **Options** | **Description** |
 |:--|:--|
 |--id|TEXT                       The run you want to upload to.|
