@@ -1,7 +1,9 @@
 # 
 
 ## Usage
-Usage: wandb [OPTIONS] COMMAND [ARGS]...
+` wandb [OPTIONS] COMMAND [ARGS]...`
+
+
 
 | **Options** | **Description** |
 |:--|:--|
@@ -31,8 +33,10 @@ Usage: wandb [OPTIONS] COMMAND [ARGS]...
 # agent
 
 ## Usage
-Usage: wandb agent [OPTIONS] SWEEP_ID
-Run the W&B agent
+` wandb agent [OPTIONS] SWEEP_ID`
+
+## Summary
+ Run the W&B agent
 
 | **Options** | **Description** |
 |:--|:--|
@@ -45,8 +49,10 @@ Run the W&B agent
 # artifact
 
 ## Usage
-Usage: wandb artifact [OPTIONS] COMMAND [ARGS]...
-Commands for interacting with artifacts
+` wandb artifact [OPTIONS] COMMAND [ARGS]...`
+
+## Summary
+ Commands for interacting with artifacts
 
 | **Options** | **Description** |
 |:--|:--|
@@ -61,8 +67,10 @@ Commands for interacting with artifacts
 # controller
 
 ## Usage
-Usage: wandb controller [OPTIONS] SWEEP_ID
-Run the W&B local sweep controller
+` wandb controller [OPTIONS] SWEEP_ID`
+
+## Summary
+ Run the W&B local sweep controller
 
 | **Options** | **Description** |
 |:--|:--|
@@ -73,8 +81,10 @@ Run the W&B local sweep controller
 # disabled
 
 ## Usage
-Usage: wandb disabled [OPTIONS]
-Disable W&B.
+` wandb disabled [OPTIONS]`
+
+## Summary
+ Disable W&B.
 
 | **Options** | **Description** |
 |:--|:--|
@@ -84,8 +94,10 @@ Disable W&B.
 # docker
 
 ## Usage
-Usage: wandb docker [OPTIONS] [DOCKER_RUN_ARGS]... [DOCKER_IMAGE]
-W&B docker lets you run your code in a docker image ensuring wandb is
+` wandb docker [OPTIONS] [DOCKER_RUN_ARGS]... [DOCKER_IMAGE]`
+
+## Summary
+ W&B docker lets you run your code in a docker image ensuring wandb is
 configured. It adds the WANDB_DOCKER and WANDB_API_KEY environment
 variables to your container and mounts the current directory in /app by
 default.  You can pass additional args which will be added to `docker run`
@@ -118,7 +130,8 @@ command, see the wandb docker-run command.
 
 # docker-run
 
-## Usage
+
+
 
 
 
@@ -126,8 +139,10 @@ command, see the wandb docker-run command.
 # enabled
 
 ## Usage
-Usage: wandb enabled [OPTIONS]
-Enable W&B.
+` wandb enabled [OPTIONS]`
+
+## Summary
+ Enable W&B.
 
 | **Options** | **Description** |
 |:--|:--|
@@ -137,8 +152,10 @@ Enable W&B.
 # init
 
 ## Usage
-Usage: wandb init [OPTIONS]
-Configure a directory with Weights & Biases
+` wandb init [OPTIONS]`
+
+## Summary
+ Configure a directory with Weights & Biases
 
 | **Options** | **Description** |
 |:--|:--|
@@ -152,8 +169,10 @@ Configure a directory with Weights & Biases
 # local
 
 ## Usage
-Usage: wandb local [OPTIONS]
-Launch local W&B container (Experimental)
+` wandb local [OPTIONS]`
+
+## Summary
+ Launch local W&B container (Experimental)
 
 | **Options** | **Description** |
 |:--|:--|
@@ -167,8 +186,10 @@ Launch local W&B container (Experimental)
 # login
 
 ## Usage
-Usage: wandb login [OPTIONS] [KEY]...
-Login to Weights & Biases
+` wandb login [OPTIONS] [KEY]...`
+
+## Summary
+ Login to Weights & Biases
 
 | **Options** | **Description** |
 |:--|:--|
@@ -182,8 +203,10 @@ Login to Weights & Biases
 # offline
 
 ## Usage
-Usage: wandb offline [OPTIONS]
-Disable W&B sync
+` wandb offline [OPTIONS]`
+
+## Summary
+ Disable W&B sync
 
 | **Options** | **Description** |
 |:--|:--|
@@ -193,8 +216,10 @@ Disable W&B sync
 # online
 
 ## Usage
-Usage: wandb online [OPTIONS]
-Enable W&B sync
+` wandb online [OPTIONS]`
+
+## Summary
+ Enable W&B sync
 
 | **Options** | **Description** |
 |:--|:--|
@@ -204,8 +229,10 @@ Enable W&B sync
 # pull
 
 ## Usage
-Usage: wandb pull [OPTIONS] RUN
-Pull files from Weights & Biases
+` wandb pull [OPTIONS] RUN`
+
+## Summary
+ Pull files from Weights & Biases
 
 | **Options** | **Description** |
 |:--|:--|
@@ -217,8 +244,10 @@ Pull files from Weights & Biases
 # restore
 
 ## Usage
-Usage: wandb restore [OPTIONS] RUN
-Restore code, config and docker state for a run
+` wandb restore [OPTIONS] RUN`
+
+## Summary
+ Restore code, config and docker state for a run
 
 | **Options** | **Description** |
 |:--|:--|
@@ -232,8 +261,10 @@ Restore code, config and docker state for a run
 # status
 
 ## Usage
-Usage: wandb status [OPTIONS]
-Show configuration settings
+` wandb status [OPTIONS]`
+
+## Summary
+ Show configuration settings
 
 | **Options** | **Description** |
 |:--|:--|
@@ -244,8 +275,10 @@ Show configuration settings
 # sweep
 
 ## Usage
-Usage: wandb sweep [OPTIONS] CONFIG_YAML
-Create a sweep
+` wandb sweep [OPTIONS] CONFIG_YAML`
+
+## Summary
+ Create a sweep
 
 | **Options** | **Description** |
 |:--|:--|
@@ -262,8 +295,10 @@ Create a sweep
 # sync
 
 ## Usage
-Usage: wandb sync [OPTIONS] [PATH]...
-Upload an offline training directory to W&B
+` wandb sync [OPTIONS] [PATH]...`
+
+## Summary
+ Upload an offline training directory to W&B
 
 | **Options** | **Description** |
 |:--|:--|

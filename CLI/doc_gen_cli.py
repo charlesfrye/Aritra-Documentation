@@ -6,7 +6,8 @@ KEYWORDS = ["Options:", "Commands:"]
 TEMPLATE = """
 {}
 
-## Usage
+{}
+
 {}
 
 {}
@@ -15,26 +16,34 @@ TEMPLATE = """
 """.strip()
 
 def process(document):
-  summary = []
-  keyword = None
-  parsed_dict = {}
+    summary = []
+    keyword = None
+    parsed_dict = {}
 
-  for line in document.split('\n'):
-    line = line.strip() #strip off the whitespace
-    if line == '':
-      # Check for no line
-      continue
-    if line in KEYWORDS:
-      parsed_dict[line] = []
-      keyword = line
-      continue
-    if keyword is None:
-      summary.append(line)
+    for line in document.split('\n'):
+        line = line.strip() #strip off the whitespace
+        if line == '':
+            # Check for no line
+            continue
+        if line in KEYWORDS:
+            parsed_dict[line] = []
+            keyword = line
+            continue
+        if keyword is None:
+            summary.append(line)
+        else:
+            extract = PATTERN.findall(line)
+            if extract:
+                parsed_dict[keyword].append([extract[0][0], extract[0][1]])
+    if len(summary) == 0:
+        return '', '', parsed_dict
+    elif len(summary) == 1:
+        return summary[0], '', parsed_dict
     else:
-      extract = PATTERN.findall(line)
-      if extract:
-        parsed_dict[keyword].append([extract[0][0], extract[0][1]])
-  return '\n'.join(summary), parsed_dict
+        usage = summary[0]
+        summary = '\n'.join(summary[1:])
+        return usage, summary, parsed_dict
+        
 
 def cli_process(rw='w',param=''):
     wandb = subprocess.run(
@@ -42,7 +51,12 @@ def cli_process(rw='w',param=''):
         shell=True,
         capture_output=True,
         text=True).stdout
-    summary, parsed_dict = process(wandb)
+    usage, summary, parsed_dict = process(wandb)
+    if usage:
+        usage = usage.split(':')
+        usage=f"## Usage\n`{usage[1]}`"
+    if summary:
+        summary=f"## Summary\n {summary}"
     options = ''
     commands = ''
     op = True
@@ -62,7 +76,8 @@ def cli_process(rw='w',param=''):
         fp.write(
             TEMPLATE.format(
                 f"# {param}", # Heading
-                f"{summary}", # Usage
+                usage, # Usage
+                summary,
                 options, # Options
                 commands  # Commands
             )
