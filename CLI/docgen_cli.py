@@ -74,9 +74,9 @@ def markdown_render(command):
     usage, summary, parsed_dict = process(command)
     if usage:
         usage = usage.split(':')
-        usage=f"## Usage\n`{usage[1]}`"
+        usage=f"**Usage**\n`{usage[1]}`"
     if summary:
-        summary=f"## Summary\n {summary}"
+        summary=f"**Summary**\n{summary}"
     options = ''
     commands = ''
     op = True
@@ -85,18 +85,19 @@ def markdown_render(command):
             if k == "Options:":
                 typ = element[1].split(' ')[0] if element[1].split(' ')[0].isupper() and element[1].split(' ')[0] != "W&B" else ''
                 des = ' '.join(list(filter(lambda x: x, element[1].split(' ')[1:]))) if element[1].split(' ')[0].isupper() else element[1]
-                # print('{}==>{}'.format(typ, des))
                 options += """|{}|{}|{}|\n""".format(element[0],typ,des) 
-            # elif k == "Commands:":
-            #     markdown_render(f'{command} {element[0]}')
         if options and op:
-            options = """## Options\n| **Options** | **Type** | **Description** |\n|:--|:--|:--|\n""" + options
+            options = """**Options**\n| **Options** | **Type** | **Description** |\n|:--|:--|:--|\n""" + options
             op = False
     if usage or summary or options or commands:
+        if len(command.split(' ')) > 2:
+            head = f'## {command}'
+        else:
+            head = f'# {command}'
         with open("cli.md", 'a') as fp:
             fp.write(
                 TEMPLATE.format(
-                    f"# {command}", # Heading
+                    head, # Heading
                     usage, # Usage
                     summary,
                     options, # Options
@@ -113,9 +114,9 @@ def markdown_render(command):
 usage, summary, parsed_dict = process('wandb')
 if usage:
     usage = usage.split(':')[1]
-    usage=f"## Usage\n`{usage}`"
+    usage=f"**Usage**\n`{usage}`"
 if summary:
-    summary=f"## Summary\n {summary}"
+    summary=f"**Summary**\n{summary}"
 options = ''
 commands = ''
 op_flag = True
@@ -125,18 +126,16 @@ for k,v in parsed_dict.items():
         if k == "Options:":
             typ = element[1].split(' ')[0] if element[1].split(' ')[0].isupper() and element[1].split(' ')[0] != "W&B" else ''
             des = ' '.join(list(filter(lambda x: x, element[1].split(' ')[1:]))) if element[1].split(' ')[0].isupper() else element[1]
-            # print('{}==>{}'.format(typ, des))
             options += """|{}|{}|{}|\n""".format(element[0],typ,des) 
         elif k == "Commands:":
             typ = element[1].split(' ')[0] if element[1].split(' ')[0].isupper() and element[1].split(' ')[0] != "W&B"  else ''
             des = ' '.join(list(filter(lambda x: x, element[1].split(' ')[1:]))) if element[1].split(' ')[0].isupper() else element[1]
-            # print('{}==>{}'.format(typ, des))
             commands += """|{}|{}|{}|\n""".format(element[0],typ,des)
     if options and op_flag:
-        options = """## Options\n| **Options** | **Type** | **Description** |\n|:--|:--|:--|\n""" + options
+        options = """**Options**\n| **Options** | **Type** | **Description** |\n|:--|:--|:--|\n""" + options
         op_flag = False
     if commands and co_flag:
-        commands = """## Commands\n| **Commands** | **Type** | **Description** |\n|:--|:--|:--|\n""" + commands
+        commands = """**Commands**\n| **Commands** | **Type** | **Description** |\n|:--|:--|:--|\n""" + commands
         co_flag = False
 if usage or summary or options or commands:
     with open("cli.md", 'w') as fp:

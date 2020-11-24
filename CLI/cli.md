@@ -1,18 +1,18 @@
 # wandb
 
-## Usage
+**Usage**
 ` wandb [OPTIONS] COMMAND [ARGS]...`
 
 
 
-## Options
+**Options**
 | **Options** | **Type** | **Description** |
 |:--|:--|:--|
 |--version||Show the version and exit.|
 |--help||Show this message and exit.|
 
 
-## Commands
+**Commands**
 | **Commands** | **Type** | **Description** |
 |:--|:--|:--|
 |agent||Run the W&B agent|
@@ -34,15 +34,15 @@
 |sync||Upload an offline training directory to W&B|
 # wandb agent
 
-## Usage
+**Usage**
 ` wandb agent [OPTIONS] SWEEP_ID`
 
-## Summary
- 
+**Summary**
+
 Run the W&B agent
 
 
-## Options
+**Options**
 | **Options** | **Type** | **Description** |
 |:--|:--|:--|
 |-p, --project|TEXT|The project of the sweep.|
@@ -53,31 +53,31 @@ Run the W&B agent
 
 # wandb artifact
 
-## Usage
+**Usage**
 ` wandb artifact [OPTIONS] COMMAND [ARGS]...`
 
-## Summary
- 
+**Summary**
+
 Commands for interacting with artifacts
 
 
-## Options
+**Options**
 | **Options** | **Type** | **Description** |
 |:--|:--|:--|
 |--help||Show this message and exit.|
 
 
-# wandb artifact get
+## wandb artifact get
 
-## Usage
+**Usage**
 ` wandb artifact get [OPTIONS] PATH`
 
-## Summary
- 
+**Summary**
+
 Download an artifact from wandb
 
 
-## Options
+**Options**
 | **Options** | **Type** | **Description** |
 |:--|:--|:--|
 |--root|TEXT|The directory you want to download the artifact to|
@@ -85,34 +85,34 @@ Download an artifact from wandb
 |--help||Show this message and exit.|
 
 
-# wandb artifact ls
+## wandb artifact ls
 
-## Usage
+**Usage**
 ` wandb artifact ls [OPTIONS] PATH`
 
-## Summary
- 
+**Summary**
+
 List all artifacts in a wandb project
 
 
-## Options
+**Options**
 | **Options** | **Type** | **Description** |
 |:--|:--|:--|
 |-t, --type|TEXT|The type of artifacts to list|
 |--help||Show this message and exit.|
 
 
-# wandb artifact put
+## wandb artifact put
 
-## Usage
+**Usage**
 ` wandb artifact put [OPTIONS] PATH`
 
-## Summary
- 
+**Summary**
+
 Upload an artifact to wandb
 
 
-## Options
+**Options**
 | **Options** | **Type** | **Description** |
 |:--|:--|:--|
 |-n, --name|TEXT|The name of the artifact to push:|
@@ -124,15 +124,15 @@ Upload an artifact to wandb
 
 # wandb controller
 
-## Usage
+**Usage**
 ` wandb controller [OPTIONS] SWEEP_ID`
 
-## Summary
- 
+**Summary**
+
 Run the W&B local sweep controller
 
 
-## Options
+**Options**
 | **Options** | **Type** | **Description** |
 |:--|:--|:--|
 |--verbose||Display verbose output|
@@ -141,15 +141,15 @@ Run the W&B local sweep controller
 
 # wandb disabled
 
-## Usage
+**Usage**
 ` wandb disabled [OPTIONS]`
 
-## Summary
- 
+**Summary**
+
 Disable W&B.
 
 
-## Options
+**Options**
 | **Options** | **Type** | **Description** |
 |:--|:--|:--|
 |--help||Show this message and exit.|
@@ -157,11 +157,11 @@ Disable W&B.
 
 # wandb docker
 
-## Usage
+**Usage**
 ` wandb docker [OPTIONS] [DOCKER_RUN_ARGS]... [DOCKER_IMAGE]`
 
-## Summary
- 
+**Summary**
+
 W&B docker lets you run your code in a docker image ensuring wandb is
 configured. It adds the WANDB_DOCKER and WANDB_API_KEY environment
 variables to your container and mounts the current directory in /app by
@@ -181,7 +181,7 @@ you just want wandb to set environment variable to an existing docker run
 command, see the wandb docker-run command.
 
 
-## Options
+**Options**
 | **Options** | **Type** | **Description** |
 |:--|:--|:--|
 |--nvidia||/ --no-nvidia    Use the nvidia runtime, defaults to nvidia if|
@@ -199,15 +199,15 @@ command, see the wandb docker-run command.
 
 # wandb enabled
 
-## Usage
+**Usage**
 ` wandb enabled [OPTIONS]`
 
-## Summary
- 
+**Summary**
+
 Enable W&B.
 
 
-## Options
+**Options**
 | **Options** | **Type** | **Description** |
 |:--|:--|:--|
 |--help||Show this message and exit.|
@@ -215,15 +215,15 @@ Enable W&B.
 
 # wandb init
 
-## Usage
+**Usage**
 ` wandb init [OPTIONS]`
 
-## Summary
- 
+**Summary**
+
 Configure a directory with Weights & Biases
 
 
-## Options
+**Options**
 | **Options** | **Type** | **Description** |
 |:--|:--|:--|
 |-p, --project|TEXT|The project to use.|
@@ -235,15 +235,15 @@ Configure a directory with Weights & Biases
 
 # wandb local
 
-## Usage
+**Usage**
 ` wandb local [OPTIONS]`
 
-## Summary
- 
+**Summary**
+
 Launch local W&B container (Experimental)
 
 
-## Options
+**Options**
 | **Options** | **Type** | **Description** |
 |:--|:--|:--|
 |-p, --port|TEXT|The host port to bind W&B local on|
@@ -255,15 +255,15 @@ Launch local W&B container (Experimental)
 
 # wandb login
 
-## Usage
+**Usage**
 ` wandb login [OPTIONS] [KEY]...`
 
-## Summary
- 
+**Summary**
+
 Login to Weights & Biases
 
 
-## Options
+**Options**
 | **Options** | **Type** | **Description** |
 |:--|:--|:--|
 |--cloud||Login to the cloud instead of local|
@@ -275,15 +275,15 @@ Login to Weights & Biases
 
 # wandb offline
 
-## Usage
+**Usage**
 ` wandb offline [OPTIONS]`
 
-## Summary
- 
+**Summary**
+
 Disable W&B sync
 
 
-## Options
+**Options**
 | **Options** | **Type** | **Description** |
 |:--|:--|:--|
 |--help||Show this message and exit.|
@@ -291,15 +291,15 @@ Disable W&B sync
 
 # wandb online
 
-## Usage
+**Usage**
 ` wandb online [OPTIONS]`
 
-## Summary
- 
+**Summary**
+
 Enable W&B sync
 
 
-## Options
+**Options**
 | **Options** | **Type** | **Description** |
 |:--|:--|:--|
 |--help||Show this message and exit.|
@@ -307,15 +307,15 @@ Enable W&B sync
 
 # wandb pull
 
-## Usage
+**Usage**
 ` wandb pull [OPTIONS] RUN`
 
-## Summary
- 
+**Summary**
+
 Pull files from Weights & Biases
 
 
-## Options
+**Options**
 | **Options** | **Type** | **Description** |
 |:--|:--|:--|
 |-p, --project|TEXT|The project you want to download.|
@@ -325,15 +325,15 @@ Pull files from Weights & Biases
 
 # wandb restore
 
-## Usage
+**Usage**
 ` wandb restore [OPTIONS] RUN`
 
-## Summary
- 
+**Summary**
+
 Restore code, config and docker state for a run
 
 
-## Options
+**Options**
 | **Options** | **Type** | **Description** |
 |:--|:--|:--|
 |--no-git||Skupp|
@@ -345,15 +345,15 @@ Restore code, config and docker state for a run
 
 # wandb status
 
-## Usage
+**Usage**
 ` wandb status [OPTIONS]`
 
-## Summary
- 
+**Summary**
+
 Show configuration settings
 
 
-## Options
+**Options**
 | **Options** | **Type** | **Description** |
 |:--|:--|:--|
 |--settings||/ --no-settings  Show the current settings|
@@ -362,15 +362,15 @@ Show configuration settings
 
 # wandb sweep
 
-## Usage
+**Usage**
 ` wandb sweep [OPTIONS] CONFIG_YAML`
 
-## Summary
- 
+**Summary**
+
 Create a sweep
 
 
-## Options
+**Options**
 | **Options** | **Type** | **Description** |
 |:--|:--|:--|
 |-p, --project|TEXT|The project of the sweep.|
@@ -385,15 +385,15 @@ Create a sweep
 
 # wandb sync
 
-## Usage
+**Usage**
 ` wandb sync [OPTIONS] [PATH]...`
 
-## Summary
- 
+**Summary**
+
 Upload an offline training directory to W&B
 
 
-## Options
+**Options**
 | **Options** | **Type** | **Description** |
 |:--|:--|:--|
 |--id|TEXT|The run you want to upload to.|
