@@ -65,14 +65,20 @@ def cli_process(rw='w',param=''):
     for k,v in parsed_dict.items():
         for element in v:
             if k == "Options:":
-                options += """|{}|{}|\n""".format(element[0],element[1]) 
+                typ = element[1].split(' ')[0] if element[1].split(' ')[0].isupper() else ''
+                des = ' '.join(list(filter(lambda x: x, element[1].split(' ')[1:]))) if element[1].split(' ')[0].isupper() else element[1]
+                # print('{}==>{}'.format(typ, des))
+                options += """|{}|{}|{}|\n""".format(element[0],typ,element[1]) 
             elif k == "Commands:":
-                commands += """|{}|{}|\n""".format(element[0],element[1])
+                typ = element[1].split(' ')[0] if element[1].split(' ')[0].isupper() else ''
+                des = ' '.join(list(filter(lambda x: x, element[1].split(' ')[1:]))) if element[1].split(' ')[0].isupper() else element[1]
+                # print('{}==>{}'.format(typ, des))
+                commands += """|{}|{}|{}|\n""".format(element[0],typ,element[1])
         if options and op:
-            options = """## Options\n| **Options** | **Description** |\n|:--|:--|\n""" + options
+            options = """## Options\n| **Options** | **Type** | **Description** |\n|:--|:--|:--|\n""" + options
             op = False
         if commands and co:
-            commands = """## Commands\n| **Commands** | **Description** |\n|:--|:--|\n""" + commands
+            commands = """## Commands\n| **Commands** | **Type** | **Description** |\n|:--|:--|:--|\n""" + commands
     if usage or summary or options or commands:
         with open("cli.md", rw) as fp:
             fp.write(
