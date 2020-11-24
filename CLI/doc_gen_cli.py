@@ -65,12 +65,12 @@ def cli_process(rw='w',param=''):
     for k,v in parsed_dict.items():
         for element in v:
             if k == "Options:":
-                typ = element[1].split(' ')[0] if element[1].split(' ')[0].isupper() else ''
+                typ = element[1].split(' ')[0] if element[1].split(' ')[0].isupper() and element[1].split(' ')[0] != "W&B" else ''
                 des = ' '.join(list(filter(lambda x: x, element[1].split(' ')[1:]))) if element[1].split(' ')[0].isupper() else element[1]
                 # print('{}==>{}'.format(typ, des))
                 options += """|{}|{}|{}|\n""".format(element[0],typ,des) 
             elif k == "Commands:":
-                typ = element[1].split(' ')[0] if element[1].split(' ')[0].isupper() else ''
+                typ = element[1].split(' ')[0] if element[1].split(' ')[0].isupper() and element[1].split(' ')[0] != "W&B"  else ''
                 des = ' '.join(list(filter(lambda x: x, element[1].split(' ')[1:]))) if element[1].split(' ')[0].isupper() else element[1]
                 # print('{}==>{}'.format(typ, des))
                 commands += """|{}|{}|{}|\n""".format(element[0],typ,des)
