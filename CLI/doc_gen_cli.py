@@ -68,12 +68,12 @@ def cli_process(rw='w',param=''):
                 typ = element[1].split(' ')[0] if element[1].split(' ')[0].isupper() else ''
                 des = ' '.join(list(filter(lambda x: x, element[1].split(' ')[1:]))) if element[1].split(' ')[0].isupper() else element[1]
                 # print('{}==>{}'.format(typ, des))
-                options += """|{}|{}|{}|\n""".format(element[0],typ,element[1]) 
+                options += """|{}|{}|{}|\n""".format(element[0],typ,des) 
             elif k == "Commands:":
                 typ = element[1].split(' ')[0] if element[1].split(' ')[0].isupper() else ''
                 des = ' '.join(list(filter(lambda x: x, element[1].split(' ')[1:]))) if element[1].split(' ')[0].isupper() else element[1]
                 # print('{}==>{}'.format(typ, des))
-                commands += """|{}|{}|{}|\n""".format(element[0],typ,element[1])
+                commands += """|{}|{}|{}|\n""".format(element[0],typ,des)
         if options and op:
             options = """## Options\n| **Options** | **Type** | **Description** |\n|:--|:--|:--|\n""" + options
             op = False
