@@ -22,9 +22,9 @@ def process(document):
 
     for line in document.split('\n'):
         line = line.strip() #strip off the whitespace
-        if line == '':
-            # Check for no line
-            continue
+        # if line == '':
+        #     # Check for no line
+        #     continue
         if line in KEYWORDS:
             parsed_dict[line] = []
             keyword = line
@@ -35,6 +35,7 @@ def process(document):
             extract = PATTERN.findall(line)
             if extract:
                 parsed_dict[keyword].append([extract[0][0], extract[0][1]])
+    
     if len(summary) == 0:
         return '', '', parsed_dict
     elif len(summary) == 1:

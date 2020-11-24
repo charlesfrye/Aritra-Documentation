@@ -38,7 +38,9 @@
 ` wandb agent [OPTIONS] SWEEP_ID`
 
 ## Summary
- Run the W&B agent
+ 
+Run the W&B agent
+
 
 ## Options
 | **Options** | **Description** |
@@ -55,7 +57,9 @@
 ` wandb artifact [OPTIONS] COMMAND [ARGS]...`
 
 ## Summary
- Commands for interacting with artifacts
+ 
+Commands for interacting with artifacts
+
 
 ## Options
 | **Options** | **Description** |
@@ -75,7 +79,9 @@
 ` wandb controller [OPTIONS] SWEEP_ID`
 
 ## Summary
- Run the W&B local sweep controller
+ 
+Run the W&B local sweep controller
+
 
 ## Options
 | **Options** | **Description** |
@@ -90,7 +96,9 @@
 ` wandb disabled [OPTIONS]`
 
 ## Summary
- Disable W&B.
+ 
+Disable W&B.
+
 
 ## Options
 | **Options** | **Description** |
@@ -104,21 +112,25 @@
 ` wandb docker [OPTIONS] [DOCKER_RUN_ARGS]... [DOCKER_IMAGE]`
 
 ## Summary
- W&B docker lets you run your code in a docker image ensuring wandb is
+ 
+W&B docker lets you run your code in a docker image ensuring wandb is
 configured. It adds the WANDB_DOCKER and WANDB_API_KEY environment
 variables to your container and mounts the current directory in /app by
 default.  You can pass additional args which will be added to `docker run`
 before the image name is declared, we'll choose a default image for you if
 one isn't passed:
+
 wandb docker -v /mnt/dataset:/app/data wandb docker gcr.io/kubeflow-
 images-public/tensorflow-1.12.0-notebook-cpu:v0.4.0 --jupyter wandb docker
 wandb/deepo:keras-gpu --no-tty --cmd "python train.py --epochs=5"
+
 By default we override the entrypoint to check for the existance of wandb
 and install it if not present.  If you pass the --jupyter flag we will
 ensure jupyter is installed and start jupyter lab on port 8888.  If we
 detect nvidia-docker on your system we will use the nvidia runtime.  If
 you just want wandb to set environment variable to an existing docker run
 command, see the wandb docker-run command.
+
 
 ## Options
 | **Options** | **Description** |
@@ -142,7 +154,9 @@ command, see the wandb docker-run command.
 ` wandb enabled [OPTIONS]`
 
 ## Summary
- Enable W&B.
+ 
+Enable W&B.
+
 
 ## Options
 | **Options** | **Description** |
@@ -156,7 +170,9 @@ command, see the wandb docker-run command.
 ` wandb init [OPTIONS]`
 
 ## Summary
- Configure a directory with Weights & Biases
+ 
+Configure a directory with Weights & Biases
+
 
 ## Options
 | **Options** | **Description** |
@@ -174,7 +190,9 @@ command, see the wandb docker-run command.
 ` wandb local [OPTIONS]`
 
 ## Summary
- Launch local W&B container (Experimental)
+ 
+Launch local W&B container (Experimental)
+
 
 ## Options
 | **Options** | **Description** |
@@ -192,7 +210,9 @@ command, see the wandb docker-run command.
 ` wandb login [OPTIONS] [KEY]...`
 
 ## Summary
- Login to Weights & Biases
+ 
+Login to Weights & Biases
+
 
 ## Options
 | **Options** | **Description** |
@@ -210,7 +230,9 @@ command, see the wandb docker-run command.
 ` wandb offline [OPTIONS]`
 
 ## Summary
- Disable W&B sync
+ 
+Disable W&B sync
+
 
 ## Options
 | **Options** | **Description** |
@@ -224,7 +246,9 @@ command, see the wandb docker-run command.
 ` wandb online [OPTIONS]`
 
 ## Summary
- Enable W&B sync
+ 
+Enable W&B sync
+
 
 ## Options
 | **Options** | **Description** |
@@ -238,7 +262,9 @@ command, see the wandb docker-run command.
 ` wandb pull [OPTIONS] RUN`
 
 ## Summary
- Pull files from Weights & Biases
+ 
+Pull files from Weights & Biases
+
 
 ## Options
 | **Options** | **Description** |
@@ -254,7 +280,9 @@ command, see the wandb docker-run command.
 ` wandb restore [OPTIONS] RUN`
 
 ## Summary
- Restore code, config and docker state for a run
+ 
+Restore code, config and docker state for a run
+
 
 ## Options
 | **Options** | **Description** |
@@ -272,7 +300,9 @@ command, see the wandb docker-run command.
 ` wandb status [OPTIONS]`
 
 ## Summary
- Show configuration settings
+ 
+Show configuration settings
+
 
 ## Options
 | **Options** | **Description** |
@@ -287,7 +317,9 @@ command, see the wandb docker-run command.
 ` wandb sweep [OPTIONS] CONFIG_YAML`
 
 ## Summary
- Create a sweep
+ 
+Create a sweep
+
 
 ## Options
 | **Options** | **Description** |
@@ -308,7 +340,9 @@ command, see the wandb docker-run command.
 ` wandb sync [OPTIONS] [PATH]...`
 
 ## Summary
- Upload an offline training directory to W&B
+ 
+Upload an offline training directory to W&B
+
 
 ## Options
 | **Options** | **Description** |
