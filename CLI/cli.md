@@ -1,4 +1,4 @@
-# 
+# wandb
 
 ## Usage
 ` wandb [OPTIONS] COMMAND [ARGS]...`
@@ -32,7 +32,7 @@
 |status||Show configuration settings|
 |sweep||Create a sweep|
 |sync||Upload an offline training directory to W&B|
-# agent
+# wandb agent
 
 ## Usage
 ` wandb agent [OPTIONS] SWEEP_ID`
@@ -51,7 +51,7 @@ Run the W&B agent
 |--help||Show this message and exit.|
 
 
-# artifact
+# wandb artifact
 
 ## Usage
 ` wandb artifact [OPTIONS] COMMAND [ARGS]...`
@@ -67,13 +67,62 @@ Commands for interacting with artifacts
 |--help||Show this message and exit.|
 
 
-## Commands
-| **Commands** | **Type** | **Description** |
+# wandb artifact get
+
+## Usage
+` wandb artifact get [OPTIONS] PATH`
+
+## Summary
+ 
+Download an artifact from wandb
+
+
+## Options
+| **Options** | **Type** | **Description** |
 |:--|:--|:--|
-|get||Download an artifact from wandb|
-|ls||List all artifacts in a wandb project|
-|put||Upload an artifact to wandb|
-# controller
+|--root|TEXT|The directory you want to download the artifact to|
+|--type|TEXT|The type of artifact you are downloading|
+|--help||Show this message and exit.|
+
+
+# wandb artifact ls
+
+## Usage
+` wandb artifact ls [OPTIONS] PATH`
+
+## Summary
+ 
+List all artifacts in a wandb project
+
+
+## Options
+| **Options** | **Type** | **Description** |
+|:--|:--|:--|
+|-t, --type|TEXT|The type of artifacts to list|
+|--help||Show this message and exit.|
+
+
+# wandb artifact put
+
+## Usage
+` wandb artifact put [OPTIONS] PATH`
+
+## Summary
+ 
+Upload an artifact to wandb
+
+
+## Options
+| **Options** | **Type** | **Description** |
+|:--|:--|:--|
+|-n, --name|TEXT|The name of the artifact to push:|
+|-d, --description|TEXT|A description of this artifact|
+|-t, --type|TEXT|The type of the artifact|
+|-a, --alias|TEXT|An alias to apply to this artifact|
+|--help||Show this message and exit.|
+
+
+# wandb controller
 
 ## Usage
 ` wandb controller [OPTIONS] SWEEP_ID`
@@ -90,7 +139,7 @@ Run the W&B local sweep controller
 |--help||Show this message and exit.|
 
 
-# disabled
+# wandb disabled
 
 ## Usage
 ` wandb disabled [OPTIONS]`
@@ -106,7 +155,7 @@ Disable W&B.
 |--help||Show this message and exit.|
 
 
-# docker
+# wandb docker
 
 ## Usage
 ` wandb docker [OPTIONS] [DOCKER_RUN_ARGS]... [DOCKER_IMAGE]`
@@ -148,7 +197,7 @@ command, see the wandb docker-run command.
 |--help||Show this message and exit.|
 
 
-# enabled
+# wandb enabled
 
 ## Usage
 ` wandb enabled [OPTIONS]`
@@ -164,7 +213,7 @@ Enable W&B.
 |--help||Show this message and exit.|
 
 
-# init
+# wandb init
 
 ## Usage
 ` wandb init [OPTIONS]`
@@ -184,7 +233,7 @@ Configure a directory with Weights & Biases
 |--help||Show this message and exit.|
 
 
-# local
+# wandb local
 
 ## Usage
 ` wandb local [OPTIONS]`
@@ -204,7 +253,7 @@ Launch local W&B container (Experimental)
 |--help||Show this message and exit.|
 
 
-# login
+# wandb login
 
 ## Usage
 ` wandb login [OPTIONS] [KEY]...`
@@ -224,7 +273,7 @@ Login to Weights & Biases
 |--help||Show this message and exit.|
 
 
-# offline
+# wandb offline
 
 ## Usage
 ` wandb offline [OPTIONS]`
@@ -240,7 +289,7 @@ Disable W&B sync
 |--help||Show this message and exit.|
 
 
-# online
+# wandb online
 
 ## Usage
 ` wandb online [OPTIONS]`
@@ -256,7 +305,7 @@ Enable W&B sync
 |--help||Show this message and exit.|
 
 
-# pull
+# wandb pull
 
 ## Usage
 ` wandb pull [OPTIONS] RUN`
@@ -274,7 +323,7 @@ Pull files from Weights & Biases
 |--help||Show this message and exit.|
 
 
-# restore
+# wandb restore
 
 ## Usage
 ` wandb restore [OPTIONS] RUN`
@@ -294,7 +343,7 @@ Restore code, config and docker state for a run
 |--help||Show this message and exit.|
 
 
-# status
+# wandb status
 
 ## Usage
 ` wandb status [OPTIONS]`
@@ -311,7 +360,7 @@ Show configuration settings
 |--help||Show this message and exit.|
 
 
-# sweep
+# wandb sweep
 
 ## Usage
 ` wandb sweep [OPTIONS] CONFIG_YAML`
@@ -334,7 +383,7 @@ Create a sweep
 |--help||Show this message and exit.|
 
 
-# sync
+# wandb sync
 
 ## Usage
 ` wandb sync [OPTIONS] [PATH]...`
