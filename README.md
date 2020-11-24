@@ -3,7 +3,8 @@ description: Automating the documentation
 ---
 
 # README
-```
+
+```text
 .
 ├── CODE [houses the source code files]
 |
@@ -16,11 +17,13 @@ description: Automating the documentation
 ```
 
 ## Usage
-Put all of the code in the `CODE directory`
-Run the `run_script.py` as follows:
+
+Put all of the code in the `CODE directory` Run the `run_script.py` as follows:
+
 ```bash
 $ pip install mydocstring
 $ python run_script
 ```
 
 The generated text pops up in the `DOCS` folder
+
