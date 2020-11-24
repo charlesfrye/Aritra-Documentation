@@ -1,6 +1,7 @@
 # wandb
 
 **Usage**
+
 ` wandb [OPTIONS] COMMAND [ARGS]...`
 
 
@@ -35,6 +36,7 @@
 # wandb agent
 
 **Usage**
+
 ` wandb agent [OPTIONS] SWEEP_ID`
 
 **Summary**
@@ -54,6 +56,7 @@ Run the W&B agent
 # wandb artifact
 
 **Usage**
+
 ` wandb artifact [OPTIONS] COMMAND [ARGS]...`
 
 **Summary**
@@ -70,6 +73,7 @@ Commands for interacting with artifacts
 ## wandb artifact get
 
 **Usage**
+
 ` wandb artifact get [OPTIONS] PATH`
 
 **Summary**
@@ -88,6 +92,7 @@ Download an artifact from wandb
 ## wandb artifact ls
 
 **Usage**
+
 ` wandb artifact ls [OPTIONS] PATH`
 
 **Summary**
@@ -105,6 +110,7 @@ List all artifacts in a wandb project
 ## wandb artifact put
 
 **Usage**
+
 ` wandb artifact put [OPTIONS] PATH`
 
 **Summary**
@@ -125,6 +131,7 @@ Upload an artifact to wandb
 # wandb controller
 
 **Usage**
+
 ` wandb controller [OPTIONS] SWEEP_ID`
 
 **Summary**
@@ -142,6 +149,7 @@ Run the W&B local sweep controller
 # wandb disabled
 
 **Usage**
+
 ` wandb disabled [OPTIONS]`
 
 **Summary**
@@ -158,6 +166,7 @@ Disable W&B.
 # wandb docker
 
 **Usage**
+
 ` wandb docker [OPTIONS] [DOCKER_RUN_ARGS]... [DOCKER_IMAGE]`
 
 **Summary**
@@ -200,6 +209,7 @@ command, see the wandb docker-run command.
 # wandb enabled
 
 **Usage**
+
 ` wandb enabled [OPTIONS]`
 
 **Summary**
@@ -216,6 +226,7 @@ Enable W&B.
 # wandb init
 
 **Usage**
+
 ` wandb init [OPTIONS]`
 
 **Summary**
@@ -236,6 +247,7 @@ Configure a directory with Weights & Biases
 # wandb local
 
 **Usage**
+
 ` wandb local [OPTIONS]`
 
 **Summary**
@@ -256,6 +268,7 @@ Launch local W&B container (Experimental)
 # wandb login
 
 **Usage**
+
 ` wandb login [OPTIONS] [KEY]...`
 
 **Summary**
@@ -276,6 +289,7 @@ Login to Weights & Biases
 # wandb offline
 
 **Usage**
+
 ` wandb offline [OPTIONS]`
 
 **Summary**
@@ -292,6 +306,7 @@ Disable W&B sync
 # wandb online
 
 **Usage**
+
 ` wandb online [OPTIONS]`
 
 **Summary**
@@ -308,6 +323,7 @@ Enable W&B sync
 # wandb pull
 
 **Usage**
+
 ` wandb pull [OPTIONS] RUN`
 
 **Summary**
@@ -326,6 +342,7 @@ Pull files from Weights & Biases
 # wandb restore
 
 **Usage**
+
 ` wandb restore [OPTIONS] RUN`
 
 **Summary**
@@ -346,6 +363,7 @@ Restore code, config and docker state for a run
 # wandb status
 
 **Usage**
+
 ` wandb status [OPTIONS]`
 
 **Summary**
@@ -363,6 +381,7 @@ Show configuration settings
 # wandb sweep
 
 **Usage**
+
 ` wandb sweep [OPTIONS] CONFIG_YAML`
 
 **Summary**
@@ -386,6 +405,7 @@ Create a sweep
 # wandb sync
 
 **Usage**
+
 ` wandb sync [OPTIONS] [PATH]...`
 
 **Summary**

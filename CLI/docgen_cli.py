@@ -74,7 +74,7 @@ def markdown_render(command):
     usage, summary, parsed_dict = process(command)
     if usage:
         usage = usage.split(':')
-        usage=f"**Usage**\n`{usage[1]}`"
+        usage=f"**Usage**\n\n`{usage[1]}`"
     if summary:
         summary=f"**Summary**\n{summary}"
     options = ''
@@ -114,7 +114,7 @@ def markdown_render(command):
 usage, summary, parsed_dict = process('wandb')
 if usage:
     usage = usage.split(':')[1]
-    usage=f"**Usage**\n`{usage}`"
+    usage=f"**Usage**\n\n`{usage}`"
 if summary:
     summary=f"**Summary**\n{summary}"
 options = ''
