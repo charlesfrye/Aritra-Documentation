@@ -7,32 +7,32 @@
 
 
 **Options**
-| **Options** | **Type** | **Description** |
+| **Options** | **Description** |
 |:--|:--|:--|
-|--version||Show the version and exit.|
-|--help||Show this message and exit.|
+|--version|Show the version and exit.|
+|--help|Show this message and exit.|
 
 
 **Commands**
-| **Commands** | **Type** | **Description** |
+| **Commands** | **Description** |
 |:--|:--|:--|
-|agent||Run the W&B agent|
-|artifact||Commands for interacting with artifacts|
-|controller||Run the W&B local sweep controller|
-|disabled||Disable W&B.|
-|docker||docker lets you run your code in a docker image ensuring...|
-|docker-run||Simple wrapper for `docker run` which sets W&B environment...|
-|enabled||Enable W&B.|
-|init||Configure a directory with Weights & Biases|
-|local||Launch local W&B container (Experimental)|
-|login||Login to Weights & Biases|
-|offline||Disable W&B sync|
-|online||Enable W&B sync|
-|pull||Pull files from Weights & Biases|
-|restore||Restore code, config and docker state for a run|
-|status||Show configuration settings|
-|sweep||Create a sweep|
-|sync||Upload an offline training directory to W&B|
+|agent|Run the W&B agent|
+|artifact|Commands for interacting with artifacts|
+|controller|Run the W&B local sweep controller|
+|disabled|Disable W&B.|
+|docker|docker lets you run your code in a docker image ensuring...|
+|docker-run|Simple wrapper for `docker run` which sets W&B environment...|
+|enabled|Enable W&B.|
+|init|Configure a directory with Weights & Biases|
+|local|Launch local W&B container (Experimental)|
+|login|Login to Weights & Biases|
+|offline|Disable W&B sync|
+|online|Enable W&B sync|
+|pull|Pull files from Weights & Biases|
+|restore|Restore code, config and docker state for a run|
+|status|Show configuration settings|
+|sweep|Create a sweep|
+|sync|Upload an offline training directory to W&B|
 # wandb agent
 
 **Usage**
@@ -45,12 +45,12 @@ Run the W&B agent
 
 
 **Options**
-| **Options** | **Type** | **Description** |
+| **Options** | **Description** |
 |:--|:--|:--|
-|-p, --project|TEXT|The project of the sweep.|
-|-e, --entity|TEXT|The entity scope for the project.|
-|--count|INTEGER|The max number of runs for this agent.|
-|--help||Show this message and exit.|
+|-p, --project|The project of the sweep.|
+|-e, --entity|The entity scope for the project.|
+|--count|The max number of runs for this agent.|
+|--help|Show this message and exit.|
 
 
 # wandb artifact
@@ -65,9 +65,9 @@ Commands for interacting with artifacts
 
 
 **Options**
-| **Options** | **Type** | **Description** |
+| **Options** | **Description** |
 |:--|:--|:--|
-|--help||Show this message and exit.|
+|--help|Show this message and exit.|
 
 
 ## wandb artifact get
@@ -82,11 +82,11 @@ Download an artifact from wandb
 
 
 **Options**
-| **Options** | **Type** | **Description** |
+| **Options** | **Description** |
 |:--|:--|:--|
-|--root|TEXT|The directory you want to download the artifact to|
-|--type|TEXT|The type of artifact you are downloading|
-|--help||Show this message and exit.|
+|--root|The directory you want to download the artifact to|
+|--type|The type of artifact you are downloading|
+|--help|Show this message and exit.|
 
 
 ## wandb artifact ls
@@ -101,10 +101,10 @@ List all artifacts in a wandb project
 
 
 **Options**
-| **Options** | **Type** | **Description** |
+| **Options** | **Description** |
 |:--|:--|:--|
-|-t, --type|TEXT|The type of artifacts to list|
-|--help||Show this message and exit.|
+|-t, --type|The type of artifacts to list|
+|--help|Show this message and exit.|
 
 
 ## wandb artifact put
@@ -119,13 +119,13 @@ Upload an artifact to wandb
 
 
 **Options**
-| **Options** | **Type** | **Description** |
+| **Options** | **Description** |
 |:--|:--|:--|
-|-n, --name|TEXT|The name of the artifact to push:|
-|-d, --description|TEXT|A description of this artifact|
-|-t, --type|TEXT|The type of the artifact|
-|-a, --alias|TEXT|An alias to apply to this artifact|
-|--help||Show this message and exit.|
+|-n, --name|The name of the artifact to push:|
+|-d, --description|A description of this artifact|
+|-t, --type|The type of the artifact|
+|-a, --alias|An alias to apply to this artifact|
+|--help|Show this message and exit.|
 
 
 # wandb controller
@@ -140,10 +140,10 @@ Run the W&B local sweep controller
 
 
 **Options**
-| **Options** | **Type** | **Description** |
+| **Options** | **Description** |
 |:--|:--|:--|
-|--verbose||Display verbose output|
-|--help||Show this message and exit.|
+|--verbose|Display verbose output|
+|--help|Show this message and exit.|
 
 
 # wandb disabled
@@ -158,9 +158,9 @@ Disable W&B.
 
 
 **Options**
-| **Options** | **Type** | **Description** |
+| **Options** | **Description** |
 |:--|:--|:--|
-|--help||Show this message and exit.|
+|--help|Show this message and exit.|
 
 
 # wandb docker
@@ -191,19 +191,19 @@ command, see the wandb docker-run command.
 
 
 **Options**
-| **Options** | **Type** | **Description** |
+| **Options** | **Description** |
 |:--|:--|:--|
-|--nvidia||/ --no-nvidia    Use the nvidia runtime, defaults to nvidia if|
-|nvidia-docker||is present|
-|--digest||Output the image digest and exit|
-|--jupyter||/ --no-jupyter  Run jupyter lab in the container|
-|--dir|TEXT|Which directory to mount the code in the container|
-|--no-dir||Don't mount the current directory|
-|--shell|TEXT|The shell to start the container with|
-|--port|TEXT|The host port to bind jupyter on|
-|--cmd|TEXT|The command to run in the container|
-|--no-tty||Run the command without a tty|
-|--help||Show this message and exit.|
+|--nvidia|/ --no-nvidia    Use the nvidia runtime, defaults to nvidia if|
+|nvidia-docker|is present|
+|--digest|Output the image digest and exit|
+|--jupyter|/ --no-jupyter  Run jupyter lab in the container|
+|--dir|Which directory to mount the code in the container|
+|--no-dir|Don't mount the current directory|
+|--shell|The shell to start the container with|
+|--port|The host port to bind jupyter on|
+|--cmd|The command to run in the container|
+|--no-tty|Run the command without a tty|
+|--help|Show this message and exit.|
 
 
 # wandb enabled
@@ -218,9 +218,9 @@ Enable W&B.
 
 
 **Options**
-| **Options** | **Type** | **Description** |
+| **Options** | **Description** |
 |:--|:--|:--|
-|--help||Show this message and exit.|
+|--help|Show this message and exit.|
 
 
 # wandb init
@@ -235,13 +235,13 @@ Configure a directory with Weights & Biases
 
 
 **Options**
-| **Options** | **Type** | **Description** |
+| **Options** | **Description** |
 |:--|:--|:--|
-|-p, --project|TEXT|The project to use.|
-|-e, --entity|TEXT|The entity to scope the project to.|
-|--reset||Reset settings|
-|-m, --mode|TEXT|Can be "online", "offline" or "disabled". Defaults to|
-|--help||Show this message and exit.|
+|-p, --project|The project to use.|
+|-e, --entity|The entity to scope the project to.|
+|--reset|Reset settings|
+|-m, --mode|Can be "online", "offline" or "disabled". Defaults to|
+|--help|Show this message and exit.|
 
 
 # wandb local
@@ -256,13 +256,13 @@ Launch local W&B container (Experimental)
 
 
 **Options**
-| **Options** | **Type** | **Description** |
+| **Options** | **Description** |
 |:--|:--|:--|
-|-p, --port|TEXT|The host port to bind W&B local on|
-|-e, --env|TEXT|Env vars to pass to wandb/local|
-|--daemon||/ --no-daemon  Run or don't run in daemon mode|
-|--upgrade||Upgrade to the most recent version|
-|--help||Show this message and exit.|
+|-p, --port|The host port to bind W&B local on|
+|-e, --env|Env vars to pass to wandb/local|
+|--daemon|/ --no-daemon  Run or don't run in daemon mode|
+|--upgrade|Upgrade to the most recent version|
+|--help|Show this message and exit.|
 
 
 # wandb login
@@ -277,13 +277,13 @@ Login to Weights & Biases
 
 
 **Options**
-| **Options** | **Type** | **Description** |
+| **Options** | **Description** |
 |:--|:--|:--|
-|--cloud||Login to the cloud instead of local|
-|--host|TEXT|Login to a specific instance of W&B|
-|--relogin||Force relogin if already logged in.|
-|--anonymously||Log in anonymously|
-|--help||Show this message and exit.|
+|--cloud|Login to the cloud instead of local|
+|--host|Login to a specific instance of W&B|
+|--relogin|Force relogin if already logged in.|
+|--anonymously|Log in anonymously|
+|--help|Show this message and exit.|
 
 
 # wandb offline
@@ -298,9 +298,9 @@ Disable W&B sync
 
 
 **Options**
-| **Options** | **Type** | **Description** |
+| **Options** | **Description** |
 |:--|:--|:--|
-|--help||Show this message and exit.|
+|--help|Show this message and exit.|
 
 
 # wandb online
@@ -315,9 +315,9 @@ Enable W&B sync
 
 
 **Options**
-| **Options** | **Type** | **Description** |
+| **Options** | **Description** |
 |:--|:--|:--|
-|--help||Show this message and exit.|
+|--help|Show this message and exit.|
 
 
 # wandb pull
@@ -332,11 +332,11 @@ Pull files from Weights & Biases
 
 
 **Options**
-| **Options** | **Type** | **Description** |
+| **Options** | **Description** |
 |:--|:--|:--|
-|-p, --project|TEXT|The project you want to download.|
-|-e, --entity|TEXT|The entity to scope the listing to.|
-|--help||Show this message and exit.|
+|-p, --project|The project you want to download.|
+|-e, --entity|The entity to scope the listing to.|
+|--help|Show this message and exit.|
 
 
 # wandb restore
@@ -351,13 +351,13 @@ Restore code, config and docker state for a run
 
 
 **Options**
-| **Options** | **Type** | **Description** |
+| **Options** | **Description** |
 |:--|:--|:--|
-|--no-git||Skupp|
-|--branch||/ --no-branch  Whether to create a branch or checkout detached|
-|-p, --project|TEXT|The project you wish to upload to.|
-|-e, --entity|TEXT|The entity to scope the listing to.|
-|--help||Show this message and exit.|
+|--no-git|Skupp|
+|--branch|/ --no-branch  Whether to create a branch or checkout detached|
+|-p, --project|The project you wish to upload to.|
+|-e, --entity|The entity to scope the listing to.|
+|--help|Show this message and exit.|
 
 
 # wandb status
@@ -372,10 +372,10 @@ Show configuration settings
 
 
 **Options**
-| **Options** | **Type** | **Description** |
+| **Options** | **Description** |
 |:--|:--|:--|
-|--settings||/ --no-settings  Show the current settings|
-|--help||Show this message and exit.|
+|--settings|/ --no-settings  Show the current settings|
+|--help|Show this message and exit.|
 
 
 # wandb sweep
@@ -390,16 +390,16 @@ Create a sweep
 
 
 **Options**
-| **Options** | **Type** | **Description** |
+| **Options** | **Description** |
 |:--|:--|:--|
-|-p, --project|TEXT|The project of the sweep.|
-|-e, --entity|TEXT|The entity scope for the project.|
-|--controller||Run local controller|
-|--verbose||Display verbose output|
-|--name|TEXT|Set sweep name|
-|--program|TEXT|Set sweep program|
-|--update|TEXT|Update pending sweep|
-|--help||Show this message and exit.|
+|-p, --project|The project of the sweep.|
+|-e, --entity|The entity scope for the project.|
+|--controller|Run local controller|
+|--verbose|Display verbose output|
+|--name|Set sweep name|
+|--program|Set sweep program|
+|--update|Update pending sweep|
+|--help|Show this message and exit.|
 
 
 # wandb sync
@@ -414,27 +414,27 @@ Upload an offline training directory to W&B
 
 
 **Options**
-| **Options** | **Type** | **Description** |
+| **Options** | **Description** |
 |:--|:--|:--|
-|--id|TEXT|The run you want to upload to.|
-|-p, --project|TEXT|The project you want to upload to.|
-|-e, --entity|TEXT|The entity to scope to.|
-|--include-globs|TEXT|Comma seperated list of globs to include.|
-|--exclude-globs|TEXT|Comma seperated list of globs to exclude.|
-|--include-online||/ --no-include-online|
-|Include||online runs|
-|--include-offline||/ --no-include-offline|
-|Include||offline runs|
-|--include-synced||/ --no-include-synced|
-|Include||synced runs|
-|--mark-synced||/ --no-mark-synced|
-|Mark||runs as synced|
-|--sync-all||Sync all runs|
-|--clean||Delete synced runs|
-|--clean-old-hours|INTEGER|Delete runs created before this many hours.|
-|To||be used alongside --clean flag.|
-|--clean-force||Clean without confirmation prompt.|
-|--show|INTEGER|Number of runs to show|
-|--help||Show this message and exit.|
+|--id|The run you want to upload to.|
+|-p, --project|The project you want to upload to.|
+|-e, --entity|The entity to scope to.|
+|--include-globs|Comma seperated list of globs to include.|
+|--exclude-globs|Comma seperated list of globs to exclude.|
+|--include-online|/ --no-include-online|
+|Include|online runs|
+|--include-offline|/ --no-include-offline|
+|Include|offline runs|
+|--include-synced|/ --no-include-synced|
+|Include|synced runs|
+|--mark-synced|/ --no-mark-synced|
+|Mark|runs as synced|
+|--sync-all|Sync all runs|
+|--clean|Delete synced runs|
+|--clean-old-hours|Delete runs created before this many hours.|
+|To|be used alongside --clean flag.|
+|--clean-force|Clean without confirmation prompt.|
+|--show|Number of runs to show|
+|--help|Show this message and exit.|
 
 

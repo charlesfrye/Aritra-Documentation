@@ -83,11 +83,10 @@ def markdown_render(command):
     for k,v in parsed_dict.items():
         for element in v:
             if k == "Options:":
-                typ = element[1].split(' ')[0] if element[1].split(' ')[0].isupper() and element[1].split(' ')[0] != "W&B" else ''
                 des = ' '.join(list(filter(lambda x: x, element[1].split(' ')[1:]))) if element[1].split(' ')[0].isupper() else element[1]
-                options += """|{}|{}|{}|\n""".format(element[0],typ,des) 
+                options += """|{}|{}|\n""".format(element[0],des) 
         if options and op:
-            options = """**Options**\n| **Options** | **Type** | **Description** |\n|:--|:--|:--|\n""" + options
+            options = """**Options**\n| **Options** | **Description** |\n|:--|:--|:--|\n""" + options
             op = False
     if usage or summary or options or commands:
         if len(command.split(' ')) > 2:
@@ -124,18 +123,16 @@ co_flag = True
 for k,v in parsed_dict.items():
     for element in v:
         if k == "Options:":
-            typ = element[1].split(' ')[0] if element[1].split(' ')[0].isupper() and element[1].split(' ')[0] != "W&B" else ''
             des = ' '.join(list(filter(lambda x: x, element[1].split(' ')[1:]))) if element[1].split(' ')[0].isupper() else element[1]
-            options += """|{}|{}|{}|\n""".format(element[0],typ,des) 
+            options += """|{}|{}|\n""".format(element[0],des) 
         elif k == "Commands:":
-            typ = element[1].split(' ')[0] if element[1].split(' ')[0].isupper() and element[1].split(' ')[0] != "W&B"  else ''
             des = ' '.join(list(filter(lambda x: x, element[1].split(' ')[1:]))) if element[1].split(' ')[0].isupper() else element[1]
-            commands += """|{}|{}|{}|\n""".format(element[0],typ,des)
+            commands += """|{}|{}|\n""".format(element[0],des)
     if options and op_flag:
-        options = """**Options**\n| **Options** | **Type** | **Description** |\n|:--|:--|:--|\n""" + options
+        options = """**Options**\n| **Options** | **Description** |\n|:--|:--|:--|\n""" + options
         op_flag = False
     if commands and co_flag:
-        commands = """**Commands**\n| **Commands** | **Type** | **Description** |\n|:--|:--|:--|\n""" + commands
+        commands = """**Commands**\n| **Commands** | **Description** |\n|:--|:--|:--|\n""" + commands
         co_flag = False
 if usage or summary or options or commands:
     with open("cli.md", 'w') as fp:
