@@ -1,15 +1,6 @@
-
-
-``
-
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_login.py#L0-#L0)
-****
-    
 Log in to Weights & Biases, authenticating your machine to log data to your
 account.
-    
 # login
-
 `def login(anonymous=None, key=None, relogin=None, host=None, force=None): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_login.py#L22-#L42)

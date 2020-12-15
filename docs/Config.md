@@ -1,14 +1,5 @@
-
-
-``
-
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_config.py#L0-#L0)
-****
-    
 config.
-    
 # Config
-
 `class Config(object):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_config.py#L28-#L243)
@@ -85,7 +76,6 @@ wandb.config.update(flags.FLAGS)  # adds all of the tensorflow flags to config
 |  |  | 4, "batch_size": 32}) |
 | default |  | 8)') |
 ## persist
-
 `def persist(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_config.py#L163-#L166)
@@ -94,7 +84,6 @@ wandb.config.update(flags.FLAGS)  # adds all of the tensorflow flags to config
 Calls the callback if it's set
     
 ## _sanitize_val
-
 `def _sanitize_val(self, val): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_config.py#L222-#L243)

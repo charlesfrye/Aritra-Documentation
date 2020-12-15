@@ -1,34 +1,22 @@
-
-
-``
-
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L0-#L0)
-****
-    
 This module configures settings for wandb runs.
 
 Order of loading settings: (differs from priority)
-defaults
-environment
-wandb.setup(settings=)
-system_config
-workspace_config
-wandb.init(settings=)
-network_org
-network_entity
-network_project
+    defaults
+    environment
+    wandb.setup(settings=)
+    system_config
+    workspace_config
+    wandb.init(settings=)
+    network_org
+    network_entity
+    network_project
 
-    
-****
-    
 Priority of settings:  See "source" variable.
 
 When override is used, it has priority over non-override settings
 
 Override priorities are in the reverse order of non-override settings
-    
 # Settings
-
 `class Settings(object):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L187-#L951)
@@ -53,7 +41,6 @@ Settings Constructor
 |--|--|--|
 | Exception |  | if problem. |
 ## _path_convert_part
-
 `def _path_convert_part(self, path_part, format_dict): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L610-#L619)
@@ -62,7 +49,6 @@ Settings Constructor
 convert slashes, expand ~ and other macros.
     
 ## _path_convert
-
 `def _path_convert(self, *path): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L621-#L645)
@@ -71,7 +57,6 @@ convert slashes, expand ~ and other macros.
 convert slashes, expand ~ and other macros.
     
 ## __copy__
-
 `def __copy__(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L656-#L660)
@@ -80,7 +65,6 @@ convert slashes, expand ~ and other macros.
 Copy (note that the copied object will not be frozen).
     
 ## _infer_settings_from_env
-
 `def _infer_settings_from_env(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L718-#L773)
@@ -89,7 +73,6 @@ Copy (note that the copied object will not be frozen).
 Modify settings based on environment (for runs and cli).
     
 ## _infer_run_settings_from_env
-
 `def _infer_run_settings_from_env(self, _logger=None): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L775-#L790)

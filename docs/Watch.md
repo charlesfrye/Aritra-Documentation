@@ -1,14 +1,5 @@
-
-
-``
-
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_watch.py#L0-#L0)
-****
-    
 watch.
-    
 # watch
-
 `def watch(models, criterion=None, log="gradients", log_freq=1000, idx=None): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_watch.py#L18-#L94)
@@ -34,7 +25,6 @@ to accept arbitrary ML models.
 `wandb.Graph` The graph object that will populate after the first backward pass
     
 # unwatch
-
 `def unwatch(models=None): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_watch.py#L97-#L113)

@@ -1,5 +1,4 @@
 # SummaryDict
-
 `class SummaryDict(object):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_summary.py#L20-#L79)
@@ -9,7 +8,6 @@ dict-like which wraps all nested dictionraries in a SummarySubDict,
 and triggers self._root._callback on property changes.
     
 # Summary
-
 `class Summary(SummaryDict):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_summary.py#L82-#L133)
@@ -48,7 +46,6 @@ if (test_accuracy > best_accuracy):
 ```
     
 # SummarySubDict
-
 `class SummarySubDict(SummaryDict):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_summary.py#L136-#L153)

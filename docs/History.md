@@ -1,10 +1,3 @@
-
-
-``
-
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_history.py#L0-#L0)
-****
-    
 History tracks logged data over time. To use history from your script, call
 wandb.log({"key": value}) at a single time step or multiple times in your
 training loop. This generates a time series of saved scalars or media that is
@@ -17,9 +10,7 @@ compare across runs with a bar chart.
 It's often useful to track a full time series as well as a single summary value.
 For example, accuracy at every step in History and best accuracy in Summary.
 By default, Summary is set to the final value of History.
-    
 # History
-
 `class History(object):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_history.py#L23-#L73)
@@ -29,7 +20,6 @@ Time series data for Runs. This is essentially a list of dicts where each
 dict is a set of summary statistics logged.
     
 ## _update_step
-
 `def _update_step(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_history.py#L47-#L49)

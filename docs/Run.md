@@ -1,5 +1,4 @@
 # Run
-
 `class Run(object):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L134-#L1812)
@@ -24,7 +23,6 @@ two objects will be merged.
 | history | (`History`) | Time series values, created with wandb.log(). History can contain scalar values, rich media, or even custom plots across multiple steps. |
 | summary | (`Summary`) | Single values set for each wandb.log() key. By default, summary is set to the last value logged. You can manually set summary to the best value, like max accuracy, instead of the final value. |
 ## _telemetry_get_framework
-
 `def _telemetry_get_framework(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L264-#L288)
@@ -33,7 +31,6 @@ two objects will be merged.
 Get telemetry data for internal config structure.
     
 ## _make_proto_run
-
 `def _make_proto_run(self, run): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L306-#L326)
@@ -42,7 +39,6 @@ Get telemetry data for internal config structure.
 Populate protocol buffer RunData for interface/interface.
     
 ## dir
-
 `def dir(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L335-#L341)
@@ -54,7 +50,6 @@ Populate protocol buffer RunData for interface/interface.
 |--|--|--|
 |  | (str) | The directory where all of the files associated with the run are placed. |
 ## config
-
 `def config(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L343-#L350)
@@ -66,7 +61,6 @@ Populate protocol buffer RunData for interface/interface.
 |--|--|--|
 |  | (`Config`) | A config object (similar to a nested dict) of key value pairs associated with the hyperparameters of the run. |
 ## name
-
 `def name(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L356-#L367)
@@ -78,7 +72,6 @@ Populate protocol buffer RunData for interface/interface.
 |--|--|--|
 |  | (str) | the display name of the run. It does not need to be unique and ideally is descriptive. |
 ## notes
-
 `def notes(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L375-#L385)
@@ -90,7 +83,6 @@ Populate protocol buffer RunData for interface/interface.
 |--|--|--|
 |  | (str) | notes associated with the run. Notes can be a multiline string and can also use markdown and latex equations inside $$ like $\{x} |
 ## tags
-
 `def tags(self) -> Optional[Tuple]: Optional[Tuple]`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L393-#L402)
@@ -102,7 +94,6 @@ Populate protocol buffer RunData for interface/interface.
 |--|--|--|
 |  | (Tuple[str]) | tags associated with the run |
 ## id
-
 `def id(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L410-#L416)
@@ -114,7 +105,6 @@ Populate protocol buffer RunData for interface/interface.
 |--|--|--|
 |  | (str) | the run_id associated with the run |
 ## sweep_id
-
 `def sweep_id(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L418-#L426)
@@ -126,7 +116,6 @@ Populate protocol buffer RunData for interface/interface.
 |--|--|--|
 |  | (str, optional) | the sweep id associated with the run or None |
 ## path
-
 `def path(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L428-#L438)
@@ -138,7 +127,6 @@ Populate protocol buffer RunData for interface/interface.
 |--|--|--|
 |  | (str) | the path to the run [entity]/[project]/[run_id] |
 ## start_time
-
 `def start_time(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L440-#L449)
@@ -150,7 +138,6 @@ Populate protocol buffer RunData for interface/interface.
 |--|--|--|
 |  | (int) | the unix time stamp in seconds when the run started |
 ## starting_step
-
 `def starting_step(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L451-#L460)
@@ -162,7 +149,6 @@ Populate protocol buffer RunData for interface/interface.
 |--|--|--|
 |  | (int) | the first step of the run |
 ## resumed
-
 `def resumed(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L462-#L471)
@@ -174,7 +160,6 @@ Populate protocol buffer RunData for interface/interface.
 |--|--|--|
 |  | (bool) | whether or not the run was resumed |
 ## step
-
 `def step(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L473-#L482)
@@ -192,7 +177,6 @@ counter.
 |--|--|--|
 |  | (int) | step counter |
 ## mode
-
 `def mode(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L488-#L491)
@@ -201,7 +185,6 @@ counter.
 For compatibility with 0.9.x and earlier, deprecate eventually.
     
 ## group
-
 `def group(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L501-#L515)
@@ -226,7 +209,6 @@ If you are doing crossvalidation you should give all the crossvalidation
 |--|--|--|
 |  | (str) | name of W&B group associated with run. |
 ## project
-
 `def project(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L522-#L528)
@@ -238,7 +220,6 @@ If you are doing crossvalidation you should give all the crossvalidation
 |--|--|--|
 |  | (str) | name of W&B project associated with run. |
 ## get_url
-
 `def get_url(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L530-#L538)
@@ -250,7 +231,6 @@ If you are doing crossvalidation you should give all the crossvalidation
 |--|--|--|
 |  | (str, optional) | url for the W&B run or None if the run is offline |
 ## get_project_url
-
 `def get_project_url(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L540-#L549)
@@ -262,7 +242,6 @@ If you are doing crossvalidation you should give all the crossvalidation
 |--|--|--|
 |  | (str, optional) | url for the W&B project associated with the run or None if the run is offline. |
 ## get_sweep_url
-
 `def get_sweep_url(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L551-#L560)
@@ -274,7 +253,6 @@ If you are doing crossvalidation you should give all the crossvalidation
 |--|--|--|
 |  | (str, optional) | url for the sweep associated with the run or None if there is no associated sweep or the run is offline. |
 ## url
-
 `def url(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L562-#L568)
@@ -286,7 +264,6 @@ If you are doing crossvalidation you should give all the crossvalidation
 |--|--|--|
 |  | (str) | name of W&B url associated with run. |
 ## entity
-
 `def entity(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L570-#L577)
@@ -298,7 +275,6 @@ If you are doing crossvalidation you should give all the crossvalidation
 |--|--|--|
 |  | (str) | name of W&B entity associated with run. Entity is either a user name or an organization name. |
 ## _add_singleton
-
 `def _add_singleton(self, type, key, value): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L702-#L727)
@@ -317,7 +293,6 @@ updated when the value changes. The last value logged will be the one
 persisted to the server
     
 ## log
-
 `def log(self, data, step=None, commit=None, sync=None): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L729-#L862)
@@ -431,7 +406,6 @@ wandb.Error - if called before wandb.init
 ValueError - if invalid data is passed
     
 ## save
-
 `def save( self, glob_str: Optional[str] = None, base_path: Optional[str] = None, policy: str = "live", ): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L864-#L948)
@@ -450,7 +424,6 @@ Ensure all files matching *glob_str* are synced to wandb with the policy specifi
 | base_path | (string) | the base path to run the glob relative to |
 | policy | (string) | on of "live", "now", or "end" live: upload the file as it changes, overwriting the previous version now: upload the file once now end: only upload file when the run ends |
 ## finish
-
 `def finish(self, exit_code=None): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L959-#L972)
@@ -461,7 +434,6 @@ used when creating multiple runs in the same process.  We automatically
 call this method when your script exits.
     
 ## join
-
 `def join(self): self.stop() self._thread.join() class Run(object): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L974-#L976)
@@ -470,7 +442,6 @@ call this method when your script exits.
 Deprecated alias for finish() - please use finish
     
 ## plot_table
-
 `def plot_table(self, vega_spec_name, data_table, fields, string_fields=None): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L978-#L994)
@@ -491,7 +462,6 @@ Creates a custom plot on a table.
 | fields |  | a dict mapping from table keys to fields that the custom visualization needs |
 | string_fields |  | a dict that provides values for any string constants the custom visualization needs |
 ## _get_sweep_url
-
 `def _get_sweep_url(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L1046-#L1067)
@@ -509,7 +479,6 @@ Generate a url for a sweep.
 |  | (str) | url if the run is part of a sweep |
 |  | (None) | if the run is not part of the sweep |
 ## use_artifact
-
 `def use_artifact(self, artifact_or_name, type=None, aliases=None): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L1638-#L1688)
@@ -537,7 +506,6 @@ May be prefixed with entity/project. Valid names
 A #Artifact object.
     
 ## log_artifact
-
 `def log_artifact(self, artifact_or_path, name=None, type=None, aliases=None): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L1691-#L1744)
@@ -561,7 +529,6 @@ Declare an artifact as output of a run.
 A `Artifact` object.
     
 ## alert
-
 `def alert(self, title, text, level=None, wait_duration=None): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L1770-#L1799)

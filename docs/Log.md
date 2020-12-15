@@ -1,5 +1,4 @@
 ## log
-
 `def log(self, data, step=None, commit=None, sync=None): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L729-#L862)

@@ -1,18 +1,9 @@
-
-
-``
-
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L0-#L0)
-****
-    
 Wandb has special data types for logging rich visualizations.
 
 All of the special data types are subclasses of WBValue. All of the data types
 serialize to JSON, since that is what wandb uses to save the objects locally
 and upload them to the W&B server.
-    
 # _safe_sdk_import
-
 `def _safe_sdk_import(): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L38-#L49)
@@ -21,7 +12,6 @@ and upload them to the W&B server.
 Safely imports sdks respecting python version
     
 # WBValue
-
 `class WBValue(object):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L85-#L215)
@@ -34,7 +24,6 @@ The objects will be serialized as JSON and always have a _type attribute
 that indicates how to interpret the other fields.
     
 ## to_json
-
 `def to_json(self, run_or_artifact): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L102-#L112)
@@ -59,7 +48,6 @@ JSON for - this is useful to to store additional data if needed.
 |--|--|--|
 | dict |  | JSON representation |
 ## from_json
-
 `def from_json(cls, json_obj, source_artifact): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L114-#L125)
@@ -79,7 +67,6 @@ during the `to_json` function.
 | json_obj | (dict) | A JSON dictionary to deserialize |
 | source_artifact | (wandb.Artifact) | An artifact which will hold any additional resources which were stored |
 ## with_suffix
-
 `def with_suffix(cls, name, filetype="json"): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L127-#L144)
@@ -104,7 +91,6 @@ Helper function to return the name with suffix added if not already
 |--|--|--|
 | str |  | a filename which is suffixed with it's `artifact_type` followed by the filetype |
 ## init_from_json
-
 `def init_from_json(json_obj, source_artifact): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L146-#L168)
@@ -134,7 +120,6 @@ during the `to_json` function.
 |--|--|--|
 | Value |  | a newly created instance of a subclass of wandb.Value |
 ## type_mapping
-
 `def type_mapping(): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L170-#L189)
@@ -151,7 +136,6 @@ Returns a map from `artifact_type` to subclass. Used to lookup correct types for
 |--|--|--|
 | dict |  | dictionary of str:class |
 ## artifact_source
-
 `def artifact_source(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L197-#L205)
@@ -168,7 +152,6 @@ stored as well as the name (optional)
 |--|--|--|
 | dict |  | {"artifact": wandb.Artifact, "name": str} the artifact from which this object was originally |
 ## artifact_source
-
 `def artifact_source(self, artifact_source): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L207-#L215)
@@ -185,7 +168,6 @@ stored as well as the name (optional)
 |--|--|--|
 | dict |  | {"artifact": wandb.Artifact, "name": str} the artifact from which this object was originally |
 # Histogram
-
 `class Histogram(WBValue):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L218-#L284)
@@ -229,7 +211,6 @@ wandb.Histogram(np_histogram=hist)
 | bins | ([float]) | edges of bins |
 | histogram | ([int]) | number of elements falling in each bin |
 # Media
-
 `class Media(WBValue):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L287-#L440)
@@ -242,7 +223,6 @@ If necessary, we move or copy the file into the Run's media directory so that it
 uploaded.
     
 ## bind_to_run
-
 `def bind_to_run(self, run, key, step, id_=None): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L334-#L371)
@@ -255,7 +235,6 @@ put the file associated with this object, from which other Runs can
 refer to it.
     
 ## to_json
-
 `def to_json(self, run=None): return {"_type": "histogram", "values": self.histogram, "bins": self.bins} class Media(WBValue): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L373-#L440)
@@ -281,7 +260,6 @@ JSON for - this is useful to to store additional data if needed.
 |--|--|--|
 | dict |  | JSON representation |
 # BatchableMedia
-
 `class BatchableMedia(Media):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L443-#L456)
@@ -294,7 +272,6 @@ Apart from images, we just use these batches to help organize files by name
 in the media directory.
     
 # Table
-
 `class Table(Media):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L459-#L605)
@@ -313,7 +290,6 @@ This is a table designed to display sets of records.
 | data | (array) | 2D Array of values that will be displayed as strings. |
 | dataframe | (pandas.DataFrame) | DataFrame object used to create the table. When set, the other arguments are ignored. |
 ## __init__
-
 `def __init__( self, columns=["Input", "Output", "Expected"], data=None, rows=None, dataframe=None, ): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L474-#L494)
@@ -323,7 +299,6 @@ rows is kept for legacy reasons, we use data to mimic the Pandas api
 
     
 ## add_data
-
 `def add_data(self, *data): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L515-#L523)
@@ -332,7 +307,6 @@ rows is kept for legacy reasons, we use data to mimic the Pandas api
 Add a row of data to the table. Argument length should match column length
     
 # Audio
-
 `class Audio(BatchableMedia):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L608-#L703)
@@ -351,7 +325,6 @@ Wandb class for audio clips.
 | sample_rate | (int) | Sample rate, required when passing in raw numpy array of audio data. |
 | caption | (string) | Caption to display with audio. |
 ## __init__
-
 `def __init__(self, data_or_path, sample_rate=None, caption=None): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L620-#L645)
@@ -361,7 +334,6 @@ Accepts a path to an audio file or a numpy array of audio data.
 
     
 # Object3D
-
 `class Object3D(BatchableMedia):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L713-#L861)
@@ -386,7 +358,6 @@ data_or_path (numpy array, string, io):
     ```
     
 # Molecule
-
 `class Molecule(BatchableMedia):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L865-#L954)
@@ -401,7 +372,6 @@ data_or_path (string, io):
     Molecule can be initialized from a file name or an io object.
     
 # Html
-
 `class Html(BatchableMedia):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L958-#L1024)
@@ -419,7 +389,6 @@ Wandb class for arbitrary html
 | data | (string or io object) | HTML to display in wandb |
 | inject | (boolean) | Add a stylesheet to the HTML object. If set to False the HTML will pass through unchanged. |
 # Video
-
 `class Video(BatchableMedia):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1027-#L1180)
@@ -445,7 +414,6 @@ data_or_path (numpy array, string, io):
 | fps | (int) | frames per second for video. Default is 4. |
 | format | (string) | format of video, necessary if initializing with path or io object. |
 ## _prepare_video
-
 `def _prepare_video(self, V): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1128-#L1160)
@@ -454,9 +422,7 @@ data_or_path (numpy array, string, io):
 This logic was mostly taken from tensorboardX
     
 # Classes
-
 ## __init__
-
 `def __init__(self, class_set): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1186-#L1193)
@@ -473,7 +439,6 @@ Classes is holds class metadata intended to be used in concert with other object
 |--|--|--|
 | class_set | (list) | list of dicts in the form of {"id":int|str, "name":str} |
 # JoinedTable
-
 `class JoinedTable(Media):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1213-#L1323)
@@ -492,7 +457,6 @@ join_key (str, [str, str]):
     key or keys to perform the join
     
 ## _validate_table_input
-
 `def _validate_table_input(table): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1263-#L1269)
@@ -501,7 +465,6 @@ join_key (str, [str, str]):
 Helper method to validate that the table input is one of the 3 supported types
     
 ## _ensure_table_in_artifact
-
 `def _ensure_table_in_artifact(self, table, artifact, table_ndx): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1272-#L1298)
@@ -510,7 +473,6 @@ Helper method to validate that the table input is one of the 3 supported types
 Helper method to add the table to the incoming artifact. Returns the path
     
 # Image
-
 `class Image(BatchableMedia):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1327-#L1731)
@@ -529,7 +491,6 @@ Wandb class for images.
 | mode | (string) | The PIL mode for an image. Most common are "L", "RGB", "RGBA". Full explanation at https://pillow.readthedocs.io/en/4.2.x/handbook/concepts.html#concept-modes. |
 | caption | (string) | Label for display of image. |
 ## guess_mode
-
 `def guess_mode(self, data): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1582-#L1595)
@@ -538,7 +499,6 @@ Wandb class for images.
 Guess what type of image the np.array is representing
     
 ## to_uint8
-
 `def to_uint8(self, data): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1598-#L1620)
@@ -548,7 +508,6 @@ Converts floating point image on the range [0,1] and integer images
 on the range [0,255] to uint8, clipping if necessary.
     
 ## seq_to_json
-
 `def seq_to_json(self, seq, run, key, step): raise NotImplementedError class Table(Media): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1622-#L1678)
@@ -557,7 +516,6 @@ on the range [0,255] to uint8, clipping if necessary.
 Combines a list of images into a meta dictionary object describing the child images.
     
 # JSONMetadata
-
 `class JSONMetadata(Media):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1742-#L1774)
@@ -566,7 +524,6 @@ Combines a list of images into a meta dictionary object describing the child ima
 JSONMetadata is a type for encoding arbitrary metadata as files.
     
 # BoundingBoxes2D
-
 `class BoundingBoxes2D(JSONMetadata):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1777-#L1915)
@@ -575,7 +532,6 @@ JSONMetadata is a type for encoding arbitrary metadata as files.
 Wandb class for 2D bounding boxes
     
 ## __init__
-
 `def __init__(self, val, key, **kwargs): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1784-#L1823)
@@ -590,7 +546,6 @@ Wandb class for 2D bounding boxes
 |  |  | optional mapping from class ids to strings {id: str} "box_data": list of boxes: [ { "position": { "minX": float, "maxX": float, "minY": float, "maxY": float, }, "class_id": 1, "box_caption": optional str "scores": optional dict of scores }, ... ], |
 | key | (str) | id for set of bounding boxes |
 # ImageMask
-
 `class ImageMask(Media):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1918-#L2031)
@@ -599,7 +554,6 @@ Wandb class for 2D bounding boxes
 Wandb class for image masks, useful for segmentation tasks
     
 ## __init__
-
 `def __init__(self, val, key, **kwargs): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1925-#L1968)
@@ -618,7 +572,6 @@ Wandb class for image masks, useful for segmentation tasks
 |  |  | path to an image file containing integers corresponding to classes, "class_labels": optional mapping from class ids to strings {id: str} |
 | key | (str) | id for set of masks |
 # Plotly
-
 `class Plotly(Media):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2035-#L2079)
@@ -635,7 +588,6 @@ Wandb class for plotly plots.
 |--|--|--|
 | val |  | matplotlib or plotly figure |
 # Graph
-
 `class Graph(Media):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2082-#L2240)
@@ -669,7 +621,6 @@ Import a keras model:
 | loaded | (boolean) | Flag to tell whether the graph is completely loaded |
 | root | (wandb.Node) | root node of the graph |
 # Node
-
 `class Node(WBValue):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2243-#L2417)
@@ -678,7 +629,6 @@ Import a keras model:
 Node used in `Graph`
     
 ## id
-
 `def id(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2294-#L2297)
@@ -687,7 +637,6 @@ Node used in `Graph`
 Must be unique in the graph
     
 ## name
-
 `def name(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2304-#L2307)
@@ -696,7 +645,6 @@ Must be unique in the graph
 Usually the type of layer or sublayer
     
 ## class_name
-
 `def class_name(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2314-#L2317)
@@ -705,7 +653,6 @@ Usually the type of layer or sublayer
 Usually the type of layer or sublayer
     
 ## size
-
 `def size(self, val): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2346-#L2350)
@@ -714,7 +661,6 @@ Usually the type of layer or sublayer
 Tensor size
     
 ## output_shape
-
 `def output_shape(self, val): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2356-#L2360)
@@ -723,7 +669,6 @@ Tensor size
 Tensor output_shape
     
 ## is_output
-
 `def is_output(self, val): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2366-#L2370)
@@ -732,7 +677,6 @@ Tensor output_shape
 Tensor is_output
     
 ## num_parameters
-
 `def num_parameters(self, val): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2376-#L2380)
@@ -741,7 +685,6 @@ Tensor is_output
 Tensor num_parameters
     
 ## child_parameters
-
 `def child_parameters(self, val): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2386-#L2390)
@@ -750,7 +693,6 @@ Tensor num_parameters
 Tensor child_parameters
     
 ## is_constant
-
 `def is_constant(self, val): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2396-#L2400)
@@ -759,7 +701,6 @@ Tensor child_parameters
 Tensor is_constant
     
 # Edge
-
 `class Edge(WBValue):`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2420-#L2467)
@@ -768,7 +709,6 @@ Tensor is_constant
 Edge used in `Graph`
     
 ## name
-
 `def name(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2441-#L2444)
@@ -777,7 +717,6 @@ Edge used in `Graph`
 Optional, not necessarily unique
     
 # data_frame_to_json
-
 `def data_frame_to_json(df, run, key, step): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2576-#L2661)

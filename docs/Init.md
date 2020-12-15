@@ -1,16 +1,7 @@
-
-
-``
-
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L0-#L0)
-****
-    
 wandb.init() indicates the beginning of a new run. In an ML training pipeline,
 you could add wandb.init() to the beginning of your training script as well as
 your evaluation script, and each piece steps would be tracked as a run in W&B.
-    
 # _set_logger
-
 `def _set_logger(log_object): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L40-#L43)
@@ -19,9 +10,7 @@ your evaluation script, and each piece steps would be tracked as a run in W&B.
 Configure module logger.
     
 # _WandbInit
-
 ## setup
-
 `def setup(self, kwargs): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L62-#L158)
@@ -31,7 +20,6 @@ Complete setup for wandb.init(). This includes parsing all arguments,
 applying them with settings and enabling logging.
     
 ## _enable_logging
-
 `def _enable_logging(self, log_fname, run_id=None): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L167-#L200)
@@ -42,7 +30,6 @@ in case of muliple processes on the same machine.
 Currently there is no way to disable logging after it's enabled.
     
 ## _jupyter_teardown
-
 `def _jupyter_teardown(self): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L232-#L245)
@@ -51,7 +38,6 @@ Currently there is no way to disable logging after it's enabled.
 Teardown hooks and display saving, called with wandb.finish
     
 ## _jupyter_setup
-
 `def _jupyter_setup(self, settings): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L247-#L269)
@@ -60,7 +46,6 @@ Teardown hooks and display saving, called with wandb.finish
 Add magic, hooks, and session history saving
     
 ## _log_setup
-
 `def _log_setup(self, settings): `
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L271-#L304)
@@ -69,7 +54,6 @@ Add magic, hooks, and session history saving
 Set up logging from settings.
     
 # init
-
 `def init( job_type: Optional[str] = None, dir=None, config: Union[Dict, str, None] = None, project: Optional[str] = None, entity: Optional[str] = None, reinit: bool = None, tags: Optional[Sequence] = None, group: Optional[str] = None, name: Optional[str] = None, notes: Optional[str] = None, magic: Union[dict, str, bool] = None, config_exclude_keys=None, config_include_keys=None, anonymous: Optional[str] = None, mode: Optional[str] = None, allow_val_change: Optional[bool] = None, resume: Optional[Union[bool, str]] = None, force: Optional[bool] = None, tensorboard=None, # alias for sync_tensorboard sync_tensorboard=None, monitor_gym=None, save_code=None, id=None, settings: Union[Settings, Dict[str, Any], None] = None, ) -> Union[Run, Dummy]: Union[Run, Dummy]`
 
 [SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L456-#L613)
