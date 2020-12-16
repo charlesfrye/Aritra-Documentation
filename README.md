@@ -2,5 +2,5 @@
 Documentation experiments with Gitbook
 Usage:
 ```bash
-$ python doc_gen_yaml.py doc_structure.yaml template/path.md
+$ python doc_gen_yaml.py wandb.yml ./template/template.md
 ```
