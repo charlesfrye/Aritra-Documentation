@@ -1,7 +1,8 @@
 ## log
 `def log(self, data, step=None, commit=None, sync=None): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L729-#L862)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L729-#L862)
+
 ****
     
 Log a dict to the global run's history.

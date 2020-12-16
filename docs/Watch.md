@@ -2,7 +2,8 @@ watch.
 # watch
 `def watch(models, criterion=None, log="gradients", log_freq=1000, idx=None): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_watch.py#L18-#L94)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_watch.py#L18-#L94)
+
 ****
     
 Hooks into the torch model to collect gradients and the topology.  Should be extended
@@ -27,7 +28,8 @@ to accept arbitrary ML models.
 # unwatch
 `def unwatch(models=None): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_watch.py#L97-#L113)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_watch.py#L97-#L113)
+
 ****
     
 Remove pytorch gradient and parameter hooks.

@@ -1,7 +1,8 @@
 # Artifact
 `class Artifact(object):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L37-#L319)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L37-#L319)
+
 ****
     
 An artifact object you can write files into, and pass to log_artifact.
@@ -9,7 +10,8 @@ An artifact object you can write files into, and pass to log_artifact.
 ## add_file
 `def add_file(self, local_path, name=None, is_tmp=False): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L113-#L146)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L113-#L146)
+
 ****
     
 Adds a local file to the artifact
@@ -34,7 +36,8 @@ Adds a local file to the artifact
 ## add_reference
 `def add_reference(self, uri, name=None, checksum=True, max_objects=None): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L191-#L224)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L191-#L224)
+
 ****
     
 adds `uri` to the artifact via a reference, located at `name`. 
@@ -52,7 +55,8 @@ You can use Artifact#get_path(`name`) to retrieve this object.
 ## add
 `def add(self, obj, name): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L226-#L267)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L226-#L267)
+
 ****
     
 Adds `obj` to the artifact, located at `name`. You can use Artifact#get(`name`) after downloading
@@ -70,7 +74,8 @@ the artifact to retrieve this object.
 ## get_added_local_path_name
 `def get_added_local_path_name(self, local_path): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L269-#L274)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L269-#L274)
+
 ****
     
 If local_path was already added to artifact, return its internal name.
@@ -79,7 +84,8 @@ If local_path was already added to artifact, return its internal name.
 ## to_manifest_json
 `def to_manifest_json(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L362-#L388)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L362-#L388)
+
 ****
     
 This is the JSON that's stored in wandb_manifest.json
@@ -93,7 +99,8 @@ contents.
 ## __init__
 `def __init__(self, scheme=None): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L630-#L639)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L630-#L639)
+
 ****
     
 Tracks paths as is, with no modification or special processing. Useful
@@ -106,7 +113,8 @@ For example, if the data to track is located on an NFS share mounted on
 # LocalFileHandler
 `class LocalFileHandler(StorageHandler):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L675-#L764)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L675-#L764)
+
 ****
     
 Handles file:// references
@@ -114,7 +122,8 @@ Handles file:// references
 ## __init__
 `def __init__(self, scheme=None): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L679-#L685)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L679-#L685)
+
 ****
     
 Tracks files or directories on a local filesystem. Directories
@@ -123,7 +132,8 @@ are expanded to create an entry for each file contained within.
 # WBArtifactHandler
 `class WBArtifactHandler(StorageHandler):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L1165-#L1256)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L1165-#L1256)
+
 ****
     
 Handles loading and storing Artifact reference-type files
@@ -131,7 +141,8 @@ Handles loading and storing Artifact reference-type files
 ## scheme
 `def scheme(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L1173-#L1180)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L1173-#L1180)
+
 ****
     
 overrides parent scheme
@@ -142,7 +153,8 @@ Return:
 ## load_path
 `def load_path(self, artifact, manifest_entry, local=False): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L1188-#L1215)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L1188-#L1215)
+
 ****
     
 Loads the file within the specified artifact given its
@@ -167,7 +179,8 @@ and a new symlink is created and returned to the caller.
 ## store_path
 `def store_path(self, artifact, path, name=None, checksum=False, max_objects=None): url = urlparse(path) if name is None: raise ValueError( 'You must pass name="<entry_name>" when tracking references with unknown schemes. ref: %s' % path ) termwarn( "Artifact references with unsupported schemes cannot be checksummed: %s" % path ) name = name or url.path[1:] # strip leading slash return [ArtifactManifestEntry(name, path, digest=path)] DEFAULT_MAX_OBJECTS = 10000 class LocalFileHandler(StorageHandler): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L1217-#L1256)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L1217-#L1256)
+
 ****
     
 Stores the file or directory at the given path within the specified artifact. In this

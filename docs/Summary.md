@@ -1,7 +1,8 @@
 # SummaryDict
 `class SummaryDict(object):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_summary.py#L20-#L79)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_summary.py#L20-#L79)
+
 ****
     
 dict-like which wraps all nested dictionraries in a SummarySubDict,
@@ -10,7 +11,8 @@ and triggers self._root._callback on property changes.
 # Summary
 `class Summary(SummaryDict):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_summary.py#L82-#L133)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_summary.py#L82-#L133)
+
 ****
     
 Summary tracks single values for each run. By default, summary is set to the
@@ -48,7 +50,8 @@ if (test_accuracy > best_accuracy):
 # SummarySubDict
 `class SummarySubDict(SummaryDict):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_summary.py#L136-#L153)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_summary.py#L136-#L153)
+
 ****
     
 Non-root node of the summary data structure. Contains a path to itself

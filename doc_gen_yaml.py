@@ -1,4 +1,4 @@
-# USAGE python doc_gen_yaml.py doc_structure.yaml template/path.md
+# USAGE python doc_gen_yaml.py wandb.yml ./template/template.md
 import yaml
 import sys
 import os

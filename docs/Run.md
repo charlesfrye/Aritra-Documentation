@@ -1,7 +1,8 @@
 # Run
 `class Run(object):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L134-#L1812)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L134-#L1812)
+
 ****
     
 The run object corresponds to a single execution of your script,
@@ -25,7 +26,8 @@ two objects will be merged.
 ## _telemetry_get_framework
 `def _telemetry_get_framework(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L264-#L288)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L264-#L288)
+
 ****
     
 Get telemetry data for internal config structure.
@@ -33,7 +35,8 @@ Get telemetry data for internal config structure.
 ## _make_proto_run
 `def _make_proto_run(self, run): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L306-#L326)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L306-#L326)
+
 ****
     
 Populate protocol buffer RunData for interface/interface.
@@ -41,7 +44,8 @@ Populate protocol buffer RunData for interface/interface.
 ## dir
 `def dir(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L335-#L341)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L335-#L341)
+
 **Returns**
     
 
@@ -52,7 +56,8 @@ Populate protocol buffer RunData for interface/interface.
 ## config
 `def config(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L343-#L350)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L343-#L350)
+
 **Returns**
     
 
@@ -63,7 +68,8 @@ Populate protocol buffer RunData for interface/interface.
 ## name
 `def name(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L356-#L367)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L356-#L367)
+
 **Returns**
     
 
@@ -74,7 +80,8 @@ Populate protocol buffer RunData for interface/interface.
 ## notes
 `def notes(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L375-#L385)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L375-#L385)
+
 **Returns**
     
 
@@ -85,7 +92,8 @@ Populate protocol buffer RunData for interface/interface.
 ## tags
 `def tags(self) -> Optional[Tuple]: Optional[Tuple]`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L393-#L402)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L393-#L402)
+
 **Returns**
     
 
@@ -96,7 +104,8 @@ Populate protocol buffer RunData for interface/interface.
 ## id
 `def id(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L410-#L416)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L410-#L416)
+
 **Returns**
     
 
@@ -107,7 +116,8 @@ Populate protocol buffer RunData for interface/interface.
 ## sweep_id
 `def sweep_id(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L418-#L426)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L418-#L426)
+
 **Returns**
     
 
@@ -118,7 +128,8 @@ Populate protocol buffer RunData for interface/interface.
 ## path
 `def path(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L428-#L438)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L428-#L438)
+
 **Returns**
     
 
@@ -129,7 +140,8 @@ Populate protocol buffer RunData for interface/interface.
 ## start_time
 `def start_time(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L440-#L449)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L440-#L449)
+
 **Returns**
     
 
@@ -140,7 +152,8 @@ Populate protocol buffer RunData for interface/interface.
 ## starting_step
 `def starting_step(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L451-#L460)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L451-#L460)
+
 **Returns**
     
 
@@ -151,7 +164,8 @@ Populate protocol buffer RunData for interface/interface.
 ## resumed
 `def resumed(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L462-#L471)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L462-#L471)
+
 **Returns**
     
 
@@ -162,7 +176,8 @@ Populate protocol buffer RunData for interface/interface.
 ## step
 `def step(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L473-#L482)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L473-#L482)
+
 ****
     
 Every time you call wandb.log() it will by default increment the step
@@ -179,7 +194,8 @@ counter.
 ## mode
 `def mode(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L488-#L491)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L488-#L491)
+
 ****
     
 For compatibility with 0.9.x and earlier, deprecate eventually.
@@ -187,7 +203,8 @@ For compatibility with 0.9.x and earlier, deprecate eventually.
 ## group
 `def group(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L501-#L515)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L501-#L515)
+
 ****
     
 Setting a group helps the W&B UI organize runs in a sensible way.
@@ -211,7 +228,8 @@ If you are doing crossvalidation you should give all the crossvalidation
 ## project
 `def project(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L522-#L528)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L522-#L528)
+
 **Returns**
     
 
@@ -222,7 +240,8 @@ If you are doing crossvalidation you should give all the crossvalidation
 ## get_url
 `def get_url(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L530-#L538)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L530-#L538)
+
 **Returns**
     
 
@@ -233,7 +252,8 @@ If you are doing crossvalidation you should give all the crossvalidation
 ## get_project_url
 `def get_project_url(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L540-#L549)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L540-#L549)
+
 **Returns**
     
 
@@ -244,7 +264,8 @@ If you are doing crossvalidation you should give all the crossvalidation
 ## get_sweep_url
 `def get_sweep_url(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L551-#L560)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L551-#L560)
+
 **Returns**
     
 
@@ -255,7 +276,8 @@ If you are doing crossvalidation you should give all the crossvalidation
 ## url
 `def url(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L562-#L568)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L562-#L568)
+
 **Returns**
     
 
@@ -266,7 +288,8 @@ If you are doing crossvalidation you should give all the crossvalidation
 ## entity
 `def entity(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L570-#L577)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L570-#L577)
+
 **Returns**
     
 
@@ -277,7 +300,8 @@ If you are doing crossvalidation you should give all the crossvalidation
 ## _add_singleton
 `def _add_singleton(self, type, key, value): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L702-#L727)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L702-#L727)
+
 ****
     
 Stores a singleton item to wandb config.
@@ -295,7 +319,8 @@ persisted to the server
 ## log
 `def log(self, data, step=None, commit=None, sync=None): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L729-#L862)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L729-#L862)
+
 ****
     
 Log a dict to the global run's history.
@@ -408,7 +433,8 @@ ValueError - if invalid data is passed
 ## save
 `def save( self, glob_str: Optional[str] = None, base_path: Optional[str] = None, policy: str = "live", ): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L864-#L948)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L864-#L948)
+
 ****
     
 Ensure all files matching *glob_str* are synced to wandb with the policy specified.
@@ -426,7 +452,8 @@ Ensure all files matching *glob_str* are synced to wandb with the policy specifi
 ## finish
 `def finish(self, exit_code=None): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L959-#L972)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L959-#L972)
+
 ****
     
 Marks a run as finished, and finishes uploading all data.  This is
@@ -436,7 +463,8 @@ call this method when your script exits.
 ## join
 `def join(self): self.stop() self._thread.join() class Run(object): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L974-#L976)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L974-#L976)
+
 ****
     
 Deprecated alias for finish() - please use finish
@@ -444,7 +472,8 @@ Deprecated alias for finish() - please use finish
 ## plot_table
 `def plot_table(self, vega_spec_name, data_table, fields, string_fields=None): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L978-#L994)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L978-#L994)
+
 ****
     
 Creates a custom plot on a table.
@@ -464,7 +493,8 @@ Creates a custom plot on a table.
 ## _get_sweep_url
 `def _get_sweep_url(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L1046-#L1067)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L1046-#L1067)
+
 ****
     
 Generate a url for a sweep.
@@ -481,7 +511,8 @@ Generate a url for a sweep.
 ## use_artifact
 `def use_artifact(self, artifact_or_name, type=None, aliases=None): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L1638-#L1688)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L1638-#L1688)
+
 ****
     
 Declare an artifact as an input to a run, call `download` or `file` on         the returned object to get the contents locally.
@@ -508,7 +539,8 @@ A #Artifact object.
 ## log_artifact
 `def log_artifact(self, artifact_or_path, name=None, type=None, aliases=None): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L1691-#L1744)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L1691-#L1744)
+
 ****
     
 Declare an artifact as output of a run.
@@ -531,7 +563,8 @@ A `Artifact` object.
 ## alert
 `def alert(self, title, text, level=None, wait_duration=None): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L1770-#L1799)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L1770-#L1799)
+
 ****
     
 Launch an alert with the given title and text.

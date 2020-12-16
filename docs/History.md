@@ -13,7 +13,8 @@ By default, Summary is set to the final value of History.
 # History
 `class History(object):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_history.py#L23-#L73)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_history.py#L23-#L73)
+
 ****
     
 Time series data for Runs. This is essentially a list of dicts where each
@@ -22,7 +23,8 @@ dict is a set of summary statistics logged.
 ## _update_step
 `def _update_step(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_history.py#L47-#L49)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_history.py#L47-#L49)
+
 ****
     
 Called after receiving the run from the internal process

@@ -2,7 +2,8 @@ config.
 # Config
 `class Config(object):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_config.py#L28-#L243)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_config.py#L28-#L243)
+
 ****
     
 Config object
@@ -78,7 +79,8 @@ wandb.config.update(flags.FLAGS)  # adds all of the tensorflow flags to config
 ## persist
 `def persist(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_config.py#L163-#L166)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_config.py#L163-#L166)
+
 ****
     
 Calls the callback if it's set
@@ -86,7 +88,8 @@ Calls the callback if it's set
 ## _sanitize_val
 `def _sanitize_val(self, val): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_config.py#L222-#L243)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_config.py#L222-#L243)
+
 ****
     
 Turn all non-builtin values into something safe for YAML

@@ -6,7 +6,8 @@ and upload them to the W&B server.
 # _safe_sdk_import
 `def _safe_sdk_import(): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L38-#L49)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L38-#L49)
+
 ****
     
 Safely imports sdks respecting python version
@@ -14,7 +15,8 @@ Safely imports sdks respecting python version
 # WBValue
 `class WBValue(object):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L85-#L215)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L85-#L215)
+
 ****
     
 Abstract parent class for things that can be logged by wandb.log() and
@@ -26,7 +28,8 @@ that indicates how to interpret the other fields.
 ## to_json
 `def to_json(self, run_or_artifact): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L102-#L112)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L102-#L112)
+
 ****
     
 Serializes the object into a JSON blob, using a run or artifact to store additional data.
@@ -50,7 +53,8 @@ JSON for - this is useful to to store additional data if needed.
 ## from_json
 `def from_json(cls, json_obj, source_artifact): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L114-#L125)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L114-#L125)
+
 ****
     
 Deserialize a `json_obj` into it's class representation. If additional resources were stored in the 
@@ -69,7 +73,8 @@ during the `to_json` function.
 ## with_suffix
 `def with_suffix(cls, name, filetype="json"): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L127-#L144)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L127-#L144)
+
 ****
     
 Helper function to return the name with suffix added if not already
@@ -93,7 +98,8 @@ Helper function to return the name with suffix added if not already
 ## init_from_json
 `def init_from_json(json_obj, source_artifact): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L146-#L168)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L146-#L168)
+
 ****
     
 Looks through all subclasses and tries to match the json obj with the class which created it. It will then
@@ -122,7 +128,8 @@ during the `to_json` function.
 ## type_mapping
 `def type_mapping(): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L170-#L189)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L170-#L189)
+
 ****
     
 Returns a map from `artifact_type` to subclass. Used to lookup correct types for deserialization.
@@ -138,7 +145,8 @@ Returns a map from `artifact_type` to subclass. Used to lookup correct types for
 ## artifact_source
 `def artifact_source(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L197-#L205)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L197-#L205)
+
 ****
     
 Getter which returns the object's artifact source
@@ -154,7 +162,8 @@ stored as well as the name (optional)
 ## artifact_source
 `def artifact_source(self, artifact_source): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L207-#L215)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L207-#L215)
+
 ****
     
 Setter for artifact source
@@ -170,7 +179,8 @@ stored as well as the name (optional)
 # Histogram
 `class Histogram(WBValue):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L218-#L284)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L218-#L284)
+
 ****
     
 wandb class for histograms
@@ -213,7 +223,8 @@ wandb.Histogram(np_histogram=hist)
 # Media
 `class Media(WBValue):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L287-#L440)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L287-#L440)
+
 ****
     
 A WBValue that we store as a file outside JSON and show in a media panel
@@ -225,7 +236,8 @@ uploaded.
 ## bind_to_run
 `def bind_to_run(self, run, key, step, id_=None): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L334-#L371)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L334-#L371)
+
 ****
     
 Bind this object to a particular Run.
@@ -237,7 +249,8 @@ refer to it.
 ## to_json
 `def to_json(self, run=None): return {"_type": "histogram", "values": self.histogram, "bins": self.bins} class Media(WBValue): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L373-#L440)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L373-#L440)
+
 ****
     
 Serializes the object into a JSON blob, using a run or artifact to store additional data. If `run_or_artifact`
@@ -262,7 +275,8 @@ JSON for - this is useful to to store additional data if needed.
 # BatchableMedia
 `class BatchableMedia(Media):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L443-#L456)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L443-#L456)
+
 ****
     
 Parent class for Media we treat specially in batches, like images and
@@ -274,7 +288,8 @@ in the media directory.
 # Table
 `class Table(Media):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L459-#L605)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L459-#L605)
+
 ****
     
 This is a table designed to display sets of records.
@@ -292,7 +307,8 @@ This is a table designed to display sets of records.
 ## __init__
 `def __init__( self, columns=["Input", "Output", "Expected"], data=None, rows=None, dataframe=None, ): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L474-#L494)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L474-#L494)
+
 ****
     
 rows is kept for legacy reasons, we use data to mimic the Pandas api
@@ -301,7 +317,8 @@ rows is kept for legacy reasons, we use data to mimic the Pandas api
 ## add_data
 `def add_data(self, *data): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L515-#L523)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L515-#L523)
+
 ****
     
 Add a row of data to the table. Argument length should match column length
@@ -309,7 +326,8 @@ Add a row of data to the table. Argument length should match column length
 # Audio
 `class Audio(BatchableMedia):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L608-#L703)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L608-#L703)
+
 ****
     
 Wandb class for audio clips.
@@ -327,7 +345,8 @@ Wandb class for audio clips.
 ## __init__
 `def __init__(self, data_or_path, sample_rate=None, caption=None): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L620-#L645)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L620-#L645)
+
 ****
     
 Accepts a path to an audio file or a numpy array of audio data.
@@ -336,7 +355,8 @@ Accepts a path to an audio file or a numpy array of audio data.
 # Object3D
 `class Object3D(BatchableMedia):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L713-#L861)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L713-#L861)
+
 ****
     
 Wandb class for 3D point clouds.
@@ -360,7 +380,8 @@ data_or_path (numpy array, string, io):
 # Molecule
 `class Molecule(BatchableMedia):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L865-#L954)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L865-#L954)
+
 ****
     
 Wandb class for Molecular data
@@ -374,7 +395,8 @@ data_or_path (string, io):
 # Html
 `class Html(BatchableMedia):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L958-#L1024)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L958-#L1024)
+
 ****
     
 Wandb class for arbitrary html
@@ -391,7 +413,8 @@ Wandb class for arbitrary html
 # Video
 `class Video(BatchableMedia):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1027-#L1180)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1027-#L1180)
+
 ****
     
 Wandb representation of video.
@@ -416,7 +439,8 @@ data_or_path (numpy array, string, io):
 ## _prepare_video
 `def _prepare_video(self, V): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1128-#L1160)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1128-#L1160)
+
 ****
     
 This logic was mostly taken from tensorboardX
@@ -425,7 +449,8 @@ This logic was mostly taken from tensorboardX
 ## __init__
 `def __init__(self, class_set): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1186-#L1193)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1186-#L1193)
+
 ****
     
 Classes is holds class metadata intended to be used in concert with other objects when visualizing artifacts
@@ -441,7 +466,8 @@ Classes is holds class metadata intended to be used in concert with other object
 # JoinedTable
 `class JoinedTable(Media):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1213-#L1323)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1213-#L1323)
+
 ****
     
 Joins two tables for visualization in the Artifact UI
@@ -459,7 +485,8 @@ join_key (str, [str, str]):
 ## _validate_table_input
 `def _validate_table_input(table): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1263-#L1269)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1263-#L1269)
+
 ****
     
 Helper method to validate that the table input is one of the 3 supported types
@@ -467,7 +494,8 @@ Helper method to validate that the table input is one of the 3 supported types
 ## _ensure_table_in_artifact
 `def _ensure_table_in_artifact(self, table, artifact, table_ndx): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1272-#L1298)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1272-#L1298)
+
 ****
     
 Helper method to add the table to the incoming artifact. Returns the path
@@ -475,7 +503,8 @@ Helper method to add the table to the incoming artifact. Returns the path
 # Image
 `class Image(BatchableMedia):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1327-#L1731)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1327-#L1731)
+
 ****
     
 Wandb class for images.
@@ -493,7 +522,8 @@ Wandb class for images.
 ## guess_mode
 `def guess_mode(self, data): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1582-#L1595)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1582-#L1595)
+
 ****
     
 Guess what type of image the np.array is representing
@@ -501,7 +531,8 @@ Guess what type of image the np.array is representing
 ## to_uint8
 `def to_uint8(self, data): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1598-#L1620)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1598-#L1620)
+
 ****
     
 Converts floating point image on the range [0,1] and integer images
@@ -510,7 +541,8 @@ on the range [0,255] to uint8, clipping if necessary.
 ## seq_to_json
 `def seq_to_json(self, seq, run, key, step): raise NotImplementedError class Table(Media): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1622-#L1678)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1622-#L1678)
+
 ****
     
 Combines a list of images into a meta dictionary object describing the child images.
@@ -518,7 +550,8 @@ Combines a list of images into a meta dictionary object describing the child ima
 # JSONMetadata
 `class JSONMetadata(Media):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1742-#L1774)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1742-#L1774)
+
 ****
     
 JSONMetadata is a type for encoding arbitrary metadata as files.
@@ -526,7 +559,8 @@ JSONMetadata is a type for encoding arbitrary metadata as files.
 # BoundingBoxes2D
 `class BoundingBoxes2D(JSONMetadata):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1777-#L1915)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1777-#L1915)
+
 ****
     
 Wandb class for 2D bounding boxes
@@ -534,7 +568,8 @@ Wandb class for 2D bounding boxes
 ## __init__
 `def __init__(self, val, key, **kwargs): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1784-#L1823)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1784-#L1823)
+
 **Args**
     
 {
@@ -548,7 +583,8 @@ Wandb class for 2D bounding boxes
 # ImageMask
 `class ImageMask(Media):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1918-#L2031)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1918-#L2031)
+
 ****
     
 Wandb class for image masks, useful for segmentation tasks
@@ -556,7 +592,8 @@ Wandb class for image masks, useful for segmentation tasks
 ## __init__
 `def __init__(self, val, key, **kwargs): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1925-#L1968)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L1925-#L1968)
+
 **Args**
     
 {
@@ -574,7 +611,8 @@ Wandb class for image masks, useful for segmentation tasks
 # Plotly
 `class Plotly(Media):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2035-#L2079)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2035-#L2079)
+
 ****
     
 Wandb class for plotly plots.
@@ -590,7 +628,8 @@ Wandb class for plotly plots.
 # Graph
 `class Graph(Media):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2082-#L2240)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2082-#L2240)
+
 ****
     
 Wandb class for graphs
@@ -623,7 +662,8 @@ Import a keras model:
 # Node
 `class Node(WBValue):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2243-#L2417)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2243-#L2417)
+
 ****
     
 Node used in `Graph`
@@ -631,7 +671,8 @@ Node used in `Graph`
 ## id
 `def id(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2294-#L2297)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2294-#L2297)
+
 ****
     
 Must be unique in the graph
@@ -639,7 +680,8 @@ Must be unique in the graph
 ## name
 `def name(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2304-#L2307)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2304-#L2307)
+
 ****
     
 Usually the type of layer or sublayer
@@ -647,7 +689,8 @@ Usually the type of layer or sublayer
 ## class_name
 `def class_name(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2314-#L2317)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2314-#L2317)
+
 ****
     
 Usually the type of layer or sublayer
@@ -655,7 +698,8 @@ Usually the type of layer or sublayer
 ## size
 `def size(self, val): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2346-#L2350)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2346-#L2350)
+
 ****
     
 Tensor size
@@ -663,7 +707,8 @@ Tensor size
 ## output_shape
 `def output_shape(self, val): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2356-#L2360)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2356-#L2360)
+
 ****
     
 Tensor output_shape
@@ -671,7 +716,8 @@ Tensor output_shape
 ## is_output
 `def is_output(self, val): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2366-#L2370)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2366-#L2370)
+
 ****
     
 Tensor is_output
@@ -679,7 +725,8 @@ Tensor is_output
 ## num_parameters
 `def num_parameters(self, val): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2376-#L2380)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2376-#L2380)
+
 ****
     
 Tensor num_parameters
@@ -687,7 +734,8 @@ Tensor num_parameters
 ## child_parameters
 `def child_parameters(self, val): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2386-#L2390)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2386-#L2390)
+
 ****
     
 Tensor child_parameters
@@ -695,7 +743,8 @@ Tensor child_parameters
 ## is_constant
 `def is_constant(self, val): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2396-#L2400)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2396-#L2400)
+
 ****
     
 Tensor is_constant
@@ -703,7 +752,8 @@ Tensor is_constant
 # Edge
 `class Edge(WBValue):`
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2420-#L2467)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2420-#L2467)
+
 ****
     
 Edge used in `Graph`
@@ -711,7 +761,8 @@ Edge used in `Graph`
 ## name
 `def name(self): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2441-#L2444)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2441-#L2444)
+
 ****
     
 Optional, not necessarily unique
@@ -719,7 +770,8 @@ Optional, not necessarily unique
 # data_frame_to_json
 `def data_frame_to_json(df, run, key, step): `
 
-[SOURCE](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2576-#L2661)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/data_types.py#L2576-#L2661)
+
 ****
     
 !NODOC Encode a Pandas DataFrame into the JSON/backend format.
