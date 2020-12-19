@@ -3,7 +3,7 @@ account.
 # login
 `def login(anonymous=None, key=None, relogin=None, host=None, force=None): `
 
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_login.py#L22-#L42)
+[![Badge](https://img.shields.io/badge/SOURCE-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_login.py#L22-#L42)
 
 ****
     

@@ -1,7 +1,7 @@
 # SummaryDict
 `class SummaryDict(object):`
 
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_summary.py#L20-#L79)
+[![Badge](https://img.shields.io/badge/SOURCE-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_summary.py#L20-#L79)
 
 ****
     
@@ -11,7 +11,7 @@ and triggers self._root._callback on property changes.
 # Summary
 `class Summary(SummaryDict):`
 
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_summary.py#L82-#L133)
+[![Badge](https://img.shields.io/badge/SOURCE-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_summary.py#L82-#L133)
 
 ****
     
@@ -50,7 +50,7 @@ if (test_accuracy > best_accuracy):
 # SummarySubDict
 `class SummarySubDict(SummaryDict):`
 
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_summary.py#L136-#L153)
+[![Badge](https://img.shields.io/badge/SOURCE-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_summary.py#L136-#L153)
 
 ****
     

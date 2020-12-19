@@ -1,7 +1,7 @@
 ## log
 `def log(self, data, step=None, commit=None, sync=None): `
 
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L729-#L862)
+[![Badge](https://img.shields.io/badge/SOURCE-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L729-#L862)
 
 ****
     
