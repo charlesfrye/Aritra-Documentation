@@ -6,7 +6,7 @@ ${el['doc']}
 % if 'sig' in el.keys() and el['sig']:
 `${el['sig']}`
 
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/${source[2:]}#L${el['lineno'][0]}-#L${el['lineno'][1]})
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/${source[2:]}#L${el['lineno'][0]}-#L${el['lineno'][1]})
 
     % if 'parse' in el.keys():
         % for segment in el['parse']:

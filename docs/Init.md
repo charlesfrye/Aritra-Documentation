@@ -4,7 +4,7 @@ your evaluation script, and each piece steps would be tracked as a run in W&B.
 # _set_logger
 `def _set_logger(log_object): `
 
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L40-#L43)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L40-#L43)
 
 ****
     
@@ -14,7 +14,7 @@ Configure module logger.
 ## setup
 `def setup(self, kwargs): `
 
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L62-#L158)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L62-#L158)
 
 ****
     
@@ -24,7 +24,7 @@ applying them with settings and enabling logging.
 ## _enable_logging
 `def _enable_logging(self, log_fname, run_id=None): `
 
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L167-#L200)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L167-#L200)
 
 ****
     
@@ -35,7 +35,7 @@ Currently there is no way to disable logging after it's enabled.
 ## _jupyter_teardown
 `def _jupyter_teardown(self): `
 
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L232-#L245)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L232-#L245)
 
 ****
     
@@ -44,7 +44,7 @@ Teardown hooks and display saving, called with wandb.finish
 ## _jupyter_setup
 `def _jupyter_setup(self, settings): `
 
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L247-#L269)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L247-#L269)
 
 ****
     
@@ -53,7 +53,7 @@ Add magic, hooks, and session history saving
 ## _log_setup
 `def _log_setup(self, settings): `
 
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L271-#L304)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L271-#L304)
 
 ****
     
@@ -62,7 +62,7 @@ Set up logging from settings.
 # init
 `def init( job_type: Optional[str] = None, dir=None, config: Union[Dict, str, None] = None, project: Optional[str] = None, entity: Optional[str] = None, reinit: bool = None, tags: Optional[Sequence] = None, group: Optional[str] = None, name: Optional[str] = None, notes: Optional[str] = None, magic: Union[dict, str, bool] = None, config_exclude_keys=None, config_include_keys=None, anonymous: Optional[str] = None, mode: Optional[str] = None, allow_val_change: Optional[bool] = None, resume: Optional[Union[bool, str]] = None, force: Optional[bool] = None, tensorboard=None, # alias for sync_tensorboard sync_tensorboard=None, monitor_gym=None, save_code=None, id=None, settings: Union[Settings, Dict[str, Any], None] = None, ) -> Union[Run, Dummy]: Union[Run, Dummy]`
 
-[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=for-the-badge&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L456-#L613)
+[![Badge](https://img.shields.io/badge/View%20source%20on%20GitHub-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L456-#L613)
 
 ****
     
