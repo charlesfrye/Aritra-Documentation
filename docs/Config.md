@@ -34,6 +34,7 @@ for x in range(wandb.config.epochs):
 
 Using wandb.init to set config
 ```
+wandb.init(config={"epochs": 4, "batch_size": 32})
 for x in range(wandb.config.epochs):
     # train
 ```
@@ -60,6 +61,7 @@ wandb.config.epochs = 4
 
 parser = argparse.ArgumentParser()
 parser.add_argument('-b', '--batch-size', type=int, default=8, metavar='N',
+                    help='input batch size for training (default: 8)')
 args = parser.parse_args()
 wandb.config.update(args)
 ```
@@ -72,10 +74,6 @@ flags.DEFINE_integer('batch_size', 128, 'Batch size.')
 wandb.config.update(flags.FLAGS)  # adds all of the tensorflow flags to config
 ```
     
-| **Filed** | **Type** | **Description** |
-|--|--|--|
-|  |  | 4, "batch_size": 32}) |
-| default |  | 8)') |
 ## persist
 `def persist(self): `
 

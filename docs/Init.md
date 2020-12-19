@@ -114,12 +114,10 @@ Launch multiple runs from the same script
 for x in range(10):
     with wandb.init(project="my-projo") as run:
         for y in range(100):
+            run.log({"metric": x+y})
 ```
 
     
-| **Filed** | **Type** | **Description** |
-|--|--|--|
-|  |  | x+y}) |
 **Raises**
     
 

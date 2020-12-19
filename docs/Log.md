@@ -59,31 +59,40 @@ the data on the client side or you may get degraded performance.
     
 Basic usage
 ```
+wandb.log({'accuracy': 0.9, 'epoch': 5})
 ```
 
 Incremental logging
 ```
+wandb.log({'loss': 0.2}, commit=False)
 # Somewhere else when I'm ready to report this step:
+wandb.log({'accuracy': 0.8})
 ```
 
 Histogram
 ```
+wandb.log({"gradients": wandb.Histogram(numpy_array_or_sequence)})
 ```
 
 Image
 ```
+wandb.log({"examples": [wandb.Image(numpy_array_or_pil, caption="Label")]})
 ```
 
 Video
 ```
+wandb.log({"video": wandb.Video(numpy_array_or_video_path, fps=4,
+    format="gif")})
 ```
 
 Matplotlib Plot
 ```
+wandb.log({"chart": plt})
 ```
 
 PR Curve
 ```
+wandb.log({'pr': wandb.plots.precision_recall(y_test, y_probas, labels)})
 ```
 
 3D Object
@@ -97,16 +106,6 @@ wandb.log({"generated_samples":
 For more examples, see https://docs.wandb.com/library/log
 
     
-| **Filed** | **Type** | **Description** |
-|--|--|--|
-|  |  | 0.9, 'epoch': 5}) |
-|  |  | 0.2}, commit=False) |
-|  |  | 0.8}) |
-|  |  | wandb.Histogram(numpy_array_or_sequence)}) |
-|  |  | [wandb.Image(numpy_array_or_pil, caption="Label")]}) |
-|  |  | wandb.Video(numpy_array_or_video_path, fps=4, format="gif")}) |
-|  |  | plt}) |
-|  |  | wandb.plots.precision_recall(y_test, y_probas, labels)}) |
 **Raises**
     
 wandb.Error - if called before wandb.init
