@@ -498,9 +498,12 @@ Generate a url for a sweep.
     
 **Returns**
     
-str - url if the run is part of a sweep
-None - if the run is not part of the sweep
+
     
+| **Filed** | **Type** | **Description** |
+|--|--|--|
+|  | (str) | url if the run is part of a sweep |
+|  | (None) | if the run is not part of the sweep |
 ## use_artifact
 `def use_artifact(self, artifact_or_name, type=None, aliases=None): `
 

@@ -2,7 +2,7 @@ config.
 # Config
 `class Config(object):`
 
-[![Badge](https://img.shields.io/badge/SOURCE-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_config.py#L28-#L243)
+[![Badge](https://img.shields.io/badge/SOURCE-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_config.py#L24-#L252)
 
 ****
     
@@ -77,7 +77,7 @@ wandb.config.update(flags.FLAGS)  # adds all of the tensorflow flags to config
 ## persist
 `def persist(self): `
 
-[![Badge](https://img.shields.io/badge/SOURCE-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_config.py#L163-#L166)
+[![Badge](https://img.shields.io/badge/SOURCE-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_config.py#L173-#L176)
 
 ****
     
@@ -86,7 +86,7 @@ Calls the callback if it's set
 ## _sanitize_val
 `def _sanitize_val(self, val): `
 
-[![Badge](https://img.shields.io/badge/SOURCE-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_config.py#L222-#L243)
+[![Badge](https://img.shields.io/badge/SOURCE-black?style=plastic&logo=github)](https://github.com/wandb/client/tree/master/wandb/sdk/wandb_config.py#L231-#L252)
 
 ****
     
