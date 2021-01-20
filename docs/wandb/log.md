@@ -62,22 +62,7 @@ the data on the client side or you may get degraded performance.
 
 <!-- Tabular view -->
  <table>
-<tr><th><h2 class="add-link">Arguments</h2></th></tr>
-<tr class="alt">
-<td colspan="2">
-row (dict, optional): A dict of serializable python objects i.e `str`,
-`ints`, `floats`, `Tensors`, `dicts`, or `wandb.data_types`.
-commit (boolean, optional): Save the metrics dict to the wandb server
-and increment the step.  If false <a href="../wandb/log.md"><code>wandb.log</code></a> just updates the current
-metrics dict with the row argument and metrics won't be saved until
-<a href="../wandb/log.md"><code>wandb.log</code></a> is called with `commit=True`.
-step (integer, optional): The global step in processing. This persists
-any non-committed earlier steps but defaults to not committing the
-specified step.
-sync (boolean, True): This argument is deprecated and currently doesn't
-change the behaviour of <a href="../wandb/log.md"><code>wandb.log</code></a>.
-</td>
-</tr>
+<tr><th>Arguments</th></tr>
 
 </table>
 
@@ -137,13 +122,7 @@ For more examples, see https://docs.wandb.com/library/log
 
 <!-- Tabular view -->
  <table>
-<tr><th><h2 class="add-link">Raises</h2></th></tr>
-<tr class="alt">
-<td colspan="2">
-wandb.Error - if called before <a href="../wandb/init.md"><code>wandb.init</code></a>
-ValueError - if invalid data is passed
-</td>
-</tr>
+<tr><th>Raises</th></tr>
 
 </table>
 

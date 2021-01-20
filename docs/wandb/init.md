@@ -59,8 +59,7 @@ with wandb.run.
 
 <!-- Tabular view -->
  <table>
-<tr><th><h2 class="add-link">Arguments</h2></th></tr>
-
+<tr><th>Arguments</th></tr>
 <tr>
 <td>
 `project`
@@ -339,8 +338,7 @@ for x in range(10):
 
 <!-- Tabular view -->
  <table>
-<tr><th><h2 class="add-link">Raises</h2></th></tr>
-
+<tr><th>Raises</th></tr>
 <tr>
 <td>
 `Exception`
@@ -355,12 +353,7 @@ if problem.
 
 <!-- Tabular view -->
  <table>
-<tr><th><h2 class="add-link">Returns</h2></th></tr>
-<tr class="alt">
-<td colspan="2">
-A `Run` object.
-</td>
-</tr>
+<tr><th>Returns</th></tr>
 
 </table>
 

@@ -27,22 +27,6 @@ Wandb class for 3D point clouds.
 <!-- Tabular view -->
  <table>
 <tr><th><h2 class="add-link">Arguments</h2></th></tr>
-<tr class="alt">
-<td colspan="2">
-data_or_path (numpy array, string, io):
-Object3D can be initialized from a file or a numpy array.
-
-The file types supported are obj, gltf, babylon, stl.  You can pass a path to
-a file or an io object and a file_type which must be one of `'obj', 'gltf', 'babylon', 'stl'`.
-
-The shape of the numpy array must be one of either:
-```
-[[x y z],       ...] nx3
-[x y z c],     ...] nx4 where c is a category with supported range [1, 14]
-[x y z r g b], ...] nx4 where is rgb is color
-```
-</td>
-</tr>
 
 </table>
 
@@ -53,7 +37,6 @@ The shape of the numpy array must be one of either:
 <!-- Tabular view -->
  <table>
 <tr><th><h2 class="add-link">Attributes</h2></th></tr>
-
 <tr>
 <td>
 `artifact_source`
@@ -154,14 +137,6 @@ a wandb.Value via it's `from_json` method, make sure to properly set this `artif
 <!-- Tabular view -->
  <table>
 <tr><th>Args</th></tr>
-<tr class="alt">
-<td colspan="2">
-json_obj (dict): A JSON dictionary to deserialize. It must contain a `_type` key. The value of
-this key is used to lookup the correct subclass to use.
-source_artifact (wandb.Artifact): An artifact which will hold any additional resources which were stored
-during the `to_json` function.
-</td>
-</tr>
 
 </table>
 
@@ -170,7 +145,6 @@ during the `to_json` function.
 <!-- Tabular view -->
  <table>
 <tr><th>Returns</th></tr>
-
 <tr>
 <td>
 `wandb.Value`
@@ -224,12 +198,6 @@ is a wandb.Run then `self.bind_to_run()` must have been previously been called.
 <!-- Tabular view -->
  <table>
 <tr><th>Args</th></tr>
-<tr class="alt">
-<td colspan="2">
-run_or_artifact (wandb.Run | wandb.Artifact): the Run or Artifact for which this object should be generating
-JSON for - this is useful to to store additional data if needed.
-</td>
-</tr>
 
 </table>
 
@@ -238,7 +206,6 @@ JSON for - this is useful to to store additional data if needed.
 <!-- Tabular view -->
  <table>
 <tr><th>Returns</th></tr>
-
 <tr>
 <td>
 `dict`
@@ -266,7 +233,6 @@ Returns a map from `artifact_type` to subclass. Used to lookup correct types for
 <!-- Tabular view -->
  <table>
 <tr><th>Returns</th></tr>
-
 <tr>
 <td>
 `dict`
@@ -296,12 +262,6 @@ Helper function to return the name with suffix added if not already
 <!-- Tabular view -->
  <table>
 <tr><th>Args</th></tr>
-<tr class="alt">
-<td colspan="2">
-name (str): the name of the file
-filetype (str, optional): the filetype to use. Defaults to "json".
-</td>
-</tr>
 
 </table>
 
@@ -310,7 +270,6 @@ filetype (str, optional): the filetype to use. Defaults to "json".
 <!-- Tabular view -->
  <table>
 <tr><th>Returns</th></tr>
-
 <tr>
 <td>
 `str`
@@ -356,7 +315,6 @@ Return self!=value.
 <!-- Tabular view -->
  <table>
 <tr><th><h2 class="add-link">Class Variables</h2></th></tr>
-
 <tr>
 <td>
 SUPPORTED_TYPES<a id="SUPPORTED_TYPES"></a>

@@ -27,21 +27,6 @@ Wandb representation of video.
 <!-- Tabular view -->
  <table>
 <tr><th><h2 class="add-link">Arguments</h2></th></tr>
-<tr class="alt">
-<td colspan="2">
-data_or_path (numpy array, string, io):
-Video can be initialized with a path to a file or an io object.
-The format must be "gif", "mp4", "webm" or "ogg".
-The format must be specified with the format argument.
-Video can be initialized with a numpy tensor.
-The numpy tensor must be either 4 dimensional or 5 dimensional.
-Channels should be (time, channel, height, width) or
-(batch, time, channel, height width)
-caption (string): caption associated with the video for display
-fps (int): frames per second for video. Default is 4.
-format (string): format of video, necessary if initializing with path or io object.
-</td>
-</tr>
 
 </table>
 
@@ -52,7 +37,6 @@ format (string): format of video, necessary if initializing with path or io obje
 <!-- Tabular view -->
  <table>
 <tr><th><h2 class="add-link">Attributes</h2></th></tr>
-
 <tr>
 <td>
 `artifact_source`
@@ -164,14 +148,6 @@ a wandb.Value via it's `from_json` method, make sure to properly set this `artif
 <!-- Tabular view -->
  <table>
 <tr><th>Args</th></tr>
-<tr class="alt">
-<td colspan="2">
-json_obj (dict): A JSON dictionary to deserialize. It must contain a `_type` key. The value of
-this key is used to lookup the correct subclass to use.
-source_artifact (wandb.Artifact): An artifact which will hold any additional resources which were stored
-during the `to_json` function.
-</td>
-</tr>
 
 </table>
 
@@ -180,7 +156,6 @@ during the `to_json` function.
 <!-- Tabular view -->
  <table>
 <tr><th>Returns</th></tr>
-
 <tr>
 <td>
 `wandb.Value`
@@ -234,12 +209,6 @@ is a wandb.Run then `self.bind_to_run()` must have been previously been called.
 <!-- Tabular view -->
  <table>
 <tr><th>Args</th></tr>
-<tr class="alt">
-<td colspan="2">
-run_or_artifact (wandb.Run | wandb.Artifact): the Run or Artifact for which this object should be generating
-JSON for - this is useful to to store additional data if needed.
-</td>
-</tr>
 
 </table>
 
@@ -248,7 +217,6 @@ JSON for - this is useful to to store additional data if needed.
 <!-- Tabular view -->
  <table>
 <tr><th>Returns</th></tr>
-
 <tr>
 <td>
 `dict`
@@ -276,7 +244,6 @@ Returns a map from `artifact_type` to subclass. Used to lookup correct types for
 <!-- Tabular view -->
  <table>
 <tr><th>Returns</th></tr>
-
 <tr>
 <td>
 `dict`
@@ -306,12 +273,6 @@ Helper function to return the name with suffix added if not already
 <!-- Tabular view -->
  <table>
 <tr><th>Args</th></tr>
-<tr class="alt">
-<td colspan="2">
-name (str): the name of the file
-filetype (str, optional): the filetype to use. Defaults to "json".
-</td>
-</tr>
 
 </table>
 
@@ -320,7 +281,6 @@ filetype (str, optional): the filetype to use. Defaults to "json".
 <!-- Tabular view -->
  <table>
 <tr><th>Returns</th></tr>
-
 <tr>
 <td>
 `str`
@@ -366,7 +326,6 @@ Return self!=value.
 <!-- Tabular view -->
  <table>
 <tr><th><h2 class="add-link">Class Variables</h2></th></tr>
-
 <tr>
 <td>
 EXTS<a id="EXTS"></a>
