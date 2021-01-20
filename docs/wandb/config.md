@@ -1,7 +1,3 @@
-description: Config object
-
-robots: noindex
-
 # wandb.config
 
 <!-- Insert buttons and diff -->

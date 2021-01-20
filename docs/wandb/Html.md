@@ -1,7 +1,3 @@
-description: Wandb class for arbitrary html
-
-robots: noindex
-
 # wandb.Html
 
 <!-- Insert buttons and diff -->

@@ -1,7 +1,3 @@
-description: Log a dict to the global run's history.
-
-robots: noindex
-
 # wandb.log
 
 <!-- Insert buttons and diff -->

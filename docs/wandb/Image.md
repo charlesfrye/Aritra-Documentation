@@ -1,7 +1,3 @@
-description: Wandb class for images.
-
-robots: noindex
-
 # wandb.Image
 
 <!-- Insert buttons and diff -->

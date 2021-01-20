@@ -1,7 +1,3 @@
-description: This is a table designed to display sets of records.
-
-robots: noindex
-
 # wandb.Table
 
 <!-- Insert buttons and diff -->

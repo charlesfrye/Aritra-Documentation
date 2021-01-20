@@ -1,7 +1,3 @@
-description: Wandb class for audio clips.
-
-robots: noindex
-
 # wandb.Audio
 
 <!-- Insert buttons and diff -->

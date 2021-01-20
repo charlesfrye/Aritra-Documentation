@@ -1,7 +1,3 @@
-description: Wandb class for plotly plots.
-
-robots: noindex
-
 # wandb.Plotly
 
 <!-- Insert buttons and diff -->

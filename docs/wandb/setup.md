@@ -1,5 +1,3 @@
-robots: noindex
-
 # wandb.setup
 
 <!-- Insert buttons and diff -->

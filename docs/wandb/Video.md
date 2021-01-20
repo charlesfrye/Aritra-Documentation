@@ -1,7 +1,3 @@
-description: Wandb representation of video.
-
-robots: noindex
-
 # wandb.Video
 
 <!-- Insert buttons and diff -->

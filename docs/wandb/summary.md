@@ -1,7 +1,3 @@
-description: Summary tracks single values for each run. By default, summary is set to the
-
-robots: noindex
-
 # wandb.summary
 
 <!-- Insert buttons and diff -->

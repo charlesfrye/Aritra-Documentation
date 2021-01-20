@@ -1,7 +1,3 @@
-description: Used for querying the wandb server.
-
-robots: noindex
-
 # wandb.Api
 
 <!-- Insert buttons and diff -->

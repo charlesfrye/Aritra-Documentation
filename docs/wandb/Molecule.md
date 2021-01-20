@@ -1,7 +1,3 @@
-description: Wandb class for Molecular data
-
-robots: noindex
-
 # wandb.Molecule
 
 <!-- Insert buttons and diff -->

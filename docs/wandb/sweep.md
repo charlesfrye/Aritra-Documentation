@@ -1,5 +1,3 @@
-robots: noindex
-
 # wandb.sweep
 
 <!-- Insert buttons and diff -->

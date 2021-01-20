@@ -1,7 +1,3 @@
-description: Ensure all files matching *glob_str* are synced to wandb with the policy specified.
-
-robots: noindex
-
 # wandb.save
 
 <!-- Insert buttons and diff -->

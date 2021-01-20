@@ -1,7 +1,3 @@
-description: wandb class for histograms
-
-robots: noindex
-
 # wandb.Histogram
 
 <!-- Insert buttons and diff -->

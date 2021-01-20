@@ -1,7 +1,3 @@
-description: Generic agent entrypoint, used for CLI or jupyter.
-
-robots: noindex
-
 # wandb.agent
 
 <!-- Insert buttons and diff -->

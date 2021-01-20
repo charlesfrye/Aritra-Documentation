@@ -1,7 +1,3 @@
-description: Wandb is a library to help track machine learning experiments.
-
-robots: noindex
-
 # Module: wandb
 
 <!-- Insert buttons and diff -->

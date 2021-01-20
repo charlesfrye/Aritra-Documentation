@@ -1,7 +1,3 @@
-description: Wandb class for graphs
-
-robots: noindex
-
 # wandb.Graph
 
 <!-- Insert buttons and diff -->

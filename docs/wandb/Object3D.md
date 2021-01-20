@@ -1,7 +1,3 @@
-description: Wandb class for 3D point clouds.
-
-robots: noindex
-
 # wandb.Object3D
 
 <!-- Insert buttons and diff -->

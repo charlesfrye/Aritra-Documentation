@@ -1,7 +1,3 @@
-description: Initialize W&B.
-
-robots: noindex
-
 # wandb.init
 
 <!-- Insert buttons and diff -->
