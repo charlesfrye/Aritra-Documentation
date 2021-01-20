@@ -311,7 +311,16 @@ Returns a single run by parsing path in the form entity/project/run_id.
 <!-- Tabular view -->
  <table>
 <tr><th>Arguments</th></tr>
-
+<tr>
+<td>
+<code>path</code>
+</td>
+<td>
+(str) path to run in the form entity/project/run_id.
+If api.entity is set, this can be in the form project/run_id
+and if api.project is set this can just be the run_id.
+</td>
+</tr>
 </table>
 
 
@@ -422,7 +431,16 @@ Returns a sweep by parsing path in the form entity/project/sweep_id.
 <!-- Tabular view -->
  <table>
 <tr><th>Arguments</th></tr>
-
+<tr>
+<td>
+<code>path</code>
+</td>
+<td>
+(str, optional) path to sweep in the form entity/project/sweep_id.  If api.entity
+is set, this can be in the form project/sweep_id and if api.project is set
+this can just be the sweep_id.
+</td>
+</tr>
 </table>
 
 
