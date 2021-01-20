@@ -49,7 +49,7 @@ For examples usage, see github.com/wandb/examples
 
 [`agent(...)`](./wandb/agent.md): Generic agent entrypoint, used for CLI or jupyter.
 
-[`config(...)`](./wandb/config.md): Config object
+[`config(...)`](./wandb/config.md): Config object to save your run's hyperparameters.
 
 [`init(...)`](./wandb/init.md): Initialize W&B.
 
