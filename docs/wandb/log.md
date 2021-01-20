@@ -6,14 +6,8 @@ robots: noindex
 
 <!-- Insert buttons and diff -->
 
-<table>
-<td>
-  <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L740-L873">
-    <img src="https://www.tensorflow.org/images/GitHub-Mark-32px.png" />
-    View source on GitHub
-  </a>
-</td>
-</table>
+
+[![https://www.tensorflow.org/images/GitHub-Mark-32px.png]()](https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L740-L873)
 
 
 
