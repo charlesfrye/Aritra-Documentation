@@ -39,7 +39,7 @@ wandb.Histogram(np_histogram=hist)
 
 <!-- Tabular view -->
  <table>
-<tr><th><h2 class="add-link">Arguments</h2></th></tr>
+<tr><th>Arguments</th></tr>
 
 </table>
 
@@ -49,7 +49,7 @@ wandb.Histogram(np_histogram=hist)
 
 <!-- Tabular view -->
  <table>
-<tr><th><h2 class="add-link">Attributes</h2></th></tr>
+<tr><th>Attributes</th></tr>
 <tr>
 <td>
 <code>artifact_source</code>
@@ -258,7 +258,7 @@ Return self!=value.
 
 <!-- Tabular view -->
  <table>
-<tr><th><h2 class="add-link">Class Variables</h2></th></tr>
+<tr><th>Class Variables</th></tr>
 <tr>
 <td>
 MAX_LENGTH<a id="MAX_LENGTH"></a>

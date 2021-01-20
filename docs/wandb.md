@@ -69,7 +69,7 @@ For examples usage, see github.com/wandb/examples
 
 <!-- Tabular view -->
  <table>
-<tr><th><h2 class="add-link">Other Members</h2></th></tr>
+<tr><th>Other Members</th></tr>
 <tr>
 <td>
 __version__<a id="__version__"></a>

@@ -31,8 +31,17 @@ Most common way to initialize
 
 <!-- Tabular view -->
  <table>
-<tr><th><h2 class="add-link">Arguments</h2></th></tr>
-
+<tr><th>Arguments</th></tr>
+<tr>
+<td>
+<code>overrides</code>
+</td>
+<td>
+dict, You can set `base_url` if you are using a wandb server
+other than https://api.wandb.ai.
+You can also set defaults for `entity`, `project`, and `run`.
+</td>
+</tr>
 </table>
 
 
@@ -41,7 +50,7 @@ Most common way to initialize
 
 <!-- Tabular view -->
  <table>
-<tr><th><h2 class="add-link">Attributes</h2></th></tr>
+<tr><th>Attributes</th></tr>
 <tr>
 <td>
 <code>api_key</code>
@@ -343,7 +352,7 @@ Returns a sweep by parsing path in the form entity/project/sweep_id.
 
 <!-- Tabular view -->
  <table>
-<tr><th><h2 class="add-link">Class Variables</h2></th></tr>
+<tr><th>Class Variables</th></tr>
 <tr>
 <td>
 VIEWER_QUERY<a id="VIEWER_QUERY"></a>

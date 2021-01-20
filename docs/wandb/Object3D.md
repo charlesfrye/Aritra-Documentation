@@ -22,7 +22,7 @@ Wandb class for 3D point clouds.
 
 <!-- Tabular view -->
  <table>
-<tr><th><h2 class="add-link">Arguments</h2></th></tr>
+<tr><th>Arguments</th></tr>
 
 </table>
 
@@ -32,7 +32,7 @@ Wandb class for 3D point clouds.
 
 <!-- Tabular view -->
  <table>
-<tr><th><h2 class="add-link">Attributes</h2></th></tr>
+<tr><th>Attributes</th></tr>
 <tr>
 <td>
 <code>artifact_source</code>
@@ -310,7 +310,7 @@ Return self!=value.
 
 <!-- Tabular view -->
  <table>
-<tr><th><h2 class="add-link">Class Variables</h2></th></tr>
+<tr><th>Class Variables</th></tr>
 <tr>
 <td>
 SUPPORTED_TYPES<a id="SUPPORTED_TYPES"></a>

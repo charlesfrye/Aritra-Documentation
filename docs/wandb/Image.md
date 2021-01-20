@@ -23,7 +23,7 @@ Wandb class for images.
 
 <!-- Tabular view -->
  <table>
-<tr><th><h2 class="add-link">Arguments</h2></th></tr>
+<tr><th>Arguments</th></tr>
 
 </table>
 
@@ -33,7 +33,7 @@ Wandb class for images.
 
 <!-- Tabular view -->
  <table>
-<tr><th><h2 class="add-link">Attributes</h2></th></tr>
+<tr><th>Attributes</th></tr>
 <tr>
 <td>
 <code>artifact_source</code>
@@ -380,7 +380,7 @@ Return self!=value.
 
 <!-- Tabular view -->
  <table>
-<tr><th><h2 class="add-link">Class Variables</h2></th></tr>
+<tr><th>Class Variables</th></tr>
 <tr>
 <td>
 MAX_DIMENSION<a id="MAX_DIMENSION"></a>
