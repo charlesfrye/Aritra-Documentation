@@ -6,7 +6,7 @@ robots: noindex
 
 <!-- Insert buttons and diff -->
 
-<table class="tfo-notebook-buttons tfo-api nocontent" align="left">
+<table>
 <td>
   <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_config.py#L24-L263">
     <img src="https://www.tensorflow.org/images/GitHub-Mark-32px.png" />
