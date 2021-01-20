@@ -13,7 +13,7 @@ robots: noindex
 
 Ensure all files matching *glob_str* are synced to wandb with the policy specified.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>wandb.save(
     glob_str: Optional[str] = None,
     base_path: Optional[str] = None,

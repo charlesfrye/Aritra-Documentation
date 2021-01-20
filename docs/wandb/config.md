@@ -13,7 +13,7 @@ robots: noindex
 
 Config object
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>wandb.config() -> None
 </code></pre>
 

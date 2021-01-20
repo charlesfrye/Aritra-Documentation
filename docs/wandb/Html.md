@@ -13,7 +13,7 @@ robots: noindex
 
 Wandb class for arbitrary html
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>wandb.Html(
     data, inject=True
 )
@@ -55,7 +55,7 @@ Getter which returns the object's artifact source
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L334-L370">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>bind_to_run(
     run, key, step, id_=None
 )
@@ -71,7 +71,7 @@ refer to it.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L321-L326">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>@classmethod</code>
 <code>captions(
     media_items
@@ -85,7 +85,7 @@ refer to it.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L331-L332">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>file_is_set()
 </code></pre>
 
@@ -96,7 +96,7 @@ refer to it.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1197-L1199">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>@classmethod</code>
 <code>from_json(
     json_obj, source_artifact
@@ -110,7 +110,7 @@ Likely will need to override for any more complicated media objects
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1188-L1190">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>@classmethod</code>
 <code>get_media_subdir()
 </code></pre>
@@ -122,7 +122,7 @@ Likely will need to override for any more complicated media objects
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L146-L168">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>@staticmethod</code>
 <code>init_from_json(
     json_obj, source_artifact
@@ -161,7 +161,7 @@ a newly created instance of a subclass of wandb.Value
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1171-L1186">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>inject_head()
 </code></pre>
 
@@ -172,7 +172,7 @@ a newly created instance of a subclass of wandb.Value
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L328-L329">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>is_bound()
 </code></pre>
 
@@ -183,7 +183,7 @@ a newly created instance of a subclass of wandb.Value
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1201-L1211">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>@classmethod</code>
 <code>seq_to_json(
     html_list, run, key, step
@@ -197,7 +197,7 @@ a newly created instance of a subclass of wandb.Value
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1192-L1195">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>to_json(
     run
 )
@@ -233,7 +233,7 @@ JSON representation
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L170-L189">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>@staticmethod</code>
 <code>type_mapping()
 </code></pre>
@@ -260,7 +260,7 @@ dictionary of str:class
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L127-L144">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>@classmethod</code>
 <code>with_suffix(
     name, filetype=&#x27;json&#x27;
@@ -297,7 +297,7 @@ a filename which is suffixed with it's `artifact_type` followed by the filetype
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L456-L463">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>__eq__(
     other
 )
@@ -310,7 +310,7 @@ Likely will need to override for any more complicated media objects
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L194-L195">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>__ne__(
     other
 )

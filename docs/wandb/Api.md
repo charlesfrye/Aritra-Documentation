@@ -13,7 +13,7 @@ robots: noindex
 
 Used for querying the wandb server.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>wandb.Api(
     overrides={}
 )
@@ -85,7 +85,7 @@ Most common way to initialize
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L495-L515">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>artifact(
     name, type=None
 )
@@ -114,7 +114,7 @@ Returns a single artifact by parsing path in the form entity/project/run_id.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L484-L487">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>artifact_type(
     type_name, project=None
 )
@@ -127,7 +127,7 @@ Returns a single artifact by parsing path in the form entity/project/run_id.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L479-L482">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>artifact_types(
     project=None
 )
@@ -140,7 +140,7 @@ Returns a single artifact by parsing path in the form entity/project/run_id.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L489-L493">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>artifact_versions(
     type_name, name, per_page=50
 )
@@ -153,7 +153,7 @@ Returns a single artifact by parsing path in the form entity/project/run_id.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L245-L248">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>create_run(
     **kwargs
 )
@@ -166,7 +166,7 @@ Returns a single artifact by parsing path in the form entity/project/run_id.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L276-L281">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>flush()
 </code></pre>
 
@@ -178,7 +178,7 @@ The api object keeps a local cache of runs, so if the state of the run may
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L338-L358">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>projects(
     entity=None, per_page=200
 )
@@ -207,7 +207,7 @@ Get projects for a given entity.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L360-L391">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>reports(
     path=&#x27;&#x27;, name=None, per_page=50
 )
@@ -237,7 +237,7 @@ WARNING: This api is in beta and will likely change in a future release
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L444-L459">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>run(
     path=&#x27;&#x27;
 )
@@ -266,7 +266,7 @@ Returns a single run by parsing path in the form entity/project/run_id.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L393-L442">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>runs(
     path=&#x27;&#x27;, filters={}, order=&#x27;-created_at&#x27;, per_page=50
 )
@@ -316,7 +316,7 @@ api.runs(path="my_entity/my_project", {"order": "+summary_metrics.loss"})
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L461-L477">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>sweep(
     path=&#x27;&#x27;
 )

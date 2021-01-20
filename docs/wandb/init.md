@@ -13,7 +13,7 @@ robots: noindex
 
 Initialize W&B.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>wandb.init(
     job_type: Optional[str] = None,
     dir=None,

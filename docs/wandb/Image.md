@@ -13,7 +13,7 @@ robots: noindex
 
 Wandb class for images.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>wandb.Image(
     data_or_path, mode=None, caption=None, grouping=None, classes=None, boxes=None,
     masks=None
@@ -56,7 +56,7 @@ Getter which returns the object's artifact source
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1906-L1921">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>@classmethod</code>
 <code>all_boxes(
     images, run, run_key, step
@@ -70,7 +70,7 @@ Getter which returns the object's artifact source
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1923-L1928">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>@classmethod</code>
 <code>all_captions(
     images
@@ -84,7 +84,7 @@ Getter which returns the object's artifact source
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1889-L1904">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>@classmethod</code>
 <code>all_masks(
     images, run, run_key, step
@@ -98,7 +98,7 @@ Getter which returns the object's artifact source
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1720-L1731">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>bind_to_run(
     *args, **kwargs
 )
@@ -114,7 +114,7 @@ refer to it.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L321-L326">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>@classmethod</code>
 <code>captions(
     media_items
@@ -128,7 +128,7 @@ refer to it.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L331-L332">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>file_is_set()
 </code></pre>
 
@@ -139,7 +139,7 @@ refer to it.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1684-L1714">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>@classmethod</code>
 <code>from_json(
     json_obj, source_artifact
@@ -153,7 +153,7 @@ Likely will need to override for any more complicated media objects
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1716-L1718">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>@classmethod</code>
 <code>get_media_subdir()
 </code></pre>
@@ -165,7 +165,7 @@ Likely will need to override for any more complicated media objects
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1791-L1805">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>guess_mode(
     data
 )
@@ -178,7 +178,7 @@ Guess what type of image the np.array is representing
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L146-L168">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>@staticmethod</code>
 <code>init_from_json(
     json_obj, source_artifact
@@ -217,7 +217,7 @@ a newly created instance of a subclass of wandb.Value
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L328-L329">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>is_bound()
 </code></pre>
 
@@ -228,7 +228,7 @@ a newly created instance of a subclass of wandb.Value
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1831-L1887">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>@classmethod</code>
 <code>seq_to_json(
     images, run, key, step
@@ -242,7 +242,7 @@ Combines a list of images into a meta dictionary object describing the child ima
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1733-L1789">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>to_json(
     run_or_artifact
 )
@@ -278,7 +278,7 @@ JSON representation
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1807-L1829">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>@classmethod</code>
 <code>to_uint8(
     data
@@ -292,7 +292,7 @@ on the range [0,255] to uint8, clipping if necessary.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L170-L189">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>@staticmethod</code>
 <code>type_mapping()
 </code></pre>
@@ -319,7 +319,7 @@ dictionary of str:class
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L127-L144">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>@classmethod</code>
 <code>with_suffix(
     name, filetype=&#x27;json&#x27;
@@ -356,7 +356,7 @@ a filename which is suffixed with it's `artifact_type` followed by the filetype
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1933-L1941">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>__eq__(
     other
 )
@@ -369,7 +369,7 @@ Likely will need to override for any more complicated media objects
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1930-L1931">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>__ne__(
     other
 )

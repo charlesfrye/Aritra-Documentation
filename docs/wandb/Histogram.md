@@ -13,7 +13,7 @@ robots: noindex
 
 wandb class for histograms
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>wandb.Histogram(
     sequence=None, np_histogram=None, num_bins=64
 )
@@ -72,7 +72,7 @@ Getter which returns the object's artifact source
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L114-L125">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>@classmethod</code>
 <code>from_json(
     json_obj, source_artifact
@@ -95,7 +95,7 @@ the `source_artifact`.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L146-L168">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>@staticmethod</code>
 <code>init_from_json(
     json_obj, source_artifact
@@ -134,7 +134,7 @@ a newly created instance of a subclass of wandb.Value
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L283-L284">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>to_json(
     run=None
 )
@@ -170,7 +170,7 @@ JSON representation
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L170-L189">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>@staticmethod</code>
 <code>type_mapping()
 </code></pre>
@@ -197,7 +197,7 @@ dictionary of str:class
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L127-L144">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>@classmethod</code>
 <code>with_suffix(
     name, filetype=&#x27;json&#x27;
@@ -234,7 +234,7 @@ a filename which is suffixed with it's `artifact_type` followed by the filetype
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L191-L192">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>__eq__(
     other
 )
@@ -247,7 +247,7 @@ Return self==value.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L194-L195">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>__ne__(
     other
 )

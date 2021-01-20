@@ -13,7 +13,7 @@ robots: noindex
 
 Generic agent entrypoint, used for CLI or jupyter.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>wandb.agent(
     sweep_id, function=None, entity=None, project=None, count=None
 )

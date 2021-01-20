@@ -13,7 +13,7 @@ robots: noindex
 
 Log a dict to the global run's history.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<pre>
 <code>wandb.log(
     data, step=None, commit=None, sync=None
 )
