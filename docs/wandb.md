@@ -59,8 +59,6 @@ For examples usage, see github.com/wandb/examples
 
 [`save(...)`](./wandb/save.md): Ensure all files matching *glob_str* are synced to wandb with the policy specified.
 
-[`setup(...)`](./wandb/setup.md)
-
 [`summary(...)`](./wandb/summary.md): Summary tracks single values for each run. By default, summary is set to the
 
 [`sweep(...)`](./wandb/sweep.md)

@@ -381,7 +381,6 @@
     "wandb.join": false,
     "wandb.log": false,
     "wandb.save": false,
-    "wandb.setup": false,
     "wandb.summary": false,
     "wandb.sweep": false
   },

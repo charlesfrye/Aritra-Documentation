@@ -22,6 +22,5 @@ robots: noindex
 *  <a href="../wandb/join.md"><code>wandb.join</code></a>
 *  <a href="../wandb/log.md"><code>wandb.log</code></a>
 *  <a href="../wandb/save.md"><code>wandb.save</code></a>
-*  <a href="../wandb/setup.md"><code>wandb.setup</code></a>
 *  <a href="../wandb/summary.md"><code>wandb.summary</code></a>
 *  <a href="../wandb/sweep.md"><code>wandb.sweep</code></a>

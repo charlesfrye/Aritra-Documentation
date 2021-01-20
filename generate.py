@@ -67,10 +67,10 @@ def build_docs(output_dir, code_url_prefix, search_hints, gen_report):
         decorator=doc_controls.do_not_doc_in_subclasses,
         cls=cls,
         skip=["__init__"])
-#   try:
-#     doc_controls.do_not_generate_docs(wandb.lightgbm)
-#   except AttributeError:
-#     pass
+  try:
+    doc_controls.do_not_generate_docs(wandb.setup)
+  except AttributeError:
+    pass
 #   try:
 #     doc_controls.do_not_generate_docs(wandb.sacred)
 #   except AttributeError:
