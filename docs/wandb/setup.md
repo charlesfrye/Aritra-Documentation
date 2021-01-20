@@ -5,10 +5,13 @@ robots: noindex
 <!-- Insert buttons and diff -->
 
 <table class="tfo-notebook-buttons tfo-api nocontent" align="left">
-
+<td>
+  <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_setup.py#L262-L264">
+    <img src="https://www.tensorflow.org/images/GitHub-Mark-32px.png" />
+    View source on GitHub
+  </a>
+</td>
 </table>
-
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/sdk/wandb_setup.py">View source</a>
 
 
 

@@ -7,10 +7,13 @@ robots: noindex
 <!-- Insert buttons and diff -->
 
 <table class="tfo-notebook-buttons tfo-api nocontent" align="left">
-
+<td>
+  <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L218-L284">
+    <img src="https://www.tensorflow.org/images/GitHub-Mark-32px.png" />
+    View source on GitHub
+  </a>
+</td>
 </table>
-
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/data_types.py">View source</a>
 
 
 
@@ -84,7 +87,7 @@ Getter which returns the object's artifact source
 
 <h3 id="from_json"><code>from_json</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/data_types.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L114-L125">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>@classmethod</code>
@@ -115,7 +118,7 @@ during the `to_json` function.
 
 <h3 id="init_from_json"><code>init_from_json</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/data_types.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L146-L168">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>@staticmethod</code>
@@ -165,7 +168,7 @@ a newly created instance of a subclass of wandb.Value
 
 <h3 id="to_json"><code>to_json</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/data_types.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L283-L284">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>to_json(
@@ -210,7 +213,7 @@ JSON representation
 
 <h3 id="type_mapping"><code>type_mapping</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/data_types.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L170-L189">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>@staticmethod</code>
@@ -239,7 +242,7 @@ dictionary of str:class
 
 <h3 id="with_suffix"><code>with_suffix</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/data_types.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L127-L144">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>@classmethod</code>
@@ -285,7 +288,7 @@ a filename which is suffixed with it's `artifact_type` followed by the filetype
 
 <h3 id="__eq__"><code>__eq__</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/data_types.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L191-L192">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>__eq__(
@@ -298,7 +301,7 @@ Return self==value.
 
 <h3 id="__ne__"><code>__ne__</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/data_types.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L194-L195">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>__ne__(

@@ -7,10 +7,13 @@ robots: noindex
 <!-- Insert buttons and diff -->
 
 <table class="tfo-notebook-buttons tfo-api nocontent" align="left">
-
+<td>
+  <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L181-L515">
+    <img src="https://www.tensorflow.org/images/GitHub-Mark-32px.png" />
+    View source on GitHub
+  </a>
+</td>
 </table>
-
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/apis/public.py">View source</a>
 
 
 
@@ -96,7 +99,7 @@ You can also set defaults for `entity`, `project`, and `run`.
 
 <h3 id="artifact"><code>artifact</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/apis/public.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L495-L515">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>artifact(
@@ -142,7 +145,7 @@ A `Artifact` object.
 
 <h3 id="artifact_type"><code>artifact_type</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/apis/public.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L484-L487">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>artifact_type(
@@ -155,7 +158,7 @@ A `Artifact` object.
 
 <h3 id="artifact_types"><code>artifact_types</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/apis/public.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L479-L482">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>artifact_types(
@@ -168,7 +171,7 @@ A `Artifact` object.
 
 <h3 id="artifact_versions"><code>artifact_versions</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/apis/public.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L489-L493">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>artifact_versions(
@@ -181,7 +184,7 @@ A `Artifact` object.
 
 <h3 id="create_run"><code>create_run</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/apis/public.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L245-L248">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>create_run(
@@ -194,7 +197,7 @@ A `Artifact` object.
 
 <h3 id="flush"><code>flush</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/apis/public.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L276-L281">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>flush()
@@ -206,7 +209,7 @@ The api object keeps a local cache of runs, so if the state of the run may
 
 <h3 id="projects"><code>projects</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/apis/public.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L338-L358">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>projects(
@@ -250,7 +253,7 @@ A `Projects` object which is an iterable collection of `Project` objects.
 
 <h3 id="reports"><code>reports</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/apis/public.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L360-L391">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>reports(
@@ -295,7 +298,7 @@ A `Reports` object which is an iterable collection of `BetaReport` objects.
 
 <h3 id="run"><code>run</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/apis/public.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L444-L459">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>run(
@@ -338,7 +341,7 @@ A `Run` object.
 
 <h3 id="runs"><code>runs</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/apis/public.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L393-L442">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>runs(
@@ -410,7 +413,7 @@ A `Runs` object, which is an iterable collection of `Run` objects.
 
 <h3 id="sweep"><code>sweep</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/apis/public.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L461-L477">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>sweep(

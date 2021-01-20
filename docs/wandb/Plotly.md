@@ -7,10 +7,13 @@ robots: noindex
 <!-- Insert buttons and diff -->
 
 <table class="tfo-notebook-buttons tfo-api nocontent" align="left">
-
+<td>
+  <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2244-L2288">
+    <img src="https://www.tensorflow.org/images/GitHub-Mark-32px.png" />
+    View source on GitHub
+  </a>
+</td>
 </table>
-
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/data_types.py">View source</a>
 
 
 
@@ -67,7 +70,7 @@ Getter which returns the object's artifact source
 
 <h3 id="bind_to_run"><code>bind_to_run</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/data_types.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L334-L370">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>bind_to_run(
@@ -83,7 +86,7 @@ refer to it.
 
 <h3 id="captions"><code>captions</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/data_types.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L321-L326">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>@classmethod</code>
@@ -97,7 +100,7 @@ refer to it.
 
 <h3 id="file_is_set"><code>file_is_set</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/data_types.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L331-L332">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>file_is_set()
@@ -108,7 +111,7 @@ refer to it.
 
 <h3 id="from_json"><code>from_json</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/data_types.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L451-L454">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>@classmethod</code>
@@ -122,7 +125,7 @@ Likely will need to override for any more complicated media objects
 
 <h3 id="get_media_subdir"><code>get_media_subdir</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/data_types.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2282-L2283">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>get_media_subdir()
@@ -133,7 +136,7 @@ Likely will need to override for any more complicated media objects
 
 <h3 id="init_from_json"><code>init_from_json</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/data_types.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L146-L168">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>@staticmethod</code>
@@ -183,7 +186,7 @@ a newly created instance of a subclass of wandb.Value
 
 <h3 id="is_bound"><code>is_bound</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/data_types.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L328-L329">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>is_bound()
@@ -194,7 +197,7 @@ a newly created instance of a subclass of wandb.Value
 
 <h3 id="make_plot_media"><code>make_plot_media</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/data_types.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2252-L2258">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>@classmethod</code>
@@ -208,7 +211,7 @@ a newly created instance of a subclass of wandb.Value
 
 <h3 id="to_json"><code>to_json</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/data_types.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2285-L2288">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>to_json(
@@ -253,7 +256,7 @@ JSON representation
 
 <h3 id="type_mapping"><code>type_mapping</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/data_types.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L170-L189">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>@staticmethod</code>
@@ -282,7 +285,7 @@ dictionary of str:class
 
 <h3 id="with_suffix"><code>with_suffix</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/data_types.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L127-L144">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>@classmethod</code>
@@ -328,7 +331,7 @@ a filename which is suffixed with it's `artifact_type` followed by the filetype
 
 <h3 id="__eq__"><code>__eq__</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/data_types.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L456-L463">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>__eq__(
@@ -341,7 +344,7 @@ Likely will need to override for any more complicated media objects
 
 <h3 id="__ne__"><code>__ne__</code></h3>
 
-<a target="_blank" href="/home/aritra/anaconda3/envs/tf_docs/lib/python3.6/site-packages/wandb/data_types.py">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L194-L195">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>__ne__(

@@ -92,7 +92,7 @@ def build_docs(output_dir, code_url_prefix, search_hints, gen_report):
       py_modules=[("wandb", wandb)],
       base_dir=path.dirname(wandb.__file__),
       search_hints=search_hints,
-      code_url_prefix=path.dirname(wandb.__file__),
+      code_url_prefix="https://www.github.com/wandb/client/tree/master/wandb",
       site_path=FLAGS.site_path,
       gen_report=gen_report,
   )
