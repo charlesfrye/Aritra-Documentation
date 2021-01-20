@@ -58,7 +58,7 @@ For examples usage, see github.com/wandb/examples
 
 [`config(...)`](./wandb/config.md): Config object
 
-[`init(...)`](./wandb/init.md): Initialize W&B
+[`init(...)`](./wandb/init.md): Initialize W&B.
 
 [`join(...)`](./wandb/join.md)
 
