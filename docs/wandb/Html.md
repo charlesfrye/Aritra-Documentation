@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![Image](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1132-L1211)
+[![Image](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1130-L1209)
 
 
 
@@ -23,97 +23,34 @@ Wandb class for arbitrary html
 <!-- Tabular view -->
  <table>
 <tr><th>Arguments</th></tr>
-
+<tr>
+<td>
+<code>data</code>
+</td>
+<td>
+(string or io object) HTML to display in wandb
+</td>
+</tr><tr>
+<td>
+<code>inject</code>
+</td>
+<td>
+(boolean) Add a stylesheet to the HTML object. If set
+to False the HTML will pass through unchanged.
+</td>
+</tr>
 </table>
 
 
 
 ## Methods
 
-<h3 id="bind_to_run"><code>bind_to_run</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L334-L370">View source</a>
-
-<pre>
-<code>bind_to_run(
-    run, key, step, id_=None
-)
-</code></pre>
-
-Bind this object to a particular Run.
-
-Calling this function is necessary so that we have somewhere specific to
-put the file associated with this object, from which other Runs can
-refer to it.
-
-<h3 id="captions"><code>captions</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L321-L326">View source</a>
-
-<pre>
-<code>@classmethod</code>
-<code>captions(
-    media_items
-)
-</code></pre>
-
-
-
-
-<h3 id="file_is_set"><code>file_is_set</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L331-L332">View source</a>
-
-<pre>
-<code>file_is_set()
-</code></pre>
-
-
-
-
-<h3 id="get_media_subdir"><code>get_media_subdir</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1188-L1190">View source</a>
-
-<pre>
-<code>@classmethod</code>
-<code>get_media_subdir()
-</code></pre>
-
-
-
-
 <h3 id="inject_head"><code>inject_head</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1171-L1186">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1169-L1184">View source</a>
 
 <pre>
 <code>inject_head()
-</code></pre>
-
-
-
-
-<h3 id="is_bound"><code>is_bound</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L328-L329">View source</a>
-
-<pre>
-<code>is_bound()
-</code></pre>
-
-
-
-
-<h3 id="seq_to_json"><code>seq_to_json</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1201-L1211">View source</a>
-
-<pre>
-<code>@classmethod</code>
-<code>seq_to_json(
-    html_list, run, key, step
-)
 </code></pre>
 
 

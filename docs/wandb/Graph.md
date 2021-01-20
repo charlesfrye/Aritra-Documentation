@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![Image](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2343-L2501)
+[![Image](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2341-L2497)
 
 
 
@@ -27,8 +27,60 @@ labels that can be visualized by wandb.
 
 Import a keras model:
 ```
-    Graph.from_keras(keras_model)
+>>> Graph.from_keras(keras_model)
 ```
+
+
+
+
+
+<!-- Tabular view -->
+ <table>
+<tr><th>Attributes</th></tr>
+<tr>
+<td>
+<code>format</code>
+</td>
+<td>
+(string) Format to help wandb display the graph nicely.
+</td>
+</tr><tr>
+<td>
+<code>nodes</code>
+</td>
+<td>
+([wandb.Node]) List of wandb.Nodes
+</td>
+</tr><tr>
+<td>
+<code>nodes_by_id</code>
+</td>
+<td>
+(dict) dict of ids -> nodes
+</td>
+</tr><tr>
+<td>
+<code>edges</code>
+</td>
+<td>
+([(wandb.Node, wandb.Node)]) List of pairs of nodes interpreted as edges
+</td>
+</tr><tr>
+<td>
+<code>loaded</code>
+</td>
+<td>
+(boolean) Flag to tell whether the graph is completely loaded
+</td>
+</tr><tr>
+<td>
+<code>root</code>
+</td>
+<td>
+(wandb.Node) root node of the graph
+</td>
+</tr>
+</table>
 
 
 
@@ -36,7 +88,7 @@ Import a keras model:
 
 <h3 id="add_edge"><code>add_edge</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2427-L2431">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2423-L2427">View source</a>
 
 <pre>
 <code>add_edge(
@@ -49,7 +101,7 @@ Import a keras model:
 
 <h3 id="add_node"><code>add_node</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2413-L2425">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2409-L2421">View source</a>
 
 <pre>
 <code>add_node(
@@ -60,50 +112,9 @@ Import a keras model:
 
 
 
-<h3 id="bind_to_run"><code>bind_to_run</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2385-L2393">View source</a>
-
-<pre>
-<code>bind_to_run(
-    *args, **kwargs
-)
-</code></pre>
-
-Bind this object to a particular Run.
-
-Calling this function is necessary so that we have somewhere specific to
-put the file associated with this object, from which other Runs can
-refer to it.
-
-<h3 id="captions"><code>captions</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L321-L326">View source</a>
-
-<pre>
-<code>@classmethod</code>
-<code>captions(
-    media_items
-)
-</code></pre>
-
-
-
-
-<h3 id="file_is_set"><code>file_is_set</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L331-L332">View source</a>
-
-<pre>
-<code>file_is_set()
-</code></pre>
-
-
-
-
 <h3 id="from_keras"><code>from_keras</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2433-L2462">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2429-L2458">View source</a>
 
 <pre>
 <code>@classmethod</code>
@@ -115,32 +126,9 @@ refer to it.
 
 
 
-<h3 id="get_media_subdir"><code>get_media_subdir</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2395-L2397">View source</a>
-
-<pre>
-<code>@classmethod</code>
-<code>get_media_subdir()
-</code></pre>
-
-
-
-
-<h3 id="is_bound"><code>is_bound</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L328-L329">View source</a>
-
-<pre>
-<code>is_bound()
-</code></pre>
-
-
-
-
 <h3 id="pprint"><code>pprint</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2407-L2411">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2403-L2407">View source</a>
 
 <pre>
 <code>pprint()
@@ -151,7 +139,7 @@ refer to it.
 
 <h3 id="__getitem__"><code>__getitem__</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2404-L2405">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2400-L2401">View source</a>
 
 <pre>
 <code>__getitem__(

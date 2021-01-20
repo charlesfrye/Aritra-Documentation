@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![Image](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1526-L1941)
+[![Image](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1524-L1939)
 
 
 
@@ -24,7 +24,31 @@ Wandb class for images.
 <!-- Tabular view -->
  <table>
 <tr><th>Arguments</th></tr>
-
+<tr>
+<td>
+<code>data_or_path</code>
+</td>
+<td>
+(numpy array, string, io) Accepts numpy array of
+image data, or a PIL image. The class attempts to infer
+the data format and converts it.
+</td>
+</tr><tr>
+<td>
+<code>mode</code>
+</td>
+<td>
+(string) The PIL mode for an image. Most common are "L", "RGB",
+"RGBA". Full explanation at https://pillow.readthedocs.io/en/4.2.x/handbook/concepts.html#concept-modes.
+</td>
+</tr><tr>
+<td>
+<code>caption</code>
+</td>
+<td>
+(string) Label for display of image.
+</td>
+</tr>
 </table>
 
 
@@ -33,7 +57,7 @@ Wandb class for images.
 
 <h3 id="all_boxes"><code>all_boxes</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1906-L1921">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1904-L1919">View source</a>
 
 <pre>
 <code>@classmethod</code>
@@ -47,7 +71,7 @@ Wandb class for images.
 
 <h3 id="all_captions"><code>all_captions</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1923-L1928">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1921-L1926">View source</a>
 
 <pre>
 <code>@classmethod</code>
@@ -61,7 +85,7 @@ Wandb class for images.
 
 <h3 id="all_masks"><code>all_masks</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1889-L1904">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1887-L1902">View source</a>
 
 <pre>
 <code>@classmethod</code>
@@ -73,62 +97,9 @@ Wandb class for images.
 
 
 
-<h3 id="bind_to_run"><code>bind_to_run</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1720-L1731">View source</a>
-
-<pre>
-<code>bind_to_run(
-    *args, **kwargs
-)
-</code></pre>
-
-Bind this object to a particular Run.
-
-Calling this function is necessary so that we have somewhere specific to
-put the file associated with this object, from which other Runs can
-refer to it.
-
-<h3 id="captions"><code>captions</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L321-L326">View source</a>
-
-<pre>
-<code>@classmethod</code>
-<code>captions(
-    media_items
-)
-</code></pre>
-
-
-
-
-<h3 id="file_is_set"><code>file_is_set</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L331-L332">View source</a>
-
-<pre>
-<code>file_is_set()
-</code></pre>
-
-
-
-
-<h3 id="get_media_subdir"><code>get_media_subdir</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1716-L1718">View source</a>
-
-<pre>
-<code>@classmethod</code>
-<code>get_media_subdir()
-</code></pre>
-
-
-
-
 <h3 id="guess_mode"><code>guess_mode</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1791-L1805">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1789-L1803">View source</a>
 
 <pre>
 <code>guess_mode(
@@ -139,34 +110,9 @@ refer to it.
 Guess what type of image the np.array is representing
 
 
-<h3 id="is_bound"><code>is_bound</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L328-L329">View source</a>
-
-<pre>
-<code>is_bound()
-</code></pre>
-
-
-
-
-<h3 id="seq_to_json"><code>seq_to_json</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1831-L1887">View source</a>
-
-<pre>
-<code>@classmethod</code>
-<code>seq_to_json(
-    images, run, key, step
-)
-</code></pre>
-
-Combines a list of images into a meta dictionary object describing the child images.
-
-
 <h3 id="to_uint8"><code>to_uint8</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1807-L1829">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1805-L1827">View source</a>
 
 <pre>
 <code>@classmethod</code>

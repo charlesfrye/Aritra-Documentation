@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![Image](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1214-L1370)
+[![Image](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1212-L1368)
 
 
 
@@ -23,97 +23,54 @@ Wandb representation of video.
 <!-- Tabular view -->
  <table>
 <tr><th>Arguments</th></tr>
-
+<tr>
+<td>
+<code>data_or_path</code>
+</td>
+<td>
+(numpy array, string, io)
+Video can be initialized with a path to a file or an io object.
+The format must be "gif", "mp4", "webm" or "ogg".
+The format must be specified with the format argument.
+Video can be initialized with a numpy tensor.
+The numpy tensor must be either 4 dimensional or 5 dimensional.
+Channels should be (time, channel, height, width) or
+(batch, time, channel, height width)
+</td>
+</tr><tr>
+<td>
+<code>caption</code>
+</td>
+<td>
+(string) caption associated with the video for display
+</td>
+</tr><tr>
+<td>
+<code>fps</code>
+</td>
+<td>
+(int) frames per second for video. Default is 4.
+</td>
+</tr><tr>
+<td>
+<code>format</code>
+</td>
+<td>
+(string) format of video, necessary if initializing with path or io object.
+</td>
+</tr>
 </table>
 
 
 
 ## Methods
 
-<h3 id="bind_to_run"><code>bind_to_run</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L334-L370">View source</a>
-
-<pre>
-<code>bind_to_run(
-    run, key, step, id_=None
-)
-</code></pre>
-
-Bind this object to a particular Run.
-
-Calling this function is necessary so that we have somewhere specific to
-put the file associated with this object, from which other Runs can
-refer to it.
-
-<h3 id="captions"><code>captions</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1365-L1370">View source</a>
-
-<pre>
-<code>@classmethod</code>
-<code>captions(
-    videos
-)
-</code></pre>
-
-
-
-
 <h3 id="encode"><code>encode</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1275-L1297">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1273-L1295">View source</a>
 
 <pre>
 <code>encode()
-</code></pre>
-
-
-
-
-<h3 id="file_is_set"><code>file_is_set</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L331-L332">View source</a>
-
-<pre>
-<code>file_is_set()
-</code></pre>
-
-
-
-
-<h3 id="get_media_subdir"><code>get_media_subdir</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1299-L1301">View source</a>
-
-<pre>
-<code>@classmethod</code>
-<code>get_media_subdir()
-</code></pre>
-
-
-
-
-<h3 id="is_bound"><code>is_bound</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L328-L329">View source</a>
-
-<pre>
-<code>is_bound()
-</code></pre>
-
-
-
-
-<h3 id="seq_to_json"><code>seq_to_json</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1352-L1363">View source</a>
-
-<pre>
-<code>@classmethod</code>
-<code>seq_to_json(
-    videos, run, key, step
-)
 </code></pre>
 
 
