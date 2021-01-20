@@ -62,6 +62,11 @@ def build_docs(output_dir, code_url_prefix, search_hints, gen_report):
     gen_report: Bool. Generates an API report containing the health of the
       docstrings of the public API.
   """
+  for cls in [wandb.data_types.WBValue]:
+    doc_controls.decorate_all_class_attributes(
+        decorator=doc_controls.do_not_doc_in_subclasses,
+        cls=cls,
+        skip=["__init__"])
 #   try:
 #     doc_controls.do_not_generate_docs(wandb.lightgbm)
 #   except AttributeError:
