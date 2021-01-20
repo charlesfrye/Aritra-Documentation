@@ -7,7 +7,7 @@ robots: noindex
 <!-- Insert buttons and diff -->
 
 
-[![Image](https://www.tensorflow.org/images/GitHub-Mark-32px.png)](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1132-L1211)
+[![Image](https://www.tensorflow.org/images/GitHub-Mark-32px.png)](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1132-L1211)View source on GitHub
 
 
 
