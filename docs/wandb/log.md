@@ -60,9 +60,12 @@ wandb.log is not intended to be called more than a few times per second.
 If you want to log more frequently than that it's better to aggregate
 the data on the client side or you may get degraded performance.
 
-| <h2 class="add-link">Arguments</h2> | Description |
-|--:|--:|
-| row (dict, optional): A dict of serializable python objects i.e `str`,
+<!-- Tabular view -->
+ <table>
+<tr><th><h2 class="add-link">Arguments</h2></th></tr>
+<tr class="alt">
+<td colspan="2">
+row (dict, optional): A dict of serializable python objects i.e `str`,
 `ints`, `floats`, `Tensors`, `dicts`, or `wandb.data_types`.
 commit (boolean, optional): Save the metrics dict to the wandb server
 and increment the step.  If false <a href="../wandb/log.md"><code>wandb.log</code></a> just updates the current
@@ -72,8 +75,11 @@ step (integer, optional): The global step in processing. This persists
 any non-committed earlier steps but defaults to not committing the
 specified step.
 sync (boolean, True): This argument is deprecated and currently doesn't
-change the behaviour of <a href="../wandb/log.md"><code>wandb.log</code></a>. |
+change the behaviour of <a href="../wandb/log.md"><code>wandb.log</code></a>.
+</td>
+</tr>
 
+</table>
 
 
 
@@ -129,9 +135,15 @@ For more examples, see https://docs.wandb.com/library/log
 
 
 
-| <h2 class="add-link">Raises</h2> | Description |
-|--:|--:|
-| wandb.Error - if called before <a href="../wandb/init.md"><code>wandb.init</code></a>
-ValueError - if invalid data is passed |
+<!-- Tabular view -->
+ <table>
+<tr><th><h2 class="add-link">Raises</h2></th></tr>
+<tr class="alt">
+<td colspan="2">
+wandb.Error - if called before <a href="../wandb/init.md"><code>wandb.init</code></a>
+ValueError - if invalid data is passed
+</td>
+</tr>
 
+</table>
 

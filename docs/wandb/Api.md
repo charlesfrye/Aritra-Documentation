@@ -33,24 +33,57 @@ Most common way to initialize
 
 
 
-| <h2 class="add-link">Arguments</h2> | Description |
-|--:|--:|
-| overrides (dict): You can set `base_url` if you are using a wandb server
+<!-- Tabular view -->
+ <table>
+<tr><th><h2 class="add-link">Arguments</h2></th></tr>
+<tr class="alt">
+<td colspan="2">
+overrides (dict): You can set `base_url` if you are using a wandb server
 other than https://api.wandb.ai.
-You can also set defaults for `entity`, `project`, and `run`. |
+You can also set defaults for `entity`, `project`, and `run`.
+</td>
+</tr>
+
+</table>
 
 
 
 
 
+<!-- Tabular view -->
+ <table>
+<tr><th><h2 class="add-link">Attributes</h2></th></tr>
 
-| <h2 class="add-link">Attributes</h2> | Description |
-|--:|--:|
+<tr>
+<td>
+`api_key`
+</td>
+<td>
 
-| `api_key` |  |
-| `client` |  |
-| `default_entity` |  |
-| `user_agent` |  |
+</td>
+</tr><tr>
+<td>
+`client`
+</td>
+<td>
+
+</td>
+</tr><tr>
+<td>
+`default_entity`
+</td>
+<td>
+
+</td>
+</tr><tr>
+<td>
+`user_agent`
+</td>
+<td>
+
+</td>
+</tr>
+</table>
 
 
 
@@ -69,22 +102,34 @@ You can also set defaults for `entity`, `project`, and `run`. |
 Returns a single artifact by parsing path in the form entity/project/run_id.
 
 
-| Arguments | Description |
-|--:|--:|
-| name (str): An artifact name. May be prefixed with entity/project. Valid names
+<!-- Tabular view -->
+ <table>
+<tr><th>Arguments</th></tr>
+<tr class="alt">
+<td colspan="2">
+name (str): An artifact name. May be prefixed with entity/project. Valid names
 can be in the following forms:
 name:version
 name:alias
 digest
-type (str, optional): The type of artifact to fetch. |
+type (str, optional): The type of artifact to fetch.
+</td>
+</tr>
+
+</table>
 
 
 
+<!-- Tabular view -->
+ <table>
+<tr><th>Returns</th></tr>
+<tr class="alt">
+<td colspan="2">
+A `Artifact` object.
+</td>
+</tr>
 
-| Returns | Description |
-|--:|--:|
-| A `Artifact` object. |
-
+</table>
 
 
 
@@ -165,20 +210,32 @@ The api object keeps a local cache of runs, so if the state of the run may
 Get projects for a given entity.
 
 
-| Arguments | Description |
-|--:|--:|
-| entity (str): Name of the entity requested.  If None will fallback to
+<!-- Tabular view -->
+ <table>
+<tr><th>Arguments</th></tr>
+<tr class="alt">
+<td colspan="2">
+entity (str): Name of the entity requested.  If None will fallback to
 default entity passed to `Api`.  If no default entity, will raise a `ValueError`.
 per_page (int): Sets the page size for query pagination.  None will use the default size.
-Usually there is no reason to change this. |
+Usually there is no reason to change this.
+</td>
+</tr>
+
+</table>
 
 
 
+<!-- Tabular view -->
+ <table>
+<tr><th>Returns</th></tr>
+<tr class="alt">
+<td colspan="2">
+A `Projects` object which is an iterable collection of `Project` objects.
+</td>
+</tr>
 
-| Returns | Description |
-|--:|--:|
-| A `Projects` object which is an iterable collection of `Project` objects. |
-
+</table>
 
 
 
@@ -196,20 +253,32 @@ Get reports for a given project path.
 
 WARNING: This api is in beta and will likely change in a future release
 
-| Arguments | Description |
-|--:|--:|
-| path (str): path to project the report resides in, should be in the form: "entity/project"
+<!-- Tabular view -->
+ <table>
+<tr><th>Arguments</th></tr>
+<tr class="alt">
+<td colspan="2">
+path (str): path to project the report resides in, should be in the form: "entity/project"
 name (str): optional name of the report requested.
 per_page (int): Sets the page size for query pagination.  None will use the default size.
-Usually there is no reason to change this. |
+Usually there is no reason to change this.
+</td>
+</tr>
+
+</table>
 
 
 
+<!-- Tabular view -->
+ <table>
+<tr><th>Returns</th></tr>
+<tr class="alt">
+<td colspan="2">
+A `Reports` object which is an iterable collection of `BetaReport` objects.
+</td>
+</tr>
 
-| Returns | Description |
-|--:|--:|
-| A `Reports` object which is an iterable collection of `BetaReport` objects. |
-
+</table>
 
 
 
@@ -226,19 +295,31 @@ Usually there is no reason to change this. |
 Returns a single run by parsing path in the form entity/project/run_id.
 
 
-| Arguments | Description |
-|--:|--:|
-| path (str): path to run in the form entity/project/run_id.
+<!-- Tabular view -->
+ <table>
+<tr><th>Arguments</th></tr>
+<tr class="alt">
+<td colspan="2">
+path (str): path to run in the form entity/project/run_id.
 If api.entity is set, this can be in the form project/run_id
-and if api.project is set this can just be the run_id. |
+and if api.project is set this can just be the run_id.
+</td>
+</tr>
+
+</table>
 
 
 
+<!-- Tabular view -->
+ <table>
+<tr><th>Returns</th></tr>
+<tr class="alt">
+<td colspan="2">
+A `Run` object.
+</td>
+</tr>
 
-| Returns | Description |
-|--:|--:|
-| A `Run` object. |
-
+</table>
 
 
 
@@ -276,9 +357,12 @@ api.runs(path="my_entity/my_project", {"order": "+summary_metrics.loss"})
 
 
 
-| Arguments | Description |
-|--:|--:|
-| path (str): path to project, should be in the form: "entity/project"
+<!-- Tabular view -->
+ <table>
+<tr><th>Arguments</th></tr>
+<tr class="alt">
+<td colspan="2">
+path (str): path to project, should be in the form: "entity/project"
 filters (dict): queries for specific runs using the MongoDB query language.
 You can filter by run properties such as config.key, summary_metrics.key, state, entity, createdAt, etc.
 For example: {"config.experiment_name": "foo"} would find runs with a config entry
@@ -288,15 +372,24 @@ see Reference for the language is at  https://docs.mongodb.com/manual/reference/
 order (str): Order can be `created_at`, `heartbeat_at`, `config.*.value`, or `summary_metrics.*`.
 If you prepend order with a + order is ascending.
 If you prepend order with a - order is descending (default).
-The default order is run.created_at from newest to oldest. |
+The default order is run.created_at from newest to oldest.
+</td>
+</tr>
+
+</table>
 
 
 
+<!-- Tabular view -->
+ <table>
+<tr><th>Returns</th></tr>
+<tr class="alt">
+<td colspan="2">
+A `Runs` object, which is an iterable collection of `Run` objects.
+</td>
+</tr>
 
-| Returns | Description |
-|--:|--:|
-| A `Runs` object, which is an iterable collection of `Run` objects. |
-
+</table>
 
 
 
@@ -313,28 +406,49 @@ The default order is run.created_at from newest to oldest. |
 Returns a sweep by parsing path in the form entity/project/sweep_id.
 
 
-| Arguments | Description |
-|--:|--:|
-| path (str, optional): path to sweep in the form entity/project/sweep_id.  If api.entity
+<!-- Tabular view -->
+ <table>
+<tr><th>Arguments</th></tr>
+<tr class="alt">
+<td colspan="2">
+path (str, optional): path to sweep in the form entity/project/sweep_id.  If api.entity
 is set, this can be in the form project/sweep_id and if api.project is set
-this can just be the sweep_id. |
+this can just be the sweep_id.
+</td>
+</tr>
+
+</table>
+
+
+
+<!-- Tabular view -->
+ <table>
+<tr><th>Returns</th></tr>
+<tr class="alt">
+<td colspan="2">
+A `Sweep` object.
+</td>
+</tr>
+
+</table>
 
 
 
 
-| Returns | Description |
-|--:|--:|
-| A `Sweep` object. |
 
 
 
+<!-- Tabular view -->
+ <table>
+<tr><th><h2 class="add-link">Class Variables</h2></th></tr>
 
+<tr>
+<td>
+VIEWER_QUERY<a id="VIEWER_QUERY"></a>
+</td>
+<td>
 
-
-
-
-| <h2 class="add-link">Class Variables</h2> | Description |
-|--:|--:|
-
-| VIEWER_QUERY |  |
+</td>
+</tr>
+</table>
 

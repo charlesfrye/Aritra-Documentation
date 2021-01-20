@@ -41,22 +41,37 @@ wandb.Histogram(np_histogram=hist)
 
 
 
-| <h2 class="add-link">Arguments</h2> | Description |
-|--:|--:|
-| sequence (array_like): input data for histogram
+<!-- Tabular view -->
+ <table>
+<tr><th><h2 class="add-link">Arguments</h2></th></tr>
+<tr class="alt">
+<td colspan="2">
+sequence (array_like): input data for histogram
 np_histogram (numpy histogram): alternative input of a precoomputed histogram
 num_bins (int): Number of bins for the histogram.  The default number of bins
-is 64.  The maximum number of bins is 512 |
+is 64.  The maximum number of bins is 512
+</td>
+</tr>
+
+</table>
 
 
 
 
 
+<!-- Tabular view -->
+ <table>
+<tr><th><h2 class="add-link">Attributes</h2></th></tr>
 
-| <h2 class="add-link">Attributes</h2> | Description |
-|--:|--:|
-
-| `artifact_source` | Getter which returns the object's artifact source |
+<tr>
+<td>
+`artifact_source`
+</td>
+<td>
+Getter which returns the object's artifact source
+</td>
+</tr>
+</table>
 
 
 
@@ -77,12 +92,18 @@ Deserialize a `json_obj` into it's class representation. If additional resources
 `run_or_artifact` artifact during the `to_json` call, then those resources are expected to be in
 the `source_artifact`.
 
-| Args | Description |
-|--:|--:|
-| json_obj (dict): A JSON dictionary to deserialize
+<!-- Tabular view -->
+ <table>
+<tr><th>Args</th></tr>
+<tr class="alt">
+<td colspan="2">
+json_obj (dict): A JSON dictionary to deserialize
 source_artifact (wandb.Artifact): An artifact which will hold any additional resources which were stored
-during the `to_json` function. |
+during the `to_json` function.
+</td>
+</tr>
 
+</table>
 
 
 
@@ -102,20 +123,35 @@ call that subclass' `from_json` method. Importantly, this function will set the 
 attribute to the passed in source artifact. This is critical for artifact bookkeeping. If you choose to create
 a wandb.Value via it's `from_json` method, make sure to properly set this `artifact_source` to avoid data duplication.
 
-| Args | Description |
-|--:|--:|
-| json_obj (dict): A JSON dictionary to deserialize. It must contain a `_type` key. The value of
+<!-- Tabular view -->
+ <table>
+<tr><th>Args</th></tr>
+<tr class="alt">
+<td colspan="2">
+json_obj (dict): A JSON dictionary to deserialize. It must contain a `_type` key. The value of
 this key is used to lookup the correct subclass to use.
 source_artifact (wandb.Artifact): An artifact which will hold any additional resources which were stored
-during the `to_json` function. |
+during the `to_json` function.
+</td>
+</tr>
+
+</table>
 
 
 
+<!-- Tabular view -->
+ <table>
+<tr><th>Returns</th></tr>
 
-| Returns | Description |
-|--:|--:|
-
-| `wandb.Value` | a newly created instance of a subclass of wandb.Value |
+<tr>
+<td>
+`wandb.Value`
+</td>
+<td>
+a newly created instance of a subclass of wandb.Value
+</td>
+</tr>
+</table>
 
 
 
@@ -132,18 +168,33 @@ during the `to_json` function. |
 Serializes the object into a JSON blob, using a run or artifact to store additional data.
 
 
-| Args | Description |
-|--:|--:|
-| run_or_artifact (wandb.Run | wandb.Artifact): the Run or Artifact for which this object should be generating
-JSON for - this is useful to to store additional data if needed. |
+<!-- Tabular view -->
+ <table>
+<tr><th>Args</th></tr>
+<tr class="alt">
+<td colspan="2">
+run_or_artifact (wandb.Run | wandb.Artifact): the Run or Artifact for which this object should be generating
+JSON for - this is useful to to store additional data if needed.
+</td>
+</tr>
+
+</table>
 
 
 
+<!-- Tabular view -->
+ <table>
+<tr><th>Returns</th></tr>
 
-| Returns | Description |
-|--:|--:|
-
-| `dict` | JSON representation |
+<tr>
+<td>
+`dict`
+</td>
+<td>
+JSON representation
+</td>
+</tr>
+</table>
 
 
 
@@ -159,10 +210,19 @@ JSON for - this is useful to to store additional data if needed. |
 Returns a map from `artifact_type` to subclass. Used to lookup correct types for deserialization.
 
 
-| Returns | Description |
-|--:|--:|
+<!-- Tabular view -->
+ <table>
+<tr><th>Returns</th></tr>
 
-| `dict` | dictionary of str:class |
+<tr>
+<td>
+`dict`
+</td>
+<td>
+dictionary of str:class
+</td>
+</tr>
+</table>
 
 
 
@@ -180,18 +240,33 @@ Returns a map from `artifact_type` to subclass. Used to lookup correct types for
 Helper function to return the name with suffix added if not already
 
 
-| Args | Description |
-|--:|--:|
-| name (str): the name of the file
-filetype (str, optional): the filetype to use. Defaults to "json". |
+<!-- Tabular view -->
+ <table>
+<tr><th>Args</th></tr>
+<tr class="alt">
+<td colspan="2">
+name (str): the name of the file
+filetype (str, optional): the filetype to use. Defaults to "json".
+</td>
+</tr>
+
+</table>
 
 
 
+<!-- Tabular view -->
+ <table>
+<tr><th>Returns</th></tr>
 
-| Returns | Description |
-|--:|--:|
-
-| `str` | a filename which is suffixed with it's `artifact_type` followed by the filetype |
+<tr>
+<td>
+`str`
+</td>
+<td>
+a filename which is suffixed with it's `artifact_type` followed by the filetype
+</td>
+</tr>
+</table>
 
 
 
@@ -225,9 +300,24 @@ Return self!=value.
 
 
 
-| <h2 class="add-link">Class Variables</h2> | Description |
-|--:|--:|
+<!-- Tabular view -->
+ <table>
+<tr><th><h2 class="add-link">Class Variables</h2></th></tr>
 
-| MAX_LENGTH | `512` |
-| artifact_type | `None` |
+<tr>
+<td>
+MAX_LENGTH<a id="MAX_LENGTH"></a>
+</td>
+<td>
+`512`
+</td>
+</tr><tr>
+<td>
+artifact_type<a id="artifact_type"></a>
+</td>
+<td>
+`None`
+</td>
+</tr>
+</table>
 

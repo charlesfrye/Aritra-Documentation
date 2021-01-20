@@ -71,8 +71,17 @@ For examples usage, see github.com/wandb/examples
 
 
 
-| <h2 class="add-link">Other Members</h2> | Description |
-|--:|--:|
+<!-- Tabular view -->
+ <table>
+<tr><th><h2 class="add-link">Other Members</h2></th></tr>
 
-| __version__ | `'0.10.14'` |
+<tr>
+<td>
+__version__<a id="__version__"></a>
+</td>
+<td>
+`'0.10.14'`
+</td>
+</tr>
+</table>
 

@@ -26,14 +26,20 @@ Ensure all files matching *glob_str* are synced to wandb with the policy specifi
 <!-- Placeholder for "Used in" -->
 
 
-| <h2 class="add-link">Arguments</h2> | Description |
-|--:|--:|
-| glob_str (string): a relative or absolute path to a unix glob or regular
+<!-- Tabular view -->
+ <table>
+<tr><th><h2 class="add-link">Arguments</h2></th></tr>
+<tr class="alt">
+<td colspan="2">
+glob_str (string): a relative or absolute path to a unix glob or regular
 path.  If this isn't specified the method is a noop.
 base_path (string): the base path to run the glob relative to
 policy (string): on of `live`, `now`, or `end`
 - live: upload the file as it changes, overwriting the previous version
 - now: upload the file once now
-- end: only upload file when the run ends |
+- end: only upload file when the run ends
+</td>
+</tr>
 
+</table>
 
