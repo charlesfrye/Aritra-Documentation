@@ -38,10 +38,10 @@ Wandb class for audio clips.
  <table>
 <tr><th><h2 class="add-link">Attributes</h2></th></tr>
 <tr>
-<td>
+<td style="text-align:left;">
 `artifact_source`
 </td>
-<td>
+<td style="text-align:left;">
 Getter which returns the object's artifact source
 </td>
 </tr>
@@ -160,10 +160,10 @@ a wandb.Value via it's `from_json` method, make sure to properly set this `artif
  <table>
 <tr><th>Returns</th></tr>
 <tr>
-<td>
+<td style="text-align:left;">
 `wandb.Value`
 </td>
-<td>
+<td style="text-align:left;">
 a newly created instance of a subclass of wandb.Value
 </td>
 </tr>
@@ -235,10 +235,10 @@ is a wandb.Run then `self.bind_to_run()` must have been previously been called.
  <table>
 <tr><th>Returns</th></tr>
 <tr>
-<td>
+<td style="text-align:left;">
 `dict`
 </td>
-<td>
+<td style="text-align:left;">
 JSON representation
 </td>
 </tr>
@@ -262,10 +262,10 @@ Returns a map from `artifact_type` to subclass. Used to lookup correct types for
  <table>
 <tr><th>Returns</th></tr>
 <tr>
-<td>
+<td style="text-align:left;">
 `dict`
 </td>
-<td>
+<td style="text-align:left;">
 dictionary of str:class
 </td>
 </tr>
@@ -299,10 +299,10 @@ Helper function to return the name with suffix added if not already
  <table>
 <tr><th>Returns</th></tr>
 <tr>
-<td>
+<td style="text-align:left;">
 `str`
 </td>
-<td>
+<td style="text-align:left;">
 a filename which is suffixed with it's `artifact_type` followed by the filetype
 </td>
 </tr>
@@ -344,10 +344,10 @@ Return self!=value.
  <table>
 <tr><th><h2 class="add-link">Class Variables</h2></th></tr>
 <tr>
-<td>
+<td style="text-align:left;">
 artifact_type<a id="artifact_type"></a>
 </td>
-<td>
+<td style="text-align:left;">
 `'audio-file'`
 </td>
 </tr>
