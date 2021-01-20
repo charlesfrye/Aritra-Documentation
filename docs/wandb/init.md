@@ -57,40 +57,21 @@ Call <a href="../wandb/init.md"><code>wandb.init()</code></a> to start a run bef
 <a href="../wandb/init.md"><code>wandb.init()</code></a> returns a run object, and you can also access the run object
 with wandb.run.
 
-<!-- Tabular view -->
- <table class="responsive fixed orange">
-<colgroup><col width="214px"><col></colgroup>
-<tr><th colspan="2"><h2 class="add-link">Arguments</h2></th></tr>
+| <h2 class="add-link">Arguments</h2> | Description |
+|--:|--:|
 
-<tr>
-<td>
-`project`
-</td>
-<td>
-(str, optional) The name of the project where you're sending
+| `project` | (str, optional) The name of the project where you're sending
 the new run. If the project is not specified, the run is put in an
-"Uncategorized" project.
-</td>
-</tr><tr>
-<td>
-`entity`
-</td>
-<td>
-(str, optional) An entity is a username or team name where
+"Uncategorized" project. |
+| `entity` | (str, optional) An entity is a username or team name where
 you're sending runs. This entity must exist before you can send runs
 there, so make sure to create your account or team in the UI before
 starting to log runs.
 If you don't specify an entity, the run will be sent to your default
 entity, which is usually your username. Change your default entity
 in [Settings](wandb.ai/settings) under "default location to create
-new projects".
-</td>
-</tr><tr>
-<td>
-`config`
-</td>
-<td>
-(dict, argparse, absl.flags, str, optional) This sets wandb.config, a dictionary-like object for saving inputs
+new projects". |
+| `config` | (dict, argparse, absl.flags, str, optional) This sets wandb.config, a dictionary-like object for saving inputs
 to your job, like hyperparameters for a model or settings for a data
 preprocessing job. The config will show up in a table in the UI that
 you can use to group, filter, and sort runs. Keys should not contain
@@ -98,100 +79,46 @@ you can use to group, filter, and sort runs. Keys should not contain
 If dict, argparse or absl.flags: will load the key value pairs into
 the wandb.config object.
 If str: will look for a yaml file by that name, and load config from
-that file into the wandb.config object.
-</td>
-</tr><tr>
-<td>
-`save_code`
-</td>
-<td>
-(bool, optional) Turn this on to save the main script or
+that file into the wandb.config object. |
+| `save_code` | (bool, optional) Turn this on to save the main script or
 notebook to W&B. This is valuable for improving experiment
 reproducibility and to diff code across experiments in the UI. By
 default this is off, but you can flip the default behavior to "on"
-in [Settings](wandb.ai/settings).
-</td>
-</tr><tr>
-<td>
-`group`
-</td>
-<td>
-(str, optional) Specify a group to organize individual runs into
+in [Settings](wandb.ai/settings). |
+| `group` | (str, optional) Specify a group to organize individual runs into
 a larger experiment. For example, you might be doing cross
 validation, or you might have multiple jobs that train and evaluate
 a model against different test sets. Group gives you a way to
 organize runs together into a larger whole, and you can toggle this
 on and off in the UI. For more details, see
-[Grouping](docs.wandb.com/library/grouping).
-</td>
-</tr><tr>
-<td>
-`job_type`
-</td>
-<td>
-(str, optional) Specify the type of run, which is useful when
+[Grouping](docs.wandb.com/library/grouping). |
+| `job_type` | (str, optional) Specify the type of run, which is useful when
 you're grouping runs together into larger experiments using group.
 For example, you might have multiple jobs in a group, with job types
 like train and eval. Setting this makes it easy to filter and group
-similar runs together in the UI so you can compare apples to apples.
-</td>
-</tr><tr>
-<td>
-`tags`
-</td>
-<td>
-(list, optional) A list of strings, which will populate the list
+similar runs together in the UI so you can compare apples to apples. |
+| `tags` | (list, optional) A list of strings, which will populate the list
 of tags on this run in the UI. Tags are useful for organizing runs
 together, or applying temporary labels like "baseline" or
 "production". It's easy to add and remove tags in the UI, or filter
-down to just runs with a specific tag.
-</td>
-</tr><tr>
-<td>
-`name`
-</td>
-<td>
-(str, optional) A short display name for this run, which is how
+down to just runs with a specific tag. |
+| `name` | (str, optional) A short display name for this run, which is how
 you'll identify this run in the UI. By default we generate a random
 two-word name that lets you easily cross-reference runs from the
 table to charts. Keeping these run names short makes the chart
 legends and tables easier to read. If you're looking for a place to
-save your hyperparameters, we recommend saving those in config.
-</td>
-</tr><tr>
-<td>
-`notes`
-</td>
-<td>
-(str, optional) A longer description of the run, like a -m commit
+save your hyperparameters, we recommend saving those in config. |
+| `notes` | (str, optional) A longer description of the run, like a -m commit
 message in git. This helps you remember what you were doing when you
-ran this run.
-</td>
-</tr><tr>
-<td>
-`dir`
-</td>
-<td>
-(str, optional) An absolute path to a directory where metadata will
+ran this run. |
+| `dir` | (str, optional) An absolute path to a directory where metadata will
 be stored. When you call download() on an artifact, this is the
 directory where downloaded files will be saved. By default this is
-the ./wandb directory.
-</td>
-</tr><tr>
-<td>
-`sync_tensorboard`
-</td>
-<td>
-(bool, optional) Whether to copy all TensorBoard logs
+the ./wandb directory. |
+| `sync_tensorboard` | (bool, optional) Whether to copy all TensorBoard logs
 to W&B (default: False).
-[Tensorboard](https://docs.wandb.com/integrations/tensorboard)
-</td>
-</tr><tr>
-<td>
-`resume`
-</td>
-<td>
-(bool, str, optional) Sets the resuming behavior. Options:
+[Tensorboard](https://docs.wandb.com/integrations/tensorboard) |
+| `resume` | (bool, str, optional) Sets the resuming behavior. Options:
 "allow", "must", "never", "auto" or None. Defaults to None.
 Cases:
 - None (default): If the new run has the same ID as a previous run,
@@ -209,48 +136,18 @@ wandb will crash.
 WANDB_RUN_ID="UNIQUE_ID" and it is identical to a previous run,
 wandb will automatically resume the run with the id. Otherwise
 wandb will crash.
-See https://docs.wandb.com/library/advanced/resuming for more.
-</td>
-</tr><tr>
-<td>
-`reinit`
-</td>
-<td>
-(bool, optional) Allow multiple wandb.init() calls in the same
-process. (default: False)
-</td>
-</tr><tr>
-<td>
-`magic`
-</td>
-<td>
-(bool, dict, or str, optional) The bool controls whether we try to
+See https://docs.wandb.com/library/advanced/resuming for more. |
+| `reinit` | (bool, optional) Allow multiple wandb.init() calls in the same
+process. (default: False) |
+| `magic` | (bool, dict, or str, optional) The bool controls whether we try to
 auto-instrument your script, capturing basic details of your run
 without you having to add more wandb code. (default: False)
-You can also pass a dict, json string, or yaml filename.
-</td>
-</tr><tr>
-<td>
-`config_exclude_keys`
-</td>
-<td>
-(list, optional) string keys to exclude from
-wandb.config.
-</td>
-</tr><tr>
-<td>
-`config_include_keys`
-</td>
-<td>
-(list, optional) string keys to include in
-wandb.config.
-</td>
-</tr><tr>
-<td>
-`anonymous`
-</td>
-<td>
-(str, optional) Controls anonymous data logging. Options:
+You can also pass a dict, json string, or yaml filename. |
+| `config_exclude_keys` | (list, optional) string keys to exclude from
+wandb.config. |
+| `config_include_keys` | (list, optional) string keys to include in
+wandb.config. |
+| `anonymous` | (str, optional) Controls anonymous data logging. Options:
 - "never" (default): requires you to link your W&B account before
 tracking the run so you don't accidentally create an anonymous
 run.
@@ -258,67 +155,28 @@ run.
 lets someone who is running the script without a W&B account see
 the charts in the UI.
 - "must": sends the run to an anonymous account instead of to a
-signed-up user account.
-</td>
-</tr><tr>
-<td>
-`mode`
-</td>
-<td>
-(str, optional) Can be "online", "offline" or "disabled". Defaults to
-online.
-</td>
-</tr><tr>
-<td>
-`allow_val_change`
-</td>
-<td>
-(bool, optional) Whether to allow config values to
+signed-up user account. |
+| `mode` | (str, optional) Can be "online", "offline" or "disabled". Defaults to
+online. |
+| `allow_val_change` | (bool, optional) Whether to allow config values to
 change after setting the keys once. By default we throw an exception
 if a config value is overwritten. If you want to track something
 like a varying learning_rate at multiple times during training, use
-wandb.log() instead. (default: False in scripts, True in Jupyter)
-</td>
-</tr><tr>
-<td>
-`force`
-</td>
-<td>
-(bool, optional) If True, this crashes the script if a user isn't
+wandb.log() instead. (default: False in scripts, True in Jupyter) |
+| `force` | (bool, optional) If True, this crashes the script if a user isn't
 logged in to W&B. If False, this will let the script run in offline
-mode if a user isn't logged in to W&B. (default: False)
-</td>
-</tr><tr>
-<td>
-`sync_tensorboard`
-</td>
-<td>
-(bool, optional) Synchronize wandb logs from tensorboard or
-tensorboardX and saves the relevant events file. Defaults to false.
-</td>
-</tr><tr>
-<td>
-`monitor_gym`
-</td>
-<td>
-(bool, optional) Automatically logs videos of environment when
+mode if a user isn't logged in to W&B. (default: False) |
+| `sync_tensorboard` | (bool, optional) Synchronize wandb logs from tensorboard or
+tensorboardX and saves the relevant events file. Defaults to false. |
+| `monitor_gym` | (bool, optional) Automatically logs videos of environment when
 using OpenAI Gym. (default: False)
-See https://docs.wandb.com/library/integrations/openai-gym
-</td>
-</tr><tr>
-<td>
-`id`
-</td>
-<td>
-(str, optional) A unique ID for this run, used for Resuming. It must
+See https://docs.wandb.com/library/integrations/openai-gym |
+| `id` | (str, optional) A unique ID for this run, used for Resuming. It must
 be unique in the project, and if you delete a run you can't reuse
 the ID. Use the name field for a short descriptive name, or config
 for saving hyperparameters to compare across runs. The ID cannot
 contain special characters.
-See https://docs.wandb.com/library/resuming
-</td>
-</tr>
-</table>
+See https://docs.wandb.com/library/resuming |
 
 
 
@@ -338,32 +196,15 @@ for x in range(10):
 
 
 
-<!-- Tabular view -->
- <table class="responsive fixed orange">
-<colgroup><col width="214px"><col></colgroup>
-<tr><th colspan="2"><h2 class="add-link">Raises</h2></th></tr>
+| <h2 class="add-link">Raises</h2> | Description |
+|--:|--:|
 
-<tr>
-<td>
-`Exception`
-</td>
-<td>
-if problem.
-</td>
-</tr>
-</table>
+| `Exception` | if problem. |
 
 
 
-<!-- Tabular view -->
- <table class="responsive fixed orange">
-<colgroup><col width="214px"><col></colgroup>
-<tr><th colspan="2"><h2 class="add-link">Returns</h2></th></tr>
-<tr class="alt">
-<td colspan="2">
-A `Run` object.
-</td>
-</tr>
+| <h2 class="add-link">Returns</h2> | Description |
+|--:|--:|
+| A `Run` object. |
 
-</table>
 

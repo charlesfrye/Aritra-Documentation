@@ -71,18 +71,8 @@ For examples usage, see github.com/wandb/examples
 
 
 
-<!-- Tabular view -->
- <table class="responsive fixed orange">
-<colgroup><col width="214px"><col></colgroup>
-<tr><th colspan="2"><h2 class="add-link">Other Members</h2></th></tr>
+| <h2 class="add-link">Other Members</h2> | Description |
+|--:|--:|
 
-<tr>
-<td>
-__version__<a id="__version__"></a>
-</td>
-<td>
-`'0.10.14'`
-</td>
-</tr>
-</table>
+| __version__ | `'0.10.14'` |
 

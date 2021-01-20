@@ -24,13 +24,9 @@ Wandb class for 3D point clouds.
 <!-- Placeholder for "Used in" -->
 
 
-<!-- Tabular view -->
- <table class="responsive fixed orange">
-<colgroup><col width="214px"><col></colgroup>
-<tr><th colspan="2"><h2 class="add-link">Arguments</h2></th></tr>
-<tr class="alt">
-<td colspan="2">
-data_or_path (numpy array, string, io):
+| <h2 class="add-link">Arguments</h2> | Description |
+|--:|--:|
+| data_or_path (numpy array, string, io):
 Object3D can be initialized from a file or a numpy array.
 
 The file types supported are obj, gltf, babylon, stl.  You can pass a path to
@@ -41,30 +37,17 @@ The shape of the numpy array must be one of either:
 [[x y z],       ...] nx3
 [x y z c],     ...] nx4 where c is a category with supported range [1, 14]
 [x y z r g b], ...] nx4 where is rgb is color
-```
-</td>
-</tr>
-
-</table>
+``` |
 
 
 
 
 
-<!-- Tabular view -->
- <table class="responsive fixed orange">
-<colgroup><col width="214px"><col></colgroup>
-<tr><th colspan="2"><h2 class="add-link">Attributes</h2></th></tr>
 
-<tr>
-<td>
-`artifact_source`
-</td>
-<td>
-Getter which returns the object's artifact source
-</td>
-</tr>
-</table>
+| <h2 class="add-link">Attributes</h2> | Description |
+|--:|--:|
+
+| `artifact_source` | Getter which returns the object's artifact source |
 
 
 
@@ -153,37 +136,20 @@ call that subclass' `from_json` method. Importantly, this function will set the 
 attribute to the passed in source artifact. This is critical for artifact bookkeeping. If you choose to create
 a wandb.Value via it's `from_json` method, make sure to properly set this `artifact_source` to avoid data duplication.
 
-<!-- Tabular view -->
- <table class="responsive fixed orange">
-<colgroup><col width="214px"><col></colgroup>
-<tr><th colspan="2">Args</th></tr>
-<tr class="alt">
-<td colspan="2">
-json_obj (dict): A JSON dictionary to deserialize. It must contain a `_type` key. The value of
+| Args | Description |
+|--:|--:|
+| json_obj (dict): A JSON dictionary to deserialize. It must contain a `_type` key. The value of
 this key is used to lookup the correct subclass to use.
 source_artifact (wandb.Artifact): An artifact which will hold any additional resources which were stored
-during the `to_json` function.
-</td>
-</tr>
-
-</table>
+during the `to_json` function. |
 
 
 
-<!-- Tabular view -->
- <table class="responsive fixed orange">
-<colgroup><col width="214px"><col></colgroup>
-<tr><th colspan="2">Returns</th></tr>
 
-<tr>
-<td>
-`wandb.Value`
-</td>
-<td>
-a newly created instance of a subclass of wandb.Value
-</td>
-</tr>
-</table>
+| Returns | Description |
+|--:|--:|
+
+| `wandb.Value` | a newly created instance of a subclass of wandb.Value |
 
 
 
@@ -225,35 +191,18 @@ a newly created instance of a subclass of wandb.Value
 Serializes the object into a JSON blob, using a run or artifact to store additional data. If `run_or_artifact`
 is a wandb.Run then `self.bind_to_run()` must have been previously been called.
 
-<!-- Tabular view -->
- <table class="responsive fixed orange">
-<colgroup><col width="214px"><col></colgroup>
-<tr><th colspan="2">Args</th></tr>
-<tr class="alt">
-<td colspan="2">
-run_or_artifact (wandb.Run | wandb.Artifact): the Run or Artifact for which this object should be generating
-JSON for - this is useful to to store additional data if needed.
-</td>
-</tr>
-
-</table>
+| Args | Description |
+|--:|--:|
+| run_or_artifact (wandb.Run | wandb.Artifact): the Run or Artifact for which this object should be generating
+JSON for - this is useful to to store additional data if needed. |
 
 
 
-<!-- Tabular view -->
- <table class="responsive fixed orange">
-<colgroup><col width="214px"><col></colgroup>
-<tr><th colspan="2">Returns</th></tr>
 
-<tr>
-<td>
-`dict`
-</td>
-<td>
-JSON representation
-</td>
-</tr>
-</table>
+| Returns | Description |
+|--:|--:|
+
+| `dict` | JSON representation |
 
 
 
@@ -269,20 +218,10 @@ JSON representation
 Returns a map from `artifact_type` to subclass. Used to lookup correct types for deserialization.
 
 
-<!-- Tabular view -->
- <table class="responsive fixed orange">
-<colgroup><col width="214px"><col></colgroup>
-<tr><th colspan="2">Returns</th></tr>
+| Returns | Description |
+|--:|--:|
 
-<tr>
-<td>
-`dict`
-</td>
-<td>
-dictionary of str:class
-</td>
-</tr>
-</table>
+| `dict` | dictionary of str:class |
 
 
 
@@ -300,35 +239,18 @@ dictionary of str:class
 Helper function to return the name with suffix added if not already
 
 
-<!-- Tabular view -->
- <table class="responsive fixed orange">
-<colgroup><col width="214px"><col></colgroup>
-<tr><th colspan="2">Args</th></tr>
-<tr class="alt">
-<td colspan="2">
-name (str): the name of the file
-filetype (str, optional): the filetype to use. Defaults to "json".
-</td>
-</tr>
-
-</table>
+| Args | Description |
+|--:|--:|
+| name (str): the name of the file
+filetype (str, optional): the filetype to use. Defaults to "json". |
 
 
 
-<!-- Tabular view -->
- <table class="responsive fixed orange">
-<colgroup><col width="214px"><col></colgroup>
-<tr><th colspan="2">Returns</th></tr>
 
-<tr>
-<td>
-`str`
-</td>
-<td>
-a filename which is suffixed with it's `artifact_type` followed by the filetype
-</td>
-</tr>
-</table>
+| Returns | Description |
+|--:|--:|
+
+| `str` | a filename which is suffixed with it's `artifact_type` followed by the filetype |
 
 
 
@@ -362,25 +284,9 @@ Return self!=value.
 
 
 
-<!-- Tabular view -->
- <table class="responsive fixed orange">
-<colgroup><col width="214px"><col></colgroup>
-<tr><th colspan="2"><h2 class="add-link">Class Variables</h2></th></tr>
+| <h2 class="add-link">Class Variables</h2> | Description |
+|--:|--:|
 
-<tr>
-<td>
-SUPPORTED_TYPES<a id="SUPPORTED_TYPES"></a>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-artifact_type<a id="artifact_type"></a>
-</td>
-<td>
-`'object3D-file'`
-</td>
-</tr>
-</table>
+| SUPPORTED_TYPES |  |
+| artifact_type | `'object3D-file'` |
 
