@@ -95,6 +95,7 @@ def build_docs(output_dir, code_url_prefix, search_hints, gen_report):
       code_url_prefix="https://www.github.com/wandb/client/tree/master/wandb",
       site_path=FLAGS.site_path,
       gen_report=gen_report,
+      yaml_toc=False,
   )
 
   doc_generator.build(output_dir)
