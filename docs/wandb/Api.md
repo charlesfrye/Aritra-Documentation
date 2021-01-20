@@ -47,31 +47,31 @@ Most common way to initialize
  <table>
 <tr><th><h2 class="add-link">Attributes</h2></th></tr>
 <tr>
-<td style="text-align:left;">
-`api_key`
+<td>
+<code>api_key</code>
 </td>
-<td style="text-align:left;">
+<td>
 
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`client`
+<td>
+<code>client</code>
 </td>
-<td style="text-align:left;">
+<td>
 
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`default_entity`
+<td>
+<code>default_entity</code>
 </td>
-<td style="text-align:left;">
+<td>
 
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`user_agent`
+<td>
+<code>user_agent</code>
 </td>
-<td style="text-align:left;">
+<td>
 
 </td>
 </tr>
@@ -349,10 +349,10 @@ Returns a sweep by parsing path in the form entity/project/sweep_id.
  <table>
 <tr><th><h2 class="add-link">Class Variables</h2></th></tr>
 <tr>
-<td style="text-align:left;">
+<td>
 VIEWER_QUERY<a id="VIEWER_QUERY"></a>
 </td>
-<td style="text-align:left;">
+<td>
 
 </td>
 </tr>

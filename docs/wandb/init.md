@@ -61,19 +61,19 @@ with wandb.run.
  <table>
 <tr><th>Arguments</th></tr>
 <tr>
-<td style="text-align:left;">
-`project`
+<td>
+<code>project</code>
 </td>
-<td style="text-align:left;">
+<td>
 (str, optional) The name of the project where you're sending
 the new run. If the project is not specified, the run is put in an
 "Uncategorized" project.
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`entity`
+<td>
+<code>entity</code>
 </td>
-<td style="text-align:left;">
+<td>
 (str, optional) An entity is a username or team name where
 you're sending runs. This entity must exist before you can send runs
 there, so make sure to create your account or team in the UI before
@@ -84,10 +84,10 @@ in [Settings](wandb.ai/settings) under "default location to create
 new projects".
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`config`
+<td>
+<code>config</code>
 </td>
-<td style="text-align:left;">
+<td>
 (dict, argparse, absl.flags, str, optional) This sets wandb.config, a dictionary-like object for saving inputs
 to your job, like hyperparameters for a model or settings for a data
 preprocessing job. The config will show up in a table in the UI that
@@ -99,10 +99,10 @@ If str: will look for a yaml file by that name, and load config from
 that file into the wandb.config object.
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`save_code`
+<td>
+<code>save_code</code>
 </td>
-<td style="text-align:left;">
+<td>
 (bool, optional) Turn this on to save the main script or
 notebook to W&B. This is valuable for improving experiment
 reproducibility and to diff code across experiments in the UI. By
@@ -110,10 +110,10 @@ default this is off, but you can flip the default behavior to "on"
 in [Settings](wandb.ai/settings).
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`group`
+<td>
+<code>group</code>
 </td>
-<td style="text-align:left;">
+<td>
 (str, optional) Specify a group to organize individual runs into
 a larger experiment. For example, you might be doing cross
 validation, or you might have multiple jobs that train and evaluate
@@ -123,10 +123,10 @@ on and off in the UI. For more details, see
 [Grouping](docs.wandb.com/library/grouping).
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`job_type`
+<td>
+<code>job_type</code>
 </td>
-<td style="text-align:left;">
+<td>
 (str, optional) Specify the type of run, which is useful when
 you're grouping runs together into larger experiments using group.
 For example, you might have multiple jobs in a group, with job types
@@ -134,10 +134,10 @@ like train and eval. Setting this makes it easy to filter and group
 similar runs together in the UI so you can compare apples to apples.
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`tags`
+<td>
+<code>tags</code>
 </td>
-<td style="text-align:left;">
+<td>
 (list, optional) A list of strings, which will populate the list
 of tags on this run in the UI. Tags are useful for organizing runs
 together, or applying temporary labels like "baseline" or
@@ -145,10 +145,10 @@ together, or applying temporary labels like "baseline" or
 down to just runs with a specific tag.
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`name`
+<td>
+<code>name</code>
 </td>
-<td style="text-align:left;">
+<td>
 (str, optional) A short display name for this run, which is how
 you'll identify this run in the UI. By default we generate a random
 two-word name that lets you easily cross-reference runs from the
@@ -157,38 +157,38 @@ legends and tables easier to read. If you're looking for a place to
 save your hyperparameters, we recommend saving those in config.
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`notes`
+<td>
+<code>notes</code>
 </td>
-<td style="text-align:left;">
+<td>
 (str, optional) A longer description of the run, like a -m commit
 message in git. This helps you remember what you were doing when you
 ran this run.
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`dir`
+<td>
+<code>dir</code>
 </td>
-<td style="text-align:left;">
+<td>
 (str, optional) An absolute path to a directory where metadata will
 be stored. When you call download() on an artifact, this is the
 directory where downloaded files will be saved. By default this is
 the ./wandb directory.
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`sync_tensorboard`
+<td>
+<code>sync_tensorboard</code>
 </td>
-<td style="text-align:left;">
+<td>
 (bool, optional) Whether to copy all TensorBoard logs
 to W&B (default: False).
 [Tensorboard](https://docs.wandb.com/integrations/tensorboard)
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`resume`
+<td>
+<code>resume</code>
 </td>
-<td style="text-align:left;">
+<td>
 (bool, str, optional) Sets the resuming behavior. Options:
 "allow", "must", "never", "auto" or None. Defaults to None.
 Cases:
@@ -210,44 +210,44 @@ wandb will crash.
 See https://docs.wandb.com/library/advanced/resuming for more.
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`reinit`
+<td>
+<code>reinit</code>
 </td>
-<td style="text-align:left;">
+<td>
 (bool, optional) Allow multiple wandb.init() calls in the same
 process. (default: False)
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`magic`
+<td>
+<code>magic</code>
 </td>
-<td style="text-align:left;">
+<td>
 (bool, dict, or str, optional) The bool controls whether we try to
 auto-instrument your script, capturing basic details of your run
 without you having to add more wandb code. (default: False)
 You can also pass a dict, json string, or yaml filename.
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`config_exclude_keys`
+<td>
+<code>config_exclude_keys</code>
 </td>
-<td style="text-align:left;">
+<td>
 (list, optional) string keys to exclude from
 wandb.config.
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`config_include_keys`
+<td>
+<code>config_include_keys</code>
 </td>
-<td style="text-align:left;">
+<td>
 (list, optional) string keys to include in
 wandb.config.
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`anonymous`
+<td>
+<code>anonymous</code>
 </td>
-<td style="text-align:left;">
+<td>
 (str, optional) Controls anonymous data logging. Options:
 - "never" (default): requires you to link your W&B account before
 tracking the run so you don't accidentally create an anonymous
@@ -259,18 +259,18 @@ the charts in the UI.
 signed-up user account.
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`mode`
+<td>
+<code>mode</code>
 </td>
-<td style="text-align:left;">
+<td>
 (str, optional) Can be "online", "offline" or "disabled". Defaults to
 online.
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`allow_val_change`
+<td>
+<code>allow_val_change</code>
 </td>
-<td style="text-align:left;">
+<td>
 (bool, optional) Whether to allow config values to
 change after setting the keys once. By default we throw an exception
 if a config value is overwritten. If you want to track something
@@ -278,36 +278,36 @@ like a varying learning_rate at multiple times during training, use
 wandb.log() instead. (default: False in scripts, True in Jupyter)
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`force`
+<td>
+<code>force</code>
 </td>
-<td style="text-align:left;">
+<td>
 (bool, optional) If True, this crashes the script if a user isn't
 logged in to W&B. If False, this will let the script run in offline
 mode if a user isn't logged in to W&B. (default: False)
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`sync_tensorboard`
+<td>
+<code>sync_tensorboard</code>
 </td>
-<td style="text-align:left;">
+<td>
 (bool, optional) Synchronize wandb logs from tensorboard or
 tensorboardX and saves the relevant events file. Defaults to false.
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`monitor_gym`
+<td>
+<code>monitor_gym</code>
 </td>
-<td style="text-align:left;">
+<td>
 (bool, optional) Automatically logs videos of environment when
 using OpenAI Gym. (default: False)
 See https://docs.wandb.com/library/integrations/openai-gym
 </td>
 </tr><tr>
-<td style="text-align:left;">
-`id`
+<td>
+<code>id</code>
 </td>
-<td style="text-align:left;">
+<td>
 (str, optional) A unique ID for this run, used for Resuming. It must
 be unique in the project, and if you delete a run you can't reuse
 the ID. Use the name field for a short descriptive name, or config
@@ -340,10 +340,10 @@ for x in range(10):
  <table>
 <tr><th>Raises</th></tr>
 <tr>
-<td style="text-align:left;">
-`Exception`
+<td>
+<code>Exception</code>
 </td>
-<td style="text-align:left;">
+<td>
 if problem.
 </td>
 </tr>

@@ -39,10 +39,10 @@ Wandb class for images.
  <table>
 <tr><th><h2 class="add-link">Attributes</h2></th></tr>
 <tr>
-<td style="text-align:left;">
-`artifact_source`
+<td>
+<code>artifact_source</code>
 </td>
-<td style="text-align:left;">
+<td>
 Getter which returns the object's artifact source
 </td>
 </tr>
@@ -202,10 +202,10 @@ a wandb.Value via it's `from_json` method, make sure to properly set this `artif
  <table>
 <tr><th>Returns</th></tr>
 <tr>
-<td style="text-align:left;">
-`wandb.Value`
+<td>
+<code>wandb.Value</code>
 </td>
-<td style="text-align:left;">
+<td>
 a newly created instance of a subclass of wandb.Value
 </td>
 </tr>
@@ -263,10 +263,10 @@ is a wandb.Run then `self.bind_to_run()` must have been previously been called.
  <table>
 <tr><th>Returns</th></tr>
 <tr>
-<td style="text-align:left;">
-`dict`
+<td>
+<code>dict</code>
 </td>
-<td style="text-align:left;">
+<td>
 JSON representation
 </td>
 </tr>
@@ -304,10 +304,10 @@ Returns a map from `artifact_type` to subclass. Used to lookup correct types for
  <table>
 <tr><th>Returns</th></tr>
 <tr>
-<td style="text-align:left;">
-`dict`
+<td>
+<code>dict</code>
 </td>
-<td style="text-align:left;">
+<td>
 dictionary of str:class
 </td>
 </tr>
@@ -341,10 +341,10 @@ Helper function to return the name with suffix added if not already
  <table>
 <tr><th>Returns</th></tr>
 <tr>
-<td style="text-align:left;">
-`str`
+<td>
+<code>str</code>
 </td>
-<td style="text-align:left;">
+<td>
 a filename which is suffixed with it's `artifact_type` followed by the filetype
 </td>
 </tr>
@@ -386,24 +386,24 @@ Return self!=value.
  <table>
 <tr><th><h2 class="add-link">Class Variables</h2></th></tr>
 <tr>
-<td style="text-align:left;">
+<td>
 MAX_DIMENSION<a id="MAX_DIMENSION"></a>
 </td>
-<td style="text-align:left;">
+<td>
 `65500`
 </td>
 </tr><tr>
-<td style="text-align:left;">
+<td>
 MAX_ITEMS<a id="MAX_ITEMS"></a>
 </td>
-<td style="text-align:left;">
+<td>
 `108`
 </td>
 </tr><tr>
-<td style="text-align:left;">
+<td>
 artifact_type<a id="artifact_type"></a>
 </td>
-<td style="text-align:left;">
+<td>
 `'image-file'`
 </td>
 </tr>

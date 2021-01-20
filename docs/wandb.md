@@ -75,10 +75,10 @@ For examples usage, see github.com/wandb/examples
  <table>
 <tr><th><h2 class="add-link">Other Members</h2></th></tr>
 <tr>
-<td style="text-align:left;">
+<td>
 __version__<a id="__version__"></a>
 </td>
-<td style="text-align:left;">
+<td>
 `'0.10.14'`
 </td>
 </tr>
