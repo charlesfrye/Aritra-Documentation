@@ -25,6 +25,7 @@ Ensure all files matching *glob_str* are synced to wandb with the policy specifi
 <!-- Tabular view -->
  <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
 <code>glob_str</code>

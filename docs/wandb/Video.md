@@ -23,6 +23,7 @@ Wandb representation of video.
 <!-- Tabular view -->
  <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
 <code>data_or_path</code>
@@ -83,6 +84,7 @@ Channels should be (time, channel, height, width) or
 <!-- Tabular view -->
  <table>
 <tr><th>Class Variables</th></tr>
+
 <tr>
 <td>
 EXTS<a id="EXTS"></a>

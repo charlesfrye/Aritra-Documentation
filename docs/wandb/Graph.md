@@ -37,6 +37,7 @@ Import a keras model:
 <!-- Tabular view -->
  <table>
 <tr><th>Attributes</th></tr>
+
 <tr>
 <td>
 <code>format</code>
@@ -157,6 +158,7 @@ Import a keras model:
 <!-- Tabular view -->
  <table>
 <tr><th>Class Variables</th></tr>
+
 <tr>
 <td>
 artifact_type<a id="artifact_type"></a>

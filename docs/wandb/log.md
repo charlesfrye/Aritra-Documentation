@@ -59,6 +59,7 @@ the data on the client side or you may get degraded performance.
 <!-- Tabular view -->
  <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
 <code>row</code>
@@ -171,6 +172,7 @@ For more examples, see https://docs.wandb.com/library/log
 <!-- Tabular view -->
  <table>
 <tr><th>Raises</th></tr>
+
 <tr>
 <td>
 <code>wandb.Error</code>

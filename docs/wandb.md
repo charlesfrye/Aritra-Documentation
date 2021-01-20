@@ -68,6 +68,7 @@ For examples usage, see github.com/wandb/examples
 <!-- Tabular view -->
  <table>
 <tr><th>Other Members</th></tr>
+
 <tr>
 <td>
 __version__<a id="__version__"></a>

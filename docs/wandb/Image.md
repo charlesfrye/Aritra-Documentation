@@ -24,6 +24,7 @@ Wandb class for images.
 <!-- Tabular view -->
  <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
 <code>data_or_path</code>
@@ -131,6 +132,7 @@ on the range [0,255] to uint8, clipping if necessary.
 <!-- Tabular view -->
  <table>
 <tr><th>Class Variables</th></tr>
+
 <tr>
 <td>
 MAX_DIMENSION<a id="MAX_DIMENSION"></a>

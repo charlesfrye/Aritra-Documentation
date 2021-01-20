@@ -23,6 +23,7 @@ This is a table designed to display sets of records.
 <!-- Tabular view -->
  <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
 <code>columns</code>
@@ -99,6 +100,7 @@ Add a row of data to the table. Argument length should match column length
 <!-- Tabular view -->
  <table>
 <tr><th>Class Variables</th></tr>
+
 <tr>
 <td>
 MAX_ARTIFACT_ROWS<a id="MAX_ARTIFACT_ROWS"></a>

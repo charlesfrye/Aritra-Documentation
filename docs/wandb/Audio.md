@@ -23,6 +23,7 @@ Wandb class for audio clips.
 <!-- Tabular view -->
  <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
 <code>data_or_path</code>
@@ -88,6 +89,7 @@ numpy array of audio data.
 <!-- Tabular view -->
  <table>
 <tr><th>Class Variables</th></tr>
+
 <tr>
 <td>
 artifact_type<a id="artifact_type"></a>

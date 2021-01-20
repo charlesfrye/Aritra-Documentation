@@ -23,6 +23,7 @@ Wandb class for arbitrary html
 <!-- Tabular view -->
  <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
 <code>data</code>
@@ -63,6 +64,7 @@ to False the HTML will pass through unchanged.
 <!-- Tabular view -->
  <table>
 <tr><th>Class Variables</th></tr>
+
 <tr>
 <td>
 artifact_type<a id="artifact_type"></a>

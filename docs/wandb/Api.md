@@ -33,6 +33,7 @@ Most common way to initialize
 <!-- Tabular view -->
  <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
 <code>overrides</code>
@@ -52,6 +53,7 @@ You can also set defaults for `entity`, `project`, and `run`.
 <!-- Tabular view -->
  <table>
 <tr><th>Attributes</th></tr>
+
 <tr>
 <td>
 <code>api_key</code>
@@ -103,6 +105,7 @@ Returns a single artifact by parsing path in the form `entity/project/run_id`.
 <!-- Tabular view -->
  <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
 <code>name</code>
@@ -129,6 +132,11 @@ can be in the following forms:
 <!-- Tabular view -->
  <table>
 <tr><th>Returns</th></tr>
+<tr class="alt">
+<td colspan="2">
+An `Artifact` object.
+</td>
+</tr>
 
 </table>
 
@@ -214,6 +222,7 @@ Get projects for a given entity.
 <!-- Tabular view -->
  <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
 <code>entity</code>
@@ -238,6 +247,11 @@ Usually there is no reason to change this.
 <!-- Tabular view -->
  <table>
 <tr><th>Returns</th></tr>
+<tr class="alt">
+<td colspan="2">
+A `Projects` object which is an iterable collection of `Project` objects.
+</td>
+</tr>
 
 </table>
 
@@ -260,6 +274,7 @@ WARNING: This api is in beta and will likely change in a future release
 <!-- Tabular view -->
  <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
 <code>path</code>
@@ -290,6 +305,11 @@ Usually there is no reason to change this.
 <!-- Tabular view -->
  <table>
 <tr><th>Returns</th></tr>
+<tr class="alt">
+<td colspan="2">
+A `Reports` object which is an iterable collection of `BetaReport` objects.
+</td>
+</tr>
 
 </table>
 
@@ -311,6 +331,7 @@ Returns a single run by parsing path in the form entity/project/run_id.
 <!-- Tabular view -->
  <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
 <code>path</code>
@@ -328,6 +349,11 @@ and if api.project is set this can just be the run_id.
 <!-- Tabular view -->
  <table>
 <tr><th>Returns</th></tr>
+<tr class="alt">
+<td colspan="2">
+A `Run` object.
+</td>
+</tr>
 
 </table>
 
@@ -373,6 +399,7 @@ Find runs in my_project sorted by ascending loss
 <!-- Tabular view -->
  <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
 <code>path</code>
@@ -410,6 +437,11 @@ The default order is run.created_at from newest to oldest.
 <!-- Tabular view -->
  <table>
 <tr><th>Returns</th></tr>
+<tr class="alt">
+<td colspan="2">
+A `Runs` object, which is an iterable collection of `Run` objects.
+</td>
+</tr>
 
 </table>
 
@@ -431,6 +463,7 @@ Returns a sweep by parsing path in the form entity/project/sweep_id.
 <!-- Tabular view -->
  <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
 <code>path</code>
@@ -448,6 +481,11 @@ this can just be the sweep_id.
 <!-- Tabular view -->
  <table>
 <tr><th>Returns</th></tr>
+<tr class="alt">
+<td colspan="2">
+A `Sweep` object.
+</td>
+</tr>
 
 </table>
 
@@ -460,6 +498,7 @@ this can just be the sweep_id.
 <!-- Tabular view -->
  <table>
 <tr><th>Class Variables</th></tr>
+
 <tr>
 <td>
 VIEWER_QUERY<a id="VIEWER_QUERY"></a>

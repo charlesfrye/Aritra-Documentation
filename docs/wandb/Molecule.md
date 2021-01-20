@@ -23,6 +23,7 @@ Wandb class for Molecular data
 <!-- Tabular view -->
  <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
 <code>data_or_path</code>
@@ -41,6 +42,7 @@ from a file name or an io object.
 <!-- Tabular view -->
  <table>
 <tr><th>Class Variables</th></tr>
+
 <tr>
 <td>
 SUPPORTED_TYPES<a id="SUPPORTED_TYPES"></a>
