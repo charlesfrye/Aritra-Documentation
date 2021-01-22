@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L181-L515)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L181-L514)
 
 
 
@@ -25,22 +25,26 @@ Used for querying the wandb server.
 
 Most common way to initialize
 ```
-    wandb.Api()
+>>> wandb.Api()
 ```
+
 
 
 
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-overrides (dict): You can set `base_url` if you are using a wandb server
+<code>overrides</code>
+</td>
+<td>
+(dict) You can set `base_url` if you are using a wandb server
 other than https://api.wandb.ai.
 You can also set defaults for `entity`, `project`, and `run`.
 </td>
 </tr>
-
 </table>
 
 
@@ -88,7 +92,7 @@ You can also set defaults for `entity`, `project`, and `run`.
 
 <h3 id="artifact"><code>artifact</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L495-L515">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L494-L514">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>artifact(
@@ -96,23 +100,32 @@ You can also set defaults for `entity`, `project`, and `run`.
 )
 </code></pre>
 
-Returns a single artifact by parsing path in the form entity/project/run_id.
+Returns a single artifact by parsing path in the form `entity/project/run_id`.
 
 
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-name (str): An artifact name. May be prefixed with entity/project. Valid names
+<code>name</code>
+</td>
+<td>
+(str) An artifact name. May be prefixed with entity/project. Valid names
 can be in the following forms:
-name:version
-name:alias
-digest
-type (str, optional): The type of artifact to fetch.
+- name:version
+- name:alias
+- digest
+</td>
+</tr><tr>
+<td>
+<code>type</code>
+</td>
+<td>
+(str, optional) The type of artifact to fetch.
 </td>
 </tr>
-
 </table>
 
 
@@ -122,7 +135,7 @@ type (str, optional): The type of artifact to fetch.
 <tr><th>Returns</th></tr>
 <tr>
 <td>
-A `Artifact` object.
+An `Artifact` object.
 </td>
 </tr>
 
@@ -132,7 +145,7 @@ A `Artifact` object.
 
 <h3 id="artifact_type"><code>artifact_type</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L484-L487">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L483-L486">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>artifact_type(
@@ -145,7 +158,7 @@ A `Artifact` object.
 
 <h3 id="artifact_types"><code>artifact_types</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L479-L482">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L478-L481">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>artifact_types(
@@ -158,7 +171,7 @@ A `Artifact` object.
 
 <h3 id="artifact_versions"><code>artifact_versions</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L489-L493">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L488-L492">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>artifact_versions(
@@ -171,7 +184,7 @@ A `Artifact` object.
 
 <h3 id="create_run"><code>create_run</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L245-L248">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L244-L247">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>create_run(
@@ -184,15 +197,15 @@ A `Artifact` object.
 
 <h3 id="flush"><code>flush</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L276-L281">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L275-L281">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>flush()
 </code></pre>
 
 The api object keeps a local cache of runs, so if the state of the run may
-    change while executing your script you must clear the local cache with `api.flush()`
-    to get the latest values associated with the run.
+change while executing your script you must clear the local cache with `api.flush()`
+to get the latest values associated with the run.
 
 <h3 id="projects"><code>projects</code></h3>
 
@@ -210,15 +223,24 @@ Get projects for a given entity.
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-entity (str): Name of the entity requested.  If None will fallback to
+<code>entity</code>
+</td>
+<td>
+(str) Name of the entity requested.  If None will fallback to
 default entity passed to `Api`.  If no default entity, will raise a `ValueError`.
-per_page (int): Sets the page size for query pagination.  None will use the default size.
+</td>
+</tr><tr>
+<td>
+<code>per_page</code>
+</td>
+<td>
+(int) Sets the page size for query pagination.  None will use the default size.
 Usually there is no reason to change this.
 </td>
 </tr>
-
 </table>
 
 
@@ -253,15 +275,30 @@ WARNING: This api is in beta and will likely change in a future release
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-path (str): path to project the report resides in, should be in the form: "entity/project"
-name (str): optional name of the report requested.
-per_page (int): Sets the page size for query pagination.  None will use the default size.
+<code>path</code>
+</td>
+<td>
+(str) path to project the report resides in, should be in the form: "entity/project"
+</td>
+</tr><tr>
+<td>
+<code>name</code>
+</td>
+<td>
+(str) optional name of the report requested.
+</td>
+</tr><tr>
+<td>
+<code>per_page</code>
+</td>
+<td>
+(int) Sets the page size for query pagination.  None will use the default size.
 Usually there is no reason to change this.
 </td>
 </tr>
-
 </table>
 
 
@@ -281,7 +318,7 @@ A `Reports` object which is an iterable collection of `BetaReport` objects.
 
 <h3 id="run"><code>run</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L444-L459">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L443-L458">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>run(
@@ -295,14 +332,17 @@ Returns a single run by parsing path in the form entity/project/run_id.
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-path (str): path to run in the form entity/project/run_id.
+<code>path</code>
+</td>
+<td>
+(str) path to run in the form entity/project/run_id.
 If api.entity is set, this can be in the form project/run_id
 and if api.project is set this can just be the run_id.
 </td>
 </tr>
-
 </table>
 
 
@@ -322,7 +362,7 @@ A `Run` object.
 
 <h3 id="runs"><code>runs</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L393-L442">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L393-L441">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>runs(
@@ -337,18 +377,21 @@ You can filter by `config.*`, `summary.*`, `state`, `entity`, `createdAt`, etc.
 
 Find runs in my_project config.experiment_name has been set to "foo"
 ```
-api.runs(path="my_entity/my_project", {"config.experiment_name": "foo"})
+>>> api.runs(path="my_entity/my_project", {"config.experiment_name": "foo"})
 ```
 
 Find runs in my_project config.experiment_name has been set to "foo" or "bar"
-```
+```python
 api.runs(path="my_entity/my_project",
-    {"$or": [{"config.experiment_name": "foo"}, {"config.experiment_name": "bar"}]})
+{"$or": [{"config.experiment_name": "foo"},
+         {"config.experiment_name": "bar"}
+        ]
+})
 ```
 
 Find runs in my_project sorted by ascending loss
 ```
-api.runs(path="my_entity/my_project", {"order": "+summary_metrics.loss"})
+>>> api.runs(path="my_entity/my_project", {"order": "+summary_metrics.loss"})
 ```
 
 
@@ -357,22 +400,37 @@ api.runs(path="my_entity/my_project", {"order": "+summary_metrics.loss"})
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-path (str): path to project, should be in the form: "entity/project"
-filters (dict): queries for specific runs using the MongoDB query language.
+<code>path</code>
+</td>
+<td>
+(str) path to project, should be in the form: "entity/project"
+</td>
+</tr><tr>
+<td>
+<code>filters</code>
+</td>
+<td>
+(dict) queries for specific runs using the MongoDB query language.
 You can filter by run properties such as config.key, summary_metrics.key, state, entity, createdAt, etc.
 For example: {"config.experiment_name": "foo"} would find runs with a config entry
 of experiment name set to "foo"
 You can compose operations to make more complicated queries,
 see Reference for the language is at  https://docs.mongodb.com/manual/reference/operator/query
-order (str): Order can be `created_at`, `heartbeat_at`, `config.*.value`, or `summary_metrics.*`.
+</td>
+</tr><tr>
+<td>
+<code>order</code>
+</td>
+<td>
+(str) Order can be `created_at`, `heartbeat_at`, `config.*.value`, or `summary_metrics.*`.
 If you prepend order with a + order is ascending.
 If you prepend order with a - order is descending (default).
 The default order is run.created_at from newest to oldest.
 </td>
 </tr>
-
 </table>
 
 
@@ -392,7 +450,7 @@ A `Runs` object, which is an iterable collection of `Run` objects.
 
 <h3 id="sweep"><code>sweep</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L461-L477">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L460-L476">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>sweep(
@@ -406,14 +464,17 @@ Returns a sweep by parsing path in the form entity/project/sweep_id.
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-path (str, optional): path to sweep in the form entity/project/sweep_id.  If api.entity
+<code>path</code>
+</td>
+<td>
+(str, optional) path to sweep in the form entity/project/sweep_id.  If api.entity
 is set, this can be in the form project/sweep_id and if api.project is set
 this can just be the sweep_id.
 </td>
 </tr>
-
 </table>
 
 

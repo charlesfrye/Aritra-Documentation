@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L804-L943)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L740-L890)
 
 
 
@@ -12,11 +12,8 @@ Log a dict to the global run's history.
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>wandb.log(
-    data: Dict[str, Any],
-    step: int = None,
-    commit: bool = None,
-    sync: bool = None
-) -> None
+    data, step=None, commit=None, sync=None
+)
 </code></pre>
 
 
@@ -27,7 +24,7 @@ Log a dict to the global run's history.
 and matplotlib plots.
 
 The most basic usage is `wandb.log({'train-loss': 0.5, 'accuracy': 0.9})`.
-This will save a history row associated with the run with train-loss=0.5
+This will save a history row associated with the run with `train-loss=0.5`
 and `accuracy=0.9`. The history values can be plotted on app.wandb.ai or
 on a local server. The history values can also be downloaded through
 the wandb API.
@@ -63,22 +60,43 @@ the data on the client side or you may get degraded performance.
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-row (dict, optional): A dict of serializable python objects i.e `str`,
+<code>row</code>
+</td>
+<td>
+(dict, optional) A dict of serializable python objects i.e `str`,
 `ints`, `floats`, `Tensors`, `dicts`, or `wandb.data_types`.
-commit (boolean, optional): Save the metrics dict to the wandb server
+</td>
+</tr><tr>
+<td>
+<code>commit</code>
+</td>
+<td>
+(boolean, optional) Save the metrics dict to the wandb server
 and increment the step.  If false <a href="../wandb/log.md"><code>wandb.log</code></a> just updates the current
 metrics dict with the row argument and metrics won't be saved until
 <a href="../wandb/log.md"><code>wandb.log</code></a> is called with `commit=True`.
-step (integer, optional): The global step in processing. This persists
+</td>
+</tr><tr>
+<td>
+<code>step</code>
+</td>
+<td>
+(integer, optional) The global step in processing. This persists
 any non-committed earlier steps but defaults to not committing the
 specified step.
-sync (boolean, True): This argument is deprecated and currently doesn't
+</td>
+</tr><tr>
+<td>
+<code>sync</code>
+</td>
+<td>
+(boolean, True) This argument is deprecated and currently doesn't
 change the behaviour of <a href="../wandb/log.md"><code>wandb.log</code></a>.
 </td>
 </tr>
-
 </table>
 
 
@@ -87,30 +105,40 @@ change the behaviour of <a href="../wandb/log.md"><code>wandb.log</code></a>.
 
 Basic usage
 ```python
-wandb.log({'accuracy': 0.9, 'epoch': 5})
+wandb.log({
+    'accuracy': 0.9,
+    'epoch': 5})
 ```
 
 Incremental logging
 ```python
-wandb.log({'loss': 0.2}, commit=False)
+wandb.log(
+    {'loss': 0.2},
+    commit=False)
 # Somewhere else when I'm ready to report this step:
 wandb.log({'accuracy': 0.8})
 ```
 
 Histogram
 ```python
-wandb.log({"gradients": wandb.Histogram(numpy_array_or_sequence)})
+wandb.log({
+    "gradients": wandb.Histogram(numpy_array_or_sequence)
+    })
 ```
 
 Image
 ```python
-wandb.log({"examples": [wandb.Image(numpy_array_or_pil, caption="Label")]})
+wandb.log({
+    "examples": [wandb.Image(numpy_array_or_pil, caption="Label")]
+    })
 ```
 
 Video
 ```python
-wandb.log({"video": wandb.Video(numpy_array_or_video_path, fps=4,
-    format="gif")})
+wandb.log({
+    "video": wandb.Video(numpy_array_or_video_path, fps=4,
+    format="gif")
+    })
 ```
 
 Matplotlib Plot
@@ -120,15 +148,22 @@ wandb.log({"chart": plt})
 
 PR Curve
 ```python
-wandb.log({'pr': wandb.plots.precision_recall(y_test, y_probas, labels)})
+wandb.log({
+    'pr': wandb.plots.precision_recall(
+        y_test,
+        y_probas,
+        labels
+        )
+    })
 ```
 
 3D Object
 ```python
-wandb.log({"generated_samples":
-[wandb.Object3D(open("sample.obj")),
+wandb.log({"generated_samples":[
+    wandb.Object3D(open("sample.obj")),
     wandb.Object3D(open("sample.gltf")),
-    wandb.Object3D(open("sample.glb"))]})
+    wandb.Object3D(open("sample.glb"))]
+})
 ```
 
 For more examples, see https://docs.wandb.com/library/log
@@ -138,12 +173,21 @@ For more examples, see https://docs.wandb.com/library/log
 <!-- Tabular view -->
 <table>
 <tr><th>Raises</th></tr>
+
 <tr>
 <td>
-wandb.Error - if called before <a href="../wandb/init.md"><code>wandb.init</code></a>
-ValueError - if invalid data is passed
+<code>wandb.Error</code>
+</td>
+<td>
+if called before <a href="../wandb/init.md"><code>wandb.init</code></a>
+</td>
+</tr><tr>
+<td>
+<code>ValueError</code>
+</td>
+<td>
+if invalid data is passed
 </td>
 </tr>
-
 </table>
 

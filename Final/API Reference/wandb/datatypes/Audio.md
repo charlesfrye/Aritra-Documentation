@@ -24,16 +24,31 @@ Wandb class for audio clips.
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-data_or_path (string or numpy array): A path to an audio file
+<code>data_or_path</code>
+</td>
+<td>
+(string or numpy array) A path to an audio file
 or a numpy array of audio data.
-sample_rate (int): Sample rate, required when passing in raw
+</td>
+</tr><tr>
+<td>
+<code>sample_rate</code>
+</td>
+<td>
+(int) Sample rate, required when passing in raw
 numpy array of audio data.
-caption (string): Caption to display with audio.
+</td>
+</tr><tr>
+<td>
+<code>caption</code>
+</td>
+<td>
+(string) Caption to display with audio.
 </td>
 </tr>
-
 </table>
 
 

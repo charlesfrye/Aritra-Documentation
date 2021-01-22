@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1043-L1129)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1041-L1127)
 
 
 
@@ -24,13 +24,16 @@ Wandb class for Molecular data
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-data_or_path (string, io):
-Molecule can be initialized from a file name or an io object.
+<code>data_or_path</code>
+</td>
+<td>
+(string, io) Molecule can be initialized 
+from a file name or an io object.
 </td>
 </tr>
-
 </table>
 
 

@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1132-L1211)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1130-L1209)
 
 
 
@@ -24,14 +24,23 @@ Wandb class for arbitrary html
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-data (string or io object): HTML to display in wandb
-inject (boolean): Add a stylesheet to the HTML object.  If set
+<code>data</code>
+</td>
+<td>
+(string or io object) HTML to display in wandb
+</td>
+</tr><tr>
+<td>
+<code>inject</code>
+</td>
+<td>
+(boolean) Add a stylesheet to the HTML object. If set
 to False the HTML will pass through unchanged.
 </td>
 </tr>
-
 </table>
 
 
@@ -40,7 +49,7 @@ to False the HTML will pass through unchanged.
 
 <h3 id="inject_head"><code>inject_head</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1171-L1186">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1169-L1184">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>inject_head()

@@ -24,16 +24,31 @@ This is a table designed to display sets of records.
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-columns ([str]): Names of the columns in the table.
+<code>columns</code>
+</td>
+<td>
+(str) Names of the columns in the table.
 Defaults to ["Input", "Output", "Expected"].
-data (array): 2D Array of values that will be displayed as strings.
-dataframe (pandas.DataFrame): DataFrame object used to create the table.
+</td>
+</tr><tr>
+<td>
+<code>data</code>
+</td>
+<td>
+(array) 2D Array of values that will be displayed as strings.
+</td>
+</tr><tr>
+<td>
+<code>dataframe</code>
+</td>
+<td>
+(pandas.DataFrame) DataFrame object used to create the table.
 When set, the other arguments are ignored.
 </td>
 </tr>
-
 </table>
 
 
