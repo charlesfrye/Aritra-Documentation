@@ -22,7 +22,7 @@ Wandb class for Molecular data
 
 
 <!-- Tabular view -->
-**Arguments**
+Arguments
 <table>
 <tr>
 <td>
@@ -38,7 +38,7 @@ Molecule can be initialized from a file name or an io object.
 
 
 <!-- Tabular view -->
-**Class Variables**
+Class Variables
 <table>
 
 <tr>

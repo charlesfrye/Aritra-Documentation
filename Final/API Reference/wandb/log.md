@@ -61,7 +61,7 @@ If you want to log more frequently than that it's better to aggregate
 the data on the client side or you may get degraded performance.
 
 <!-- Tabular view -->
-**Arguments**
+Arguments
 <table>
 <tr>
 <td>
@@ -136,7 +136,7 @@ For more examples, see https://docs.wandb.com/library/log
 
 
 <!-- Tabular view -->
-**Raises**
+Raises
 <table>
 <tr>
 <td>

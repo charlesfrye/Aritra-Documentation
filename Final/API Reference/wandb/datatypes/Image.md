@@ -23,7 +23,7 @@ Wandb class for images.
 
 
 <!-- Tabular view -->
-**Arguments**
+Arguments
 <table>
 <tr>
 <td>
@@ -116,7 +116,7 @@ on the range [0,255] to uint8, clipping if necessary.
 
 
 <!-- Tabular view -->
-**Class Variables**
+Class Variables
 <table>
 
 <tr>

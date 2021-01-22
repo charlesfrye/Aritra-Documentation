@@ -22,7 +22,7 @@ Wandb representation of video.
 
 
 <!-- Tabular view -->
-**Arguments**
+Arguments
 <table>
 <tr>
 <td>
@@ -62,7 +62,7 @@ format (string): format of video, necessary if initializing with path or io obje
 
 
 <!-- Tabular view -->
-**Class Variables**
+Class Variables
 <table>
 
 <tr>

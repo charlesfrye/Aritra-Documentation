@@ -22,7 +22,7 @@ Log in to W&B.
 
 
 <!-- Tabular view -->
-**Arguments**
+Arguments
 <table>
 <tr>
 <td>
@@ -41,7 +41,7 @@ host (string, optional): The host to connect to.
 
 
 <!-- Tabular view -->
-**Returns**
+Returns
 <table>
 
 <tr>
@@ -57,7 +57,7 @@ if key is configured
 
 
 <!-- Tabular view -->
-**Raises**
+Raises
 <table>
 <tr>
 <td>

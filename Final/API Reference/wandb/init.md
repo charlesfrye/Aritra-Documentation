@@ -46,7 +46,7 @@ Spawns a new process to start or resume a run locally and communicate with a
 wandb server. Should be called before any calls to wandb.log.
 
 <!-- Tabular view -->
-**Arguments**
+Arguments
 <table>
 <tr>
 <td>
@@ -139,7 +139,7 @@ for x in range(10):
 
 
 <!-- Tabular view -->
-**Raises**
+Raises
 <table>
 
 <tr>
@@ -155,7 +155,7 @@ if problem.
 
 
 <!-- Tabular view -->
-**Returns**
+Returns
 <table>
 <tr>
 <td>

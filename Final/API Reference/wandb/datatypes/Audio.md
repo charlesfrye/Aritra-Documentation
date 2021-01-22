@@ -22,7 +22,7 @@ Wandb class for audio clips.
 
 
 <!-- Tabular view -->
-**Arguments**
+Arguments
 <table>
 <tr>
 <td>
@@ -73,7 +73,7 @@ caption (string): Caption to display with audio.
 
 
 <!-- Tabular view -->
-**Class Variables**
+Class Variables
 <table>
 
 <tr>

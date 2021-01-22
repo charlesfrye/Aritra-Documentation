@@ -39,7 +39,7 @@ wandb.Histogram(np_histogram=hist)
 
 
 <!-- Tabular view -->
-**Arguments**
+Arguments
 <table>
 <tr>
 <td>
@@ -57,7 +57,7 @@ is 64.  The maximum number of bins is 512
 
 
 <!-- Tabular view -->
-**Class Variables**
+Class Variables
 <table>
 
 <tr>

@@ -24,7 +24,7 @@ Will run a function or program with configuration parameters specified
     by server.
 
 <!-- Tabular view -->
-**Arguments**
+Arguments
 <table>
 <tr>
 <td>

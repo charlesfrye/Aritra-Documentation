@@ -31,7 +31,7 @@ Most common way to initialize
 
 
 <!-- Tabular view -->
-**Arguments**
+Arguments
 <table>
 <tr>
 <td>
@@ -48,7 +48,7 @@ You can also set defaults for `entity`, `project`, and `run`.
 
 
 <!-- Tabular view -->
-**Attributes**
+Attributes
 <table>
 
 <tr>
@@ -100,7 +100,7 @@ Returns a single artifact by parsing path in the form entity/project/run_id.
 
 
 <!-- Tabular view -->
-**Arguments**
+Arguments
 <table>
 <tr>
 <td>
@@ -118,7 +118,7 @@ type (str, optional): The type of artifact to fetch.
 
 
 <!-- Tabular view -->
-**Returns**
+Returns
 <table>
 <tr>
 <td>
@@ -208,7 +208,7 @@ Get projects for a given entity.
 
 
 <!-- Tabular view -->
-**Arguments**
+Arguments
 <table>
 <tr>
 <td>
@@ -224,7 +224,7 @@ Usually there is no reason to change this.
 
 
 <!-- Tabular view -->
-**Returns**
+Returns
 <table>
 <tr>
 <td>
@@ -251,7 +251,7 @@ Get reports for a given project path.
 WARNING: This api is in beta and will likely change in a future release
 
 <!-- Tabular view -->
-**Arguments**
+Arguments
 <table>
 <tr>
 <td>
@@ -267,7 +267,7 @@ Usually there is no reason to change this.
 
 
 <!-- Tabular view -->
-**Returns**
+Returns
 <table>
 <tr>
 <td>
@@ -293,7 +293,7 @@ Returns a single run by parsing path in the form entity/project/run_id.
 
 
 <!-- Tabular view -->
-**Arguments**
+Arguments
 <table>
 <tr>
 <td>
@@ -308,7 +308,7 @@ and if api.project is set this can just be the run_id.
 
 
 <!-- Tabular view -->
-**Returns**
+Returns
 <table>
 <tr>
 <td>
@@ -355,7 +355,7 @@ api.runs(path="my_entity/my_project", {"order": "+summary_metrics.loss"})
 
 
 <!-- Tabular view -->
-**Arguments**
+Arguments
 <table>
 <tr>
 <td>
@@ -378,7 +378,7 @@ The default order is run.created_at from newest to oldest.
 
 
 <!-- Tabular view -->
-**Returns**
+Returns
 <table>
 <tr>
 <td>
@@ -404,7 +404,7 @@ Returns a sweep by parsing path in the form entity/project/sweep_id.
 
 
 <!-- Tabular view -->
-**Arguments**
+Arguments
 <table>
 <tr>
 <td>
@@ -419,7 +419,7 @@ this can just be the sweep_id.
 
 
 <!-- Tabular view -->
-**Returns**
+Returns
 <table>
 <tr>
 <td>
@@ -436,7 +436,7 @@ A `Sweep` object.
 
 
 <!-- Tabular view -->
-**Class Variables**
+Class Variables
 <table>
 
 <tr>
