@@ -1,0 +1,79 @@
+# Histogram
+
+<!-- Insert buttons and diff -->
+
+
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L218-L284)
+
+
+
+
+wandb class for histograms
+
+<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<code>datatypes.Histogram(
+    sequence=None, np_histogram=None, num_bins=64
+)
+</code></pre>
+
+
+
+<!-- Placeholder for "Used in" -->
+
+This object works just like numpy's histogram function
+https://docs.scipy.org/doc/numpy/reference/generated/numpy.histogram.html
+
+#### Examples:
+
+Generate histogram from a sequence
+```
+wandb.Histogram([1,2,3])
+```
+
+Efficiently initialize from np.histogram.
+```
+hist = np.histogram(data)
+wandb.Histogram(np_histogram=hist)
+```
+
+
+
+<!-- Tabular view -->
+**Arguments**
+<table>
+<tr>
+<td>
+sequence (array_like): input data for histogram
+np_histogram (numpy histogram): alternative input of a precoomputed histogram
+num_bins (int): Number of bins for the histogram.  The default number of bins
+is 64.  The maximum number of bins is 512
+</td>
+</tr>
+
+</table>
+
+
+
+
+
+<!-- Tabular view -->
+**Class Variables**
+<table>
+
+<tr>
+<td>
+MAX_LENGTH<a id="MAX_LENGTH"></a>
+</td>
+<td>
+`512`
+</td>
+</tr><tr>
+<td>
+artifact_type<a id="artifact_type"></a>
+</td>
+<td>
+`None`
+</td>
+</tr>
+</table>
+

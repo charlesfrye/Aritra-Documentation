@@ -1,0 +1,145 @@
+# Image
+
+<!-- Insert buttons and diff -->
+
+
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1526-L1941)
+
+
+
+
+Wandb class for images.
+
+<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<code>datatypes.Image(
+    data_or_path, mode=None, caption=None, grouping=None, classes=None, boxes=None,
+    masks=None
+)
+</code></pre>
+
+
+
+<!-- Placeholder for "Used in" -->
+
+
+<!-- Tabular view -->
+**Arguments**
+<table>
+<tr>
+<td>
+data_or_path (numpy array, string, io): Accepts numpy array of
+image data, or a PIL image. The class attempts to infer
+the data format and converts it.
+mode (string): The PIL mode for an image. Most common are "L", "RGB",
+"RGBA". Full explanation at https://pillow.readthedocs.io/en/4.2.x/handbook/concepts.html#concept-modes.
+caption (string): Label for display of image.
+</td>
+</tr>
+
+</table>
+
+
+
+## Methods
+
+<h3 id="all_boxes"><code>all_boxes</code></h3>
+
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1906-L1921">View source</a>
+
+<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<code>@classmethod</code>
+<code>all_boxes(
+    images, run, run_key, step
+)
+</code></pre>
+
+
+
+
+<h3 id="all_captions"><code>all_captions</code></h3>
+
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1923-L1928">View source</a>
+
+<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<code>@classmethod</code>
+<code>all_captions(
+    images
+)
+</code></pre>
+
+
+
+
+<h3 id="all_masks"><code>all_masks</code></h3>
+
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1889-L1904">View source</a>
+
+<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<code>@classmethod</code>
+<code>all_masks(
+    images, run, run_key, step
+)
+</code></pre>
+
+
+
+
+<h3 id="guess_mode"><code>guess_mode</code></h3>
+
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1791-L1805">View source</a>
+
+<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<code>guess_mode(
+    data
+)
+</code></pre>
+
+Guess what type of image the np.array is representing
+
+
+<h3 id="to_uint8"><code>to_uint8</code></h3>
+
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1807-L1829">View source</a>
+
+<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<code>@classmethod</code>
+<code>to_uint8(
+    data
+)
+</code></pre>
+
+Converts floating point image on the range [0,1] and integer images
+on the range [0,255] to uint8, clipping if necessary.
+
+
+
+
+
+<!-- Tabular view -->
+**Class Variables**
+<table>
+
+<tr>
+<td>
+MAX_DIMENSION<a id="MAX_DIMENSION"></a>
+</td>
+<td>
+`65500`
+</td>
+</tr><tr>
+<td>
+MAX_ITEMS<a id="MAX_ITEMS"></a>
+</td>
+<td>
+`108`
+</td>
+</tr><tr>
+<td>
+artifact_type<a id="artifact_type"></a>
+</td>
+<td>
+`'image-file'`
+</td>
+</tr>
+</table>
+
