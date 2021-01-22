@@ -22,8 +22,8 @@ This is a table designed to display sets of records.
 
 
 <!-- Tabular view -->
-Arguments
 <table>
+Arguments
 <tr>
 <td>
 columns ([str]): Names of the columns in the table.
@@ -84,8 +84,8 @@ Add a row of data to the table. Argument length should match column length
 
 
 <!-- Tabular view -->
-Class Variables
 <table>
+Class Variables
 
 <tr>
 <td>

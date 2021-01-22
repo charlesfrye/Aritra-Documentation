@@ -22,8 +22,8 @@ Wandb representation of video.
 
 
 <!-- Tabular view -->
-Arguments
 <table>
+Arguments
 <tr>
 <td>
 data_or_path (numpy array, string, io):
@@ -62,8 +62,8 @@ format (string): format of video, necessary if initializing with path or io obje
 
 
 <!-- Tabular view -->
-Class Variables
 <table>
+Class Variables
 
 <tr>
 <td>

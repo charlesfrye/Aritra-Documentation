@@ -22,8 +22,8 @@ Wandb class for 3D point clouds.
 
 
 <!-- Tabular view -->
-Arguments
 <table>
+Arguments
 <tr>
 <td>
 data_or_path (numpy array, string, io):
@@ -48,8 +48,8 @@ The shape of the numpy array must be one of either:
 
 
 <!-- Tabular view -->
-Class Variables
 <table>
+Class Variables
 
 <tr>
 <td>

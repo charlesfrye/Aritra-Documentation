@@ -23,8 +23,8 @@ Wandb class for images.
 
 
 <!-- Tabular view -->
-Arguments
 <table>
+Arguments
 <tr>
 <td>
 data_or_path (numpy array, string, io): Accepts numpy array of
@@ -116,8 +116,8 @@ on the range [0,255] to uint8, clipping if necessary.
 
 
 <!-- Tabular view -->
-Class Variables
 <table>
+Class Variables
 
 <tr>
 <td>

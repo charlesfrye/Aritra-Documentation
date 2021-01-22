@@ -46,8 +46,8 @@ Spawns a new process to start or resume a run locally and communicate with a
 wandb server. Should be called before any calls to wandb.log.
 
 <!-- Tabular view -->
-Arguments
 <table>
+Arguments
 <tr>
 <td>
 job_type (str, optional): The type of job running, defaults to 'train'
@@ -139,8 +139,8 @@ for x in range(10):
 
 
 <!-- Tabular view -->
-Raises
 <table>
+Raises
 
 <tr>
 <td>
@@ -155,8 +155,8 @@ if problem.
 
 
 <!-- Tabular view -->
-Returns
 <table>
+Returns
 <tr>
 <td>
 A `Run` object.

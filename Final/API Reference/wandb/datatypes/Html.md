@@ -22,8 +22,8 @@ Wandb class for arbitrary html
 
 
 <!-- Tabular view -->
-Arguments
 <table>
+Arguments
 <tr>
 <td>
 data (string or io object): HTML to display in wandb
@@ -54,8 +54,8 @@ to False the HTML will pass through unchanged.
 
 
 <!-- Tabular view -->
-Class Variables
 <table>
+Class Variables
 
 <tr>
 <td>

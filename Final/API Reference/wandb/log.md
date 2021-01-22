@@ -61,8 +61,8 @@ If you want to log more frequently than that it's better to aggregate
 the data on the client side or you may get degraded performance.
 
 <!-- Tabular view -->
-Arguments
 <table>
+Arguments
 <tr>
 <td>
 row (dict, optional): A dict of serializable python objects i.e `str`,
@@ -136,8 +136,8 @@ For more examples, see https://docs.wandb.com/library/log
 
 
 <!-- Tabular view -->
-Raises
 <table>
+Raises
 <tr>
 <td>
 wandb.Error - if called before <a href="../wandb/init.md"><code>wandb.init</code></a>

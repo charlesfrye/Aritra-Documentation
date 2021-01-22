@@ -24,8 +24,8 @@ Ensure all files matching *glob_str* are synced to wandb with the policy specifi
 
 
 <!-- Tabular view -->
-Arguments
 <table>
+Arguments
 <tr>
 <td>
 glob_str (string): a relative or absolute path to a unix glob or regular

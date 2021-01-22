@@ -31,8 +31,8 @@ Most common way to initialize
 
 
 <!-- Tabular view -->
-Arguments
 <table>
+Arguments
 <tr>
 <td>
 overrides (dict): You can set `base_url` if you are using a wandb server
@@ -48,8 +48,8 @@ You can also set defaults for `entity`, `project`, and `run`.
 
 
 <!-- Tabular view -->
-Attributes
 <table>
+Attributes
 
 <tr>
 <td>
@@ -100,8 +100,8 @@ Returns a single artifact by parsing path in the form entity/project/run_id.
 
 
 <!-- Tabular view -->
-Arguments
 <table>
+Arguments
 <tr>
 <td>
 name (str): An artifact name. May be prefixed with entity/project. Valid names
@@ -118,8 +118,8 @@ type (str, optional): The type of artifact to fetch.
 
 
 <!-- Tabular view -->
-Returns
 <table>
+Returns
 <tr>
 <td>
 A `Artifact` object.
@@ -208,8 +208,8 @@ Get projects for a given entity.
 
 
 <!-- Tabular view -->
-Arguments
 <table>
+Arguments
 <tr>
 <td>
 entity (str): Name of the entity requested.  If None will fallback to
@@ -224,8 +224,8 @@ Usually there is no reason to change this.
 
 
 <!-- Tabular view -->
-Returns
 <table>
+Returns
 <tr>
 <td>
 A `Projects` object which is an iterable collection of `Project` objects.
@@ -251,8 +251,8 @@ Get reports for a given project path.
 WARNING: This api is in beta and will likely change in a future release
 
 <!-- Tabular view -->
-Arguments
 <table>
+Arguments
 <tr>
 <td>
 path (str): path to project the report resides in, should be in the form: "entity/project"
@@ -267,8 +267,8 @@ Usually there is no reason to change this.
 
 
 <!-- Tabular view -->
-Returns
 <table>
+Returns
 <tr>
 <td>
 A `Reports` object which is an iterable collection of `BetaReport` objects.
@@ -293,8 +293,8 @@ Returns a single run by parsing path in the form entity/project/run_id.
 
 
 <!-- Tabular view -->
-Arguments
 <table>
+Arguments
 <tr>
 <td>
 path (str): path to run in the form entity/project/run_id.
@@ -308,8 +308,8 @@ and if api.project is set this can just be the run_id.
 
 
 <!-- Tabular view -->
-Returns
 <table>
+Returns
 <tr>
 <td>
 A `Run` object.
@@ -355,8 +355,8 @@ api.runs(path="my_entity/my_project", {"order": "+summary_metrics.loss"})
 
 
 <!-- Tabular view -->
-Arguments
 <table>
+Arguments
 <tr>
 <td>
 path (str): path to project, should be in the form: "entity/project"
@@ -378,8 +378,8 @@ The default order is run.created_at from newest to oldest.
 
 
 <!-- Tabular view -->
-Returns
 <table>
+Returns
 <tr>
 <td>
 A `Runs` object, which is an iterable collection of `Run` objects.
@@ -404,8 +404,8 @@ Returns a sweep by parsing path in the form entity/project/sweep_id.
 
 
 <!-- Tabular view -->
-Arguments
 <table>
+Arguments
 <tr>
 <td>
 path (str, optional): path to sweep in the form entity/project/sweep_id.  If api.entity
@@ -419,8 +419,8 @@ this can just be the sweep_id.
 
 
 <!-- Tabular view -->
-Returns
 <table>
+Returns
 <tr>
 <td>
 A `Sweep` object.
@@ -436,8 +436,8 @@ A `Sweep` object.
 
 
 <!-- Tabular view -->
-Class Variables
 <table>
+Class Variables
 
 <tr>
 <td>

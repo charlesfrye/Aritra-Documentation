@@ -22,8 +22,8 @@ Wandb class for plotly plots.
 
 
 <!-- Tabular view -->
-Arguments
 <table>
+Arguments
 
 <tr>
 <td>
@@ -58,8 +58,8 @@ matplotlib or plotly figure
 
 
 <!-- Tabular view -->
-Class Variables
 <table>
+Class Variables
 
 <tr>
 <td>
