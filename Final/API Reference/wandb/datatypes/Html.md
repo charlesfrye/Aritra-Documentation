@@ -23,7 +23,7 @@ Wandb class for arbitrary html
 
 <!-- Tabular view -->
 <table>
-Arguments
+<tr><th>Arguments</th></tr>
 <tr>
 <td>
 data (string or io object): HTML to display in wandb
@@ -55,7 +55,7 @@ to False the HTML will pass through unchanged.
 
 <!-- Tabular view -->
 <table>
-Class Variables
+<tr><th>Class Variables</th></tr>
 
 <tr>
 <td>

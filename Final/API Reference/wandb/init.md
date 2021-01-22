@@ -47,7 +47,7 @@ wandb server. Should be called before any calls to wandb.log.
 
 <!-- Tabular view -->
 <table>
-Arguments
+<tr><th>Arguments</th></tr>
 <tr>
 <td>
 job_type (str, optional): The type of job running, defaults to 'train'
@@ -140,7 +140,7 @@ for x in range(10):
 
 <!-- Tabular view -->
 <table>
-Raises
+<tr><th>Raises</th></tr>
 
 <tr>
 <td>
@@ -156,7 +156,7 @@ if problem.
 
 <!-- Tabular view -->
 <table>
-Returns
+<tr><th>Returns</th></tr>
 <tr>
 <td>
 A `Run` object.

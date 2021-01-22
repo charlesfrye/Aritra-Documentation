@@ -23,7 +23,7 @@ Wandb class for plotly plots.
 
 <!-- Tabular view -->
 <table>
-Arguments
+<tr><th>Arguments</th></tr>
 
 <tr>
 <td>
@@ -59,7 +59,7 @@ matplotlib or plotly figure
 
 <!-- Tabular view -->
 <table>
-Class Variables
+<tr><th>Class Variables</th></tr>
 
 <tr>
 <td>

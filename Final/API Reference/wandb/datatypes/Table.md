@@ -23,7 +23,7 @@ This is a table designed to display sets of records.
 
 <!-- Tabular view -->
 <table>
-Arguments
+<tr><th>Arguments</th></tr>
 <tr>
 <td>
 columns ([str]): Names of the columns in the table.
@@ -85,7 +85,7 @@ Add a row of data to the table. Argument length should match column length
 
 <!-- Tabular view -->
 <table>
-Class Variables
+<tr><th>Class Variables</th></tr>
 
 <tr>
 <td>

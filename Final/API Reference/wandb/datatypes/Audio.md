@@ -23,7 +23,7 @@ Wandb class for audio clips.
 
 <!-- Tabular view -->
 <table>
-Arguments
+<tr><th>Arguments</th></tr>
 <tr>
 <td>
 data_or_path (string or numpy array): A path to an audio file
@@ -74,7 +74,7 @@ caption (string): Caption to display with audio.
 
 <!-- Tabular view -->
 <table>
-Class Variables
+<tr><th>Class Variables</th></tr>
 
 <tr>
 <td>

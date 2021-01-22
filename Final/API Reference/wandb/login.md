@@ -23,7 +23,7 @@ Log in to W&B.
 
 <!-- Tabular view -->
 <table>
-Arguments
+<tr><th>Arguments</th></tr>
 <tr>
 <td>
 anonymous (string, optional): Can be "must", "allow", or "never".
@@ -42,7 +42,7 @@ host (string, optional): The host to connect to.
 
 <!-- Tabular view -->
 <table>
-Returns
+<tr><th>Returns</th></tr>
 
 <tr>
 <td>
@@ -58,7 +58,7 @@ if key is configured
 
 <!-- Tabular view -->
 <table>
-Raises
+<tr><th>Raises</th></tr>
 <tr>
 <td>
 UsageError - if api_key can not configured and no tty

@@ -62,7 +62,7 @@ the data on the client side or you may get degraded performance.
 
 <!-- Tabular view -->
 <table>
-Arguments
+<tr><th>Arguments</th></tr>
 <tr>
 <td>
 row (dict, optional): A dict of serializable python objects i.e `str`,
@@ -137,7 +137,7 @@ For more examples, see https://docs.wandb.com/library/log
 
 <!-- Tabular view -->
 <table>
-Raises
+<tr><th>Raises</th></tr>
 <tr>
 <td>
 wandb.Error - if called before <a href="../wandb/init.md"><code>wandb.init</code></a>
