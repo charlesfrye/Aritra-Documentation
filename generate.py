@@ -67,7 +67,7 @@ if __name__== "__main__":
 
     build_docs(
         name_pair=("wandb", wandb),
-        output_dir="API Reference",
+        output_dir="API Reference 2",
         code_url_prefix=CODE_URL_PREFIX,
         search_hints=False,
         gen_report=False)
@@ -87,7 +87,7 @@ if __name__== "__main__":
 
     build_docs(
         name_pair=("datatypes",wandb),
-        output_dir="API Reference/wandb",
+        output_dir="API Reference 2/wandb",
         code_url_prefix=CODE_URL_PREFIX,
         search_hints=False,
         gen_report=False)
