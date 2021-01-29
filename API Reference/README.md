@@ -30,11 +30,11 @@ For examples usage, see github.com/wandb/examples
 
 [`agent(...)`](./wandb/agent.md): Generic agent entrypoint, used for CLI or jupyter.
 
-[`config(...)`](./wandb/config.md): Config object to save your run's hyperparameters.
+[`config(...)`](./wandb/config.md): Config object
 
 [`finish(...)`](./wandb/finish.md): Marks a run as finished, and finishes uploading all data.
 
-[`init(...)`](./wandb/init.md): Initialize W&B.
+[`init(...)`](./wandb/init.md): Start a new tracked run with <a href="./wandb/init.md"><code>wandb.init()</code></a>.
 
 [`log(...)`](./wandb/log.md): Log a dict to the global run's history.
 
