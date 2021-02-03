@@ -11,7 +11,7 @@
 Used for querying the wandb server.
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>wandb.Api(
+<code>Library.Api(
     overrides={}
 )
 </code></pre>

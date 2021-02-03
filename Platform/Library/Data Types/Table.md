@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L481-L749)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L481-L761)
 
 
 
@@ -11,7 +11,7 @@
 This is a table designed to display sets of records.
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>datatypes.Table(
+<code>Data Types.Table(
     columns=None, data=None, rows=None, dataframe=None, dtype=None, optional=True
 )
 </code></pre>
@@ -93,6 +93,22 @@ Add a row of data to the table. Argument length should match column length
 
 
 
+
+<h3 id="iterrows"><code>iterrows</code></h3>
+
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L751-L761">View source</a>
+
+<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<code>iterrows()
+</code></pre>
+
+Iterate over rows as (ndx, row)
+Yields
+------
+index : int
+    The index of the row.
+row : List[any]
+    The data of the row
 
 
 

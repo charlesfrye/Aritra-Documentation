@@ -8,10 +8,10 @@
 
 
 
-Start a new tracked run with <a href="../wandb/init.md"><code>wandb.init()</code></a>.
+Start a new tracked run with `wandb.init()`.
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>wandb.init(
+<code>Run.init(
     job_type: Optional[str] = None,
     dir=None,
     config: Union[Dict, str, None] = None,
@@ -35,7 +35,7 @@ Start a new tracked run with <a href="../wandb/init.md"><code>wandb.init()</code
     monitor_gym=None,
     save_code=None,
     id=None,
-    settings: Union[Settings, Dict[str, Any], None] = None
+    settings: Union[<a href="../Run/settings.md"><code>Run.settings</code></a>, Dict[str, Any], None] = None
 ) -> Union[Run, Dummy, None]
 </code></pre>
 
@@ -43,15 +43,15 @@ Start a new tracked run with <a href="../wandb/init.md"><code>wandb.init()</code
 
 <!-- Placeholder for "Used in" -->
 
-In an ML training pipeline, you could add <a href="../wandb/init.md"><code>wandb.init()</code></a>
+In an ML training pipeline, you could add `wandb.init()`
 to the beginning of your training script as well as your evaluation
 script, and each piece would be tracked as a run in W&B.
 
-<a href="../wandb/init.md"><code>wandb.init()</code></a> spawns a new background process to log data to a run, and it
+`wandb.init()` spawns a new background process to log data to a run, and it
 also syncs data to wandb.ai by default so you can see live visualizations.
-Call <a href="../wandb/init.md"><code>wandb.init()</code></a> to start a run before logging data with <a href="../wandb/log.md"><code>wandb.log()</code></a>.
+Call `wandb.init()` to start a run before logging data with `wandb.log()`.
 
-<a href="../wandb/init.md"><code>wandb.init()</code></a> returns a run object, and you can also access the run object
+`wandb.init()` returns a run object, and you can also access the run object
 with wandb.run.
 
 <!-- Tabular view -->
@@ -226,7 +226,7 @@ You can also pass a dict, json string, or yaml filename.
 </td>
 <td>
 (list, optional) string keys to exclude from
-<a href="../wandb/config.md"><code>wandb.config</code></a>.
+`wandb.config`.
 </td>
 </tr><tr>
 <td>
@@ -351,7 +351,7 @@ if problem.
 <tr><th>Returns</th></tr>
 <tr>
 <td>
-A `Run` object.
+A <a href="../Run.md"><code>Run</code></a> object.
 </td>
 </tr>
 

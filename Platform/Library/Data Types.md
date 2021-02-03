@@ -1,4 +1,4 @@
-# Module: datatypes
+# Module: Data Types
 
 <!-- Insert buttons and diff -->
 
@@ -24,21 +24,21 @@ For examples usage, see github.com/wandb/examples
 
 ## Classes
 
-[`class Audio`](./datatypes/Audio.md): Wandb class for audio clips.
+[`class Audio`](./Data Types/Audio.md): Wandb class for audio clips.
 
-[`class Histogram`](./datatypes/Histogram.md): wandb class for histograms.
+[`class Histogram`](./Data Types/Histogram.md): wandb class for histograms.
 
-[`class Html`](./datatypes/Html.md): Wandb class for arbitrary html
+[`class Html`](./Data Types/Html.md): Wandb class for arbitrary html
 
-[`class Image`](./datatypes/Image.md): Wandb class for images.
+[`class Image`](./Data Types/Image.md): Wandb class for images.
 
-[`class Molecule`](./datatypes/Molecule.md): Wandb class for Molecular data
+[`class Molecule`](./Data Types/Molecule.md): Wandb class for Molecular data
 
-[`class Object3D`](./datatypes/Object3D.md): Wandb class for 3D point clouds.
+[`class Object3D`](./Data Types/Object3D.md): Wandb class for 3D point clouds.
 
-[`class Plotly`](./datatypes/Plotly.md): Wandb class for plotly plots.
+[`class Plotly`](./Data Types/Plotly.md): Wandb class for plotly plots.
 
-[`class Table`](./datatypes/Table.md): This is a table designed to display sets of records.
+[`class Table`](./Data Types/Table.md): This is a table designed to display sets of records.
 
-[`class Video`](./datatypes/Video.md): Wandb representation of video.
+[`class Video`](./Data Types/Video.md): Wandb representation of video.
 

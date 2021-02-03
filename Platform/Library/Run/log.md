@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L804-L943)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_run.py#L807-L946)
 
 
 
@@ -11,7 +11,7 @@
 Log a dict to the global run's history.
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>wandb.log(
+<code>Run.log(
     data: Dict[str, Any],
     step: int = None,
     commit: bool = None,
@@ -23,7 +23,7 @@ Log a dict to the global run's history.
 
 <!-- Placeholder for "Used in" -->
 
-<a href="../wandb/log.md"><code>wandb.log</code></a> can be used to log everything from scalars to histograms, media
+`wandb.log` can be used to log everything from scalars to histograms, media
 and matplotlib plots.
 
 The most basic usage is `wandb.log({'train-loss': 0.5, 'accuracy': 0.9})`.
@@ -68,14 +68,14 @@ the data on the client side or you may get degraded performance.
 row (dict, optional): A dict of serializable python objects i.e `str`,
 `ints`, `floats`, `Tensors`, `dicts`, or `wandb.data_types`.
 commit (boolean, optional): Save the metrics dict to the wandb server
-and increment the step.  If false <a href="../wandb/log.md"><code>wandb.log</code></a> just updates the current
+and increment the step.  If false `wandb.log` just updates the current
 metrics dict with the row argument and metrics won't be saved until
-<a href="../wandb/log.md"><code>wandb.log</code></a> is called with `commit=True`.
+`wandb.log` is called with `commit=True`.
 step (integer, optional): The global step in processing. This persists
 any non-committed earlier steps but defaults to not committing the
 specified step.
 sync (boolean, True): This argument is deprecated and currently doesn't
-change the behaviour of <a href="../wandb/log.md"><code>wandb.log</code></a>.
+change the behaviour of `wandb.log`.
 </td>
 </tr>
 
@@ -140,7 +140,7 @@ For more examples, see https://docs.wandb.com/library/log
 <tr><th>Raises</th></tr>
 <tr>
 <td>
-wandb.Error - if called before <a href="../wandb/init.md"><code>wandb.init</code></a>
+wandb.Error - if called before `wandb.init`
 ValueError - if invalid data is passed
 </td>
 </tr>

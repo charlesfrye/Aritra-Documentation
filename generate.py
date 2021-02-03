@@ -50,28 +50,41 @@ def build_docs(name_pair,output_dir,code_url_prefix, search_hints, gen_report):
 
 if __name__== "__main__":
     CODE_URL_PREFIX = "https://www.github.com/wandb/client/tree/master/wandb"
-    wandb_methods = [
+
+    wandb_classes = [
+        'Api',
+        'Artifact']
+
+    wandb.__all__ = wandb_classes
+
+    build_docs(
+        name_pair=("Library", wandb),
+        output_dir="Platform",
+        code_url_prefix=CODE_URL_PREFIX,
+        search_hints=False,
+        gen_report=False)
+    
+    wandb.settings = wandb.wandb_sdk.Settings
+    wandb.history = wandb.wandb_sdk.History
+    wandb_run = [
         'init',
         'log',
         'config',
         'summary',
         'login',
-        'agent',
-        'save',
-        'finish',]
-
-    wandb_classes = [
-        'Api',]
-
-    wandb.__all__ = wandb_methods+wandb_classes
+        'alert',
+        'history',
+        'settings']
+    
+    wandb.__all__ = wandb_run
 
     build_docs(
-        name_pair=("wandb", wandb),
-        output_dir="API Reference 2",
+        name_pair=("Run",wandb),
+        output_dir="Platform/Library",
         code_url_prefix=CODE_URL_PREFIX,
         search_hints=False,
         gen_report=False)
-    
+
     wandb_datatypes = [
         'Image',
         'Plotly',
@@ -86,8 +99,8 @@ if __name__== "__main__":
     wandb.__all__ = wandb_datatypes
 
     build_docs(
-        name_pair=("datatypes",wandb),
-        output_dir="API Reference 2/wandb",
+        name_pair=("Data Types",wandb),
+        output_dir="Platform/Library",
         code_url_prefix=CODE_URL_PREFIX,
         search_hints=False,
         gen_report=False)

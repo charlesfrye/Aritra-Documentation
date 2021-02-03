@@ -11,7 +11,7 @@
 Summary tracks single values for each run. By default, summary is set to the
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>wandb.summary(
+<code>Run.summary(
     get_current_summary_callback: t.Callable
 )
 </code></pre>
