@@ -24,7 +24,5 @@ For examples usage, see github.com/wandb/examples
 
 ## Classes
 
-[`class Api`](./Library/Api.md): Used for querying the wandb server.
-
 [`class Artifact`](./Library/Artifact.md): An artifact object you can write files into, and pass to log_artifact.
 

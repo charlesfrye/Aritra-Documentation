@@ -52,8 +52,8 @@ if __name__== "__main__":
     CODE_URL_PREFIX = "https://www.github.com/wandb/client/tree/master/wandb"
 
     wandb_classes = [
-        'Api',
-        'Artifact']
+        'Artifact'
+        ]
 
     wandb.__all__ = wandb_classes
 
@@ -64,6 +64,48 @@ if __name__== "__main__":
         search_hints=False,
         gen_report=False)
     
+    wandb.Api = wandb.apis.public.Api
+    wandb.Projects = wandb.apis.public.Projects
+    wandb.Project = wandb.apis.public.Project
+    wandb.Runs = wandb.apis.public.Runs
+    wandb.Run = wandb.apis.public.Run
+    wandb.Sweep = wandb.apis.public.Sweep
+    wandb.Files = wandb.apis.public.Files
+    wandb.File = wandb.apis.public.File
+    wandb.Reports = wandb.apis.public.Reports
+    wandb.QueryGenerator = wandb.apis.public.QueryGenerator
+    wandb.BetaReport = wandb.apis.public.BetaReport
+    wandb.ArtifactType = wandb.apis.public.ArtifactType
+    wandb.ArtifactCollection = wandb.apis.public.ArtifactCollection
+    wandb.Artifact = wandb.apis.public.Artifact
+    wandb.ArtifactVersions = wandb.apis.public.ArtifactVersions
+    wandb_api_doc = [
+        'Api',
+        'Projects',
+        'Project',
+        'Runs',
+        'Run',
+        'Sweep',
+        'Files',
+        'File',
+        'Reports',
+        'QueryGenerator',
+        'BetaReport',
+        'ArtifactType',
+        'ArtifactCollection',
+        'Artifact',
+        'ArtifactVersions',
+    ]
+    wandb.__all__ = wandb_api_doc
+
+    build_docs(
+        name_pair=("Api",wandb),
+        output_dir="Platform/Library",
+        code_url_prefix=CODE_URL_PREFIX,
+        search_hints=False,
+        gen_report=False)
+
+
     wandb.settings = wandb.wandb_sdk.Settings
     wandb.history = wandb.wandb_sdk.History
     wandb_run = [
