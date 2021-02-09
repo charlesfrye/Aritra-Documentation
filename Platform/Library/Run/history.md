@@ -10,7 +10,7 @@
 
 Time series data for Runs. This is essentially a list of dicts where each
 
-<pre><code>Run.history(
+<pre><code>history(
     run
 )</code></pre>
 

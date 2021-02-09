@@ -10,7 +10,7 @@
 
 A project is a namespace for runs
 
-<pre><code>Public Api.Project(
+<pre><code>Project(
     client, entity, project, attrs
 )</code></pre>
 

@@ -10,7 +10,7 @@
 
 Config object
 
-<pre><code>Run.config() -> None</code></pre>
+<pre><code>config() -> None</code></pre>
 
 
 

@@ -10,7 +10,7 @@
 
 Wandb class for 3D point clouds.
 
-<pre><code>Data Types.Object3D(
+<pre><code>Object3D(
     data_or_path, **kwargs
 )</code></pre>
 

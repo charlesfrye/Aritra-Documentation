@@ -10,7 +10,7 @@
 
 wandb class for histograms.
 
-<pre><code>Data Types.Histogram(
+<pre><code>Histogram(
     sequence=None, np_histogram=None, num_bins=64
 )</code></pre>
 

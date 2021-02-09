@@ -10,7 +10,7 @@
 
 Wandb class for Molecular data
 
-<pre><code>Data Types.Molecule(
+<pre><code>Molecule(
     data_or_path, **kwargs
 )</code></pre>
 

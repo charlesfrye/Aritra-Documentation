@@ -10,7 +10,7 @@
 
 Wandb class for images.
 
-<pre><code>Data Types.Image(
+<pre><code>Image(
     data_or_path, mode=None, caption=None, grouping=None, classes=None, boxes=None,
     masks=None
 )</code></pre>

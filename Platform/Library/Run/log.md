@@ -10,7 +10,7 @@
 
 Log a dict to the global run's history.
 
-<pre><code>Run.log(
+<pre><code>log(
     data: Dict[str, Any],
     step: int = None,
     commit: bool = None,

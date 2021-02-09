@@ -10,7 +10,7 @@
 
 BetaReport is a class associated with reports created in wandb.
 
-<pre><code>Public Api.BetaReport(
+<pre><code>BetaReport(
     client, attrs, entity=None, project=None
 )</code></pre>
 

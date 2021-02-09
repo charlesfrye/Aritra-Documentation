@@ -10,7 +10,7 @@
 
 A set of runs associated with a sweep
 
-<pre><code>Public Api.Sweep(
+<pre><code>Sweep(
     client, entity, project, sweep_id, attrs={}
 )</code></pre>
 

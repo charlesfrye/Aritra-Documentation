@@ -10,7 +10,7 @@
 
 Files is an iterable collection of `File` objects.
 
-<pre><code>Public Api.Files(
+<pre><code>Files(
     client, run, names=[], per_page=50, upload=False
 )</code></pre>
 

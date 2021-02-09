@@ -10,7 +10,7 @@
 
 An iterable collection of artifact versions associated with a project and optional filter.
 
-<pre><code>Public Api.ArtifactVersions(
+<pre><code>ArtifactVersions(
     client, entity, project, collection_name, type, filters={}, order=None,
     per_page=50
 )</code></pre>

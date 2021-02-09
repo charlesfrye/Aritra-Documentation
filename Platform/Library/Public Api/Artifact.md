@@ -10,7 +10,7 @@
 
 
 
-<pre><code>Public Api.Artifact(
+<pre><code>Artifact(
     client, entity, project, name, attrs=None
 )</code></pre>
 

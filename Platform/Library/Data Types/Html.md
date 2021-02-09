@@ -10,7 +10,7 @@
 
 Wandb class for arbitrary html
 
-<pre><code>Data Types.Html(
+<pre><code>Html(
     data, inject=True
 )</code></pre>
 

@@ -10,7 +10,7 @@
 
 Settings Constructor
 
-<pre><code>Run.settings(
+<pre><code>settings(
     base_url: str = None,
     api_key: str = None,
     anonymous=None,

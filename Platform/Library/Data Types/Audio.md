@@ -10,7 +10,7 @@
 
 Wandb class for audio clips.
 
-<pre><code>Data Types.Audio(
+<pre><code>Audio(
     data_or_path, sample_rate=None, caption=None
 )</code></pre>
 

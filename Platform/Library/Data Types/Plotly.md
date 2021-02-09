@@ -10,7 +10,7 @@
 
 Wandb class for plotly plots.
 
-<pre><code>Data Types.Plotly(
+<pre><code>Plotly(
     val, **kwargs
 )</code></pre>
 

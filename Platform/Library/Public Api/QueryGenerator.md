@@ -10,7 +10,7 @@
 
 QueryGenerator is a helper object to write filters for runs
 
-<pre><code>Public Api.QueryGenerator()</code></pre>
+<pre><code>QueryGenerator()</code></pre>
 
 
 

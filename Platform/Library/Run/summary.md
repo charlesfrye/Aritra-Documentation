@@ -10,7 +10,7 @@
 
 Summary tracks single values for each run. By default, summary is set to the
 
-<pre><code>Run.summary(
+<pre><code>summary(
     get_current_summary_callback: t.Callable
 )</code></pre>
 

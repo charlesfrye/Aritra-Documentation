@@ -10,7 +10,7 @@
 
 An artifact object you can write files into, and pass to log_artifact.
 
-<pre><code>Library.Artifact(
+<pre><code>Artifact(
     name, type, description=None, metadata=None
 )</code></pre>
 

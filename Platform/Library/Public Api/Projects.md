@@ -10,7 +10,7 @@
 
 An iterable collection of `Project` objects.
 
-<pre><code>Public Api.Projects(
+<pre><code>Projects(
     client, entity, per_page=50
 )</code></pre>
 

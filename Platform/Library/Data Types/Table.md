@@ -10,7 +10,7 @@
 
 This is a table designed to display sets of records.
 
-<pre><code>Data Types.Table(
+<pre><code>Table(
     columns=None, data=None, rows=None, dataframe=None, dtype=None, optional=True,
     allow_mixed_types=False
 )</code></pre>

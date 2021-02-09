@@ -10,7 +10,7 @@
 
 Launch an alert with the given title and text.
 
-<pre><code>Run.alert(
+<pre><code>alert(
     title, text, level=None, wait_duration=None
 )</code></pre>
 

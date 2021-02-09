@@ -10,7 +10,7 @@
 
 An iterable collection of runs associated with a project and optional filter.
 
-<pre><code>Public Api.Runs(
+<pre><code>Runs(
     client, entity, project, filters={}, order=None, per_page=50
 )</code></pre>
 

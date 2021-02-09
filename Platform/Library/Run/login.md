@@ -10,7 +10,7 @@
 
 Log in to W&B.
 
-<pre><code>Run.login(
+<pre><code>login(
     anonymous=None, key=None, relogin=None, host=None, force=None
 )</code></pre>
 

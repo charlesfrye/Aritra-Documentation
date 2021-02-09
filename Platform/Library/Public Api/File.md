@@ -10,7 +10,7 @@
 
 File is a class associated with a file saved by wandb.
 
-<pre><code>Public Api.File(
+<pre><code>File(
     client, attrs
 )</code></pre>
 

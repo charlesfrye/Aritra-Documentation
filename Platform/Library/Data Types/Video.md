@@ -10,7 +10,7 @@
 
 Wandb representation of video.
 
-<pre><code>Data Types.Video(
+<pre><code>Video(
     data_or_path, caption=None, fps=4, format=None
 )</code></pre>
 

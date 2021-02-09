@@ -10,7 +10,7 @@
 
 Used for querying the wandb server.
 
-<pre><code>Public Api.Api(
+<pre><code>Api(
     overrides={}
 )</code></pre>
 

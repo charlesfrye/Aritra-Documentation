@@ -10,7 +10,7 @@
 
 A single run associated with an entity and project.
 
-<pre><code>Public Api.Run(
+<pre><code>Run(
     client, entity, project, run_id, attrs={}
 )</code></pre>
 

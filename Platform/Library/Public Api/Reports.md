@@ -10,7 +10,7 @@
 
 Reports is an iterable collection of `BetaReport` objects.
 
-<pre><code>Public Api.Reports(
+<pre><code>Reports(
     client, project, name=None, entity=None, per_page=50
 )</code></pre>
 

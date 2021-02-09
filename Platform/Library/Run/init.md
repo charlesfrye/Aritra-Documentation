@@ -10,7 +10,7 @@
 
 Start a new tracked run with `wandb.init()`.
 
-<pre><code>Run.init(
+<pre><code>init(
     job_type: Optional[str] = None,
     dir=None,
     config: Union[Dict, str, None] = None,
