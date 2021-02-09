@@ -10,8 +10,7 @@ Requires a local installation of `tensorflow_docs`:
 pip install git+https://github.com/tensorflow/docs
 ```
 """
-import pathlib
-from os import path
+from os import path, walk, getcwd, remove
 
 import wandb
 
@@ -153,3 +152,12 @@ if __name__== "__main__":
         code_url_prefix=CODE_URL_PREFIX,
         search_hints=False,
         gen_report=False)
+
+    # Remove the unwanted files
+    # all_symbols and _api.cache.md
+    directory = getcwd()
+    for root, folder, file_names in walk("Platform"):
+        if "all_symbols.md" in file_names:
+            remove(f"{root}/all_symbols.md")
+        if "_api_cache.json" in file_names:
+            remove(f"{root}/_api_cache.json")
