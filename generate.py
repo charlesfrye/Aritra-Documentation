@@ -119,7 +119,14 @@ if __name__== "__main__":
         'settings']
     
     wandb.__all__ = wandb_run
-
+    try:
+        doc_controls.do_not_generate_docs(wandb.settings.Console)
+    except AttributeError:
+        pass
+    try:
+        doc_controls.do_not_generate_docs(wandb.settings.Source)
+    except AttributeError:
+        pass
     build_docs(
         name_pair=("Run",wandb),
         output_dir="Platform/Library",

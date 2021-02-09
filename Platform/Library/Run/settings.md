@@ -230,11 +230,6 @@ if problem.
 
 
 
-## Child Classes
-[`class Console`](../Run/settings/Console.md)
-
-[`class Source`](../Run/settings/Source.md)
-
 ## Methods
 
 <h3 id="duplicate"><code>duplicate</code></h3>

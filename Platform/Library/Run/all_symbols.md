@@ -12,6 +12,4 @@ robots: noindex
 *  <a href="../Run/log.md"><code>Run.log</code></a>
 *  <a href="../Run/login.md"><code>Run.login</code></a>
 *  <a href="../Run/settings.md"><code>Run.settings</code></a>
-*  <a href="../Run/settings/Console.md"><code>Run.settings.Console</code></a>
-*  <a href="../Run/settings/Source.md"><code>Run.settings.Source</code></a>
 *  <a href="../Run/summary.md"><code>Run.summary</code></a>
