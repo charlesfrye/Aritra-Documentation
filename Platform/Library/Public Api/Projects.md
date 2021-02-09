@@ -1,18 +1,18 @@
-# Reports
+# Projects
 
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1652-L1729)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L622-L681)
 
 
 
 
-Reports is an iterable collection of `BetaReport` objects.
+An iterable collection of `Project` objects.
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Api.Reports(
-    client, project, name=None, entity=None, per_page=50
+<code>Public Api.Projects(
+    client, entity, per_page=50
 )
 </code></pre>
 
@@ -57,7 +57,7 @@ Reports is an iterable collection of `BetaReport` objects.
 
 <h3 id="convert_objects"><code>convert_objects</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1717-L1726">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L674-L678">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>convert_objects()
@@ -79,7 +79,7 @@ Reports is an iterable collection of `BetaReport` objects.
 
 <h3 id="update_variables"><code>update_variables</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1712-L1715">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L586-L587">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>update_variables()

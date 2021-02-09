@@ -11,7 +11,7 @@
 A project is a namespace for runs
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Api.Project(
+<code>Public Api.Project(
     client, entity, project, attrs
 )
 </code></pre>

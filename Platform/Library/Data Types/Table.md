@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L481-L761)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L481-L770)
 
 
 
@@ -12,7 +12,8 @@ This is a table designed to display sets of records.
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>Data Types.Table(
-    columns=None, data=None, rows=None, dataframe=None, dtype=None, optional=True
+    columns=None, data=None, rows=None, dataframe=None, dtype=None, optional=True,
+    allow_mixed_types=False
 )
 </code></pre>
 
@@ -47,6 +48,10 @@ Defaults to ["Input", "Output", "Expected"].
 <td>
 (pandas.DataFrame) DataFrame object used to create the table.
 When set, the other arguments are ignored.
+optional (Union[bool,List[bool]]): If None values are allowed. Singular bool
+applies to all columns. A list of bool values applies to each respective column.
+Default to True.
+allow_mixed_types (bool): Determines if columns are allowed to have mixed types (disables type validation). Defaults to False
 </td>
 </tr>
 </table>
@@ -57,7 +62,7 @@ When set, the other arguments are ignored.
 
 <h3 id="add_data"><code>add_data</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L628-L637">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L636-L645">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>add_data(
@@ -70,7 +75,7 @@ Add a row of data to the table. Argument length should match column length
 
 <h3 id="add_row"><code>add_row</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L624-L626">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L632-L634">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>add_row(
@@ -83,7 +88,7 @@ Add a row of data to the table. Argument length should match column length
 
 <h3 id="cast"><code>cast</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L587-L604">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L594-L611">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>cast(
@@ -96,7 +101,7 @@ Add a row of data to the table. Argument length should match column length
 
 <h3 id="iterrows"><code>iterrows</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L751-L761">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L760-L770">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>iterrows()

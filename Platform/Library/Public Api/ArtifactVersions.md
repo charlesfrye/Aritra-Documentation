@@ -1,25 +1,26 @@
-# Runs
+# ArtifactVersions
 
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L705-L807)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L3151-L3254)
 
 
 
 
-An iterable collection of runs associated with a project and optional filter.
+An iterable collection of artifact versions associated with a project and optional filter.
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Api.Runs(
-    client, entity, project, filters={}, order=None, per_page=50
+<code>Public Api.ArtifactVersions(
+    client, entity, project, collection_name, type, filters={}, order=None,
+    per_page=50
 )
 </code></pre>
 
 
 
 <!-- Placeholder for "Used in" -->
-This is generally used indirectly via the <a href="../Api.md"><code>Api</code></a>.runs method
+This is generally used indirectly via the `Api`.artifact_versions method
 
 
 
@@ -57,7 +58,7 @@ This is generally used indirectly via the <a href="../Api.md"><code>Api</code></
 
 <h3 id="convert_objects"><code>convert_objects</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L770-L804">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L3240-L3254">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>convert_objects()

@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1501-L1564)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1537-L1600)
 
 
 
@@ -11,7 +11,7 @@
 Files is an iterable collection of `File` objects.
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Api.Files(
+<code>Public Api.Files(
     client, run, names=[], per_page=50, upload=False
 )
 </code></pre>
@@ -57,7 +57,7 @@ Files is an iterable collection of `File` objects.
 
 <h3 id="convert_objects"><code>convert_objects</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1557-L1561">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1593-L1597">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>convert_objects()
@@ -79,7 +79,7 @@ Files is an iterable collection of `File` objects.
 
 <h3 id="update_variables"><code>update_variables</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1554-L1555">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1590-L1591">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>update_variables()

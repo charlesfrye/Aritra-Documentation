@@ -1,25 +1,25 @@
-# Projects
+# Runs
 
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L622-L681)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L705-L807)
 
 
 
 
-An iterable collection of `Project` objects.
+An iterable collection of runs associated with a project and optional filter.
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Api.Projects(
-    client, entity, per_page=50
+<code>Public Api.Runs(
+    client, entity, project, filters={}, order=None, per_page=50
 )
 </code></pre>
 
 
 
 <!-- Placeholder for "Used in" -->
-
+This is generally used indirectly via the `Api`.runs method
 
 
 
@@ -57,7 +57,7 @@ An iterable collection of `Project` objects.
 
 <h3 id="convert_objects"><code>convert_objects</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L674-L678">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L770-L804">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>convert_objects()

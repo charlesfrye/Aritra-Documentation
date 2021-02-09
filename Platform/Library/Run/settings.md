@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L183-L979)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L193-L996)
 
 
 
@@ -16,6 +16,7 @@ Settings Constructor
     api_key: str = None,
     anonymous=None,
     mode: str = None,
+    start_method: str = None,
     entity: str = None,
     project: str = None,
     run_group: str = None,
@@ -238,7 +239,7 @@ if problem.
 
 <h3 id="duplicate"><code>duplicate</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L680-L681">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L697-L698">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>duplicate()
@@ -249,7 +250,7 @@ if problem.
 
 <h3 id="freeze"><code>freeze</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L873-L875">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L890-L892">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>freeze()
@@ -260,7 +261,7 @@ if problem.
 
 <h3 id="is_frozen"><code>is_frozen</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L877-L878">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L894-L895">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>is_frozen() -> bool
@@ -271,7 +272,7 @@ if problem.
 
 <h3 id="keys"><code>keys</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L864-L865">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L881-L882">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>keys()
@@ -282,7 +283,7 @@ if problem.
 
 <h3 id="load"><code>load</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L830-L831">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L847-L848">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>load(
@@ -295,7 +296,7 @@ if problem.
 
 <h3 id="save"><code>save</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L827-L828">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L844-L845">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>save(
@@ -308,7 +309,7 @@ if problem.
 
 <h3 id="setdefaults"><code>setdefaults</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L819-L825">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L836-L842">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>setdefaults(
@@ -321,7 +322,7 @@ if problem.
 
 <h3 id="update"><code>update</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L727-L728">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L744-L745">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>update(
@@ -334,7 +335,7 @@ if problem.
 
 <h3 id="__getitem__"><code>__getitem__</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L867-L871">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L884-L888">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>__getitem__(
@@ -555,6 +556,13 @@ silent<a id="silent"></a>
 </td>
 <td>
 `False`
+</td>
+</tr><tr>
+<td>
+start_method<a id="start_method"></a>
+</td>
+<td>
+`'spawn'`
 </td>
 </tr><tr>
 <td>

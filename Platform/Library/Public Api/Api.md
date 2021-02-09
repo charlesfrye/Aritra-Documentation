@@ -11,7 +11,7 @@
 Used for querying the wandb server.
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Api.Api(
+<code>Public Api.Api(
     overrides={}
 )
 </code></pre>
@@ -229,7 +229,7 @@ Get projects for a given entity.
 </td>
 <td>
 (str) Name of the entity requested.  If None will fallback to
-default entity passed to <a href="../Api.md"><code>Api</code></a>.  If no default entity, will raise a `ValueError`.
+default entity passed to `Api`.  If no default entity, will raise a `ValueError`.
 </td>
 </tr><tr>
 <td>

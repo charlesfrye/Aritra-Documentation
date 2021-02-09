@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1732-L1826)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1787-L1881)
 
 
 
@@ -11,7 +11,7 @@
 QueryGenerator is a helper object to write filters for runs
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Api.QueryGenerator()
+<code>Public Api.QueryGenerator()
 </code></pre>
 
 
@@ -23,7 +23,7 @@ QueryGenerator is a helper object to write filters for runs
 
 <h3 id="filter_to_mongo"><code>filter_to_mongo</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1818-L1826">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1873-L1881">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>filter_to_mongo(
@@ -36,7 +36,7 @@ QueryGenerator is a helper object to write filters for runs
 
 <h3 id="format_order_key"><code>format_order_key</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1751-L1767">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1806-L1822">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>@classmethod</code>
@@ -50,7 +50,7 @@ QueryGenerator is a helper object to write filters for runs
 
 <h3 id="key_to_server_path"><code>key_to_server_path</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1781-L1792">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1836-L1847">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>key_to_server_path(

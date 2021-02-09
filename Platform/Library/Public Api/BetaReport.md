@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1829-L1879)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1884-L1934)
 
 
 
@@ -11,7 +11,7 @@
 BetaReport is a class associated with reports created in wandb.
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Api.BetaReport(
+<code>Public Api.BetaReport(
     client, attrs, entity=None, project=None
 )
 </code></pre>
@@ -51,7 +51,7 @@ WARNING: this API will likely change in a future release
 
 <h3 id="runs"><code>runs</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1854-L1875">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1909-L1930">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>runs(

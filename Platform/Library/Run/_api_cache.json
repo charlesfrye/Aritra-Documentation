@@ -101,6 +101,7 @@
     "Run.settings.show_info": true,
     "Run.settings.show_warnings": true,
     "Run.settings.silent": true,
+    "Run.settings.start_method": true,
     "Run.settings.sync_dir_spec": true,
     "Run.settings.sync_file": true,
     "Run.settings.sync_file_spec": true,

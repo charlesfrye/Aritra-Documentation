@@ -1,26 +1,25 @@
-# ArtifactVersions
+# Reports
 
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L3095-L3198)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1707-L1784)
 
 
 
 
-An iterable collection of artifact versions associated with a project and optional filter.
+Reports is an iterable collection of `BetaReport` objects.
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Api.ArtifactVersions(
-    client, entity, project, collection_name, type, filters={}, order=None,
-    per_page=50
+<code>Public Api.Reports(
+    client, project, name=None, entity=None, per_page=50
 )
 </code></pre>
 
 
 
 <!-- Placeholder for "Used in" -->
-This is generally used indirectly via the <a href="../Api.md"><code>Api</code></a>.artifact_versions method
+
 
 
 
@@ -58,7 +57,7 @@ This is generally used indirectly via the <a href="../Api.md"><code>Api</code></
 
 <h3 id="convert_objects"><code>convert_objects</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L3184-L3198">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1772-L1781">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>convert_objects()
@@ -80,7 +79,7 @@ This is generally used indirectly via the <a href="../Api.md"><code>Api</code></
 
 <h3 id="update_variables"><code>update_variables</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L586-L587">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1767-L1770">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>update_variables()

@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1567-L1649)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1603-L1704)
 
 
 
@@ -11,7 +11,7 @@
 File is a class associated with a file saved by wandb.
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Api.File(
+<code>Public Api.File(
     client, attrs
 )
 </code></pre>
@@ -37,6 +37,13 @@ File is a class associated with a file saved by wandb.
 </tr><tr>
 <td>
 <code>direct_url</code>
+</td>
+<td>
+
+</td>
+</tr><tr>
+<td>
+<code>id</code>
 </td>
 <td>
 
@@ -90,9 +97,20 @@ File is a class associated with a file saved by wandb.
 
 ## Methods
 
+<h3 id="delete"><code>delete</code></h3>
+
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1686-L1699">View source</a>
+
+<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
+<code>delete()
+</code></pre>
+
+
+
+
 <h3 id="download"><code>download</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1623-L1644">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1663-L1684">View source</a>
 
 <pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
 <code>download(

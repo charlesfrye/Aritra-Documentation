@@ -99,7 +99,7 @@ if __name__== "__main__":
     wandb.__all__ = wandb_api_doc
 
     build_docs(
-        name_pair=("Api",wandb),
+        name_pair=("Public Api",wandb),
         output_dir="Platform/Library",
         code_url_prefix=CODE_URL_PREFIX,
         search_hints=False,
