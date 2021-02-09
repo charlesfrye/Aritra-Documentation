@@ -10,11 +10,9 @@
 
 Time series data for Runs. This is essentially a list of dicts where each
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Run.history(
+<pre><code>Run.history(
     run
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -52,11 +50,9 @@ dict is a set of summary statistics logged.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_history.py#L66-L67">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>add(
+<pre><code>add(
     d
-)
-</code></pre>
+)</code></pre>
 
 
 

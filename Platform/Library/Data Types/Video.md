@@ -10,11 +10,9 @@
 
 Wandb representation of video.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Data Types.Video(
+<pre><code>Data Types.Video(
     data_or_path, caption=None, fps=4, format=None
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -71,9 +69,7 @@ Channels should be (time, channel, height, width) or
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1383-L1417">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>encode()
-</code></pre>
+<pre><code>encode()</code></pre>
 
 
 

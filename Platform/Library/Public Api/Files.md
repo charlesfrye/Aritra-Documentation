@@ -10,11 +10,9 @@
 
 Files is an iterable collection of `File` objects.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Public Api.Files(
+<pre><code>Public Api.Files(
     client, run, names=[], per_page=50, upload=False
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -59,9 +57,7 @@ Files is an iterable collection of `File` objects.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1593-L1597">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>convert_objects()
-</code></pre>
+<pre><code>convert_objects()</code></pre>
 
 
 
@@ -70,9 +66,7 @@ Files is an iterable collection of `File` objects.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L605-L612">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>next()
-</code></pre>
+<pre><code>next()</code></pre>
 
 
 
@@ -81,9 +75,7 @@ Files is an iterable collection of `File` objects.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1590-L1591">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>update_variables()
-</code></pre>
+<pre><code>update_variables()</code></pre>
 
 
 
@@ -92,11 +84,9 @@ Files is an iterable collection of `File` objects.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L599-L603">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>__getitem__(
+<pre><code>__getitem__(
     index
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -105,9 +95,7 @@ Files is an iterable collection of `File` objects.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L560-L562">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>__iter__()
-</code></pre>
+<pre><code>__iter__()</code></pre>
 
 
 
@@ -116,9 +104,7 @@ Files is an iterable collection of `File` objects.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L564-L569">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>__len__()
-</code></pre>
+<pre><code>__len__()</code></pre>
 
 
 

@@ -10,11 +10,9 @@
 
 Wandb class for Molecular data
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Data Types.Molecule(
+<pre><code>Data Types.Molecule(
     data_or_path, **kwargs
-)
-</code></pre>
+)</code></pre>
 
 
 

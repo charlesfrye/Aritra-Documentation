@@ -10,11 +10,9 @@
 
 Wandb class for audio clips.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Data Types.Audio(
+<pre><code>Data Types.Audio(
     data_or_path, sample_rate=None, caption=None
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -59,12 +57,9 @@ numpy array of audio data.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L952-L954">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>@classmethod</code>
-<code>durations(
+<pre><code>@classmethod</code><code>durations(
     audio_list
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -73,12 +68,9 @@ numpy array of audio data.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L956-L958">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>@classmethod</code>
-<code>sample_rates(
+<pre><code>@classmethod</code><code>sample_rates(
     audio_list
-)
-</code></pre>
+)</code></pre>
 
 
 

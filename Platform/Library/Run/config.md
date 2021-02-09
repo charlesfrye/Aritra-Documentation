@@ -10,9 +10,7 @@
 
 Config object
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Run.config() -> None
-</code></pre>
+<pre><code>Run.config() -> None</code></pre>
 
 
 

@@ -10,11 +10,9 @@
 
 
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Public Api.Artifact(
+<pre><code>Public Api.Artifact(
     client, entity, project, name, attrs=None
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -122,11 +120,9 @@
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2666-L2667">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>add_dir(
+<pre><code>add_dir(
     path, name=None
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -135,11 +131,9 @@
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2663-L2664">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>add_file(
+<pre><code>add_file(
     path, name=None
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -148,11 +142,9 @@
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2669-L2670">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>add_reference(
+<pre><code>add_reference(
     path, name=None
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -161,9 +153,7 @@
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2643-L2658">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>delete()
-</code></pre>
+<pre><code>delete()</code></pre>
 
 Delete artifact and its files.
 
@@ -172,11 +162,9 @@ Delete artifact and its files.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2799-L2841">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>download(
+<pre><code>download(
     root=None, recursive=False
-)
-</code></pre>
+)</code></pre>
 
 Download the artifact to dir specified by the <root>
 
@@ -215,12 +203,9 @@ The path to the downloaded contents.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2601-L2641">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>@staticmethod</code>
-<code>expected_type(
+<pre><code>@staticmethod</code><code>expected_type(
     client, name, entity_name, project_name
-)
-</code></pre>
+)</code></pre>
 
 Returns the expected type for a given artifact name and project
 
@@ -229,11 +214,9 @@ Returns the expected type for a given artifact name and project
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2843-L2864">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>file(
+<pre><code>file(
     root=None
-)
-</code></pre>
+)</code></pre>
 
 Download a single file artifact to dir specified by the <root>
 
@@ -269,12 +252,9 @@ The full path of the downloaded file
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2469-L2509">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>@classmethod</code>
-<code>from_id(
+<pre><code>@classmethod</code><code>from_id(
     artifact_id, client
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -283,11 +263,9 @@ The full path of the downloaded file
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2763-L2797">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>get(
+<pre><code>get(
     name
-)
-</code></pre>
+)</code></pre>
 
 Returns the wandb.Media resource stored in the artifact. Media can be
 stored in the artifact via Artifact#add(obj: wandbMedia, name: str)`
@@ -311,11 +289,9 @@ A `wandb.Media` which has been stored at `name`
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2692-L2761">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>get_path(
+<pre><code>get_path(
     name
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -324,9 +300,7 @@ A `wandb.Media` which has been stored at `name`
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L3115-L3148">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>logged_by()
-</code></pre>
+<pre><code>logged_by()</code></pre>
 
 Retrieves the run which logged this artifact
 
@@ -351,11 +325,9 @@ Run object which logged this artifact
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2660-L2661">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>new_file(
+<pre><code>new_file(
     name, mode=None
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -364,9 +336,7 @@ Run object which logged this artifact
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2877-L2915">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>save()
-</code></pre>
+<pre><code>save()</code></pre>
 
 Persists artifact changes to the wandb backend.
 
@@ -375,9 +345,7 @@ Persists artifact changes to the wandb backend.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L3071-L3113">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>used_by()
-</code></pre>
+<pre><code>used_by()</code></pre>
 
 Retrieves the runs which use this artifact directly
 
@@ -399,11 +367,9 @@ Retrieves the runs which use this artifact directly
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2917-L2942">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>verify(
+<pre><code>verify(
     root=None
-)
-</code></pre>
+)</code></pre>
 
 Verify an artifact by checksumming its downloaded contents.
 

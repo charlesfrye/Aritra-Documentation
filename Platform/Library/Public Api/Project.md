@@ -10,11 +10,9 @@
 
 A project is a namespace for runs
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Public Api.Project(
+<pre><code>Public Api.Project(
     client, entity, project, attrs
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -45,11 +43,9 @@ A project is a namespace for runs
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L700-L702">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>artifacts_types(
+<pre><code>artifacts_types(
     per_page=50
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -58,11 +54,9 @@ A project is a namespace for runs
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L528-L530">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>snake_to_camel(
+<pre><code>snake_to_camel(
     string
-)
-</code></pre>
+)</code></pre>
 
 
 

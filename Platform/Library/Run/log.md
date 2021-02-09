@@ -10,14 +10,12 @@
 
 Log a dict to the global run's history.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Run.log(
+<pre><code>Run.log(
     data: Dict[str, Any],
     step: int = None,
     commit: bool = None,
     sync: bool = None
-) -> None
-</code></pre>
+) -> None</code></pre>
 
 
 

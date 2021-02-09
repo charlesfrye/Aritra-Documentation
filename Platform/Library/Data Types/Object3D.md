@@ -10,11 +10,9 @@
 
 Wandb class for 3D point clouds.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Data Types.Object3D(
+<pre><code>Data Types.Object3D(
     data_or_path, **kwargs
-)
-</code></pre>
+)</code></pre>
 
 
 

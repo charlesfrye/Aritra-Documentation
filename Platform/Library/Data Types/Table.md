@@ -10,12 +10,10 @@
 
 This is a table designed to display sets of records.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Data Types.Table(
+<pre><code>Data Types.Table(
     columns=None, data=None, rows=None, dataframe=None, dtype=None, optional=True,
     allow_mixed_types=False
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -64,11 +62,9 @@ allow_mixed_types (bool): Determines if columns are allowed to have mixed types 
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L636-L645">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>add_data(
+<pre><code>add_data(
     *data
-)
-</code></pre>
+)</code></pre>
 
 Add a row of data to the table. Argument length should match column length
 
@@ -77,11 +73,9 @@ Add a row of data to the table. Argument length should match column length
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L632-L634">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>add_row(
+<pre><code>add_row(
     *row
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -90,11 +84,9 @@ Add a row of data to the table. Argument length should match column length
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L594-L611">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>cast(
+<pre><code>cast(
     col_name, dtype, optional=False
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -103,9 +95,7 @@ Add a row of data to the table. Argument length should match column length
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L760-L770">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>iterrows()
-</code></pre>
+<pre><code>iterrows()</code></pre>
 
 Iterate over rows as (ndx, row)
 Yields

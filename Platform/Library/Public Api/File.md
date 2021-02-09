@@ -10,11 +10,9 @@
 
 File is a class associated with a file saved by wandb.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Public Api.File(
+<pre><code>Public Api.File(
     client, attrs
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -101,9 +99,7 @@ File is a class associated with a file saved by wandb.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1686-L1699">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>delete()
-</code></pre>
+<pre><code>delete()</code></pre>
 
 
 
@@ -112,11 +108,9 @@ File is a class associated with a file saved by wandb.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1663-L1684">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>download(
+<pre><code>download(
     root=&#x27;.&#x27;, replace=False
-)
-</code></pre>
+)</code></pre>
 
 Downloads a file previously saved by a run from the wandb server.
 

@@ -10,11 +10,9 @@
 
 wandb class for histograms.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Data Types.Histogram(
+<pre><code>Data Types.Histogram(
     sequence=None, np_histogram=None, num_bins=64
-)
-</code></pre>
+)</code></pre>
 
 
 

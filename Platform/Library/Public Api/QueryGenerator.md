@@ -10,9 +10,7 @@
 
 QueryGenerator is a helper object to write filters for runs
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Public Api.QueryGenerator()
-</code></pre>
+<pre><code>Public Api.QueryGenerator()</code></pre>
 
 
 
@@ -25,11 +23,9 @@ QueryGenerator is a helper object to write filters for runs
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1873-L1881">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>filter_to_mongo(
+<pre><code>filter_to_mongo(
     filter
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -38,12 +34,9 @@ QueryGenerator is a helper object to write filters for runs
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1806-L1822">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>@classmethod</code>
-<code>format_order_key(
+<pre><code>@classmethod</code><code>format_order_key(
     key
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -52,11 +45,9 @@ QueryGenerator is a helper object to write filters for runs
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1836-L1847">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>key_to_server_path(
+<pre><code>key_to_server_path(
     key
-)
-</code></pre>
+)</code></pre>
 
 
 

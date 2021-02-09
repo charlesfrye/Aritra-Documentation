@@ -10,11 +10,9 @@
 
 
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Public Api.ArtifactType(
+<pre><code>Public Api.ArtifactType(
     client, entity, project, type_name, attrs=None
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -52,11 +50,9 @@
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2409-L2412">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>collection(
+<pre><code>collection(
     name
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -65,11 +61,9 @@
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2402-L2407">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>collections(
+<pre><code>collections(
     per_page=50
-)
-</code></pre>
+)</code></pre>
 
 Artifact collections
 
@@ -78,9 +72,7 @@ Artifact collections
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2358-L2392">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>load()
-</code></pre>
+<pre><code>load()</code></pre>
 
 
 

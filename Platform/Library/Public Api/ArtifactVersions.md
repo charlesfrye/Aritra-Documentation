@@ -10,12 +10,10 @@
 
 An iterable collection of artifact versions associated with a project and optional filter.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Public Api.ArtifactVersions(
+<pre><code>Public Api.ArtifactVersions(
     client, entity, project, collection_name, type, filters={}, order=None,
     per_page=50
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -60,9 +58,7 @@ This is generally used indirectly via the `Api`.artifact_versions method
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L3240-L3254">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>convert_objects()
-</code></pre>
+<pre><code>convert_objects()</code></pre>
 
 
 
@@ -71,9 +67,7 @@ This is generally used indirectly via the `Api`.artifact_versions method
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L605-L612">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>next()
-</code></pre>
+<pre><code>next()</code></pre>
 
 
 
@@ -82,9 +76,7 @@ This is generally used indirectly via the `Api`.artifact_versions method
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L586-L587">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>update_variables()
-</code></pre>
+<pre><code>update_variables()</code></pre>
 
 
 
@@ -93,11 +85,9 @@ This is generally used indirectly via the `Api`.artifact_versions method
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L599-L603">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>__getitem__(
+<pre><code>__getitem__(
     index
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -106,9 +96,7 @@ This is generally used indirectly via the `Api`.artifact_versions method
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L560-L562">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>__iter__()
-</code></pre>
+<pre><code>__iter__()</code></pre>
 
 
 
@@ -117,9 +105,7 @@ This is generally used indirectly via the `Api`.artifact_versions method
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L564-L569">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>__len__()
-</code></pre>
+<pre><code>__len__()</code></pre>
 
 
 

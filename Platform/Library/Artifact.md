@@ -10,11 +10,9 @@
 
 An artifact object you can write files into, and pass to log_artifact.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Library.Artifact(
+<pre><code>Library.Artifact(
     name, type, description=None, metadata=None
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -73,11 +71,9 @@ An artifact object you can write files into, and pass to log_artifact.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L220-L262">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>add(
+<pre><code>add(
     obj, name
-)
-</code></pre>
+)</code></pre>
 
 Adds `obj` to the artifact, located at `name`. You can
 use <a href="../Library/Artifact.md#get"><code>Artifact.get(name)</code></a> after downloading the artifact to retrieve this object.
@@ -100,11 +96,9 @@ name (str): The path to save
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L150-L183">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>add_dir(
+<pre><code>add_dir(
     local_path, name=None
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -113,11 +107,9 @@ name (str): The path to save
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L124-L148">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>add_file(
+<pre><code>add_file(
     local_path, name=None, is_tmp=False
-)
-</code></pre>
+)</code></pre>
 
 Adds a local file to the artifact
 
@@ -157,11 +149,9 @@ the added entry
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L185-L218">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>add_reference(
+<pre><code>add_reference(
     uri, name=None, checksum=True, max_objects=None
-)
-</code></pre>
+)</code></pre>
 
 adds `uri` to the artifact via a reference, located at `name`. 
 You can use <a href="../Library/Artifact.md#get_path"><code>Artifact.get_path(name)</code></a> to retrieve this object.
@@ -185,9 +175,7 @@ name (str) - the path to save
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L274-L275">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>download()
-</code></pre>
+<pre><code>download()</code></pre>
 
 
 
@@ -196,9 +184,7 @@ name (str) - the path to save
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L280-L286">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>finalize()
-</code></pre>
+<pre><code>finalize()</code></pre>
 
 
 
@@ -207,9 +193,7 @@ name (str) - the path to save
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L277-L278">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>get()
-</code></pre>
+<pre><code>get()</code></pre>
 
 
 
@@ -218,11 +202,9 @@ name (str) - the path to save
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L264-L269">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>get_added_local_path_name(
+<pre><code>get_added_local_path_name(
     local_path
-)
-</code></pre>
+)</code></pre>
 
 If local_path was already added to artifact, return its internal name.
 
@@ -231,11 +213,9 @@ If local_path was already added to artifact, return its internal name.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L271-L272">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>get_path(
+<pre><code>get_path(
     name
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -244,12 +224,9 @@ If local_path was already added to artifact, return its internal name.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L109-L122">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>@contextlib.contextmanager</code>
-<code>new_file(
+<pre><code>@contextlib.contextmanager</code><code>new_file(
     name, mode=&#x27;w&#x27;
-)
-</code></pre>
+)</code></pre>
 
 
 

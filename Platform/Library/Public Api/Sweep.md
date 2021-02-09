@@ -10,11 +10,9 @@
 
 A set of runs associated with a sweep
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Public Api.Sweep(
+<pre><code>Public Api.Sweep(
     client, entity, project, sweep_id, attrs={}
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -86,11 +84,9 @@ api.sweep(sweep_path)
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1442-L1465">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>best_run(
+<pre><code>best_run(
     order=None
-)
-</code></pre>
+)</code></pre>
 
 Returns the best run sorted by the metric defined in config or the order passed in
 
@@ -99,13 +95,10 @@ Returns the best run sorted by the metric defined in config or the order passed 
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1481-L1531">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>@classmethod</code>
-<code>get(
+<pre><code>@classmethod</code><code>get(
     client, entity=None, project=None, sid=None, withRuns=True, order=None,
     query=None, **kwargs
-)
-</code></pre>
+)</code></pre>
 
 Execute a query against the cloud backend
 
@@ -114,11 +107,9 @@ Execute a query against the cloud backend
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1422-L1431">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>load(
+<pre><code>load(
     force=False
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -127,11 +118,9 @@ Execute a query against the cloud backend
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L528-L530">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>snake_to_camel(
+<pre><code>snake_to_camel(
     string
-)
-</code></pre>
+)</code></pre>
 
 
 

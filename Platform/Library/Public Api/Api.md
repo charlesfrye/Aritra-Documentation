@@ -10,11 +10,9 @@
 
 Used for querying the wandb server.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Public Api.Api(
+<pre><code>Public Api.Api(
     overrides={}
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -93,11 +91,9 @@ You can also set defaults for `entity`, `project`, and `run`.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L500-L521">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>artifact(
+<pre><code>artifact(
     name, type=None
-)
-</code></pre>
+)</code></pre>
 
 Returns a single artifact by parsing path in the form `entity/project/run_id`.
 
@@ -146,11 +142,9 @@ A `Artifact` object.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L489-L492">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>artifact_type(
+<pre><code>artifact_type(
     type_name, project=None
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -159,11 +153,9 @@ A `Artifact` object.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L484-L487">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>artifact_types(
+<pre><code>artifact_types(
     project=None
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -172,11 +164,9 @@ A `Artifact` object.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L494-L498">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>artifact_versions(
+<pre><code>artifact_versions(
     type_name, name, per_page=50
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -185,11 +175,9 @@ A `Artifact` object.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L244-L247">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>create_run(
+<pre><code>create_run(
     **kwargs
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -198,9 +186,7 @@ A `Artifact` object.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L275-L281">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>flush()
-</code></pre>
+<pre><code>flush()</code></pre>
 
 The api object keeps a local cache of runs, so if the state of the run may
 change while executing your script you must clear the local cache with `api.flush()`
@@ -210,11 +196,9 @@ to get the latest values associated with the run.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L338-L360">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>projects(
+<pre><code>projects(
     entity=None, per_page=200
-)
-</code></pre>
+)</code></pre>
 
 Get projects for a given entity.
 
@@ -261,11 +245,9 @@ A `Projects` object which is an iterable collection of `Project` objects.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L362-L393">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>reports(
+<pre><code>reports(
     path=&#x27;&#x27;, name=None, per_page=50
-)
-</code></pre>
+)</code></pre>
 
 Get reports for a given project path.
 
@@ -319,11 +301,9 @@ A `Reports` object which is an iterable collection of `BetaReport` objects.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L448-L464">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>run(
+<pre><code>run(
     path=&#x27;&#x27;
-)
-</code></pre>
+)</code></pre>
 
 Returns a single run by parsing path in the form entity/project/run_id.
 
@@ -363,11 +343,9 @@ A `Run` object.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L395-L446">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>runs(
+<pre><code>runs(
     path=&#x27;&#x27;, filters={}, order=&#x27;-created_at&#x27;, per_page=50
-)
-</code></pre>
+)</code></pre>
 
 Return a set of runs from a project that match the filters provided.
 
@@ -449,11 +427,9 @@ A `Runs` object, which is an iterable collection of `Run` objects.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L466-L482">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>sweep(
+<pre><code>sweep(
     path=&#x27;&#x27;
-)
-</code></pre>
+)</code></pre>
 
 Returns a sweep by parsing path in the form `entity/project/sweep_id`.
 

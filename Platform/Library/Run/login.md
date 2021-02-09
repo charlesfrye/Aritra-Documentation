@@ -10,11 +10,9 @@
 
 Log in to W&B.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Run.login(
+<pre><code>Run.login(
     anonymous=None, key=None, relogin=None, host=None, force=None
-)
-</code></pre>
+)</code></pre>
 
 
 

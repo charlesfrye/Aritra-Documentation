@@ -10,11 +10,9 @@
 
 BetaReport is a class associated with reports created in wandb.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Public Api.BetaReport(
+<pre><code>Public Api.BetaReport(
     client, attrs, entity=None, project=None
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -53,11 +51,9 @@ WARNING: this API will likely change in a future release
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1909-L1930">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>runs(
+<pre><code>runs(
     section, per_page=50, only_selected=True
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -66,11 +62,9 @@ WARNING: this API will likely change in a future release
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L528-L530">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>snake_to_camel(
+<pre><code>snake_to_camel(
     string
-)
-</code></pre>
+)</code></pre>
 
 
 

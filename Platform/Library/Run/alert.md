@@ -10,11 +10,9 @@
 
 Launch an alert with the given title and text.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Run.alert(
+<pre><code>Run.alert(
     title, text, level=None, wait_duration=None
-)
-</code></pre>
+)</code></pre>
 
 
 

@@ -10,11 +10,9 @@
 
 A single run associated with an entity and project.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Public Api.Run(
+<pre><code>Public Api.Run(
     client, entity, project, run_id, attrs={}
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -108,12 +106,9 @@ A single run associated with an entity and project.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L892-L932">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>@classmethod</code>
-<code>create(
+<pre><code>@classmethod</code><code>create(
     api, run_id=None, project=None, entity=None
-)
-</code></pre>
+)</code></pre>
 
 Create a run for the given project
 
@@ -122,11 +117,9 @@ Create a run for the given project
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1027-L1061">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>delete(
+<pre><code>delete(
     delete_artifacts=False
-)
-</code></pre>
+)</code></pre>
 
 Deletes the given run from the wandb backend.
 
@@ -135,11 +128,9 @@ Deletes the given run from the wandb backend.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1123-L1132">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>file(
+<pre><code>file(
     name
-)
-</code></pre>
+)</code></pre>
 
 Arguments:
     name (str): name of requested file.
@@ -161,11 +152,9 @@ A `File` matching the name argument.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1111-L1121">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>files(
+<pre><code>files(
     names=[], per_page=50
-)
-</code></pre>
+)</code></pre>
 
 Arguments:
     names (list): names of the requested files, if empty returns all files
@@ -188,12 +177,10 @@ A `Files` object, which is an iterator over `File` obejcts.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1157-L1189">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>history(
+<pre><code>history(
     samples=500, keys=None, x_axis=&#x27;_step&#x27;, pandas=True,
     stream=&#x27;default&#x27;
-)
-</code></pre>
+)</code></pre>
 
 Returns sampled history metrics for a run.  This is simpler and faster if you are ok with
 the history records being sampled.
@@ -233,11 +220,9 @@ If pandas=False returns a list of dicts of history metrics.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L934-L996">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>load(
+<pre><code>load(
     force=False
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -246,11 +231,9 @@ If pandas=False returns a list of dicts of history metrics.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1275-L1307">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>log_artifact(
+<pre><code>log_artifact(
     artifact, aliases=None
-)
-</code></pre>
+)</code></pre>
 
 Declare an artifact as output of a run.
 
@@ -287,11 +270,9 @@ A `Artifact` object.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1240-L1242">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>logged_artifacts(
+<pre><code>logged_artifacts(
     per_page=100
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -300,9 +281,7 @@ A `Artifact` object.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1063-L1064">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>save()
-</code></pre>
+<pre><code>save()</code></pre>
 
 
 
@@ -311,11 +290,9 @@ A `Artifact` object.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1191-L1238">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>scan_history(
+<pre><code>scan_history(
     keys=None, page_size=1000, min_step=None, max_step=None
-)
-</code></pre>
+)</code></pre>
 
 Returns an iterable collection of all history records for a run.
 
@@ -364,11 +341,9 @@ An iterable collection over history records (dict).
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L528-L530">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>snake_to_camel(
+<pre><code>snake_to_camel(
     string
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -377,9 +352,7 @@ An iterable collection over history records (dict).
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L998-L1025">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>update()
-</code></pre>
+<pre><code>update()</code></pre>
 
 Persists changes to the run object to the wandb backend.
 
@@ -388,11 +361,9 @@ Persists changes to the run object to the wandb backend.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1134-L1155">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>upload_file(
+<pre><code>upload_file(
     path, root=&#x27;.&#x27;
-)
-</code></pre>
+)</code></pre>
 
 Arguments:
     path (str): name of file to upload.
@@ -417,11 +388,9 @@ A `File` matching the name argument.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1248-L1273">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>use_artifact(
+<pre><code>use_artifact(
     artifact
-)
-</code></pre>
+)</code></pre>
 
 Declare an artifact as an input to a run.
 
@@ -457,11 +426,9 @@ A `Artifact` object.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1244-L1246">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>used_artifacts(
+<pre><code>used_artifacts(
     per_page=100
-)
-</code></pre>
+)</code></pre>
 
 
 

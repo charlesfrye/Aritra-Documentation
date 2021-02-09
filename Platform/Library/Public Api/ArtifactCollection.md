@@ -10,11 +10,9 @@
 
 
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Public Api.ArtifactCollection(
+<pre><code>Public Api.ArtifactCollection(
     client, entity, project, name, type, attrs=None
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -45,11 +43,9 @@
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2431-L2441">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>versions(
+<pre><code>versions(
     per_page=50
-)
-</code></pre>
+)</code></pre>
 
 Artifact versions
 

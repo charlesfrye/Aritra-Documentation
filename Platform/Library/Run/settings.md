@@ -10,8 +10,7 @@
 
 Settings Constructor
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Run.settings(
+<pre><code>Run.settings(
     base_url: str = None,
     api_key: str = None,
     anonymous=None,
@@ -95,8 +94,7 @@ Settings Constructor
     _python=None,
     _kaggle=None,
     _except_exit=None
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -236,9 +234,7 @@ if problem.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L697-L698">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>duplicate()
-</code></pre>
+<pre><code>duplicate()</code></pre>
 
 
 
@@ -247,9 +243,7 @@ if problem.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L890-L892">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>freeze()
-</code></pre>
+<pre><code>freeze()</code></pre>
 
 
 
@@ -258,9 +252,7 @@ if problem.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L894-L895">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>is_frozen() -> bool
-</code></pre>
+<pre><code>is_frozen() -> bool</code></pre>
 
 
 
@@ -269,9 +261,7 @@ if problem.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L881-L882">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>keys()
-</code></pre>
+<pre><code>keys()</code></pre>
 
 
 
@@ -280,11 +270,9 @@ if problem.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L847-L848">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>load(
+<pre><code>load(
     fname
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -293,11 +281,9 @@ if problem.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L844-L845">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>save(
+<pre><code>save(
     fname
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -306,11 +292,9 @@ if problem.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L836-L842">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>setdefaults(
+<pre><code>setdefaults(
     _Settings__d=None
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -319,11 +303,9 @@ if problem.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L744-L745">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>update(
+<pre><code>update(
     _Settings__d=None, **kwargs
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -332,11 +314,9 @@ if problem.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L884-L888">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>__getitem__(
+<pre><code>__getitem__(
     k
-)
-</code></pre>
+)</code></pre>
 
 
 

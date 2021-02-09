@@ -10,11 +10,9 @@
 
 Wandb class for arbitrary html
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Data Types.Html(
+<pre><code>Data Types.Html(
     data, inject=True
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -51,9 +49,7 @@ to False the HTML will pass through unchanged.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1279-L1294">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>inject_head()
-</code></pre>
+<pre><code>inject_head()</code></pre>
 
 
 

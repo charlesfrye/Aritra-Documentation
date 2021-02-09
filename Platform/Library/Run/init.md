@@ -10,8 +10,7 @@
 
 Start a new tracked run with `wandb.init()`.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Run.init(
+<pre><code>Run.init(
     job_type: Optional[str] = None,
     dir=None,
     config: Union[Dict, str, None] = None,
@@ -36,8 +35,7 @@ Start a new tracked run with `wandb.init()`.
     save_code=None,
     id=None,
     settings: Union[<a href="../Run/settings.md"><code>Run.settings</code></a>, Dict[str, Any], None] = None
-) -> Union[Run, Dummy, None]
-</code></pre>
+) -> Union[Run, Dummy, None]</code></pre>
 
 
 

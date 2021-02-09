@@ -10,11 +10,9 @@
 
 Wandb class for plotly plots.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Data Types.Plotly(
+<pre><code>Data Types.Plotly(
     val, **kwargs
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -43,12 +41,9 @@ matplotlib or plotly figure
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2373-L2379">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>@classmethod</code>
-<code>make_plot_media(
+<pre><code>@classmethod</code><code>make_plot_media(
     val
-)
-</code></pre>
+)</code></pre>
 
 
 

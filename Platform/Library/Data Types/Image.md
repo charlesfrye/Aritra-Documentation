@@ -10,12 +10,10 @@
 
 Wandb class for images.
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>Data Types.Image(
+<pre><code>Data Types.Image(
     data_or_path, mode=None, caption=None, grouping=None, classes=None, boxes=None,
     masks=None
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -61,12 +59,9 @@ the data format and converts it.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2027-L2042">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>@classmethod</code>
-<code>all_boxes(
+<pre><code>@classmethod</code><code>all_boxes(
     images, run, run_key, step
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -75,12 +70,9 @@ the data format and converts it.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2044-L2049">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>@classmethod</code>
-<code>all_captions(
+<pre><code>@classmethod</code><code>all_captions(
     images
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -89,12 +81,9 @@ the data format and converts it.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2010-L2025">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>@classmethod</code>
-<code>all_masks(
+<pre><code>@classmethod</code><code>all_masks(
     images, run, run_key, step
-)
-</code></pre>
+)</code></pre>
 
 
 
@@ -103,11 +92,9 @@ the data format and converts it.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1912-L1926">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>guess_mode(
+<pre><code>guess_mode(
     data
-)
-</code></pre>
+)</code></pre>
 
 Guess what type of image the np.array is representing
 
@@ -116,12 +103,9 @@ Guess what type of image the np.array is representing
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1928-L1950">View source</a>
 
-<pre class="devsite-click-to-copy prettyprint lang-py tfo-signature-link">
-<code>@classmethod</code>
-<code>to_uint8(
+<pre><code>@classmethod</code><code>to_uint8(
     data
-)
-</code></pre>
+)</code></pre>
 
 Converts floating point image on the range [0,1] and integer images
 on the range [0,255] to uint8, clipping if necessary.
