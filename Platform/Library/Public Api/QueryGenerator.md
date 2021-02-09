@@ -34,7 +34,8 @@ QueryGenerator is a helper object to write filters for runs
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1806-L1822">View source</a>
 
-<pre><code>@classmethod</code><code>format_order_key(
+<pre><code>@classmethod</code>
+<code>format_order_key(
     key
 )</code></pre>
 

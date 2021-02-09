@@ -203,7 +203,8 @@ The path to the downloaded contents.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2601-L2641">View source</a>
 
-<pre><code>@staticmethod</code><code>expected_type(
+<pre><code>@staticmethod</code>
+<code>expected_type(
     client, name, entity_name, project_name
 )</code></pre>
 
@@ -252,7 +253,8 @@ The full path of the downloaded file
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2469-L2509">View source</a>
 
-<pre><code>@classmethod</code><code>from_id(
+<pre><code>@classmethod</code>
+<code>from_id(
     artifact_id, client
 )</code></pre>
 

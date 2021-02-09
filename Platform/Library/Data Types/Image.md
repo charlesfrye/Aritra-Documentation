@@ -59,7 +59,8 @@ the data format and converts it.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2027-L2042">View source</a>
 
-<pre><code>@classmethod</code><code>all_boxes(
+<pre><code>@classmethod</code>
+<code>all_boxes(
     images, run, run_key, step
 )</code></pre>
 
@@ -70,7 +71,8 @@ the data format and converts it.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2044-L2049">View source</a>
 
-<pre><code>@classmethod</code><code>all_captions(
+<pre><code>@classmethod</code>
+<code>all_captions(
     images
 )</code></pre>
 
@@ -81,7 +83,8 @@ the data format and converts it.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2010-L2025">View source</a>
 
-<pre><code>@classmethod</code><code>all_masks(
+<pre><code>@classmethod</code>
+<code>all_masks(
     images, run, run_key, step
 )</code></pre>
 
@@ -103,7 +106,8 @@ Guess what type of image the np.array is representing
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1928-L1950">View source</a>
 
-<pre><code>@classmethod</code><code>to_uint8(
+<pre><code>@classmethod</code>
+<code>to_uint8(
     data
 )</code></pre>
 

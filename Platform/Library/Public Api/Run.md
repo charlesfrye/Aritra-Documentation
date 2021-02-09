@@ -106,7 +106,8 @@ A single run associated with an entity and project.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L892-L932">View source</a>
 
-<pre><code>@classmethod</code><code>create(
+<pre><code>@classmethod</code>
+<code>create(
     api, run_id=None, project=None, entity=None
 )</code></pre>
 

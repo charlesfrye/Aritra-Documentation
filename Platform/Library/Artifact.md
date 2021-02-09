@@ -224,7 +224,8 @@ If local_path was already added to artifact, return its internal name.
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_artifacts.py#L109-L122">View source</a>
 
-<pre><code>@contextlib.contextmanager</code><code>new_file(
+<pre><code>@contextlib.contextmanager</code>
+<code>new_file(
     name, mode=&#x27;w&#x27;
 )</code></pre>
 

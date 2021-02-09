@@ -95,7 +95,8 @@ Returns the best run sorted by the metric defined in config or the order passed 
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1481-L1531">View source</a>
 
-<pre><code>@classmethod</code><code>get(
+<pre><code>@classmethod</code>
+<code>get(
     client, entity=None, project=None, sid=None, withRuns=True, order=None,
     query=None, **kwargs
 )</code></pre>

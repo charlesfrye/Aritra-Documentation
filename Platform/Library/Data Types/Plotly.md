@@ -41,7 +41,8 @@ matplotlib or plotly figure
 
 <a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2373-L2379">View source</a>
 
-<pre><code>@classmethod</code><code>make_plot_media(
+<pre><code>@classmethod</code>
+<code>make_plot_media(
     val
 )</code></pre>
 
