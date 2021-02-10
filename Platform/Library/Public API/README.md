@@ -1,4 +1,4 @@
-# Module: Public API
+# Public API
 
 <!-- Insert buttons and diff -->
 

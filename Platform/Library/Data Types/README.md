@@ -1,4 +1,4 @@
-# Module: Data Types
+# Data Types
 
 <!-- Insert buttons and diff -->
 

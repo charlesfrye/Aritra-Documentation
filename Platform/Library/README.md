@@ -1,4 +1,4 @@
-# Module: Library
+# Library
 
 <!-- Insert buttons and diff -->
 
