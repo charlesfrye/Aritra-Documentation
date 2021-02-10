@@ -60,7 +60,7 @@ if __name__== "__main__":
     
     build_docs(
         name_pair=("library", wandb),
-        output_dir="platform",
+        output_dir=".",
         code_url_prefix=CODE_URL_PREFIX,
         search_hints=False,
         gen_report=False)
@@ -89,7 +89,7 @@ if __name__== "__main__":
 
     build_docs(
         name_pair=("public-api",wandb),
-        output_dir="platform/library",
+        output_dir="./library",
         code_url_prefix=CODE_URL_PREFIX,
         search_hints=False,
         gen_report=False)
@@ -116,7 +116,7 @@ if __name__== "__main__":
         pass
     build_docs(
         name_pair=("run",wandb),
-        output_dir="platform/library",
+        output_dir="./library",
         code_url_prefix=CODE_URL_PREFIX,
         search_hints=False,
         gen_report=False)
@@ -136,7 +136,7 @@ if __name__== "__main__":
 
     build_docs(
         name_pair=("data-types",wandb),
-        output_dir="platform/library",
+        output_dir="./library",
         code_url_prefix=CODE_URL_PREFIX,
         search_hints=False,
         gen_report=False)
@@ -144,16 +144,15 @@ if __name__== "__main__":
     # Remove the unwanted files
     # all_symbols and _api.cache.md
     directory = getcwd()
-    for root, folder, file_names in walk("platform"):
+    for root, folder, file_names in walk("."):
         if "all_symbols.md" in file_names:
             remove(f"{root}/all_symbols.md")
         if "_api_cache.json" in file_names:
             remove(f"{root}/_api_cache.json")
 
     # Moving all the folder md to respective folders
-    rename(f"{directory}/platform/library.md", f"{directory}/platform/library/README.md")
-    rename(f"{directory}/platform/library/run.md", f"{directory}/platform/library/run/README.md")
-    rename(f"{directory}/platform/library/data-types.md", f"{directory}/platform/library/data-types/README.md")
-    rename(f"{directory}/platform/library/public-api.md", f"{directory}/platform/library/public-api/README.md")
-
-    
+    rename(f"{directory}/library.md", f"{directory}/library/README.md")
+    rename(f"{directory}/library/run.md", f"{directory}/library/run/README.md")
+    rename(f"{directory}/library/data-types.md", f"{directory}/library/data-types/README.md")
+    rename(f"{directory}/library/public-api.md", f"{directory}/library/public-api/README.md")
+ 
