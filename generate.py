@@ -28,7 +28,8 @@ def build_docs(name_pair,output_dir,code_url_prefix, search_hints, gen_report):
         gen_report: Bool. Generates an API report containing the health of the
             docstrings of the public API.
     """
-    for cls in [wandb.data_types.WBValue, wandb.data_types.Media, wandb.data_types.BatchableMedia]:
+    # This is to help not document the parent class methods
+    for cls in [wandb.data_types.WBValue, wandb.data_types.Media, wandb.data_types.BatchableMedia, wandb.apis.public.Paginator]:
         doc_controls.decorate_all_class_attributes(
             decorator=doc_controls.do_not_doc_in_subclasses,
             cls=cls,
