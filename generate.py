@@ -11,6 +11,7 @@ pip install git+https://github.com/tensorflow/docs
 ```
 """
 from os import path, walk, getcwd, remove, rename
+from shutil import rmtree
 
 import wandb
 
@@ -56,10 +57,14 @@ if __name__== "__main__":
         ]
 
     wandb.__all__ = wandb_classes
-
+    
+    # Delete the folder named platform
+    # if already exists
+    if path.isdir("platform"):
+        rmtree("platform")
     build_docs(
         name_pair=("Library", wandb),
-        output_dir="Platform",
+        output_dir="platform",
         code_url_prefix=CODE_URL_PREFIX,
         search_hints=False,
         gen_report=False)
@@ -88,7 +93,7 @@ if __name__== "__main__":
 
     build_docs(
         name_pair=("Public API",wandb),
-        output_dir="Platform/Library",
+        output_dir="platform/Library",
         code_url_prefix=CODE_URL_PREFIX,
         search_hints=False,
         gen_report=False)
@@ -115,7 +120,7 @@ if __name__== "__main__":
         pass
     build_docs(
         name_pair=("Run",wandb),
-        output_dir="Platform/Library",
+        output_dir="platform/Library",
         code_url_prefix=CODE_URL_PREFIX,
         search_hints=False,
         gen_report=False)
@@ -135,22 +140,40 @@ if __name__== "__main__":
 
     build_docs(
         name_pair=("Data Types",wandb),
-        output_dir="Platform/Library",
+        output_dir="platform/Library",
         code_url_prefix=CODE_URL_PREFIX,
         search_hints=False,
         gen_report=False)
 
+     # Writing a Readme.md inside Platform
+    with open("platform/README.md", 'w') as f:
+        f.write("# Wandb Platform")
+    
     # Remove the unwanted files
     # all_symbols and _api.cache.md
     directory = getcwd()
-    for root, folder, file_names in walk("Platform"):
+    for root, folder, file_names in walk("platform"):
         if "all_symbols.md" in file_names:
             remove(f"{root}/all_symbols.md")
         if "_api_cache.json" in file_names:
             remove(f"{root}/_api_cache.json")
     
-    # Moving all the folder md to respective folders
-    rename(f"{directory}/Platform/Library.md", f"{directory}/Platform/Library/README.md")
-    rename(f"{directory}/Platform/Library/Run.md", f"{directory}/Platform/Library/Run/README.md")
-    rename(f"{directory}/Platform/Library/Data Types.md", f"{directory}/Platform/Library/Data Types/README.md")
-    rename(f"{directory}/Platform/Library/Public API.md", f"{directory}/Platform/Library/Public API/README.md")
+    # Moving all the README md to respective folders
+    rename(f"{directory}/platform/Library.md", f"{directory}/platform/Library/README.md")
+    rename(f"{directory}/platform/Library/Run.md", f"{directory}/platform/Library/Run/README.md")
+    rename(f"{directory}/platform/Library/Data Types.md", f"{directory}/platform/Library/Data Types/README.md")
+    rename(f"{directory}/platform/Library/Public API.md", f"{directory}/platform/Library/Public API/README.md")
+
+    # Convert everything in lowercase
+    rename(f"{directory}/platform/Library", f"{directory}/platform/library")
+    for root, folder, file_names in walk("platform/library"):
+        for fol_name in folder:
+            short_name = fol_name.replace(" ", "-").lower()
+            rename(f'{directory}/{root}/{fol_name}', f'{directory}/{root}/{short_name}')
+    for root, folder, file_names in walk("platform/library"):
+        for name in file_names:
+            if name == "README.md":
+                short_name = name
+            else:    
+                short_name = name.replace(" ", "-").lower()
+            rename(f'{directory}/{root}/{name}', f'{directory}/{root}/{short_name}')
