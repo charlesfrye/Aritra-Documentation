@@ -10,7 +10,7 @@ Requires a local installation of `tensorflow_docs`:
 pip install git+https://github.com/tensorflow/docs
 ```
 """
-from os import path, walk, getcwd, remove
+from os import path, walk, getcwd, remove, rename
 
 import wandb
 
@@ -155,3 +155,9 @@ if __name__== "__main__":
             remove(f"{root}/all_symbols.md")
         if "_api_cache.json" in file_names:
             remove(f"{root}/_api_cache.json")
+    
+    # Moving all the folder md to respective folders
+    rename(f"{directory}/Platform/Library.md", f"{directory}/Platform/Library/README.md")
+    rename(f"{directory}/Platform/Library/Run.md", f"{directory}/Platform/Library/Run/README.md")
+    rename(f"{directory}/Platform/Library/Data Types.md", f"{directory}/Platform/Library/Data Types/README.md")
+    rename(f"{directory}/Platform/Library/Public Api.md", f"{directory}/Platform/Library/Public Api/README.md")
