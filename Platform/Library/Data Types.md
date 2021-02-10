@@ -1,4 +1,4 @@
-# run
+# Data Types
 
 <!-- Insert buttons and diff -->
 
@@ -24,19 +24,21 @@ For examples usage, see github.com/wandb/examples
 
 ## Classes
 
-[`class settings`](./run/settings.md): Settings Constructor
+[`class Audio`](./Data Types/Audio.md): Wandb class for audio clips.
 
-## Functions
+[`class Histogram`](./Data Types/Histogram.md): wandb class for histograms.
 
-[`alert(...)`](./run/alert.md): Launch an alert with the given title and text.
+[`class Html`](./Data Types/Html.md): Wandb class for arbitrary html
 
-[`config(...)`](./run/config.md): Config object
+[`class Image`](./Data Types/Image.md): Wandb class for images.
 
-[`init(...)`](./run/init.md): Start a new tracked run with `wandb.init()`.
+[`class Molecule`](./Data Types/Molecule.md): Wandb class for Molecular data
 
-[`log(...)`](./run/log.md): Log a dict to the global run's history.
+[`class Object3D`](./Data Types/Object3D.md): Wandb class for 3D point clouds.
 
-[`login(...)`](./run/login.md): Log in to W&B.
+[`class Plotly`](./Data Types/Plotly.md): Wandb class for plotly plots.
 
-[`summary(...)`](./run/summary.md): Summary tracks single values for each run. By default, summary is set to the
+[`class Table`](./Data Types/Table.md): This is a table designed to display sets of records.
+
+[`class Video`](./Data Types/Video.md): Wandb representation of video.
 

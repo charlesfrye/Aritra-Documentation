@@ -59,8 +59,8 @@ if __name__== "__main__":
     wandb.__all__ = wandb_classes
     
     build_docs(
-        name_pair=("library", wandb),
-        output_dir="platform",
+        name_pair=("Library", wandb),
+        output_dir="Platform",
         code_url_prefix=CODE_URL_PREFIX,
         search_hints=False,
         gen_report=False)
@@ -88,8 +88,8 @@ if __name__== "__main__":
     wandb.__all__ = wandb_api_doc
 
     build_docs(
-        name_pair=("public-api",wandb),
-        output_dir="platform/library",
+        name_pair=("Public API",wandb),
+        output_dir="Platform/Library",
         code_url_prefix=CODE_URL_PREFIX,
         search_hints=False,
         gen_report=False)
@@ -115,8 +115,8 @@ if __name__== "__main__":
     except AttributeError:
         pass
     build_docs(
-        name_pair=("run",wandb),
-        output_dir="platform/library",
+        name_pair=("Run",wandb),
+        output_dir="Platform/Library",
         code_url_prefix=CODE_URL_PREFIX,
         search_hints=False,
         gen_report=False)
@@ -135,20 +135,16 @@ if __name__== "__main__":
     wandb.__all__ = wandb_datatypes
 
     build_docs(
-        name_pair=("data-types",wandb),
-        output_dir="platform/library",
+        name_pair=("Data Types",wandb),
+        output_dir="Platform/Library",
         code_url_prefix=CODE_URL_PREFIX,
         search_hints=False,
         gen_report=False)
-
-     # Writing a Readme.md inside Platform
-    with open("platform/README.md", 'w') as f:
-        f.write("# Platform")
     
     # Remove the unwanted files
     # all_symbols and _api.cache.md
     directory = getcwd()
-    for root, folder, file_names in walk("platform"):
+    for root, folder, file_names in walk("Platform"):
         if "all_symbols.md" in file_names:
             remove(f"{root}/all_symbols.md")
         if "_api_cache.json" in file_names:
