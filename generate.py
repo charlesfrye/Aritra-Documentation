@@ -87,9 +87,7 @@ if __name__== "__main__":
         'Sweep',
         'Files',
         'File',
-        'Reports',
         'QueryGenerator',
-        'BetaReport',
         'ArtifactType',
         'ArtifactCollection',
         'Artifact',
@@ -114,7 +112,6 @@ if __name__== "__main__":
         'summary',
         'login',
         'alert',
-        'history',
         'settings']
     
     wandb.__all__ = wandb_run

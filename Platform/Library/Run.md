@@ -24,8 +24,6 @@ For examples usage, see github.com/wandb/examples
 
 ## Classes
 
-[`class history`](./Run/history.md): Time series data for Runs. This is essentially a list of dicts where each
-
 [`class settings`](./Run/settings.md): Settings Constructor
 
 ## Functions

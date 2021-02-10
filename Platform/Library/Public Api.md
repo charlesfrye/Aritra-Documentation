@@ -34,8 +34,6 @@ For examples usage, see github.com/wandb/examples
 
 [`class ArtifactVersions`](./Public Api/ArtifactVersions.md): An iterable collection of artifact versions associated with a project and optional filter.
 
-[`class BetaReport`](./Public Api/BetaReport.md): BetaReport is a class associated with reports created in wandb.
-
 [`class File`](./Public Api/File.md): File is a class associated with a file saved by wandb.
 
 [`class Files`](./Public Api/Files.md): Files is an iterable collection of `File` objects.
@@ -45,8 +43,6 @@ For examples usage, see github.com/wandb/examples
 [`class Projects`](./Public Api/Projects.md): An iterable collection of `Project` objects.
 
 [`class QueryGenerator`](./Public Api/QueryGenerator.md): QueryGenerator is a helper object to write filters for runs
-
-[`class Reports`](./Public Api/Reports.md): Reports is an iterable collection of `BetaReport` objects.
 
 [`class Run`](./Public Api/Run.md): A single run associated with an entity and project.
 
