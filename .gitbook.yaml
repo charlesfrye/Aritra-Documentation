@@ -1,0 +1,5 @@
+redirects:
+  platform/library: ./platform/library.md
+  platform/library: ./platform/library/data-types.md
+  platform/library: ./platform/library/public-api.md
+  platform/library: ./platform/library/run.md
