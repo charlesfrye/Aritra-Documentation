@@ -1,4 +1,4 @@
-# Run
+# library
 
 <!-- Insert buttons and diff -->
 
@@ -24,19 +24,5 @@ For examples usage, see github.com/wandb/examples
 
 ## Classes
 
-[`class settings`](./Run/settings.md): Settings Constructor
-
-## Functions
-
-[`alert(...)`](./Run/alert.md): Launch an alert with the given title and text.
-
-[`config(...)`](./Run/config.md): Config object
-
-[`init(...)`](./Run/init.md): Start a new tracked run with `wandb.init()`.
-
-[`log(...)`](./Run/log.md): Log a dict to the global run's history.
-
-[`login(...)`](./Run/login.md): Log in to W&B.
-
-[`summary(...)`](./Run/summary.md): Summary tracks single values for each run. By default, summary is set to the
+[`class Artifact`](./library/Artifact.md): An artifact object you can write files into, and pass to log_artifact.
 

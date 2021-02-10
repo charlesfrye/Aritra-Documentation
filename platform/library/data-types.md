@@ -1,4 +1,4 @@
-# Library
+# data-types
 
 <!-- Insert buttons and diff -->
 
@@ -24,5 +24,21 @@ For examples usage, see github.com/wandb/examples
 
 ## Classes
 
-[`class Artifact`](./Library/Artifact.md): An artifact object you can write files into, and pass to log_artifact.
+[`class Audio`](./data-types/Audio.md): Wandb class for audio clips.
+
+[`class Histogram`](./data-types/Histogram.md): wandb class for histograms.
+
+[`class Html`](./data-types/Html.md): Wandb class for arbitrary html
+
+[`class Image`](./data-types/Image.md): Wandb class for images.
+
+[`class Molecule`](./data-types/Molecule.md): Wandb class for Molecular data
+
+[`class Object3D`](./data-types/Object3D.md): Wandb class for 3D point clouds.
+
+[`class Plotly`](./data-types/Plotly.md): Wandb class for plotly plots.
+
+[`class Table`](./data-types/Table.md): This is a table designed to display sets of records.
+
+[`class Video`](./data-types/Video.md): Wandb representation of video.
 

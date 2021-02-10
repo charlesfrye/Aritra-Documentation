@@ -1,1 +1,1 @@
-# Wandb Platform
+# Platform

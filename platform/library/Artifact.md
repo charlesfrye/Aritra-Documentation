@@ -76,7 +76,7 @@ An artifact object you can write files into, and pass to log_artifact.
 )</code></pre>
 
 Adds `obj` to the artifact, located at `name`. You can
-use <a href="../Library/Artifact.md#get"><code>Artifact.get(name)</code></a> after downloading the artifact to retrieve this object.
+use <a href="../library/Artifact.md#get"><code>Artifact.get(name)</code></a> after downloading the artifact to retrieve this object.
 
 <!-- Tabular view -->
 <table>
@@ -154,7 +154,7 @@ the added entry
 )</code></pre>
 
 adds `uri` to the artifact via a reference, located at `name`. 
-You can use <a href="../Library/Artifact.md#get_path"><code>Artifact.get_path(name)</code></a> to retrieve this object.
+You can use <a href="../library/Artifact.md#get_path"><code>Artifact.get_path(name)</code></a> to retrieve this object.
 
 <!-- Tabular view -->
 <table>
