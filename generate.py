@@ -165,15 +165,15 @@ if __name__== "__main__":
     rename(f"{directory}/platform/Library/Public API.md", f"{directory}/platform/Library/Public API/README.md")
 
     # Convert everything in lowercase
-    rename(f"{directory}/platform/Library", f"{directory}/platform/library")
-    for root, folder, file_names in walk("platform/library"):
-        for fol_name in folder:
-            short_name = fol_name.replace(" ", "-").lower()
-            rename(f'{directory}/{root}/{fol_name}', f'{directory}/{root}/{short_name}')
-    for root, folder, file_names in walk("platform/library"):
-        for name in file_names:
-            if name == "README.md":
-                short_name = name
-            else:    
-                short_name = name.replace(" ", "-").lower()
-            rename(f'{directory}/{root}/{name}', f'{directory}/{root}/{short_name}')
+    # rename(f"{directory}/platform/Library", f"{directory}/platform/library")
+    # for root, folder, file_names in walk("platform/library"):
+    #     for fol_name in folder:
+    #         short_name = fol_name.replace(" ", "-").lower()
+    #         rename(f'{directory}/{root}/{fol_name}', f'{directory}/{root}/{short_name}')
+    # for root, folder, file_names in walk("platform/library"):
+    #     for name in file_names:
+    #         if name == "README.md":
+    #             short_name = name
+    #         else:    
+    #             short_name = name.replace(" ", "-").lower()
+    #         rename(f'{directory}/{root}/{name}', f'{directory}/{root}/{short_name}')
