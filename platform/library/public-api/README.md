@@ -24,21 +24,21 @@ For examples usage, see github.com/wandb/examples
 
 ## Classes
 
-[`class Api`](./public-api/Api.md): Used for querying the wandb server.
+[`class Api`](./Api.md): Used for querying the wandb server.
 
-[`class Artifact`](./public-api/Artifact.md)
+[`class Artifact`](./Artifact.md)
 
-[`class File`](./public-api/File.md): File is a class associated with a file saved by wandb.
+[`class File`](./File.md): File is a class associated with a file saved by wandb.
 
-[`class Files`](./public-api/Files.md): Files is an iterable collection of `File` objects.
+[`class Files`](./Files.md): Files is an iterable collection of `File` objects.
 
-[`class Project`](./public-api/Project.md): A project is a namespace for runs
+[`class Project`](./Project.md): A project is a namespace for runs
 
-[`class Projects`](./public-api/Projects.md): An iterable collection of `Project` objects.
+[`class Projects`](./Projects.md): An iterable collection of `Project` objects.
 
-[`class Run`](./public-api/Run.md): A single run associated with an entity and project.
+[`class Run`](./Run.md): A single run associated with an entity and project.
 
-[`class Runs`](./public-api/Runs.md): An iterable collection of runs associated with a project and optional filter.
+[`class Runs`](./Runs.md): An iterable collection of runs associated with a project and optional filter.
 
-[`class Sweep`](./public-api/Sweep.md): A set of runs associated with a sweep
+[`class Sweep`](./Sweep.md): A set of runs associated with a sweep
 

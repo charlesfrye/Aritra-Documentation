@@ -149,4 +149,10 @@ if __name__== "__main__":
             remove(f"{root}/all_symbols.md")
         if "_api_cache.json" in file_names:
             remove(f"{root}/_api_cache.json")
+
+    # Moving all the folder md to respective folders
+    rename(f"{directory}/platform/library.md", f"{directory}/platform/library/README.md")
+    rename(f"{directory}/platform/library/run.md", f"{directory}/platform/library/run/README.md")
+    rename(f"{directory}/platform/library/data-types.md", f"{directory}/platform/library/data-types/README.md")
+    rename(f"{directory}/platform/library/public-api.md", f"{directory}/platform/library/public-api/README.md")
     

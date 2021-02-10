@@ -24,21 +24,21 @@ For examples usage, see github.com/wandb/examples
 
 ## Classes
 
-[`class Audio`](./data-types/Audio.md): Wandb class for audio clips.
+[`class Audio`](./Audio.md): Wandb class for audio clips.
 
-[`class Histogram`](./data-types/Histogram.md): wandb class for histograms.
+[`class Histogram`](./Histogram.md): wandb class for histograms.
 
-[`class Html`](./data-types/Html.md): Wandb class for arbitrary html
+[`class Html`](./Html.md): Wandb class for arbitrary html
 
-[`class Image`](./data-types/Image.md): Wandb class for images.
+[`class Image`](./Image.md): Wandb class for images.
 
-[`class Molecule`](./data-types/Molecule.md): Wandb class for Molecular data
+[`class Molecule`](./Molecule.md): Wandb class for Molecular data
 
-[`class Object3D`](./data-types/Object3D.md): Wandb class for 3D point clouds.
+[`class Object3D`](./Object3D.md): Wandb class for 3D point clouds.
 
-[`class Plotly`](./data-types/Plotly.md): Wandb class for plotly plots.
+[`class Plotly`](./Plotly.md): Wandb class for plotly plots.
 
-[`class Table`](./data-types/Table.md): This is a table designed to display sets of records.
+[`class Table`](./Table.md): This is a table designed to display sets of records.
 
-[`class Video`](./data-types/Video.md): Wandb representation of video.
+[`class Video`](./Video.md): Wandb representation of video.
 

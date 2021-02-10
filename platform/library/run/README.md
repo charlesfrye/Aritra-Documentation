@@ -24,19 +24,19 @@ For examples usage, see github.com/wandb/examples
 
 ## Classes
 
-[`class settings`](./run/settings.md): Settings Constructor
+[`class settings`](./settings.md): Settings Constructor
 
 ## Functions
 
-[`alert(...)`](./run/alert.md): Launch an alert with the given title and text.
+[`alert(...)`](./alert.md): Launch an alert with the given title and text.
 
-[`config(...)`](./run/config.md): Config object
+[`config(...)`](./config.md): Config object
 
-[`init(...)`](./run/init.md): Start a new tracked run with `wandb.init()`.
+[`init(...)`](./init.md): Start a new tracked run with `wandb.init()`.
 
-[`log(...)`](./run/log.md): Log a dict to the global run's history.
+[`log(...)`](./log.md): Log a dict to the global run's history.
 
-[`login(...)`](./run/login.md): Log in to W&B.
+[`login(...)`](./login.md): Log in to W&B.
 
-[`summary(...)`](./run/summary.md): Summary tracks single values for each run. By default, summary is set to the
+[`summary(...)`](./summary.md): Summary tracks single values for each run. By default, summary is set to the
 
