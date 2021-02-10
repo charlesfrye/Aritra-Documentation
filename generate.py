@@ -71,9 +71,7 @@ if __name__== "__main__":
     wandb.Sweep = wandb.apis.public.Sweep
     wandb.Files = wandb.apis.public.Files
     wandb.File = wandb.apis.public.File
-    wandb.Reports = wandb.apis.public.Reports
     wandb.QueryGenerator = wandb.apis.public.QueryGenerator
-    wandb.BetaReport = wandb.apis.public.BetaReport
     wandb.ArtifactType = wandb.apis.public.ArtifactType
     wandb.ArtifactCollection = wandb.apis.public.ArtifactCollection
     wandb.Artifact = wandb.apis.public.Artifact
@@ -104,7 +102,6 @@ if __name__== "__main__":
 
 
     wandb.settings = wandb.wandb_sdk.Settings
-    wandb.history = wandb.wandb_sdk.History
     wandb_run = [
         'init',
         'log',
