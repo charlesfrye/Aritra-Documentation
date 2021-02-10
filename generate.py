@@ -72,11 +72,7 @@ if __name__== "__main__":
     wandb.Sweep = wandb.apis.public.Sweep
     wandb.Files = wandb.apis.public.Files
     wandb.File = wandb.apis.public.File
-    wandb.QueryGenerator = wandb.apis.public.QueryGenerator
-    wandb.ArtifactType = wandb.apis.public.ArtifactType
-    wandb.ArtifactCollection = wandb.apis.public.ArtifactCollection
     wandb.Artifact = wandb.apis.public.Artifact
-    wandb.ArtifactVersions = wandb.apis.public.ArtifactVersions
     wandb_api_doc = [
         'Api',
         'Projects',
@@ -86,16 +82,12 @@ if __name__== "__main__":
         'Sweep',
         'Files',
         'File',
-        'QueryGenerator',
-        'ArtifactType',
-        'ArtifactCollection',
         'Artifact',
-        'ArtifactVersions',
     ]
     wandb.__all__ = wandb_api_doc
 
     build_docs(
-        name_pair=("Public Api",wandb),
+        name_pair=("Public API",wandb),
         output_dir="Platform/Library",
         code_url_prefix=CODE_URL_PREFIX,
         search_hints=False,
@@ -161,4 +153,4 @@ if __name__== "__main__":
     rename(f"{directory}/Platform/Library.md", f"{directory}/Platform/Library/README.md")
     rename(f"{directory}/Platform/Library/Run.md", f"{directory}/Platform/Library/Run/README.md")
     rename(f"{directory}/Platform/Library/Data Types.md", f"{directory}/Platform/Library/Data Types/README.md")
-    rename(f"{directory}/Platform/Library/Public Api.md", f"{directory}/Platform/Library/Public Api/README.md")
+    rename(f"{directory}/Platform/Library/Public API.md", f"{directory}/Platform/Library/Public API/README.md")
