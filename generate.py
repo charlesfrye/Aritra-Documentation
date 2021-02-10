@@ -156,12 +156,4 @@ if __name__== "__main__":
     rename(f"{directory}/platform/library/data-types.md", f"{directory}/platform/library/data-types/README.md")
     rename(f"{directory}/platform/library/public-api.md", f"{directory}/platform/library/public-api/README.md")
 
-    # Change everything to lower case
-    for root, folder, file_names in walk("platform/library"):
-        for name in file_names:
-            if name == "README.md":
-                short_name = name
-            else:    
-                short_name = name.replace(" ", "-").lower()
-            rename(f'{directory}/{root}/{name}', f'{directory}/{root}/{short_name}')
     
