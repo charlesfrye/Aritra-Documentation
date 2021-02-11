@@ -24,5 +24,5 @@ For examples usage, see github.com/wandb/examples
 
 ## Classes
 
-[`class Artifact`](./Artifact.md): An artifact object you can write files into, and pass to log_artifact.
+[`class Artifact`](./artifact.md): An artifact object you can write files into, and pass to log_artifact.
 
