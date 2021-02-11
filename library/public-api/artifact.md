@@ -1,412 +1,227 @@
 # Artifact
 
-<!-- Insert buttons and diff -->
-
-
 [![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2447-L3148)
 
-
-
-
-
-
-<pre><code>Artifact(
+```text
+Artifact(
     client, entity, project, name, attrs=None
-)</code></pre>
+)
+```
 
-
-
-<!-- Placeholder for "Used in" -->
-
-
-
-
-<!-- Tabular view -->
-<table>
-<tr><th>Attributes</th></tr>
-
-<tr>
-<td>
-<code>aliases</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-<code>created_at</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-<code>description</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-<code>digest</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-<code>id</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-<code>manifest</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-<code>metadata</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-<code>name</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-<code>size</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-<code>state</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-<code>type</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-<code>updated_at</code>
-</td>
-<td>
-
-</td>
-</tr>
-</table>
-
-
+| Attributes |  |
+| :--- | :--- |
+|  `aliases` |  |
+|  `created_at` |  |
+|  `description` |  |
+|  `digest` |  |
+|  `id` |  |
+|  `manifest` |  |
+|  `metadata` |  |
+|  `name` |  |
+|  `size` |  |
+|  `state` |  |
+|  `type` |  |
+|  `updated_at` |  |
 
 ## Methods
 
-<h3 id="add_dir"><code>add_dir</code></h3>
+### `add_dir` <a id="add_dir"></a>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2666-L2667">View source</a>
+[View source](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2666-L2667)
 
-<pre><code>add_dir(
+```text
+add_dir(
     path, name=None
-)</code></pre>
+)
+```
 
+### `add_file` <a id="add_file"></a>
 
+[View source](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2663-L2664)
 
-
-<h3 id="add_file"><code>add_file</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2663-L2664">View source</a>
-
-<pre><code>add_file(
+```text
+add_file(
     path, name=None
-)</code></pre>
+)
+```
 
+### `add_reference` <a id="add_reference"></a>
 
+[View source](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2669-L2670)
 
-
-<h3 id="add_reference"><code>add_reference</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2669-L2670">View source</a>
-
-<pre><code>add_reference(
+```text
+add_reference(
     path, name=None
-)</code></pre>
+)
+```
 
+### `delete` <a id="delete"></a>
 
+[View source](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2643-L2658)
 
-
-<h3 id="delete"><code>delete</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2643-L2658">View source</a>
-
-<pre><code>delete()</code></pre>
+```text
+delete()
+```
 
 Delete artifact and its files.
 
+### `download` <a id="download"></a>
 
-<h3 id="download"><code>download</code></h3>
+[View source](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2799-L2841)
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2799-L2841">View source</a>
-
-<pre><code>download(
+```text
+download(
     root=None, recursive=False
-)</code></pre>
+)
+```
 
-Download the artifact to dir specified by the <root>
+Download the artifact to dir specified by the 
 
+| Arguments |
+| :--- |
+|  root \(str, optional\): directory to download artifact to. If None artifact will be downloaded to './artifacts//' recursive \(bool, optional\): if set to true, then all dependent artifacts are eagerly downloaded as well. If false, then the dependent artifact will only be downloaded when needed. |
 
-<!-- Tabular view -->
-<table>
-<tr><th>Arguments</th></tr>
-<tr>
-<td>
-root (str, optional): directory to download artifact to. If None
-artifact will be downloaded to './artifacts/<self.name>/'
-recursive (bool, optional): if set to true, then all dependent artifacts are
-eagerly downloaded as well. If false, then the dependent artifact will
-only be downloaded when needed.
-</td>
-</tr>
+| Returns |
+| :--- |
+|  The path to the downloaded contents. |
 
-</table>
+### `expected_type` <a id="expected_type"></a>
 
+[View source](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2601-L2641)
 
-
-<!-- Tabular view -->
-<table>
-<tr><th>Returns</th></tr>
-<tr>
-<td>
-The path to the downloaded contents.
-</td>
-</tr>
-
-</table>
-
-
-
-<h3 id="expected_type"><code>expected_type</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2601-L2641">View source</a>
-
-<pre><code>@staticmethod</code>
-<code>expected_type(
+```text
+@staticmethod
+expected_type(
     client, name, entity_name, project_name
-)</code></pre>
+)
+```
 
 Returns the expected type for a given artifact name and project
 
+### `file` <a id="file"></a>
 
-<h3 id="file"><code>file</code></h3>
+[View source](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2843-L2864)
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2843-L2864">View source</a>
-
-<pre><code>file(
+```text
+file(
     root=None
-)</code></pre>
+)
+```
 
-Download a single file artifact to dir specified by the <root>
+Download a single file artifact to dir specified by the 
 
+| Arguments |
+| :--- |
+|  root \(str, optional\): directory to download artifact to. If None artifact will be downloaded to './artifacts//' |
 
-<!-- Tabular view -->
-<table>
-<tr><th>Arguments</th></tr>
-<tr>
-<td>
-root (str, optional): directory to download artifact to. If None
-artifact will be downloaded to './artifacts/<self.name>/'
-</td>
-</tr>
+| Returns |
+| :--- |
+|  The full path of the downloaded file |
 
-</table>
+### `from_id` <a id="from_id"></a>
 
+[View source](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2469-L2509)
 
-
-<!-- Tabular view -->
-<table>
-<tr><th>Returns</th></tr>
-<tr>
-<td>
-The full path of the downloaded file
-</td>
-</tr>
-
-</table>
-
-
-
-<h3 id="from_id"><code>from_id</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2469-L2509">View source</a>
-
-<pre><code>@classmethod</code>
-<code>from_id(
+```text
+@classmethod
+from_id(
     artifact_id, client
-)</code></pre>
+)
+```
 
+### `get` <a id="get"></a>
 
+[View source](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2763-L2797)
 
-
-<h3 id="get"><code>get</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2763-L2797">View source</a>
-
-<pre><code>get(
+```text
+get(
     name
-)</code></pre>
+)
+```
 
-Returns the wandb.Media resource stored in the artifact. Media can be
-stored in the artifact via Artifact#add(obj: wandbMedia, name: str)`
-Arguments:
-    name (str): name of resource.
+Returns the wandb.Media resource stored in the artifact. Media can be stored in the artifact via Artifact\#add\(obj: wandbMedia, name: str\)\` Arguments: name \(str\): name of resource.
 
-<!-- Tabular view -->
-<table>
-<tr><th>Returns</th></tr>
-<tr>
-<td>
-A `wandb.Media` which has been stored at `name`
-</td>
-</tr>
+| Returns |
+| :--- |
+|  A \`wandb.Media\` which has been stored at \`name\` |
 
-</table>
+### `get_path` <a id="get_path"></a>
 
+[View source](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2692-L2761)
 
-
-<h3 id="get_path"><code>get_path</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2692-L2761">View source</a>
-
-<pre><code>get_path(
+```text
+get_path(
     name
-)</code></pre>
+)
+```
 
+### `logged_by` <a id="logged_by"></a>
 
+[View source](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L3115-L3148)
 
-
-<h3 id="logged_by"><code>logged_by</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L3115-L3148">View source</a>
-
-<pre><code>logged_by()</code></pre>
+```text
+logged_by()
+```
 
 Retrieves the run which logged this artifact
 
+| Returns |  |
+| :--- | :--- |
+|  `Run` |  Run object which logged this artifact |
 
-<!-- Tabular view -->
-<table>
-<tr><th>Returns</th></tr>
+### `new_file` <a id="new_file"></a>
 
-<tr>
-<td>
-<code>Run</code>
-</td>
-<td>
-Run object which logged this artifact
-</td>
-</tr>
-</table>
+[View source](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2660-L2661)
 
-
-
-<h3 id="new_file"><code>new_file</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2660-L2661">View source</a>
-
-<pre><code>new_file(
+```text
+new_file(
     name, mode=None
-)</code></pre>
+)
+```
 
+### `save` <a id="save"></a>
 
+[View source](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2877-L2915)
 
-
-<h3 id="save"><code>save</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2877-L2915">View source</a>
-
-<pre><code>save()</code></pre>
+```text
+save()
+```
 
 Persists artifact changes to the wandb backend.
 
+### `used_by` <a id="used_by"></a>
 
-<h3 id="used_by"><code>used_by</code></h3>
+[View source](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L3071-L3113)
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L3071-L3113">View source</a>
-
-<pre><code>used_by()</code></pre>
+```text
+used_by()
+```
 
 Retrieves the runs which use this artifact directly
 
+| Returns |
+| :--- |
+|  \[Run\]: a list of Run objects which use this artifact |
 
-<!-- Tabular view -->
-<table>
-<tr><th>Returns</th></tr>
-<tr>
-<td>
-[Run]: a list of Run objects which use this artifact
-</td>
-</tr>
+### `verify` <a id="verify"></a>
 
-</table>
+[View source](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2917-L2942)
 
-
-
-<h3 id="verify"><code>verify</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2917-L2942">View source</a>
-
-<pre><code>verify(
+```text
+verify(
     root=None
-)</code></pre>
+)
+```
 
 Verify an artifact by checksumming its downloaded contents.
 
-Raises a ValueError if the verification fails. Does not verify downloaded
-reference files.
+Raises a ValueError if the verification fails. Does not verify downloaded reference files.
 
-<!-- Tabular view -->
-<table>
-<tr><th>Arguments</th></tr>
-<tr>
-<td>
-root (str, optional): directory to download artifact to. If None
-artifact will be downloaded to './artifacts/<self.name>/'
-</td>
-</tr>
+| Arguments |
+| :--- |
+|  root \(str, optional\): directory to download artifact to. If None artifact will be downloaded to './artifacts//' |
 
-</table>
-
-
-
-
-
-
-
-<!-- Tabular view -->
-<table>
-<tr><th>Class Variables</th></tr>
-
-<tr>
-<td>
-QUERY<a id="QUERY"></a>
-</td>
-<td>
-
-</td>
-</tr>
-</table>
+| Class Variables |  |
+| :--- | :--- |
+|  QUERY |  |
 
