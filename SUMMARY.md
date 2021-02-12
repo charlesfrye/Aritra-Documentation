@@ -31,4 +31,4 @@
     * [Runs](library/public-api/runs.md)
     * [Sweep](library/public-api/sweep.md)
     * [Run](library/public-api/run.md)
-
+  * [CLI](library/cli.md)
