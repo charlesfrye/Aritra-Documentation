@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L526-L754)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_init.py#L529-L757)
 
 
 
@@ -35,7 +35,7 @@ Start a new tracked run with `wandb.init()`.
     save_code=None,
     id=None,
     settings: Union[<a href="../run/settings.md"><code>run.settings</code></a>, Dict[str, Any], None] = None
-) -> Union[Run, Dummy, None]</code></pre>
+) -> Union[Run, RunDisabled, None]</code></pre>
 
 
 

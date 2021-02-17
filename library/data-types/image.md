@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1647-L2062)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/sdk/data_types.py#L1451-L1912)
 
 
 
@@ -11,9 +11,14 @@
 Wandb class for images.
 
 <pre><code>Image(
-    data_or_path, mode=None, caption=None, grouping=None, classes=None, boxes=None,
-    masks=None
-)</code></pre>
+    data_or_path: "ImageDataOrPathType",
+    mode: Optional[str] = None,
+    caption: Optional[str] = None,
+    grouping: Optional[str] = None,
+    classes: Optional[Union['Classes', Sequence[dict]]] = None,
+    boxes: Optional[Union[Dict[str, 'BoundingBoxes2D'], Dict[str, dict]]] = None,
+    masks: Optional[Union[Dict[str, 'ImageMask'], Dict[str, dict]]] = None
+) -> None</code></pre>
 
 
 
@@ -57,59 +62,65 @@ the data format and converts it.
 
 <h3 id="all_boxes"><code>all_boxes</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2027-L2042">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/data_types.py#L1869-L1890">View source</a>
 
 <pre><code>@classmethod</code>
 <code>all_boxes(
-    images, run, run_key, step
-)</code></pre>
+    images: Sequence['Image'],
+    run: "LocalRun",
+    run_key: str,
+    step: Union[int, str]
+) -> Union[List[Optional[dict]], bool]</code></pre>
 
 
 
 
 <h3 id="all_captions"><code>all_captions</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2044-L2049">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/data_types.py#L1892-L1896">View source</a>
 
 <pre><code>@classmethod</code>
 <code>all_captions(
-    images
-)</code></pre>
+    images: Sequence['Media']
+) -> Union[bool, Sequence[Optional[str]]]</code></pre>
 
 
 
 
 <h3 id="all_masks"><code>all_masks</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2010-L2025">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/data_types.py#L1846-L1867">View source</a>
 
 <pre><code>@classmethod</code>
 <code>all_masks(
-    images, run, run_key, step
-)</code></pre>
+    images: Sequence['Image'],
+    run: "LocalRun",
+    run_key: str,
+    step: Union[int, str]
+) -> Union[List[Optional[dict]], bool]</code></pre>
 
 
 
 
 <h3 id="guess_mode"><code>guess_mode</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1912-L1926">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/data_types.py#L1740-L1754">View source</a>
 
 <pre><code>guess_mode(
-    data
-)</code></pre>
+    data: "np.ndarray"
+) -> str</code></pre>
 
 Guess what type of image the np.array is representing
 
 
 <h3 id="to_uint8"><code>to_uint8</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1928-L1950">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/data_types.py#L1756-L1778">View source</a>
 
 <pre><code>@classmethod</code>
 <code>to_uint8(
-    data
-)</code></pre>
+    data: "np.ndarray"
+) -> "np.ndarray"</code></pre>
 
 Converts floating point image on the range [0,1] and integer images
 on the range [0,255] to uint8, clipping if necessary.

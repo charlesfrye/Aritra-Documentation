@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2365-L2409)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/sdk/data_types.py#L1915-L1962)
 
 
 
@@ -11,7 +11,7 @@
 Wandb class for plotly plots.
 
 <pre><code>Plotly(
-    val, **kwargs
+    val: Union['plotly.Figure', 'matplotlib.artist.Artist']
 )</code></pre>
 
 
@@ -39,12 +39,12 @@ matplotlib or plotly figure
 
 <h3 id="make_plot_media"><code>make_plot_media</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L2373-L2379">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/data_types.py#L1923-L1931">View source</a>
 
 <pre><code>@classmethod</code>
 <code>make_plot_media(
-    val
-)</code></pre>
+    val: Union['plotly.Figure', 'matplotlib.artist.Artist']
+) -> Union[Image, 'Plotly']</code></pre>
 
 
 

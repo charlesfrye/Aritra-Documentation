@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1240-L1319)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/sdk/data_types.py#L802-L892)
 
 
 
@@ -11,8 +11,9 @@
 Wandb class for arbitrary html
 
 <pre><code>Html(
-    data, inject=True
-)</code></pre>
+    data: Union[str, 'TextIO'],
+    inject: bool = True
+) -> None</code></pre>
 
 
 
@@ -47,9 +48,9 @@ to False the HTML will pass through unchanged.
 
 <h3 id="inject_head"><code>inject_head</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1279-L1294">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/data_types.py#L844-L859">View source</a>
 
-<pre><code>inject_head()</code></pre>
+<pre><code>inject_head() -> None</code></pre>
 
 
 

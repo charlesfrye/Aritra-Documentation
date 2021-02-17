@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L862-L976)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L488-L602)
 
 
 
@@ -55,7 +55,7 @@ numpy array of audio data.
 
 <h3 id="durations"><code>durations</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L952-L954">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L578-L580">View source</a>
 
 <pre><code>@classmethod</code>
 <code>durations(
@@ -67,7 +67,7 @@ numpy array of audio data.
 
 <h3 id="sample_rates"><code>sample_rates</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L956-L958">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L582-L584">View source</a>
 
 <pre><code>@classmethod</code>
 <code>sample_rates(

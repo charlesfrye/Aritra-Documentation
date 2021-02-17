@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L986-L1148)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/sdk/data_types.py#L523-L704)
 
 
 
@@ -11,8 +11,9 @@
 Wandb class for 3D point clouds.
 
 <pre><code>Object3D(
-    data_or_path, **kwargs
-)</code></pre>
+    data_or_path: Union['np.ndarray', str, 'TextIO'],
+    **kwargs
+) -> None</code></pre>
 
 
 

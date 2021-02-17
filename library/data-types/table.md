@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L481-L770)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L107-L396)
 
 
 
@@ -60,7 +60,7 @@ allow_mixed_types (bool): Determines if columns are allowed to have mixed types 
 
 <h3 id="add_data"><code>add_data</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L636-L645">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L262-L271">View source</a>
 
 <pre><code>add_data(
     *data
@@ -71,7 +71,7 @@ Add a row of data to the table. Argument length should match column length
 
 <h3 id="add_row"><code>add_row</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L632-L634">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L258-L260">View source</a>
 
 <pre><code>add_row(
     *row
@@ -82,7 +82,7 @@ Add a row of data to the table. Argument length should match column length
 
 <h3 id="cast"><code>cast</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L594-L611">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L220-L237">View source</a>
 
 <pre><code>cast(
     col_name, dtype, optional=False
@@ -93,7 +93,7 @@ Add a row of data to the table. Argument length should match column length
 
 <h3 id="iterrows"><code>iterrows</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L760-L770">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L386-L396">View source</a>
 
 <pre><code>iterrows()</code></pre>
 

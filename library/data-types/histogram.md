@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L218-L283)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/sdk/data_types.py#L209-L279)
 
 
 
@@ -11,8 +11,10 @@
 wandb class for histograms.
 
 <pre><code>Histogram(
-    sequence=None, np_histogram=None, num_bins=64
-)</code></pre>
+    sequence: Optional[Sequence] = None,
+    np_histogram: Optional['NumpyHistogram'] = None,
+    num_bins: int = 64
+) -> None</code></pre>
 
 
 

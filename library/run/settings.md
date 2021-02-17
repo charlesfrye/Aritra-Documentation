@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L193-L996)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L193-L997)
 
 
 
@@ -232,7 +232,7 @@ if problem.
 
 <h3 id="duplicate"><code>duplicate</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L697-L698">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L698-L699">View source</a>
 
 <pre><code>duplicate()</code></pre>
 
@@ -241,7 +241,7 @@ if problem.
 
 <h3 id="freeze"><code>freeze</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L890-L892">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L891-L893">View source</a>
 
 <pre><code>freeze()</code></pre>
 
@@ -250,7 +250,7 @@ if problem.
 
 <h3 id="is_frozen"><code>is_frozen</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L894-L895">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L895-L896">View source</a>
 
 <pre><code>is_frozen() -> bool</code></pre>
 
@@ -259,7 +259,7 @@ if problem.
 
 <h3 id="keys"><code>keys</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L881-L882">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L882-L883">View source</a>
 
 <pre><code>keys()</code></pre>
 
@@ -268,7 +268,7 @@ if problem.
 
 <h3 id="load"><code>load</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L847-L848">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L848-L849">View source</a>
 
 <pre><code>load(
     fname
@@ -279,7 +279,7 @@ if problem.
 
 <h3 id="save"><code>save</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L844-L845">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L845-L846">View source</a>
 
 <pre><code>save(
     fname
@@ -290,7 +290,7 @@ if problem.
 
 <h3 id="setdefaults"><code>setdefaults</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L836-L842">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L837-L843">View source</a>
 
 <pre><code>setdefaults(
     _Settings__d=None
@@ -301,7 +301,7 @@ if problem.
 
 <h3 id="update"><code>update</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L744-L745">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L745-L746">View source</a>
 
 <pre><code>update(
     _Settings__d=None, **kwargs
@@ -312,7 +312,7 @@ if problem.
 
 <h3 id="__getitem__"><code>__getitem__</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L884-L888">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/wandb_settings.py#L885-L889">View source</a>
 
 <pre><code>__getitem__(
     k

@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1151-L1237)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/sdk/data_types.py#L707-L799)
 
 
 
@@ -11,8 +11,9 @@
 Wandb class for Molecular data
 
 <pre><code>Molecule(
-    data_or_path, **kwargs
-)</code></pre>
+    data_or_path: Union[str, 'TextIO'],
+    **kwargs
+) -> None</code></pre>
 
 
 

@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1322-L1490)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/sdk/data_types.py#L895-L1073)
 
 
 
@@ -11,7 +11,10 @@
 Wandb representation of video.
 
 <pre><code>Video(
-    data_or_path, caption=None, fps=4, format=None
+    data_or_path: Union['np.ndarray', str, 'TextIO'],
+    caption: Optional[str] = None,
+    fps: int = 4,
+    format: Optional[str] = None
 )</code></pre>
 
 
@@ -67,9 +70,9 @@ Channels should be (time, channel, height, width) or
 
 <h3 id="encode"><code>encode</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L1383-L1417">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/data_types.py#L964-L1001">View source</a>
 
-<pre><code>encode()</code></pre>
+<pre><code>encode() -> None</code></pre>
 
 
 
