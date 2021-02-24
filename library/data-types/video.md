@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/sdk/data_types.py#L895-L1073)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/sdk/data_types.py#L903-L1081)
 
 
 
@@ -70,7 +70,7 @@ Channels should be (time, channel, height, width) or
 
 <h3 id="encode"><code>encode</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/data_types.py#L964-L1001">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/sdk/data_types.py#L972-L1009">View source</a>
 
 <pre><code>encode() -> None</code></pre>
 

@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L488-L602)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L490-L628)
 
 
 
@@ -55,7 +55,7 @@ numpy array of audio data.
 
 <h3 id="durations"><code>durations</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L578-L580">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L592-L594">View source</a>
 
 <pre><code>@classmethod</code>
 <code>durations(
@@ -65,9 +65,30 @@ numpy array of audio data.
 
 
 
+<h3 id="path_is_reference"><code>path_is_reference</code></h3>
+
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L535-L537">View source</a>
+
+<pre><code>@classmethod</code>
+<code>path_is_reference(
+    path
+)</code></pre>
+
+
+
+
+<h3 id="resolve_ref"><code>resolve_ref</code></h3>
+
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L608-L614">View source</a>
+
+<pre><code>resolve_ref()</code></pre>
+
+
+
+
 <h3 id="sample_rates"><code>sample_rates</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L582-L584">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L596-L598">View source</a>
 
 <pre><code>@classmethod</code>
 <code>sample_rates(

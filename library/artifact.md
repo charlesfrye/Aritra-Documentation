@@ -384,7 +384,7 @@ None
 <pre><code>add_file(
     local_path: str,
     name: Optional[str] = None,
-    is_tmp: Optional[bool] = False
+    is_tmp: Optional[bool] = (False)
 )</code></pre>
 
 Adds a local file to the artifact.
@@ -475,7 +475,7 @@ the added manifest entry
 <pre><code>add_reference(
     uri: Union[ArtifactEntry, str],
     name: Optional[str] = None,
-    checksum: bool = True,
+    checksum: bool = (True),
     max_objects: Optional[int] = None
 )</code></pre>
 
@@ -596,7 +596,7 @@ artifact.add_reference('gs://mybucket/prefix', name='path')
 
 <pre><code>download(
     root: str = None,
-    recursive: bool = False
+    recursive: bool = (False)
 )</code></pre>
 
 Downloads the contents of the artifact to the specified root directory.

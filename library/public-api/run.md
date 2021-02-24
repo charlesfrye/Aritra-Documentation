@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L810-L1353)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L812-L1355)
 
 
 
@@ -104,7 +104,7 @@ A single run associated with an entity and project.
 
 <h3 id="create"><code>create</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L892-L932">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L894-L934">View source</a>
 
 <pre><code>@classmethod</code>
 <code>create(
@@ -116,10 +116,10 @@ Create a run for the given project
 
 <h3 id="delete"><code>delete</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1027-L1061">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1029-L1063">View source</a>
 
 <pre><code>delete(
-    delete_artifacts=False
+    delete_artifacts=(False)
 )</code></pre>
 
 Deletes the given run from the wandb backend.
@@ -127,7 +127,7 @@ Deletes the given run from the wandb backend.
 
 <h3 id="file"><code>file</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1123-L1132">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1125-L1134">View source</a>
 
 <pre><code>file(
     name
@@ -151,7 +151,7 @@ A `File` matching the name argument.
 
 <h3 id="files"><code>files</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1111-L1121">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1113-L1123">View source</a>
 
 <pre><code>files(
     names=[], per_page=50
@@ -176,10 +176,10 @@ A `Files` object, which is an iterator over `File` obejcts.
 
 <h3 id="history"><code>history</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1157-L1189">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1159-L1191">View source</a>
 
 <pre><code>history(
-    samples=500, keys=None, x_axis=&#x27;_step&#x27;, pandas=True,
+    samples=500, keys=None, x_axis=&#x27;_step&#x27;, pandas=(True),
     stream=&#x27;default&#x27;
 )</code></pre>
 
@@ -219,10 +219,10 @@ If pandas=False returns a list of dicts of history metrics.
 
 <h3 id="load"><code>load</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L934-L996">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L936-L998">View source</a>
 
 <pre><code>load(
-    force=False
+    force=(False)
 )</code></pre>
 
 
@@ -230,7 +230,7 @@ If pandas=False returns a list of dicts of history metrics.
 
 <h3 id="log_artifact"><code>log_artifact</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1275-L1307">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1277-L1309">View source</a>
 
 <pre><code>log_artifact(
     artifact, aliases=None
@@ -269,7 +269,7 @@ A `Artifact` object.
 
 <h3 id="logged_artifacts"><code>logged_artifacts</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1240-L1242">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1242-L1244">View source</a>
 
 <pre><code>logged_artifacts(
     per_page=100
@@ -280,7 +280,7 @@ A `Artifact` object.
 
 <h3 id="save"><code>save</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1063-L1064">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1065-L1066">View source</a>
 
 <pre><code>save()</code></pre>
 
@@ -289,7 +289,7 @@ A `Artifact` object.
 
 <h3 id="scan_history"><code>scan_history</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1191-L1238">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1193-L1240">View source</a>
 
 <pre><code>scan_history(
     keys=None, page_size=1000, min_step=None, max_step=None
@@ -340,7 +340,7 @@ An iterable collection over history records (dict).
 
 <h3 id="snake_to_camel"><code>snake_to_camel</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L528-L530">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L530-L532">View source</a>
 
 <pre><code>snake_to_camel(
     string
@@ -351,7 +351,7 @@ An iterable collection over history records (dict).
 
 <h3 id="update"><code>update</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L998-L1025">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1000-L1027">View source</a>
 
 <pre><code>update()</code></pre>
 
@@ -360,7 +360,7 @@ Persists changes to the run object to the wandb backend.
 
 <h3 id="upload_file"><code>upload_file</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1134-L1155">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1136-L1157">View source</a>
 
 <pre><code>upload_file(
     path, root=&#x27;.&#x27;
@@ -387,7 +387,7 @@ A `File` matching the name argument.
 
 <h3 id="use_artifact"><code>use_artifact</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1248-L1273">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1250-L1275">View source</a>
 
 <pre><code>use_artifact(
     artifact
@@ -425,7 +425,7 @@ A `Artifact` object.
 
 <h3 id="used_artifacts"><code>used_artifacts</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1244-L1246">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L1246-L1248">View source</a>
 
 <pre><code>used_artifacts(
     per_page=100

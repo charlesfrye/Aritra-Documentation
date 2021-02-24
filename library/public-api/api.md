@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L182-L521)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L184-L523)
 
 
 
@@ -89,7 +89,7 @@ You can also set defaults for `entity`, `project`, and `run`.
 
 <h3 id="artifact"><code>artifact</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L500-L521">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L502-L523">View source</a>
 
 <pre><code>artifact(
     name, type=None
@@ -140,7 +140,7 @@ A `Artifact` object.
 
 <h3 id="artifact_type"><code>artifact_type</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L489-L492">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L491-L494">View source</a>
 
 <pre><code>artifact_type(
     type_name, project=None
@@ -151,7 +151,7 @@ A `Artifact` object.
 
 <h3 id="artifact_types"><code>artifact_types</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L484-L487">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L486-L489">View source</a>
 
 <pre><code>artifact_types(
     project=None
@@ -162,7 +162,7 @@ A `Artifact` object.
 
 <h3 id="artifact_versions"><code>artifact_versions</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L494-L498">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L496-L500">View source</a>
 
 <pre><code>artifact_versions(
     type_name, name, per_page=50
@@ -173,7 +173,7 @@ A `Artifact` object.
 
 <h3 id="create_run"><code>create_run</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L244-L247">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L246-L249">View source</a>
 
 <pre><code>create_run(
     **kwargs
@@ -184,7 +184,7 @@ A `Artifact` object.
 
 <h3 id="flush"><code>flush</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L275-L281">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L277-L283">View source</a>
 
 <pre><code>flush()</code></pre>
 
@@ -194,7 +194,7 @@ to get the latest values associated with the run.
 
 <h3 id="projects"><code>projects</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L338-L360">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L340-L362">View source</a>
 
 <pre><code>projects(
     entity=None, per_page=200
@@ -243,7 +243,7 @@ A `Projects` object which is an iterable collection of `Project` objects.
 
 <h3 id="reports"><code>reports</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L362-L393">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L364-L395">View source</a>
 
 <pre><code>reports(
     path=&#x27;&#x27;, name=None, per_page=50
@@ -299,7 +299,7 @@ A `Reports` object which is an iterable collection of `BetaReport` objects.
 
 <h3 id="run"><code>run</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L448-L464">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L450-L466">View source</a>
 
 <pre><code>run(
     path=&#x27;&#x27;
@@ -341,7 +341,7 @@ A `Run` object.
 
 <h3 id="runs"><code>runs</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L395-L446">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L397-L448">View source</a>
 
 <pre><code>runs(
     path=&#x27;&#x27;, filters={}, order=&#x27;-created_at&#x27;, per_page=50
@@ -425,7 +425,7 @@ A `Runs` object, which is an iterable collection of `Run` objects.
 
 <h3 id="sweep"><code>sweep</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L466-L482">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L468-L484">View source</a>
 
 <pre><code>sweep(
     path=&#x27;&#x27;
