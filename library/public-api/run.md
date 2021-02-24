@@ -27,17 +27,117 @@ A single run associated with an entity and project.
 
 <tr>
 <td>
-<code>entity</code>
+<code>tags</code>
 </td>
 <td>
-
+([str]) a list of tags associated with the run
+</td>
+</tr><tr>
+<td>
+<code>url</code>
+</td>
+<td>
+(str) the url of this run
 </td>
 </tr><tr>
 <td>
 <code>id</code>
 </td>
 <td>
-
+(str) unique identifier for the run (defaults to eight characters)
+</td>
+</tr><tr>
+<td>
+<code>name</code>
+</td>
+<td>
+(str) the name of the run
+</td>
+</tr><tr>
+<td>
+<code>state</code>
+</td>
+<td>
+(str) one of: running, finished, crashed, aborted
+</td>
+</tr><tr>
+<td>
+<code>config</code>
+</td>
+<td>
+(dict) a dict of hyperparameters associated with the run
+</td>
+</tr><tr>
+<td>
+<code>created_at</code>
+</td>
+<td>
+(str) ISO timestamp when the run was started
+</td>
+</tr><tr>
+<td>
+<code>system_metrics</code>
+</td>
+<td>
+(dict) the latest system metrics recorded for the run
+</td>
+</tr><tr>
+<td>
+<code>summary</code>
+</td>
+<td>
+(dict) A mutable dict-like property that holds the current summary.
+Calling update will persist any changes.
+</td>
+</tr><tr>
+<td>
+<code>project</code>
+</td>
+<td>
+(str) the project associated with the run
+</td>
+</tr><tr>
+<td>
+<code>entity</code>
+</td>
+<td>
+(str) the name of the entity associated with the run
+</td>
+</tr><tr>
+<td>
+<code>user</code>
+</td>
+<td>
+(str) the name of the user who created the run
+</td>
+</tr><tr>
+<td>
+<code>path</code>
+</td>
+<td>
+(str) Unique identifier [entity]/[project]/[run_id]
+</td>
+</tr><tr>
+<td>
+<code>notes</code>
+</td>
+<td>
+(str) Notes about the run
+</td>
+</tr><tr>
+<td>
+<code>read_only</code>
+</td>
+<td>
+(boolean) Whether the run is editable
+</td>
+</tr><tr>
+<td>
+<code>history_keys</code>
+</td>
+<td>
+(str) Keys of the history metrics that have been logged
+with `wandb.log({key: value})`
 </td>
 </tr><tr>
 <td>
@@ -55,35 +155,7 @@ A single run associated with an entity and project.
 </td>
 </tr><tr>
 <td>
-<code>name</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-<code>path</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
 <code>storage_id</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-<code>summary</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-<code>url</code>
 </td>
 <td>
 

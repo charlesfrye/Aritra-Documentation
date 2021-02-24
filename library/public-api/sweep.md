@@ -33,10 +33,31 @@ api.sweep(sweep_path)
 
 <tr>
 <td>
+<code>runs</code>
+</td>
+<td>
+(`Runs`) list of runs
+</td>
+</tr><tr>
+<td>
+<code>id</code>
+</td>
+<td>
+(str) sweep id
+</td>
+</tr><tr>
+<td>
+<code>project</code>
+</td>
+<td>
+(str) name of project
+</td>
+</tr><tr>
+<td>
 <code>config</code>
 </td>
 <td>
-
+(str) dictionary of sweep configuration
 </td>
 </tr><tr>
 <td>
