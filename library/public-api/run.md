@@ -206,7 +206,7 @@ Deletes the given run from the wandb backend.
 )</code></pre>
 
 Arguments:
-    name (str): name of requested file.
+    name: (str) name of requested file.
 
 <!-- Tabular view -->
 <table>
@@ -230,8 +230,8 @@ A `File` matching the name argument.
 )</code></pre>
 
 Arguments:
-    names (list): names of the requested files, if empty returns all files
-    per_page (int): number of results per page
+    names: (list) names of the requested files, if empty returns all files
+    per_page: (int) number of results per page
 
 <!-- Tabular view -->
 <table>
@@ -261,16 +261,43 @@ the history records being sampled.
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-samples (int, optional): The number of samples to return
-pandas (bool, optional): Return a pandas dataframe
-keys (list, optional): Only return metrics for specific keys
-x_axis (str, optional): Use this metric as the xAxis defaults to _step
-stream (str, optional): "default" for metrics, "system" for machine metrics
+<code>samples</code>
+</td>
+<td>
+(int, optional) The number of samples to return
+</td>
+</tr><tr>
+<td>
+<code>pandas</code>
+</td>
+<td>
+(bool, optional) Return a pandas dataframe
+</td>
+</tr><tr>
+<td>
+<code>keys</code>
+</td>
+<td>
+(list, optional) Only return metrics for specific keys
+</td>
+</tr><tr>
+<td>
+<code>x_axis</code>
+</td>
+<td>
+(str, optional) Use this metric as the xAxis defaults to _step
+</td>
+</tr><tr>
+<td>
+<code>stream</code>
+</td>
+<td>
+(str, optional) "default" for metrics, "system" for machine metrics
 </td>
 </tr>
-
 </table>
 
 
@@ -314,14 +341,23 @@ Declare an artifact as output of a run.
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-artifact (`Artifact`): An artifact returned from
+<code>artifact</code>
+</td>
+<td>
+(`Artifact`) An artifact returned from
 `wandb.Api().artifact(name)`
-aliases (list, optional): Aliases to apply to this artifact
+</td>
+</tr><tr>
+<td>
+<code>aliases</code>
+</td>
+<td>
+(list, optional) Aliases to apply to this artifact
 </td>
 </tr>
-
 </table>
 
 
@@ -386,13 +422,22 @@ losses = [row["Loss"] for row in history]
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-keys ([str], optional): only fetch these keys, and only fetch rows that have all of keys defined.
-page_size (int, optional): size of pages to fetch from the api
+<code>keys</code>
+</td>
+<td>
+([str], optional) only fetch these keys, and only fetch rows that have all of keys defined.
+</td>
+</tr><tr>
+<td>
+<code>page_size</code>
+</td>
+<td>
+(int, optional) size of pages to fetch from the api
 </td>
 </tr>
-
 </table>
 
 
@@ -439,8 +484,8 @@ Persists changes to the run object to the wandb backend.
 )</code></pre>
 
 Arguments:
-    path (str): name of file to upload.
-    root (str): the root path to save the file relative to.  i.e.
+    path: (str) name of file to upload.
+    root: (str) the root path to save the file relative to.  i.e.
         If you want to have the file saved in the run as "my_dir/file.txt"
         and you're currently in "my_dir" you would set root to "../"
 
@@ -471,13 +516,16 @@ Declare an artifact as an input to a run.
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-artifact (`Artifact`): An artifact returned from
+<code>artifact</code>
+</td>
+<td>
+(`Artifact`) An artifact returned from
 `wandb.Api().artifact(name)`
 </td>
 </tr>
-
 </table>
 
 
