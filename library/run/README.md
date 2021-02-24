@@ -22,10 +22,6 @@ The most commonly used functions/objects are:
 
 For examples usage, see github.com/wandb/examples
 
-## Classes
-
-[`class settings`](./settings.md): Settings Constructor
-
 ## Functions
 
 [`alert(...)`](./alert.md): Launch an alert with the given title and text.

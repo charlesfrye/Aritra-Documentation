@@ -102,8 +102,7 @@ if __name__== "__main__":
         'config',
         'summary',
         'login',
-        'alert',
-        'settings']
+        'alert',]
     
     wandb.__all__ = wandb_run
     try:

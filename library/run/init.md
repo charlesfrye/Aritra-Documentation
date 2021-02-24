@@ -34,7 +34,7 @@ Start a new tracked run with `wandb.init()`.
     monitor_gym=None,
     save_code=None,
     id=None,
-    settings: Union[<a href="../run/settings.md"><code>run.settings</code></a>, Dict[str, Any], None] = None
+    settings: Union[Settings, Dict[str, Any], None] = None
 ) -> Union[Run, RunDisabled, None]</code></pre>
 
 

@@ -4,7 +4,6 @@
 * [Library](library/README.md)
   * [Run](library/run/README.md)
     * [alert](library/run/alert.md)
-    * [settings](library/run/settings.md)
     * [config](library/run/config.md)
     * [login](library/run/login.md)
     * [summary](library/run/summary.md)
