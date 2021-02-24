@@ -61,22 +61,43 @@ the data on the client side or you may get degraded performance.
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-row (dict, optional): A dict of serializable python objects i.e `str`,
+<code>row</code>
+</td>
+<td>
+(dict, optional) A dict of serializable python objects i.e `str`,
 `ints`, `floats`, `Tensors`, `dicts`, or `wandb.data_types`.
-commit (boolean, optional): Save the metrics dict to the wandb server
+</td>
+</tr><tr>
+<td>
+<code>commit</code>
+</td>
+<td>
+(boolean, optional) Save the metrics dict to the wandb server
 and increment the step.  If false `wandb.log` just updates the current
 metrics dict with the row argument and metrics won't be saved until
 `wandb.log` is called with `commit=True`.
-step (integer, optional): The global step in processing. This persists
+</td>
+</tr><tr>
+<td>
+<code>step</code>
+</td>
+<td>
+(integer, optional) The global step in processing. This persists
 any non-committed earlier steps but defaults to not committing the
 specified step.
-sync (boolean, True): This argument is deprecated and currently doesn't
+</td>
+</tr><tr>
+<td>
+<code>sync</code>
+</td>
+<td>
+(boolean, True) This argument is deprecated and currently doesn't
 change the behaviour of `wandb.log`.
 </td>
 </tr>
-
 </table>
 
 
