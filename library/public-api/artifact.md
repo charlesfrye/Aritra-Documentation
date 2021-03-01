@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2449-L3221)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2451-L3253)
 
 
 
@@ -103,7 +103,10 @@ Returns:
 <code>description</code>
 </td>
 <td>
-
+Returns:
+(str): Free text that offers a description of the artifact. The
+description is markdown rendered in the UI, so this is a good place
+to put links, etc.
 </td>
 </tr><tr>
 <td>
@@ -156,7 +159,8 @@ and plottable in the UI. There is a hard limit of 100 total keys.
 <code>name</code>
 </td>
 <td>
-
+Returns:
+(str): The artifact's name
 </td>
 </tr><tr>
 <td>
@@ -189,7 +193,8 @@ Returns:
 <code>type</code>
 </td>
 <td>
-
+Returns:
+(str): The artifact's type
 </td>
 </tr><tr>
 <td>
@@ -198,6 +203,16 @@ Returns:
 <td>
 Returns:
 (datetime): The time at which the artifact was last updated.
+</td>
+</tr><tr>
+<td>
+<code>version</code>
+</td>
+<td>
+Returns:
+(int): The version of this artifact. For example, if this
+is the first version of an artifact, its `version` will
+be 'v0'.
 </td>
 </tr>
 </table>
@@ -208,7 +223,7 @@ Returns:
 
 <h3 id="add"><code>add</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2758-L2759">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2764-L2765">View source</a>
 
 <pre><code>add(
     obj, name
@@ -280,7 +295,7 @@ table = artifact.get("my_table")
 
 <h3 id="add_dir"><code>add_dir</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2752-L2753">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2758-L2759">View source</a>
 
 <pre><code>add_dir(
     path, name=None
@@ -358,7 +373,7 @@ None
 
 <h3 id="add_file"><code>add_file</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2749-L2750">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2755-L2756">View source</a>
 
 <pre><code>add_file(
     local_path, name=None, is_tmp=(False)
@@ -447,7 +462,7 @@ the added manifest entry
 
 <h3 id="add_reference"><code>add_reference</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2755-L2756">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2761-L2762">View source</a>
 
 <pre><code>add_reference(
     uri, name=None, checksum=(True), max_objects=None
@@ -564,9 +579,51 @@ artifact.add_reference('gs://mybucket/prefix', name='path')
 ```
 
 
+<h3 id="checkout"><code>checkout</code></h3>
+
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2919-L2934">View source</a>
+
+<pre><code>checkout(
+    root=None
+)</code></pre>
+
+Replaces the specified root directory with the contents of the artifact.
+
+WARNING: This will DELETE all files in `root` that are not included in the
+artifact.
+
+<!-- Tabular view -->
+<table>
+<tr><th>Arguments</th></tr>
+
+<tr>
+<td>
+<code>root</code>
+</td>
+<td>
+(str, optional) The directory to replace with this artifact's files.
+</td>
+</tr>
+</table>
+
+
+
+<!-- Tabular view -->
+<table>
+<tr><th>Returns</th></tr>
+<tr>
+<td>
+(str): The path to the checked out contents.
+</td>
+</tr>
+
+</table>
+
+
+
 <h3 id="delete"><code>delete</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2729-L2744">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2735-L2750">View source</a>
 
 <pre><code>delete()</code></pre>
 
@@ -575,7 +632,7 @@ Delete artifact and its files.
 
 <h3 id="download"><code>download</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2881-L2911">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2887-L2917">View source</a>
 
 <pre><code>download(
     root=None, recursive=(False)
@@ -596,7 +653,7 @@ match the artifact.
 <code>root</code>
 </td>
 <td>
-(str, optional) The directory in which to download this artifact's files
+(str, optional) The directory in which to download this artifact's files.
 </td>
 </tr><tr>
 <td>
@@ -616,7 +673,7 @@ downloaded. Otherwise, the dependent artifacts are downloaded as needed.
 <tr><th>Returns</th></tr>
 <tr>
 <td>
-The path to the downloaded contents.
+(str): The path to the downloaded contents.
 </td>
 </tr>
 
@@ -626,7 +683,7 @@ The path to the downloaded contents.
 
 <h3 id="expected_type"><code>expected_type</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2687-L2727">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2693-L2733">View source</a>
 
 <pre><code>@staticmethod</code>
 <code>expected_type(
@@ -638,7 +695,7 @@ Returns the expected type for a given artifact name and project
 
 <h3 id="file"><code>file</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2913-L2934">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2968-L2989">View source</a>
 
 <pre><code>file(
     root=None
@@ -678,7 +735,7 @@ Download a single file artifact to dir specified by the <root>
 
 <h3 id="from_id"><code>from_id</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2532-L2572">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2534-L2574">View source</a>
 
 <pre><code>@classmethod</code>
 <code>from_id(
@@ -690,7 +747,7 @@ Download a single file artifact to dir specified by the <root>
 
 <h3 id="get"><code>get</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2853-L2879">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2859-L2885">View source</a>
 
 <pre><code>get(
     name
@@ -753,7 +810,7 @@ with wandb.init() as r:
 
 <h3 id="get_path"><code>get_path</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2782-L2851">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2788-L2857">View source</a>
 
 <pre><code>get_path(
     name
@@ -818,7 +875,7 @@ with wandb.init() as r:
 
 <h3 id="logged_by"><code>logged_by</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L3188-L3221">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L3220-L3253">View source</a>
 
 <pre><code>logged_by()</code></pre>
 
@@ -843,7 +900,7 @@ Run object which logged this artifact
 
 <h3 id="new_file"><code>new_file</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2746-L2747">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2752-L2753">View source</a>
 
 <pre><code>new_file(
     name, mode=None
@@ -902,7 +959,7 @@ the file will be automatically added to the artifact.
 
 <h3 id="save"><code>save</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2947-L2985">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L3006-L3044">View source</a>
 
 <pre><code>save()</code></pre>
 
@@ -911,7 +968,7 @@ Persists artifact changes to the wandb backend.
 
 <h3 id="used_by"><code>used_by</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L3144-L3186">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L3176-L3218">View source</a>
 
 <pre><code>used_by()</code></pre>
 
@@ -933,13 +990,18 @@ Retrieves the runs which use this artifact directly
 
 <h3 id="verify"><code>verify</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2987-L3015">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L2936-L2966">View source</a>
 
 <pre><code>verify(
     root=None
 )</code></pre>
 
-Verify an artifact by checksumming its downloaded contents.
+Verify that the actual contents of an artifact at a specified directory
+`root` match the expected contents of the artifact according to its
+manifest.
+
+All files in the directory are checksummed and the checksums are then
+cross-referenced against the artifact's manifest.
 
 NOTE: References are not verified.
 
@@ -952,7 +1014,7 @@ NOTE: References are not verified.
 <code>root</code>
 </td>
 <td>
-(str, optional) directory to download artifact to. If None
+(str, optional) The directory to verify. If None
 artifact will be downloaded to './artifacts/<self.name>/'
 </td>
 </tr>
@@ -966,6 +1028,28 @@ artifact will be downloaded to './artifacts/<self.name>/'
 <tr>
 <td>
 (ValueError): If the verification fails.
+</td>
+</tr>
+
+</table>
+
+
+
+<h3 id="wait"><code>wait</code></h3>
+
+<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/apis/public.py#L3046-L3047">View source</a>
+
+<pre><code>wait()</code></pre>
+
+Waits for this artifact to finish logging, if needed.
+
+
+<!-- Tabular view -->
+<table>
+<tr><th>Returns</th></tr>
+<tr>
+<td>
+Artifact
 </td>
 </tr>
 
