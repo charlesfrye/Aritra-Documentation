@@ -52,14 +52,13 @@ def build_docs(name_pair,output_dir,code_url_prefix, search_hints, gen_report):
 if __name__== "__main__":
     CODE_URL_PREFIX = "https://www.github.com/wandb/client/tree/master/wandb"
 
+    # For library
     wandb_classes = [
         'Artifact'
         ]
-
     wandb.__all__ = wandb_classes
     wandb.__doc__ = """
     """
-    
     build_docs(
         name_pair=("library", wandb),
         output_dir=".",
@@ -67,15 +66,17 @@ if __name__== "__main__":
         search_hints=False,
         gen_report=False)
 
+    # For run
+    wandb.Settings = wandb.wandb_sdk.Settings
     wandb_run = [
         'init',
         'log',
         'config',
         'summary',
+        'Settings',
         'login',
         'alert',
         'finish',]
-    
     wandb.__all__ = wandb_run
     wandb.__doc__ = """
     """
@@ -94,6 +95,7 @@ if __name__== "__main__":
         search_hints=False,
         gen_report=False)
 
+    # For library
     wandb_datatypes = [
         'Image',
         'Plotly',
@@ -104,11 +106,9 @@ if __name__== "__main__":
         'Object3D',
         'Molecule',
         'Histogram',]
-
     wandb.__all__ = wandb_datatypes
     wandb.__doc__ = """
     """
-
     build_docs(
         name_pair=("data-types",wandb),
         output_dir="./library",
@@ -116,6 +116,7 @@ if __name__== "__main__":
         search_hints=False,
         gen_report=False)
     
+    # For library
     wandb.Api = wandb.apis.public.Api
     wandb.Projects = wandb.apis.public.Projects
     wandb.Project = wandb.apis.public.Project
@@ -148,7 +149,6 @@ if __name__== "__main__":
 
     See the [Generated Reference Docs](../ref/public-api/) for details on available functions.
     """
-
     build_docs(
         name_pair=("public-api",wandb),
         output_dir="./library",
