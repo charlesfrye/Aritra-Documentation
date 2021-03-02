@@ -5,8 +5,9 @@
 ## generate.py
 The follwing is a road map of how to generate documentaion like tensorflow.
 **Steps**
-1. `pip install git+https://github.com/ariG23498/docs@wandb-docs` This installs the modified `tensorflow_docs`. The modifications are minor templating changes.
-3. `python generate.py` creates the documentation.
+1. `pip install git+git://github.com/ariG23498/docs.git@wandb-docs` This installs the modified `tensorflow_docs`. The modifications are minor templating changes.
+2. `pip install git+git://github.com/wandb/client.git@<git_hash>` This will install the wandb version that we want.
+3. `python generate.py` creates the documentation. Here the script will ask for the `git_hash`. Please provide the git hash so that the source links do not change.
 
 **Outputs**
 A folder named `library` in the same folder as the code. The files in the `library` folder are the generated markdown.
