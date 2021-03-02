@@ -50,7 +50,8 @@ def build_docs(name_pair,output_dir,code_url_prefix, search_hints, gen_report):
 
 
 if __name__== "__main__":
-    CODE_URL_PREFIX = "https://www.github.com/wandb/client/tree/master/wandb"
+    git_hash = input("Provide Git Hash: ")
+    CODE_URL_PREFIX = f"https://www.github.com/wandb/client/tree/{git_hash}/wandb"
 
     # For library
     wandb_classes = [

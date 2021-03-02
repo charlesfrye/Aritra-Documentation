@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L109-L398)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/bdf4b81e3bd3af7f5cd7caf3a7d7d0244d324138/wandb/data_types.py#L109-L398)
 
 
 
@@ -60,7 +60,7 @@ allow_mixed_types (bool): Determines if columns are allowed to have mixed types 
 
 <h3 id="add_data"><code>add_data</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L264-L273">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/bdf4b81e3bd3af7f5cd7caf3a7d7d0244d324138/wandb/data_types.py#L264-L273">View source</a>
 
 <pre><code>add_data(
     *data
@@ -71,7 +71,7 @@ Add a row of data to the table. Argument length should match column length
 
 <h3 id="add_row"><code>add_row</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L260-L262">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/bdf4b81e3bd3af7f5cd7caf3a7d7d0244d324138/wandb/data_types.py#L260-L262">View source</a>
 
 <pre><code>add_row(
     *row
@@ -82,7 +82,7 @@ Add a row of data to the table. Argument length should match column length
 
 <h3 id="cast"><code>cast</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L222-L239">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/bdf4b81e3bd3af7f5cd7caf3a7d7d0244d324138/wandb/data_types.py#L222-L239">View source</a>
 
 <pre><code>cast(
     col_name, dtype, optional=(False)
@@ -93,7 +93,7 @@ Add a row of data to the table. Argument length should match column length
 
 <h3 id="iterrows"><code>iterrows</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/master/wandb/data_types.py#L388-L398">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/bdf4b81e3bd3af7f5cd7caf3a7d7d0244d324138/wandb/data_types.py#L388-L398">View source</a>
 
 <pre><code>iterrows()</code></pre>
 
