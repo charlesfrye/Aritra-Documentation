@@ -57,6 +57,8 @@ if __name__== "__main__":
         ]
 
     wandb.__all__ = wandb_classes
+    wandb.__doc__ = """
+    """
     
     build_docs(
         name_pair=("library", wandb),
@@ -71,9 +73,12 @@ if __name__== "__main__":
         'config',
         'summary',
         'login',
-        'alert',]
+        'alert',
+        'finish',]
     
     wandb.__all__ = wandb_run
+    wandb.__doc__ = """
+    """
     try:
         doc_controls.do_not_generate_docs(wandb.settings.Console)
     except AttributeError:
@@ -101,6 +106,8 @@ if __name__== "__main__":
         'Histogram',]
 
     wandb.__all__ = wandb_datatypes
+    wandb.__doc__ = """
+    """
 
     build_docs(
         name_pair=("data-types",wandb),
