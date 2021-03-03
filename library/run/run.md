@@ -958,18 +958,5 @@ An `Artifact` object.
 
 
 
-<h3 id="__exit__"><code>__exit__</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L2261-L2269">View source</a>
-
-<pre><code>__exit__(
-    exc_type: Type[BaseException],
-    exc_val: BaseException,
-    exc_tb: TracebackType
-) -> bool</code></pre>
-
-
-
-
 
 

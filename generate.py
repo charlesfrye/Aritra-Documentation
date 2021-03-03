@@ -93,7 +93,7 @@ if __name__== "__main__":
     # except AttributeError:
     #     pass
     try:
-        doc_controls.do_not_generate_docs(wandb.Run.__enter__)
+        doc_controls.do_not_generate_docs(wandb.Run.__exit__)
     except AttributeError:
         pass
     try:
