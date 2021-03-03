@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/bdf4b81e3bd3af7f5cd7caf3a7d7d0244d324138/wandb/sdk/wandb_init.py#L553-L781)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_init.py#L553-L781)
 
 
 
@@ -34,7 +34,7 @@ Start a new tracked run with `wandb.init()`.
     monitor_gym=None,
     save_code=None,
     id=None,
-    settings: Union[<a href="../run/Settings.md"><code>run.Settings</code></a>, Dict[str, Any], None] = None
+    settings: Union[Settings, Dict[str, Any], None] = None
 ) -> Union[Run, RunDisabled, None]</code></pre>
 
 

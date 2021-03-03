@@ -68,27 +68,28 @@ if __name__== "__main__":
         gen_report=False)
 
     # For run
-    wandb.Settings = wandb.wandb_sdk.Settings
+    # wandb.Settings = wandb.wandb_sdk.Settings [DOCS-67]
     wandb_run = [
         'init',
         'log',
         'config',
         'summary',
-        'Settings',
+        # 'Settings', [DOCS-67]
         'login',
         'alert',
         'finish',]
     wandb.__all__ = wandb_run
     wandb.__doc__ = """
     """
-    try:
-        doc_controls.do_not_generate_docs(wandb.settings.Console)
-    except AttributeError:
-        pass
-    try:
-        doc_controls.do_not_generate_docs(wandb.settings.Source)
-    except AttributeError:
-        pass
+    # Settings Classes that do not need to be documented
+    # try:
+    #     doc_controls.do_not_generate_docs(wandb.Settings.Console)
+    # except AttributeError:
+    #     pass
+    # try:
+    #     doc_controls.do_not_generate_docs(wandb.Settings.Source)
+    # except AttributeError:
+    #     pass
     build_docs(
         name_pair=("run",wandb),
         output_dir="./library",

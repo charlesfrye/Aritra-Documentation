@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/bdf4b81e3bd3af7f5cd7caf3a7d7d0244d324138/wandb/sdk/data_types.py#L1459-L1920)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/data_types.py#L1459-L1920)
 
 
 
@@ -62,7 +62,7 @@ the data format and converts it.
 
 <h3 id="all_boxes"><code>all_boxes</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/bdf4b81e3bd3af7f5cd7caf3a7d7d0244d324138/wandb/sdk/data_types.py#L1877-L1898">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/data_types.py#L1877-L1898">View source</a>
 
 <pre><code>@classmethod</code>
 <code>all_boxes(
@@ -77,7 +77,7 @@ the data format and converts it.
 
 <h3 id="all_captions"><code>all_captions</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/bdf4b81e3bd3af7f5cd7caf3a7d7d0244d324138/wandb/sdk/data_types.py#L1900-L1904">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/data_types.py#L1900-L1904">View source</a>
 
 <pre><code>@classmethod</code>
 <code>all_captions(
@@ -89,7 +89,7 @@ the data format and converts it.
 
 <h3 id="all_masks"><code>all_masks</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/bdf4b81e3bd3af7f5cd7caf3a7d7d0244d324138/wandb/sdk/data_types.py#L1854-L1875">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/data_types.py#L1854-L1875">View source</a>
 
 <pre><code>@classmethod</code>
 <code>all_masks(
@@ -104,7 +104,7 @@ the data format and converts it.
 
 <h3 id="guess_mode"><code>guess_mode</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/bdf4b81e3bd3af7f5cd7caf3a7d7d0244d324138/wandb/sdk/data_types.py#L1748-L1762">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/data_types.py#L1748-L1762">View source</a>
 
 <pre><code>guess_mode(
     data: "np.ndarray"
@@ -115,7 +115,7 @@ Guess what type of image the np.array is representing
 
 <h3 id="to_uint8"><code>to_uint8</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/bdf4b81e3bd3af7f5cd7caf3a7d7d0244d324138/wandb/sdk/data_types.py#L1764-L1786">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/data_types.py#L1764-L1786">View source</a>
 
 <pre><code>@classmethod</code>
 <code>to_uint8(
