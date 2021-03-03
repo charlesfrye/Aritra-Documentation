@@ -12,6 +12,10 @@
 
 
 
+## Classes
+
+[`class Run`](./run.md): The run object corresponds to a single execution of your script,
+
 ## Functions
 
 [`alert(...)`](./alert.md): Launch an alert with the given title and text.

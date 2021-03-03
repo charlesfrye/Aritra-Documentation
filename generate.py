@@ -30,7 +30,7 @@ def build_docs(name_pair,output_dir,code_url_prefix, search_hints, gen_report):
             docstrings of the public API.
     """
     # This is to help not document the parent class methods
-    for cls in [wandb.data_types.WBValue, wandb.data_types.Media, wandb.data_types.BatchableMedia, wandb.apis.public.Paginator]:
+    for cls in [wandb.data_types.WBValue, wandb.data_types.Media, wandb.data_types.BatchableMedia, wandb.apis.public.Paginator, wandb.sdk.wandb_run.Run]:
         doc_controls.decorate_all_class_attributes(
             decorator=doc_controls.do_not_doc_in_subclasses,
             cls=cls,
@@ -68,8 +68,10 @@ if __name__== "__main__":
         gen_report=False)
 
     # For run
+    wandb.Run = wandb.sdk.wandb_run.Run
     # wandb.Settings = wandb.wandb_sdk.Settings [DOCS-67]
     wandb_run = [
+        'Run',
         'init',
         'log',
         'config',
@@ -90,6 +92,14 @@ if __name__== "__main__":
     #     doc_controls.do_not_generate_docs(wandb.Settings.Source)
     # except AttributeError:
     #     pass
+    try:
+        doc_controls.do_not_generate_docs(wandb.Run.__enter__)
+    except AttributeError:
+        pass
+    try:
+        doc_controls.do_not_generate_docs(wandb.Run.__enter__)
+    except AttributeError:
+        pass
     build_docs(
         name_pair=("run",wandb),
         output_dir="./library",
