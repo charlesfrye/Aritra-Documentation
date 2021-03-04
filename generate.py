@@ -30,7 +30,7 @@ def build_docs(name_pair,output_dir,code_url_prefix, search_hints, gen_report):
             docstrings of the public API.
     """
     # This is to help not document the parent class methods
-    for cls in [wandb.data_types.WBValue, wandb.data_types.Media, wandb.data_types.BatchableMedia, wandb.apis.public.Paginator, wandb.sdk.wandb_run.Run]:
+    for cls in [wandb.data_types.WBValue, wandb.data_types.Media, wandb.data_types.BatchableMedia, wandb.apis.public.Paginator]:
         doc_controls.decorate_all_class_attributes(
             decorator=doc_controls.do_not_doc_in_subclasses,
             cls=cls,
@@ -50,48 +50,23 @@ def build_docs(name_pair,output_dir,code_url_prefix, search_hints, gen_report):
 
 
 if __name__== "__main__":
+    # GitHash: 3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c
     git_hash = input("Provide Git Hash: ")
     CODE_URL_PREFIX = f"https://www.github.com/wandb/client/tree/{git_hash}/wandb"
 
     # For library
+    wandb.Run = wandb.sdk.wandb_run.Run
     wandb_classes = [
-        'Artifact'
+        'Artifact',
+        'config',
+        'summary',
+        'init',
+        'login',
+        'Run',
         ]
     wandb.__all__ = wandb_classes
     wandb.__doc__ = """
     """
-    build_docs(
-        name_pair=("library", wandb),
-        output_dir=".",
-        code_url_prefix=CODE_URL_PREFIX,
-        search_hints=False,
-        gen_report=False)
-
-    # For run
-    wandb.Run = wandb.sdk.wandb_run.Run
-    # wandb.Settings = wandb.wandb_sdk.Settings [DOCS-67]
-    wandb_run = [
-        'Run',
-        'init',
-        'log',
-        'config',
-        'summary',
-        # 'Settings', [DOCS-67]
-        'login',
-        'alert',
-        'finish',]
-    wandb.__all__ = wandb_run
-    wandb.__doc__ = """
-    """
-    # Settings Classes that do not need to be documented
-    # try:
-    #     doc_controls.do_not_generate_docs(wandb.Settings.Console)
-    # except AttributeError:
-    #     pass
-    # try:
-    #     doc_controls.do_not_generate_docs(wandb.Settings.Source)
-    # except AttributeError:
-    #     pass
     try:
         doc_controls.do_not_generate_docs(wandb.Run.__exit__)
     except AttributeError:
@@ -101,11 +76,37 @@ if __name__== "__main__":
     except AttributeError:
         pass
     build_docs(
-        name_pair=("run",wandb),
-        output_dir="./library",
+        name_pair=("library", wandb),
+        output_dir=".",
         code_url_prefix=CODE_URL_PREFIX,
         search_hints=False,
         gen_report=False)
+
+    # For run
+    # wandb.Settings = wandb.wandb_sdk.Settings [DOCS-67]
+    # wandb_run = [
+    #     'log',
+    #     # 'Settings', [DOCS-67]
+    #     'alert',
+    #     'finish',]
+    # wandb.__all__ = wandb_run
+    # wandb.__doc__ = """
+    # """
+    # Settings Classes that do not need to be documented
+    # try:
+    #     doc_controls.do_not_generate_docs(wandb.Settings.Console)
+    # except AttributeError:
+    #     pass
+    # try:
+    #     doc_controls.do_not_generate_docs(wandb.Settings.Source)
+    # except AttributeError:
+    #     pass
+    # build_docs(
+    #     name_pair=("run",wandb),
+    #     output_dir="./library",
+    #     code_url_prefix=CODE_URL_PREFIX,
+    #     search_hints=False,
+    #     gen_report=False)
 
     # For library
     wandb_datatypes = [
@@ -179,7 +180,7 @@ if __name__== "__main__":
 
     # Moving all the folder md to respective folders
     rename(f"{directory}/library.md", f"{directory}/library/README.md")
-    rename(f"{directory}/library/run.md", f"{directory}/library/run/README.md")
+    # rename(f"{directory}/library/run.md", f"{directory}/library/run/README.md")
     rename(f"{directory}/library/data-types.md", f"{directory}/library/data-types/README.md")
     rename(f"{directory}/library/public-api.md", f"{directory}/library/public-api/README.md")
 
