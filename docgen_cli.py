@@ -116,57 +116,58 @@ def markdown_render(command):
 
 
 ########## BEGIN First pass for wandb
-usage, summary, parsed_dict = process("wandb")
-if usage:
-    usage = usage.split(":")[1]
-    usage = f"**Usage**\n\n`{usage}`"
-if summary:
-    summary = f"**Summary**\n{summary}"
-options = ""
-commands = ""
-op_flag = True
-co_flag = True
-for k, v in parsed_dict.items():
-    for element in v:
-        if k == "Options:":
-            des = (
-                " ".join(list(filter(lambda x: x, element[1].split(" ")[1:])))
-                if element[1].split(" ")[0].isupper()
-                else element[1]
+def cli_gen():
+    usage, summary, parsed_dict = process("wandb")
+    if usage:
+        usage = usage.split(":")[1]
+        usage = f"**Usage**\n\n`{usage}`"
+    if summary:
+        summary = f"**Summary**\n{summary}"
+    options = ""
+    commands = ""
+    op_flag = True
+    co_flag = True
+    for k, v in parsed_dict.items():
+        for element in v:
+            if k == "Options:":
+                des = (
+                    " ".join(list(filter(lambda x: x, element[1].split(" ")[1:])))
+                    if element[1].split(" ")[0].isupper()
+                    else element[1]
+                )
+                options += """|{}|{}|\n""".format(element[0], des)
+            elif k == "Commands:":
+                des = (
+                    " ".join(list(filter(lambda x: x, element[1].split(" ")[1:])))
+                    if element[1].split(" ")[0].isupper()
+                    else element[1]
+                )
+                commands += """|{}|{}|\n""".format(element[0], des)
+        if options and op_flag:
+            options = (
+                """**Options**\n| **Options** | **Description** |\n|:--|:--|:--|\n"""
+                + options
             )
-            options += """|{}|{}|\n""".format(element[0], des)
-        elif k == "Commands:":
-            des = (
-                " ".join(list(filter(lambda x: x, element[1].split(" ")[1:])))
-                if element[1].split(" ")[0].isupper()
-                else element[1]
+            op_flag = False
+        if commands and co_flag:
+            commands = (
+                """**Commands**\n| **Commands** | **Description** |\n|:--|:--|:--|\n"""
+                + commands
             )
-            commands += """|{}|{}|\n""".format(element[0], des)
-    if options and op_flag:
-        options = (
-            """**Options**\n| **Options** | **Description** |\n|:--|:--|:--|\n"""
-            + options
-        )
-        op_flag = False
-    if commands and co_flag:
-        commands = (
-            """**Commands**\n| **Commands** | **Description** |\n|:--|:--|:--|\n"""
-            + commands
-        )
-        co_flag = False
-if usage or summary or options or commands:
-    with open("library/cli.md", "w") as fp:
-        fp.write(
-            TEMPLATE.format(
-                f"# wandb",  # Heading
-                usage,  # Usage
-                summary,
-                options,  # Options
-                commands,  # Commands
+            co_flag = False
+    if usage or summary or options or commands:
+        with open("library/cli.md", "w") as fp:
+            fp.write(
+                TEMPLATE.format(
+                    f"# wandb",  # Heading
+                    usage,  # Usage
+                    summary,
+                    options,  # Options
+                    commands,  # Commands
+                )
             )
-        )
-########## END First pass for wandb
+    ########## END First pass for wandb
 
-commands = parsed_dict["Commands:"]
-for command in commands:
-    markdown_render(f"wandb {command[0]}")
+    commands = parsed_dict["Commands:"]
+    for command in commands:
+        markdown_render(f"wandb {command[0]}")

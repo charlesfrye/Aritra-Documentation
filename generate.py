@@ -18,6 +18,8 @@ import wandb
 from tensorflow_docs.api_generator import doc_controls
 from tensorflow_docs.api_generator import generate_lib
 
+from docgen_cli import cli_gen
+
 
 def build_docs(name_pair, output_dir, code_url_prefix, search_hints, gen_report):
     """Build api docs for w&b.
@@ -55,9 +57,44 @@ def build_docs(name_pair, output_dir, code_url_prefix, search_hints, gen_report)
     doc_generator.build(output_dir)
 
 
+def populate_summary(folder: str) -> None:
+    """Populates the `SUMMARY.md` with generated filne names.
+
+    GitBook uses the `SUMMARY.md` file to handle what we see in
+    the site. With automated docs, we need to generate the file names
+    and insert the names into the `SUMMARY.md` file.
+
+    Args:
+        folder: Str. The root folder that contains
+            the generated docs.
+    """
+    with open("_SUMMARY.md", "r") as f:
+        doc_structure = f.read()
+    lines = []
+    indent = 0
+    for root, dirs, files in walk(folder):
+        if "/" in root:
+            short_root = root.split("/")
+            indent = len(short_root)
+            short_root = short_root[-1]
+        else:
+            short_root = root
+        lines.append(" "*indent+f"* [{short_root}]({root}/README.md)")
+        for file_name in files:
+            if file_name != "README.md":
+                short_name = file_name.split(".")[0]
+                lines.append(" "*indent+f"  * [{short_name}]({root}/{file_name})")
+    lines = "\n".join(lines)
+    doc_structure = doc_structure.format(autodoc=lines)
+    with open("SUMMARY.md","w") as f:
+        f.write(doc_structure)
+
+
+
+
 if __name__ == "__main__":
     # GitHash: 3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c
-    git_hash = input("Provide Git Hash: ")
+    git_hash = "3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c"
     CODE_URL_PREFIX = f"https://www.github.com/wandb/client/tree/{git_hash}/wandb"
 
     # For library
@@ -208,3 +245,9 @@ if __name__ == "__main__":
             else:
                 short_name = name.replace(" ", "-").lower()
             rename(f"{directory}/{root}/{name}", f"{directory}/{root}/{short_name}")
+    
+    # Create the CLI docs
+    cli_gen()
+    
+    # SUMMARY.md magic
+    populate_summary("library")
