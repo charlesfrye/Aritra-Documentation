@@ -10,6 +10,7 @@ Requires a local installation of `tensorflow_docs`:
 pip install git+https://github.com/tensorflow/docs
 ```
 """
+import argparse
 import os
 
 from tensorflow_docs.api_generator import doc_controls
@@ -19,19 +20,21 @@ import wandb
 from docgen_cli import cli_gen
 
 
-def main(git_hash):
-    code_url_prefix = f"https://www.github.com/wandb/client/tree/{git_hash}/wandb"
+def main(args):
+    git_hash = args.git_hash
+    output_dir = args.output_dir
+    code_url_prefix = "/".join([args.repo, "tree", f"{git_hash}", args.prefix])
 
-    build_library_docs(git_hash, code_url_prefix)
-    build_datatype_docs(git_hash, code_url_prefix)
-    build_api_docs(git_hash, code_url_prefix)
+    build_library_docs(git_hash, code_url_prefix, output_dir)
 
-    directory = os.getcwd()
+    build_datatype_docs(git_hash, code_url_prefix, output_dir)
+    build_api_docs(git_hash, code_url_prefix, output_dir)
 
     # convert generate_lib output to GitBook format
-    filter_files(directory, ["all_symbols.md", "_api_cache.json"])
-    rename_to_readme(directory)
-    clean_names(directory, "library")
+    rename_to_readme(output_dir)
+    library_dir = os.path.join(output_dir, "library")
+    filter_files(library_dir, ["all_symbols.md", "_api_cache.json"])
+    clean_names(library_dir)
 
     # Create the CLI docs
     cli_gen()
@@ -140,7 +143,7 @@ def add_files(files: list, root: str, indent: int) -> list:
     return file_markdowns
 
 
-def build_library_docs(git_hash, code_url_prefix):
+def build_library_docs(git_hash, code_url_prefix, output_dir):
     wandb.Run = wandb.sdk.wandb_run.Run
     wandb_classes = [
         "Artifact",
@@ -163,14 +166,14 @@ def build_library_docs(git_hash, code_url_prefix):
         pass
     build_docs(
         name_pair=("library", wandb),
-        output_dir=".",
+        output_dir=output_dir,
         code_url_prefix=code_url_prefix,
         search_hints=False,
         gen_report=False,
     )
 
 
-def build_datatype_docs(git_hash, code_url_prefix):
+def build_datatype_docs(git_hash, code_url_prefix, output_dir):
 
     wandb_datatypes = [
         "Image",
@@ -188,14 +191,14 @@ def build_datatype_docs(git_hash, code_url_prefix):
     """
     build_docs(
         name_pair=("data-types", wandb),
-        output_dir="./library",
+        output_dir=os.path.join(output_dir, "library"),
         code_url_prefix=code_url_prefix,
         search_hints=False,
         gen_report=False,
     )
 
 
-def build_api_docs(git_hash, code_url_prefix):
+def build_api_docs(git_hash, code_url_prefix, output_dir):
 
     wandb.Api = wandb.apis.public.Api
     wandb.Projects = wandb.apis.public.Projects
@@ -231,7 +234,7 @@ def build_api_docs(git_hash, code_url_prefix):
     """
     build_docs(
         name_pair=("public-api", wandb),
-        output_dir="./library",
+        output_dir=os.path.join(output_dir, "library"),
         code_url_prefix=code_url_prefix,
         search_hints=False,
         gen_report=False,
@@ -239,39 +242,50 @@ def build_api_docs(git_hash, code_url_prefix):
 
 
 def rename_to_readme(directory):
-    # Moving all the folder-level md to respective folders
-    os.rename(f"{directory}/library.md", f"{directory}/library/README.md")
-    os.rename(
-        f"{directory}/library/data-types.md",
-        f"{directory}/library/data-types/README.md",
-    )
-    os.rename(
-        f"{directory}/library/public-api.md",
-        f"{directory}/library/public-api/README.md",
-    )
+    """Moves all the folder-level markdown files into
+    their respective folders, as a README."""
+
+    for root, folders, file_names in os.walk(directory):
+        for file_name in file_names:
+            raw_file_name, suffix = file_name[:-3], file_name[-3:]
+            if suffix == ".md" and raw_file_name in folders:
+                os.rename(os.path.join(f"{root}", file_name),
+                          os.path.join(f"{root}", raw_file_name, "README.md"))
 
 
-def clean_names(directory, folder):
+def clean_names(directory):
     """Converts names to lower case and removes spaces
     """
-    for root, folder, file_names in os.walk(folder):
+    for root, folders, file_names in os.walk(directory):
         for name in file_names:
             if name == "README.md":
                 short_name = name
             else:
                 short_name = name.replace(" ", "-").lower()
-            os.rename(f"{directory}/{root}/{name}", f"{directory}/{root}/{short_name}")
+            os.rename(os.path.join(f"{root}", f"{name}"),
+                      os.path.join(f"{root}", f"{short_name}"))
 
 
 def filter_files(directory, files_to_remove):
-    for root, folder, file_names in os.walk(directory):
-        if "all_symbols.md" in file_names:
-            os.remove(f"{root}/all_symbols.md")
-        if "_api_cache.json" in file_names:
-            os.remove(f"{root}/_api_cache.json")
+    for root, _, file_names in os.walk(directory):
+        for file_name in file_names:
+            if file_name in files_to_remove:
+                os.remove(os.path.join(f"{root}", f"{file_name}"))
+
+
+def get_args():
+    parser = argparse.ArgumentParser(description="Generate documentation.")
+    parser.add_argument(
+        "--git_hash", type=str, default="3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c")
+    parser.add_argument(
+        "--repo", type=str, default="https://www.github.com/wandb/client")
+    parser.add_argument(
+        "--prefix", type=str, default="wandb")
+    parser.add_argument(
+        "--output_dir", type=str, default=os.getcwd())
+    return parser.parse_args()
 
 
 if __name__ == "__main__":
-    git_hash = "3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c"
-
-    main(git_hash)
+    args = get_args()
+    main(args)
