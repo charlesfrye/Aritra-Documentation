@@ -1,4 +1,4 @@
-# Table of contents
+# Table of Contents
 
-* [Documemtation Generation](README.md)
+* [Documentation Generation](README.md)
 {autodoc}
