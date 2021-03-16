@@ -11,18 +11,16 @@ pip install git+https://github.com/tensorflow/docs
 ```
 """
 from os import path, walk, getcwd, remove, rename
-from shutil import rmtree
-
-import wandb
 
 from tensorflow_docs.api_generator import doc_controls
 from tensorflow_docs.api_generator import generate_lib
+import wandb
 
 from docgen_cli import cli_gen
 
 
 def build_docs(name_pair, output_dir, code_url_prefix, search_hints, gen_report):
-    """Build api docs for w&b.
+    """Build api docs for W&B.
 
     Args:
         name_pair: Name of the pymodule
@@ -79,17 +77,16 @@ def populate_summary(folder: str) -> None:
             short_root = short_root[-1]
         else:
             short_root = root
-        lines.append(" "*indent+f"* [{short_root}]({root}/README.md)")
+        lines.append(" " * indent + f"* [{short_root}]({root}/README.md)")
         for file_name in files:
             if file_name != "README.md":
                 short_name = file_name.split(".")[0]
-                lines.append(" "*indent+f"  * [{short_name}]({root}/{file_name})")
+                lines.append(" " * indent + f"  * [{short_name}]({root}/{file_name})")
     lines = "\n".join(lines)
     doc_structure = doc_structure.format(autodoc=lines)
-    with open("SUMMARY.md","w") as f:
+
+    with open("SUMMARY.md", "w") as f:
         f.write(doc_structure)
-
-
 
 
 if __name__ == "__main__":
@@ -125,32 +122,6 @@ if __name__ == "__main__":
         search_hints=False,
         gen_report=False,
     )
-
-    # For run
-    # wandb.Settings = wandb.wandb_sdk.Settings [DOCS-67]
-    # wandb_run = [
-    #     'log',
-    #     # 'Settings', [DOCS-67]
-    #     'alert',
-    #     'finish',]
-    # wandb.__all__ = wandb_run
-    # wandb.__doc__ = """
-    # """
-    # Settings Classes that do not need to be documented
-    # try:
-    #     doc_controls.do_not_generate_docs(wandb.Settings.Console)
-    # except AttributeError:
-    #     pass
-    # try:
-    #     doc_controls.do_not_generate_docs(wandb.Settings.Source)
-    # except AttributeError:
-    #     pass
-    # build_docs(
-    #     name_pair=("run",wandb),
-    #     output_dir="./library",
-    #     code_url_prefix=CODE_URL_PREFIX,
-    #     search_hints=False,
-    #     gen_report=False)
 
     # For library
     wandb_datatypes = [
@@ -245,9 +216,9 @@ if __name__ == "__main__":
             else:
                 short_name = name.replace(" ", "-").lower()
             rename(f"{directory}/{root}/{name}", f"{directory}/{root}/{short_name}")
-    
+
     # Create the CLI docs
     cli_gen()
-    
+
     # SUMMARY.md magic
     populate_summary("library")

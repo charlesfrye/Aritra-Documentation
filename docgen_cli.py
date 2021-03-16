@@ -1,8 +1,6 @@
-# Imports
 import subprocess
 import re
 
-# Utils
 PATTERN = re.compile(r"(.*?\w) +(.*)")
 KEYWORDS = ["Options:", "Commands:"]
 TEMPLATE = """
@@ -115,7 +113,7 @@ def markdown_render(command):
                 markdown_render(f"{command} {element[0]}")
 
 
-########## BEGIN First pass for wandb
+# BEGIN First pass for wandb
 def cli_gen():
     usage, summary, parsed_dict = process("wandb")
     if usage:
@@ -159,14 +157,14 @@ def cli_gen():
         with open("library/cli.md", "w") as fp:
             fp.write(
                 TEMPLATE.format(
-                    f"# wandb",  # Heading
+                    "# wandb",  # Heading
                     usage,  # Usage
                     summary,
                     options,  # Options
                     commands,  # Commands
                 )
             )
-    ########## END First pass for wandb
+    # END First pass for wandb
 
     commands = parsed_dict["Commands:"]
     for command in commands:
