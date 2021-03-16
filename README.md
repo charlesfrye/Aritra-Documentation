@@ -17,7 +17,7 @@ A folder named `library` in the same folder as the code. The files in the `libra
 - `tensorflow_docs`
 - `wandb`
 
-## `docgen_cli.py
+## `docgen_cli.py`
 
 ### Usage
 ```bash
