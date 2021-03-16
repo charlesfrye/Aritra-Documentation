@@ -19,6 +19,8 @@ import wandb
 
 from docgen_cli import cli_gen
 
+DIRNAME = "library"
+
 
 def main(args):
     git_hash = args.git_hash
@@ -32,7 +34,7 @@ def main(args):
 
     # convert generate_lib output to GitBook format
     rename_to_readme(output_dir)
-    library_dir = os.path.join(output_dir, "library")
+    library_dir = os.path.join(output_dir, DIRNAME)
     filter_files(library_dir, ["all_symbols.md", "_api_cache.json"])
     clean_names(library_dir)
 
@@ -41,7 +43,7 @@ def main(args):
 
     # fill the SUMMARY.md with generated doc files,
     #  based on template in _SUMMARY.md
-    populate_summary("library")
+    populate_summary(DIRNAME)
 
 
 def build_docs(name_pair, output_dir, code_url_prefix, search_hints, gen_report):
@@ -83,10 +85,11 @@ def build_docs(name_pair, output_dir, code_url_prefix, search_hints, gen_report)
 def populate_summary(docgen_folder: str, template_file: str = "_SUMMARY.md",
                      output_path: str = "SUMMARY.md") -> None:
     """Populates the output file with generated file names
-    by filling in the template_file a the {autodoc} location.
+    by filling in the template_file at the {autodoc} location.
 
-    GitBook uses a `SUMMARY.md` file to determine which.
-
+    GitBook uses a `SUMMARY.md` file to determine which
+    files to show in the sidebar. When using autodoc,
+    we must generate this partly programmatically.
 
     Args:
         docgen_folder: str. The root folder that contains
@@ -108,7 +111,9 @@ def populate_summary(docgen_folder: str, template_file: str = "_SUMMARY.md",
 
 
 def walk_autodoc(folder: str) -> str:
-    """
+    """Walks a folder, pulls out all of the markdown files,
+    formats their names into markdown strings with appropriate links
+    and formatting for a GitBook SUMMARY.md, then returns that block of markdown.
     """
 
     autodoc_markdowns = []
@@ -134,7 +139,7 @@ def add_files(files: list, root: str, indent: int) -> list:
     file_markdowns = []
     indentation = " " * indent
     for file_name in files:
-        if file_name == "README.md":
+        if file_name == "README.md" or not file_name.endswith(".md"):
             continue
         short_name = file_name.split(".")[0]
         file_markdown = indentation + f"  * [{short_name}]({root}/{file_name})"
@@ -164,8 +169,9 @@ def build_library_docs(git_hash, code_url_prefix, output_dir):
         doc_controls.do_not_generate_docs(wandb.Run.__enter__)
     except AttributeError:
         pass
+
     build_docs(
-        name_pair=("library", wandb),
+        name_pair=(DIRNAME, wandb),
         output_dir=output_dir,
         code_url_prefix=code_url_prefix,
         search_hints=False,
@@ -191,7 +197,7 @@ def build_datatype_docs(git_hash, code_url_prefix, output_dir):
     """
     build_docs(
         name_pair=("data-types", wandb),
-        output_dir=os.path.join(output_dir, "library"),
+        output_dir=os.path.join(output_dir, DIRNAME),
         code_url_prefix=code_url_prefix,
         search_hints=False,
         gen_report=False,
@@ -234,7 +240,7 @@ def build_api_docs(git_hash, code_url_prefix, output_dir):
     """
     build_docs(
         name_pair=("public-api", wandb),
-        output_dir=os.path.join(output_dir, "library"),
+        output_dir=os.path.join(output_dir, DIRNAME),
         code_url_prefix=code_url_prefix,
         search_hints=False,
         gen_report=False,
