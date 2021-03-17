@@ -6,8 +6,20 @@ import wandb
 
 DIRNAME = "library"
 
+# which datatypes are we documenting?
+WANDB_DATATYPES = ["Graph", "Image", "Plotly", "Video", "Audio", "Table",
+                   "Html", "Object3D", "Molecule", "Histogram"]
+
+# which parts of the API are we documenting?
+WANDB_API = ["Api", "Projects", "Project", "Runs", "Run",
+             "Sweep", "Files", "File", "Artifact"]
+
 
 def build(git_hash, code_url_prefix, output_dir):
+    """Builds docs in three stages: library, data types, and API.
+
+    For now, this involves a lot of special-casing.
+    """
 
     configure_doc_hiding()
 
@@ -47,21 +59,35 @@ def build_docs(name_pair, output_dir, code_url_prefix, search_hints, gen_report)
 
 
 def build_library_docs(git_hash, code_url_prefix, output_dir):
-    wandb.Run = wandb.sdk.wandb_run.Run
-    wandb_classes = ["Artifact", "config", "summary", "init",
-                     "login", "Run"]
+    # we start from the current __all__ attribute
+    doclist = wandb.__all__
 
-    wandb.__all__ = wandb_classes
+    # the datatypes are included at the top level,
+    #  but maybe should not be?
+    doclist = [elem for elem in doclist if elem not in WANDB_DATATYPES]
+
+    # some parts of the Api are included at the top level,
+    #  but maybe should not be?
+    doclist = [elem for elem in doclist if elem not in WANDB_API]
+
+    # the "Run" object is not included at the top level,
+    #  but maybe it should be?
+    wandb.Run = wandb.wandb_sdk.wandb_run.Run
+    doclist.extend(["Artifact", "Run"])
+
+    wandb.__all__ = doclist
     wandb.__doc__ = """\n"""
 
-    try:
-        doc_controls.do_not_generate_docs(wandb.Run.__exit__)
-    except AttributeError:
-        pass
-    try:
-        doc_controls.do_not_generate_docs(wandb.Run.__enter__)
-    except AttributeError:
-        pass
+    # is this necessary?
+
+    # try:
+    #     doc_controls.do_not_generate_docs(wandb.Run.__exit__)
+    # except AttributeError:
+    #     pass
+    # try:
+    #     doc_controls.do_not_generate_docs(wandb.Run.__enter__)
+    # except AttributeError:
+    #     pass
 
     build_docs(
         name_pair=(DIRNAME, wandb),
@@ -74,11 +100,9 @@ def build_library_docs(git_hash, code_url_prefix, output_dir):
 
 def build_datatype_docs(git_hash, code_url_prefix, output_dir):
 
-    wandb_datatypes = ["Image", "Plotly", "Video", "Audio", "Table",
-                       "Html", "Object3D", "Molecule", "Histogram"]
-
-    wandb.__all__ = wandb_datatypes
+    wandb.__all__ = WANDB_DATATYPES
     wandb.__doc__ = """\n"""
+
     build_docs(
         name_pair=("data-types", wandb),
         output_dir=os.path.join(output_dir, DIRNAME),
@@ -90,6 +114,10 @@ def build_datatype_docs(git_hash, code_url_prefix, output_dir):
 
 def build_api_docs(git_hash, code_url_prefix, output_dir):
 
+    # this should be made cleaner
+    #  by either using the __all__ of the api
+    #  or changing the top-level __all__
+
     wandb.Api = wandb.apis.public.Api
     wandb.Projects = wandb.apis.public.Projects
     wandb.Project = wandb.apis.public.Project
@@ -99,10 +127,8 @@ def build_api_docs(git_hash, code_url_prefix, output_dir):
     wandb.Files = wandb.apis.public.Files
     wandb.File = wandb.apis.public.File
     wandb.Artifact = wandb.apis.public.Artifact
-    wandb_api_doc = ["Api", "Projects", "Project", "Runs", "Run",
-                     "Sweep", "Files", "File", "Artifact"]
 
-    wandb.__all__ = wandb_api_doc
+    wandb.__all__ = WANDB_API
     wandb.__doc__ = """
     Use the Public API to export or update data that you have saved to W&B.
     Before using this API, you'll want to log data from your script — check the [Quickstart](../quickstart.md) for more details.
@@ -114,6 +140,7 @@ def build_api_docs(git_hash, code_url_prefix, output_dir):
 
     See the [Generated Reference Docs](../ref/public-api/) for details on available functions.
     """
+
     build_docs(
         name_pair=("public-api", wandb),
         output_dir=os.path.join(output_dir, DIRNAME),

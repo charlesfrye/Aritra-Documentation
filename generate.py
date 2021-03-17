@@ -4,6 +4,7 @@ For help, run:
 
 python generate.py --help
 """
+# TODO(charlesfrye): review docgen_lib __all__ issues
 import argparse
 import os
 
@@ -72,6 +73,8 @@ def walk_autodoc(folder: str) -> str:
     autodoc_markdowns = []
     indent = 0
     for path, dirs, files in os.walk(folder):
+        dirs.sort()
+        files.sort()
         is_subdir = "/" in path
         if is_subdir:
             components = path.split("/")
