@@ -21,6 +21,8 @@ def main(args):
     output_dir = args.output_dir
     code_url_prefix = "/".join([args.repo, "tree", f"{git_hash}", args.prefix])
 
+    configure_doc_hiding()
+
     build_library_docs(git_hash, code_url_prefix, output_dir)
 
     build_datatype_docs(git_hash, code_url_prefix, output_dir)
@@ -51,16 +53,6 @@ def build_docs(name_pair, output_dir, code_url_prefix, search_hints, gen_report)
         gen_report: Bool. Generates an API report containing the health of the
             docstrings of the public API.
     """
-    # This is to help not document the parent class methods
-    for cls in [
-        wandb.data_types.WBValue,
-        wandb.data_types.Media,
-        wandb.data_types.BatchableMedia,
-        wandb.apis.public.Paginator,
-    ]:
-        doc_controls.decorate_all_class_attributes(
-            decorator=doc_controls.do_not_doc_in_subclasses, cls=cls, skip=["__init__"]
-        )
 
     doc_generator = generate_lib.DocGenerator(
         root_title="W&B",
@@ -271,6 +263,21 @@ def filter_files(directory, files_to_remove):
         for file_name in file_names:
             if file_name in files_to_remove:
                 os.remove(os.path.join(f"{root}", f"{file_name}"))
+
+
+def configure_doc_hiding():
+
+    # avoid documenting internal methods
+    #  that are defined in basic datatypes and apis
+
+    deco = doc_controls.do_not_doc_in_subclasses
+    base_classes = [wandb.data_types.WBValue,
+                    wandb.data_types.Media,
+                    wandb.data_types.BatchableMedia,
+                    wandb.apis.public.Paginator]
+
+    for cls in base_classes:
+        doc_controls.decorate_all_class_attributes(decorator=deco, cls=cls, skip=["__init__"])
 
 
 def get_args():
