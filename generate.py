@@ -117,11 +117,11 @@ def rename_to_readme(directory):
 
 
 def clean_names(directory):
-    """Removes spaces from all names.
+    """Applies transformations to file/folder names.
     """
     for root, folders, file_names in os.walk(directory):
-        for name in file_names:
-            clean_name = name.replace(" ", "-")
+        for name in folders:
+            clean_name = name.title().replace("-", " ")
             os.rename(os.path.join(f"{root}", f"{name}"),
                       os.path.join(f"{root}", f"{clean_name}"))
 
