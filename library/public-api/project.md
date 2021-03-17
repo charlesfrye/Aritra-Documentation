@@ -1,65 +1,38 @@
-# Project
-
-<!-- Insert buttons and diff -->
-
+# project
 
 [![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/apis/public.py#L686-L704)
 
-
-
-
 A project is a namespace for runs
 
-<pre><code>Project(
+```text
+Project(
     client, entity, project, attrs
-)</code></pre>
+)
+```
 
-
-
-<!-- Placeholder for "Used in" -->
-
-
-
-
-<!-- Tabular view -->
-<table>
-<tr><th>Attributes</th></tr>
-
-<tr>
-<td>
-<code>path</code>
-</td>
-<td>
-
-</td>
-</tr>
-</table>
-
-
+| Attributes |  |
+| :--- | :--- |
+|  `path` |  |
 
 ## Methods
 
-<h3 id="artifacts_types"><code>artifacts_types</code></h3>
+### `artifacts_types` <a id="artifacts_types"></a>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/apis/public.py#L702-L704">View source</a>
+[View source](https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/apis/public.py#L702-L704)
 
-<pre><code>artifacts_types(
+```text
+artifacts_types(
     per_page=50
-)</code></pre>
+)
+```
 
+### `snake_to_camel` <a id="snake_to_camel"></a>
 
+[View source](https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/apis/public.py#L530-L532)
 
-
-<h3 id="snake_to_camel"><code>snake_to_camel</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/apis/public.py#L530-L532">View source</a>
-
-<pre><code>snake_to_camel(
+```text
+snake_to_camel(
     string
-)</code></pre>
-
-
-
-
-
+)
+```
 

@@ -1,147 +1,54 @@
-# File
-
-<!-- Insert buttons and diff -->
-
+# file
 
 [![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/apis/public.py#L1605-L1708)
 
-
-
-
 File is a class associated with a file saved by wandb.
 
-<pre><code>File(
+```text
+File(
     client, attrs
-)</code></pre>
+)
+```
 
-
-
-<!-- Placeholder for "Used in" -->
-
-
-
-
-<!-- Tabular view -->
-<table>
-<tr><th>Attributes</th></tr>
-
-<tr>
-<td>
-<code>digest</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-<code>direct_url</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-<code>id</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-<code>md5</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-<code>mimetype</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-<code>name</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-<code>size</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-<code>updated_at</code>
-</td>
-<td>
-
-</td>
-</tr><tr>
-<td>
-<code>url</code>
-</td>
-<td>
-
-</td>
-</tr>
-</table>
-
-
+| Attributes |  |
+| :--- | :--- |
+|  `digest` |  |
+|  `direct_url` |  |
+|  `id` |  |
+|  `md5` |  |
+|  `mimetype` |  |
+|  `name` |  |
+|  `size` |  |
+|  `updated_at` |  |
+|  `url` |  |
 
 ## Methods
 
-<h3 id="delete"><code>delete</code></h3>
+### `delete` <a id="delete"></a>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/apis/public.py#L1688-L1701">View source</a>
+[View source](https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/apis/public.py#L1688-L1701)
 
-<pre><code>delete()</code></pre>
+```text
+delete()
+```
 
+### `download` <a id="download"></a>
 
+[View source](https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/apis/public.py#L1665-L1686)
 
-
-<h3 id="download"><code>download</code></h3>
-
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/apis/public.py#L1665-L1686">View source</a>
-
-<pre><code>download(
-    root=&#x27;.&#x27;, replace=(False)
-)</code></pre>
+```text
+download(
+    root='.', replace=(False)
+)
+```
 
 Downloads a file previously saved by a run from the wandb server.
 
+| Arguments |
+| :--- |
+|  replace \(boolean\): If \`True\`, download will overwrite a local file if it exists. Defaults to \`False\`. root \(str\): Local directory to save the file. Defaults to ".". |
 
-<!-- Tabular view -->
-<table>
-<tr><th>Arguments</th></tr>
-<tr>
-<td>
-replace (boolean): If `True`, download will overwrite a local file
-if it exists. Defaults to `False`.
-root (str): Local directory to save the file.  Defaults to ".".
-</td>
-</tr>
-
-</table>
-
-
-
-<!-- Tabular view -->
-<table>
-<tr><th>Raises</th></tr>
-<tr>
-<td>
-`ValueError` if file already exists and replace=False
-</td>
-</tr>
-
-</table>
-
-
-
-
+| Raises |
+| :--- |
+|  \`ValueError\` if file already exists and replace=False |
 

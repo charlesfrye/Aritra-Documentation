@@ -1,4 +1,4 @@
-# Table of Contents
+# Table of contents
 
 * [Documentation Generation](README.md)
 * [library](library/README.md)
@@ -29,3 +29,4 @@
     * [runs](library/public-api/runs.md)
     * [api](library/public-api/api.md)
     * [run](library/public-api/run.md)
+
