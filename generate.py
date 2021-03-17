@@ -7,8 +7,10 @@ python generate.py --help
 import argparse
 import os
 
-from docgen_cli import cli_gen
-from docgen_lib import build, DIRNAME
+import docgen_cli
+import docgen_lib
+
+DIRNAME = docgen_lib.DIRNAME  # directory name for autodocs
 
 
 def main(args):
@@ -16,7 +18,7 @@ def main(args):
     output_dir = args.output_dir
     code_url_prefix = "/".join([args.repo, "tree", f"{git_hash}", args.prefix])
 
-    build(git_hash, code_url_prefix, output_dir)
+    docgen_lib.build(git_hash, code_url_prefix, output_dir)
 
     # convert generate_lib output to GitBook format
     rename_to_readme(output_dir)
@@ -25,7 +27,7 @@ def main(args):
     clean_names(library_dir)
 
     # Create the CLI docs
-    cli_gen()
+    docgen_cli.build(library_dir)
 
     # fill the SUMMARY.md with generated doc files,
     #  based on template in _SUMMARY.md
