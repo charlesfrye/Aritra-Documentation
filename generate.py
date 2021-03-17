@@ -23,8 +23,11 @@ def main(args):
 
     configure_doc_hiding()
 
-    build_library_docs(git_hash, code_url_prefix, output_dir)
+    # each of these operates by changing the __all__
+    #  attribute of the wandb module, populating it with
+    #  the relevant objects and then generating docs.
 
+    build_library_docs(git_hash, code_url_prefix, output_dir)
     build_datatype_docs(git_hash, code_url_prefix, output_dir)
     build_api_docs(git_hash, code_url_prefix, output_dir)
 
@@ -136,17 +139,12 @@ def add_files(files: list, root: str, indent: int) -> list:
 
 def build_library_docs(git_hash, code_url_prefix, output_dir):
     wandb.Run = wandb.sdk.wandb_run.Run
-    wandb_classes = [
-        "Artifact",
-        "config",
-        "summary",
-        "init",
-        "login",
-        "Run",
-    ]
+    wandb_classes = ["Artifact", "config", "summary", "init",
+                     "login", "Run"]
+
     wandb.__all__ = wandb_classes
-    wandb.__doc__ = """
-    """
+    wandb.__doc__ = """\n"""
+
     try:
         doc_controls.do_not_generate_docs(wandb.Run.__exit__)
     except AttributeError:
@@ -167,20 +165,11 @@ def build_library_docs(git_hash, code_url_prefix, output_dir):
 
 def build_datatype_docs(git_hash, code_url_prefix, output_dir):
 
-    wandb_datatypes = [
-        "Image",
-        "Plotly",
-        "Video",
-        "Audio",
-        "Table",
-        "Html",
-        "Object3D",
-        "Molecule",
-        "Histogram",
-    ]
+    wandb_datatypes = ["Image", "Plotly", "Video", "Audio", "Table",
+                       "Html", "Object3D", "Molecule", "Histogram"]
+
     wandb.__all__ = wandb_datatypes
-    wandb.__doc__ = """
-    """
+    wandb.__doc__ = """\n"""
     build_docs(
         name_pair=("data-types", wandb),
         output_dir=os.path.join(output_dir, DIRNAME),
@@ -201,17 +190,9 @@ def build_api_docs(git_hash, code_url_prefix, output_dir):
     wandb.Files = wandb.apis.public.Files
     wandb.File = wandb.apis.public.File
     wandb.Artifact = wandb.apis.public.Artifact
-    wandb_api_doc = [
-        "Api",
-        "Projects",
-        "Project",
-        "Runs",
-        "Run",
-        "Sweep",
-        "Files",
-        "File",
-        "Artifact",
-    ]
+    wandb_api_doc = ["Api", "Projects", "Project", "Runs", "Run",
+                     "Sweep", "Files", "File", "Artifact"]
+
     wandb.__all__ = wandb_api_doc
     wandb.__doc__ = """
     Use the Public API to export or update data that you have saved to W&B.
