@@ -1,357 +1,122 @@
-# init
+---
+description: Call wandb.init() at the top of your script to start a new run
+---
 
-<!-- Insert buttons and diff -->
+# wandb.init\(\)
 
+Call `wandb.init()` once at the beginning of your script to initialize a new job. This creates a new run in W&B and launches a background process to sync data.
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_init.py#L553-L781)
+* **On Prem**: If you need a private cloud or local instance of W&B, see our [Self Hosted](../self-hosted/) offerings. 
+* **Automated Environments**: Most of these settings can also be controlled via [Environment Variables](environment-variables.md). This is often useful when you're running jobs on a cluster.
 
+### Reference Docs
 
+Check the reference docs for arguments.
 
+## Common Questions
 
-Start a new tracked run with `wandb.init()`.
+### How do I launch multiple runs from one script?
 
-<pre><code>init(
-    job_type: Optional[str] = None,
-    dir=None,
-    config: Union[Dict, str, None] = None,
-    project: Optional[str] = None,
-    entity: Optional[str] = None,
-    reinit: bool = None,
-    tags: Optional[Sequence] = None,
-    group: Optional[str] = None,
-    name: Optional[str] = None,
-    notes: Optional[str] = None,
-    magic: Union[dict, str, bool] = None,
-    config_exclude_keys=None,
-    config_include_keys=None,
-    anonymous: Optional[str] = None,
-    mode: Optional[str] = None,
-    allow_val_change: Optional[bool] = None,
-    resume: Optional[Union[bool, str]] = None,
-    force: Optional[bool] = None,
-    tensorboard=None,
-    sync_tensorboard=None,
-    monitor_gym=None,
-    save_code=None,
-    id=None,
-    settings: Union[Settings, Dict[str, Any], None] = None
-) -> Union[<a href="../library/Run.md"><code>library.Run</code></a>, RunDisabled, None]</code></pre>
+If you're trying to start multiple runs from one script, add two things to your code:
 
+1. run = wandb.init\(**reinit=True**\): Use this setting to allow reinitializing runs
+2. **run.finish\(\)**: Use this at the end of your run to finish logging for that run
 
-
-<!-- Placeholder for "Used in" -->
-
-In an ML training pipeline, you could add `wandb.init()`
-to the beginning of your training script as well as your evaluation
-script, and each piece would be tracked as a run in W&B.
-
-`wandb.init()` spawns a new background process to log data to a run, and it
-also syncs data to wandb.ai by default so you can see live visualizations.
-Call `wandb.init()` to start a run before logging data with `wandb.log()`.
-
-`wandb.init()` returns a run object, and you can also access the run object
-with wandb.run.
-
-<!-- Tabular view -->
-<table>
-<tr><th>Arguments</th></tr>
-
-<tr>
-<td>
-<code>project</code>
-</td>
-<td>
-(str, optional) The name of the project where you're sending
-the new run. If the project is not specified, the run is put in an
-"Uncategorized" project.
-</td>
-</tr><tr>
-<td>
-<code>entity</code>
-</td>
-<td>
-(str, optional) An entity is a username or team name where
-you're sending runs. This entity must exist before you can send runs
-there, so make sure to create your account or team in the UI before
-starting to log runs.
-If you don't specify an entity, the run will be sent to your default
-entity, which is usually your username. Change your default entity
-in [Settings](wandb.ai/settings) under "default location to create
-new projects".
-</td>
-</tr><tr>
-<td>
-<code>config</code>
-</td>
-<td>
-(dict, argparse, absl.flags, str, optional)
-This sets wandb.config, a dictionary-like object for saving inputs
-to your job, like hyperparameters for a model or settings for a data
-preprocessing job. The config will show up in a table in the UI that
-you can use to group, filter, and sort runs. Keys should not contain
-`.` in their names, and values should be under 10 MB.
-If dict, argparse or absl.flags: will load the key value pairs into
-the wandb.config object.
-If str: will look for a yaml file by that name, and load config from
-that file into the wandb.config object.
-</td>
-</tr><tr>
-<td>
-<code>save_code</code>
-</td>
-<td>
-(bool, optional) Turn this on to save the main script or
-notebook to W&B. This is valuable for improving experiment
-reproducibility and to diff code across experiments in the UI. By
-default this is off, but you can flip the default behavior to "on"
-in [Settings](wandb.ai/settings).
-</td>
-</tr><tr>
-<td>
-<code>group</code>
-</td>
-<td>
-(str, optional) Specify a group to organize individual runs into
-a larger experiment. For example, you might be doing cross
-validation, or you might have multiple jobs that train and evaluate
-a model against different test sets. Group gives you a way to
-organize runs together into a larger whole, and you can toggle this
-on and off in the UI. For more details, see
-[Grouping](docs.wandb.com/library/grouping).
-</td>
-</tr><tr>
-<td>
-<code>job_type</code>
-</td>
-<td>
-(str, optional) Specify the type of run, which is useful when
-you're grouping runs together into larger experiments using group.
-For example, you might have multiple jobs in a group, with job types
-like train and eval. Setting this makes it easy to filter and group
-similar runs together in the UI so you can compare apples to apples.
-</td>
-</tr><tr>
-<td>
-<code>tags</code>
-</td>
-<td>
-(list, optional) A list of strings, which will populate the list
-of tags on this run in the UI. Tags are useful for organizing runs
-together, or applying temporary labels like "baseline" or
-"production". It's easy to add and remove tags in the UI, or filter
-down to just runs with a specific tag.
-</td>
-</tr><tr>
-<td>
-<code>name</code>
-</td>
-<td>
-(str, optional) A short display name for this run, which is how
-you'll identify this run in the UI. By default we generate a random
-two-word name that lets you easily cross-reference runs from the
-table to charts. Keeping these run names short makes the chart
-legends and tables easier to read. If you're looking for a place to
-save your hyperparameters, we recommend saving those in config.
-</td>
-</tr><tr>
-<td>
-<code>notes</code>
-</td>
-<td>
-(str, optional) A longer description of the run, like a -m commit
-message in git. This helps you remember what you were doing when you
-ran this run.
-</td>
-</tr><tr>
-<td>
-<code>dir</code>
-</td>
-<td>
-(str, optional) An absolute path to a directory where metadata will
-be stored. When you call download() on an artifact, this is the
-directory where downloaded files will be saved. By default this is
-the ./wandb directory.
-</td>
-</tr><tr>
-<td>
-<code>sync_tensorboard</code>
-</td>
-<td>
-(bool, optional) Whether to copy all TensorBoard logs
-to W&B (default: False).
-[Tensorboard](https://docs.wandb.com/integrations/tensorboard)
-resume (bool, str, optional): Sets the resuming behavior. Options:
-"allow", "must", "never", "auto" or None. Defaults to None.
-Cases:
-- None (default): If the new run has the same ID as a previous run,
-this run overwrites that data.
-- "auto" (or True): if the preivous run on this machine crashed,
-automatically resume it. Otherwise, start a new run.
-- "allow": if id is set with init(id="UNIQUE_ID") or
-WANDB_RUN_ID="UNIQUE_ID" and it is identical to a previous run,
-wandb will automatically resume the run with that id. Otherwise,
-wandb will start a new run.
-- "never": if id is set with init(id="UNIQUE_ID") or
-WANDB_RUN_ID="UNIQUE_ID" and it is identical to a previous run,
-wandb will crash.
-- "must": if id is set with init(id="UNIQUE_ID") or
-WANDB_RUN_ID="UNIQUE_ID" and it is identical to a previous run,
-wandb will automatically resume the run with the id. Otherwise
-wandb will crash.
-See https://docs.wandb.com/library/advanced/resuming for more.
-</td>
-</tr><tr>
-<td>
-<code>reinit</code>
-</td>
-<td>
-(bool, optional) Allow multiple wandb.init() calls in the same
-process. (default: False)
-</td>
-</tr><tr>
-<td>
-<code>magic</code>
-</td>
-<td>
-(bool, dict, or str, optional) The bool controls whether we try to
-auto-instrument your script, capturing basic details of your run
-without you having to add more wandb code. (default: False)
-You can also pass a dict, json string, or yaml filename.
-</td>
-</tr><tr>
-<td>
-<code>config_exclude_keys</code>
-</td>
-<td>
-(list, optional) string keys to exclude from
-`wandb.config`.
-</td>
-</tr><tr>
-<td>
-<code>config_include_keys</code>
-</td>
-<td>
-(list, optional) string keys to include in
-wandb.config.
-</td>
-</tr><tr>
-<td>
-<code>anonymous</code>
-</td>
-<td>
-(str, optional) Controls anonymous data logging. Options:
-- "never" (default): requires you to link your W&B account before
-tracking the run so you don't accidentally create an anonymous
-run.
-- "allow": lets a logged-in user track runs with their account, but
-lets someone who is running the script without a W&B account see
-the charts in the UI.
-- "must": sends the run to an anonymous account instead of to a
-signed-up user account.
-</td>
-</tr><tr>
-<td>
-<code>mode</code>
-</td>
-<td>
-(str, optional) Can be "online", "offline" or "disabled". Defaults to
-online.
-</td>
-</tr><tr>
-<td>
-<code>allow_val_change</code>
-</td>
-<td>
-(bool, optional) Whether to allow config values to
-change after setting the keys once. By default we throw an exception
-if a config value is overwritten. If you want to track something
-like a varying learning_rate at multiple times during training, use
-wandb.log() instead. (default: False in scripts, True in Jupyter)
-</td>
-</tr><tr>
-<td>
-<code>force</code>
-</td>
-<td>
-(bool, optional) If True, this crashes the script if a user isn't
-logged in to W&B. If False, this will let the script run in offline
-mode if a user isn't logged in to W&B. (default: False)
-</td>
-</tr><tr>
-<td>
-<code>sync_tensorboard</code>
-</td>
-<td>
-(bool, optional) Synchronize wandb logs from tensorboard or
-tensorboardX and saves the relevant events file. Defaults to false.
-</td>
-</tr><tr>
-<td>
-<code>monitor_gym</code>
-</td>
-<td>
-(bool, optional) automatically logs videos of environment when
-using OpenAI Gym. (default: False)
-See https://docs.wandb.com/library/integrations/openai-gym
-</td>
-</tr><tr>
-<td>
-<code>id</code>
-</td>
-<td>
-(str, optional) A unique ID for this run, used for Resuming. It must
-be unique in the project, and if you delete a run you can't reuse
-the ID. Use the name field for a short descriptive name, or config
-for saving hyperparameters to compare across runs. The ID cannot
-contain special characters.
-See https://docs.wandb.com/library/resuming
-</td>
-</tr>
-</table>
-
-
-
-#### Examples:
-
-Basic usage
-```
-wandb.init()
-```
-
-Launch multiple runs from the same script
-```
+```python
+import wandb
 for x in range(10):
-    with wandb.init(project="my-projo") as run:
+    run = wandb.init(project="runs-from-for-loop", reinit=True)
+    for y in range (100):
+        wandb.log({"metric": x+y})
+    run.finish()
+```
+
+Alternatively you can use a python context manager which will automatically finish logging:
+
+```python
+import wandb
+for x in range(10):
+    run = wandb.init(reinit=True)
+    with run:
         for y in range(100):
             run.log({"metric": x+y})
 ```
 
+### LaunchError: Permission denied
 
+If you're getting a **LaunchError: Launch exception: Permission denied** error, you don't have permissions to log to the project you're trying to send runs to. This might be for a few different reasons.
 
-<!-- Tabular view -->
-<table>
-<tr><th>Raises</th></tr>
+1. You aren't logged in on this machine. Run `wandb login` on the command line.
+2. You've set an entity that doesn't exist. "Entity" should be your username or the name of an existing team. If you need to create a team, go to our [Subscriptions page](https://app.wandb.ai/billing).
+3. You don't have project permissions. Ask the creator of the project to set the privacy to **Open** so you can log runs to this project.
 
-<tr>
-<td>
-<code>Exception</code>
-</td>
-<td>
-if problem.
-</td>
-</tr>
-</table>
+### Get the readable run name
 
+Get the nice, readable name for your run.
 
+```python
+import wandb
 
-<!-- Tabular view -->
-<table>
-<tr><th>Returns</th></tr>
-<tr>
-<td>
-A `Run` object.
-</td>
-</tr>
+wandb.init()
+run_name = wandb.run.name
+```
 
-</table>
+### Set the run name to the generated run ID
+
+If you'd like to overwrite the run name \(like snowy-owl-10\) with the run ID \(like qvlp96vk\) you can use this snippet:
+
+```python
+import wandb
+wandb.init()
+wandb.run.name = wandb.run.id
+wandb.run.save()
+```
+
+### Save the git commit
+
+When wandb.init\(\) is called in your script, we automatically look for git information to save a link to your repo the SHA of the latest commit. The git information should show up on your [run page](../app/pages/run-page.md#overview-tab). If you aren't seeing it appear there, make sure that your script where you call wandb.init\(\) is located in a folder that has git information.
+
+The git commit and command used to run the experiment are visible to you but are hidden to external users, so if you have a public project, these details will remain private.
+
+### Save logs offline
+
+By default, wandb.init\(\) starts a process that syncs metrics in real time to our cloud hosted app. If your machine is offline or you don't have internet access, here's how to run wandb using the offline mode and sync later.
+
+Set two environment variables:
+
+1. **WANDB\_API\_KEY**: Set this to your account's API key, on your [settings page](https://app.wandb.ai/settings)
+2. **WANDB\_MODE**: dryrun
+
+Here's a sample of what this would look like in your script:
+
+```python
+import wandb
+import os
+
+os.environ["WANDB_API_KEY"] = YOUR_KEY_HERE
+os.environ["WANDB_MODE"] = "dryrun"
+
+config = {
+  "dataset": "CIFAR10",
+  "machine": "offline cluster",
+  "model": "CNN",
+  "learning_rate": 0.01,
+  "batch_size": 128,
+}
+
+wandb.init(project="offline-demo")
+
+for i in range(100):
+  wandb.log({"accuracy": i})
+```
+
+Here's a sample terminal output:
+
+![](../.gitbook/assets/image%20%2881%29.png)
+
+And once I have internet, I run a sync command to send that folder to the cloud.
+
+`wandb sync wandb/dryrun-folder-name`
+
+![](../.gitbook/assets/image%20%2836%29.png)
 
