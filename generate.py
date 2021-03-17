@@ -1,14 +1,8 @@
 """A tool to generate api_docs for wandb
 
-```
-python generate.py --output_dir=docs
-```
+For help, run:
 
-Requires a local installation of `tensorflow_docs`:
-
-```
-pip install git+https://github.com/tensorflow/docs
-```
+python generate.py --help
 """
 import argparse
 import os
@@ -280,15 +274,21 @@ def filter_files(directory, files_to_remove):
 
 
 def get_args():
-    parser = argparse.ArgumentParser(description="Generate documentation.")
+    parser = argparse.ArgumentParser(
+        description="Generate documentation for the wandb library and CLI.")
     parser.add_argument(
-        "--git_hash", type=str, default="3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c")
+        "--git_hash", type=str, default="3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c",
+        help="Hash for the git commit to base the docs on. "
+        + "Ensures that the source code is properly linked.")
     parser.add_argument(
-        "--repo", type=str, default="https://www.github.com/wandb/client")
+        "--repo", type=str, default="https://www.github.com/wandb/client",
+        help="Repo to link for source code.")
     parser.add_argument(
-        "--prefix", type=str, default="wandb")
+        "--prefix", type=str, default="wandb",
+        help="Folder within repo where wandb library is located.")
     parser.add_argument(
-        "--output_dir", type=str, default=os.getcwd())
+        "--output_dir", type=str, default=os.getcwd(),
+        help="Folder into which to place folder library/ containing results.")
     return parser.parse_args()
 
 
