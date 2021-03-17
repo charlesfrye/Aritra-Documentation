@@ -42,7 +42,7 @@ def main(args):
 
     # fill the SUMMARY.md with generated doc files,
     #  based on template in _SUMMARY.md
-    populate_summary(DIRNAME)
+    populate_summary(DIRNAME, output_dir=output_dir)
 
 
 def build_docs(name_pair, output_dir, code_url_prefix, search_hints, gen_report):
@@ -72,7 +72,7 @@ def build_docs(name_pair, output_dir, code_url_prefix, search_hints, gen_report)
 
 
 def populate_summary(docgen_folder: str, template_file: str = "_SUMMARY.md",
-                     output_path: str = "SUMMARY.md") -> None:
+                     output_dir: str = ".") -> None:
     """Populates the output file with generated file names
     by filling in the template_file at the {autodoc} location.
 
@@ -85,7 +85,8 @@ def populate_summary(docgen_folder: str, template_file: str = "_SUMMARY.md",
             the generated docs.
         template_file: str. A markdown template that contains
             the rest of the SUMMARY.md.
-        output_path: str. Location at which to write the final markdown.
+        output_dir: str. Directory into which to write the final
+            SUMMARY.md file.
     """
 
     with open(template_file, "r") as f:
@@ -95,7 +96,7 @@ def populate_summary(docgen_folder: str, template_file: str = "_SUMMARY.md",
 
     doc_structure = doc_structure.format(autodoc=autodoc_markdown)
 
-    with open(output_path, "w") as f:
+    with open(os.path.join(output_dir, "SUMMARY.md"), "w") as f:
         f.write(doc_structure)
 
 
