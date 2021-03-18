@@ -1,8 +1,7 @@
-# Imports
-import subprocess
+import os
 import re
+import subprocess
 
-# Utils
 PATTERN = re.compile(r"(.*?\w) +(.*)")
 KEYWORDS = ["Options:", "Commands:"]
 TEMPLATE = """
@@ -59,17 +58,19 @@ def process(command):
         return usage, summary, parsed_dict
 
 
-def markdown_render(command):
+def markdown_render(command, output_file):
     """
     Renders the markdown and also provides
     the commands nested in it.
 
     Args:
-        command (str): The command that is exectued `wandb command --help`
+        command (str): The command that is executed `wandb command --help`
+        output_file (str): The file in which the markdown is written.
 
     Returns:
         commands: The nested commands in the parsed dictionary
     """
+
     usage, summary, parsed_dict = process(command)
     if usage:
         usage = usage.split(":")
@@ -99,7 +100,7 @@ def markdown_render(command):
             head = f"## {command}"
         else:
             head = f"# {command}"
-        with open("library/cli.md", "a") as fp:
+        with open(output_file, "a") as fp:
             fp.write(
                 TEMPLATE.format(
                     head,  # Heading
@@ -112,21 +113,27 @@ def markdown_render(command):
     for k, v in parsed_dict.items():
         for element in v:
             if k == "Commands:":
-                markdown_render(f"{command} {element[0]}")
+                markdown_render(f"{command} {element[0]}", output_file)
 
 
-########## BEGIN First pass for wandb
-def cli_gen():
+def build(output_dir=None):
+    if output_dir is None:
+        output_dir = os.getcwd()
+    output_file = os.path.join(output_dir, "cli.md")
+
     usage, summary, parsed_dict = process("wandb")
+
     if usage:
         usage = usage.split(":")[1]
         usage = f"**Usage**\n\n`{usage}`"
+
     if summary:
         summary = f"**Summary**\n{summary}"
     options = ""
     commands = ""
     op_flag = True
     co_flag = True
+
     for k, v in parsed_dict.items():
         for element in v:
             if k == "Options:":
@@ -155,19 +162,21 @@ def cli_gen():
                 + commands
             )
             co_flag = False
+
     if usage or summary or options or commands:
-        with open("library/cli.md", "w") as fp:
+        with open(output_file, "w") as fp:
             fp.write(
                 TEMPLATE.format(
-                    f"# wandb",  # Heading
+                    "# wandb",  # Heading
                     usage,  # Usage
                     summary,
                     options,  # Options
                     commands,  # Commands
                 )
             )
-    ########## END First pass for wandb
 
+    # work through commands and sub-commands,
+    #  rendering them into the same shared markdown file
     commands = parsed_dict["Commands:"]
     for command in commands:
-        markdown_render(f"wandb {command[0]}")
+        markdown_render(f"wandb {command[0]}", output_file)

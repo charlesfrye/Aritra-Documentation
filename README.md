@@ -1,30 +1,26 @@
-# Important Files
-- `generate.py`: Generic documentation generator for wandb
-- `docgen_cli.py`: Documentation generator for wandb CLI
+# Documentation Generation
 
-## generate.py
-The follwing is a road map of how to generate documentaion like tensorflow.
-**Steps**
-1. `pip install git+git://github.com/ariG23498/docs.git@wandb-docs` This installs the modified `tensorflow_docs`. The modifications are minor templating changes.
-2. `pip install git+git://github.com/wandb/client.git@<git_hash>` This will install the wandb version that we want.
-3. `python generate.py` creates the documentation. Here the script will ask for the `git_hash`. Please provide the git hash so that the source links do not change.
+## `generate.py`
 
-**Outputs**
-A folder named `library` in the same folder as the code. The files in the `library` folder are the generated markdown.
+This script generates documentation for the `wandb` library based on a git commit hash in a format suitable for use with GitBook.
 
-**Requirements**
-- tensorflow_docs
-- wandb
+For help with this function, run
 
-## docgen_cli.py
-**Usage**
-```bash
-$ python docgen_cli.py
+```text
+python generate.py --help
 ```
 
-**Outputs**
-A file named `cli.md` in the same folder as the code. The file is the generated markdown for the CLI.
+### Steps
 
-**Requirements**
-- python >= 3.8
-- wandb
+1. Run `pip install --upgrade git+git://github.com/wandb/client.git@<git_hash>` to install the version of`wandb` you wish to document.
+2. Run `python generate.py --git_hash <git_hash>` to create the documentation.
+
+### Outputs
+
+1. A folder named `library`. The files in the `library` folder are the generated markdown. Use the `--output_dir` option to change where this is saved; by default it is in the same folder as the code.
+2. A `SUMMARY.md` file for creating a GitBook sidebar containing the automatically-generated docs. This is based on a provided template file \(by default, `_SUMMARY.md` from this repo\).
+
+### Requirements
+
+*  `pip install git+git://github.com/ariG23498/docs.git@wandb-docs` 
+

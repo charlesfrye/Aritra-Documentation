@@ -8,13 +8,15 @@
 
 
 
-    
+
 
 
 
 ## Classes
 
 [`class Audio`](./audio.md): Wandb class for audio clips.
+
+[`class Graph`](./graph.md): Wandb class for graphs
 
 [`class Histogram`](./histogram.md): wandb class for histograms.
 
