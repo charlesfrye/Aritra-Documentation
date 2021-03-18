@@ -35,8 +35,9 @@ def main(args):
     populate_summary(DIRNAME, output_dir=output_dir)
 
 
-def populate_summary(docgen_folder: str, template_file: str = "_SUMMARY.md",
-                     output_dir: str = ".") -> None:
+def populate_summary(
+    docgen_folder: str, template_file: str = "_SUMMARY.md", output_dir: str = "."
+) -> None:
     """Populates the output file with generated file names
     by filling in the template_file at the {autodoc} location.
 
@@ -112,21 +113,24 @@ def rename_to_readme(directory):
         for file_name in file_names:
             raw_file_name, suffix = file_name[:-3], file_name[-3:]
             if suffix == ".md" and raw_file_name in folders:
-                os.rename(os.path.join(f"{root}", file_name),
-                          os.path.join(f"{root}", raw_file_name, "README.md"))
+                os.rename(
+                    os.path.join(f"{root}", file_name),
+                    os.path.join(f"{root}", raw_file_name, "README.md"),
+                )
 
 
 def clean_names(directory):
-    """Converts names to lower case and removes spaces
-    """
+    """Converts names to lower case and removes spaces"""
     for root, folders, file_names in os.walk(directory):
         for name in file_names:
             if name == "README.md":
                 short_name = name
             else:
                 short_name = name.replace(" ", "-").lower()
-            os.rename(os.path.join(f"{root}", f"{name}"),
-                      os.path.join(f"{root}", f"{short_name}"))
+            os.rename(
+                os.path.join(f"{root}", f"{name}"),
+                os.path.join(f"{root}", f"{short_name}"),
+            )
 
 
 def filter_files(directory, files_to_remove):
@@ -138,20 +142,33 @@ def filter_files(directory, files_to_remove):
 
 def get_args():
     parser = argparse.ArgumentParser(
-        description="Generate documentation for the wandb library and CLI.")
+        description="Generate documentation for the wandb library and CLI."
+    )
     parser.add_argument(
-        "--git_hash", type=str, default="3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c",
+        "--git_hash",
+        type=str,
+        default="3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c",
         help="Hash for the git commit to base the docs on. "
-        + "Ensures that the source code is properly linked.")
+        + "Ensures that the source code is properly linked.",
+    )
     parser.add_argument(
-        "--repo", type=str, default="https://www.github.com/wandb/client",
-        help="Repo to link for source code.")
+        "--repo",
+        type=str,
+        default="https://www.github.com/wandb/client",
+        help="Repo to link for source code.",
+    )
     parser.add_argument(
-        "--prefix", type=str, default="wandb",
-        help="Folder within repo where wandb library is located.")
+        "--prefix",
+        type=str,
+        default="wandb",
+        help="Folder within repo where wandb library is located.",
+    )
     parser.add_argument(
-        "--output_dir", type=str, default=os.getcwd(),
-        help="Folder into which to place folder library/ containing results.")
+        "--output_dir",
+        type=str,
+        default=os.getcwd(),
+        help="Folder into which to place folder library/ containing results.",
+    )
     return parser.parse_args()
 
 

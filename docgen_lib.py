@@ -7,12 +7,31 @@ import wandb
 DIRNAME = "library"
 
 # which datatypes are we documenting?
-WANDB_DATATYPES = ["Graph", "Image", "Plotly", "Video", "Audio", "Table",
-                   "Html", "Object3D", "Molecule", "Histogram"]
+WANDB_DATATYPES = [
+    "Graph",
+    "Image",
+    "Plotly",
+    "Video",
+    "Audio",
+    "Table",
+    "Html",
+    "Object3D",
+    "Molecule",
+    "Histogram",
+]
 
 # which parts of the API are we documenting?
-WANDB_API = ["Api", "Projects", "Project", "Runs", "Run",
-             "Sweep", "Files", "File", "Artifact"]
+WANDB_API = [
+    "Api",
+    "Projects",
+    "Project",
+    "Runs",
+    "Run",
+    "Sweep",
+    "Files",
+    "File",
+    "Artifact",
+]
 
 
 def build(git_hash, code_url_prefix, output_dir):
@@ -156,10 +175,14 @@ def configure_doc_hiding():
     #  that are defined in basic datatypes and apis
 
     deco = doc_controls.do_not_doc_in_subclasses
-    base_classes = [wandb.data_types.WBValue,
-                    wandb.data_types.Media,
-                    wandb.data_types.BatchableMedia,
-                    wandb.apis.public.Paginator]
+    base_classes = [
+        wandb.data_types.WBValue,
+        wandb.data_types.Media,
+        wandb.data_types.BatchableMedia,
+        wandb.apis.public.Paginator,
+    ]
 
     for cls in base_classes:
-        doc_controls.decorate_all_class_attributes(decorator=deco, cls=cls, skip=["__init__"])
+        doc_controls.decorate_all_class_attributes(
+            decorator=deco, cls=cls, skip=["__init__"]
+        )
