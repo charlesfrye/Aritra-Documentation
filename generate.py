@@ -117,13 +117,16 @@ def rename_to_readme(directory):
 
 
 def clean_names(directory):
-    """Removes spaces from all names.
+    """Converts names to lower case and removes spaces
     """
     for root, folders, file_names in os.walk(directory):
         for name in file_names:
-            clean_name = name.replace(" ", "-")
+            if name == "README.md":
+                short_name = name
+            else:
+                short_name = name.replace(" ", "-").lower()
             os.rename(os.path.join(f"{root}", f"{name}"),
-                      os.path.join(f"{root}", f"{clean_name}"))
+                      os.path.join(f"{root}", f"{short_name}"))
 
 
 def filter_files(directory, files_to_remove):

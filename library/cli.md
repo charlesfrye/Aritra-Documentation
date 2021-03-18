@@ -293,8 +293,8 @@ Run a command in a new container
 |--health-cmd|string              Command to run to check health|
 |--health-interval|duration       Time between running the check (ms|s|m|h) (default 0s)|
 |--health-retries|int             Consecutive failures needed to report unhealthy|
-|--health-start-period|duration   Start period for the container to initialize before starting|
-|health-retries|countdown (ms|s|m|h) (default 0s)|
+|--health-start-period|duration   Start period for the container to initialize before|
+|starting|health-retries countdown (ms|s|m|h) (default 0s)|
 |--health-timeout|duration        Maximum time to allow one check to run (ms|s|m|h) (default 0s)|
 |--help|Print usage|
 |-h, --hostname|string                Container host name|
