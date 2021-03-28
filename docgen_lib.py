@@ -6,32 +6,16 @@ import wandb
 
 DIRNAME = "library"
 
+# fmt: off
 # which datatypes are we documenting?
-WANDB_DATATYPES = [
-    "Graph",
-    "Image",
-    "Plotly",
-    "Video",
-    "Audio",
-    "Table",
-    "Html",
-    "Object3D",
-    "Molecule",
-    "Histogram",
-]
+WANDB_DATATYPES = ["Graph", "Image", "Plotly", "Video",
+                   "Audio", "Table", "Html", "Object3D",
+                   "Molecule", "Histogram",]
 
 # which parts of the API are we documenting?
-WANDB_API = [
-    "Api",
-    "Projects",
-    "Project",
-    "Runs",
-    "Run",
-    "Sweep",
-    "Files",
-    "File",
-    "Artifact",
-]
+WANDB_API = ["Api", "Projects", "Project", "Runs", "Run",
+             "Sweep", "Files", "File", "Artifact",]
+# fmt: on
 
 
 def build(git_hash, code_url_prefix, output_dir):
