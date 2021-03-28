@@ -19,6 +19,7 @@ def main(args):
     output_dir = args.output_dir
     code_url_prefix = "/".join([args.repo, "tree", f"{git_hash}", args.prefix])
 
+    # Create the library docs
     docgen_lib.build(git_hash, code_url_prefix, output_dir)
 
     # convert generate_lib output to GitBook format
