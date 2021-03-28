@@ -4,18 +4,21 @@ from tensorflow_docs.api_generator import doc_controls
 from tensorflow_docs.api_generator import generate_lib
 import wandb
 
-DIRNAME = "library"
+DIRNAME = "ref"
 
 # fmt: off
 # which datatypes are we documenting?
 WANDB_DATATYPES = ["Graph", "Image", "Plotly", "Video",
                    "Audio", "Table", "Html", "Object3D",
-                   "Molecule", "Histogram",]
+                   "Molecule", "Histogram"]
 
 # which parts of the API are we documenting?
 WANDB_API = ["Api", "Projects", "Project", "Runs", "Run",
-             "Sweep", "Files", "File", "Artifact",]
+             "Sweep", "Files", "File", "Artifact"]
 # fmt: on
+
+# later, which parts of the library are we documenting?
+WANDB_DOCLIST = []
 
 
 def build(git_hash, code_url_prefix, output_dir):
@@ -77,6 +80,8 @@ def build_library_docs(git_hash, code_url_prefix, output_dir):
     #  but maybe it should be?
     wandb.Run = wandb.wandb_sdk.wandb_run.Run
     doclist.extend(["Artifact", "Run"])
+
+    WANDB_DOCLIST.extend(doclist)
 
     wandb.__all__ = doclist
     wandb.__doc__ = """\n"""

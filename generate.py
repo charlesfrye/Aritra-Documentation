@@ -13,6 +13,13 @@ import docgen_lib
 
 DIRNAME = docgen_lib.DIRNAME  # directory name for autodocs
 
+DIRNAMES_TO_TITLES = {
+    DIRNAME: "Reference Docs",
+    "cli": "Command Line Interface",
+    "data-types": "Data Types",
+    "public-api": "Import & Export API",
+}
+
 
 def main(args):
     git_hash = args.git_hash
@@ -70,10 +77,21 @@ def walk_autodoc(folder: str) -> str:
     """Walks a folder, pulls out all of the markdown files,
     formats their names into markdown strings with appropriate links
     and formatting for a GitBook SUMMARY.md, then returns that block of markdown.
+
+    To make for a cleaner sidebar, first extracts the contents of subfolders.
     """
 
     autodoc_markdowns = []
-    indent = 0
+    autodoc_markdowns.extend(get_subfolder_markdowns(folder))
+
+    autodoc_markdowns.extend(get_folder_markdowns(folder))
+    autodoc_markdown = "\n".join(autodoc_markdowns)
+
+    return autodoc_markdown
+
+
+def get_subfolder_markdowns(folder: str) -> list:
+    all_markdowns = []
     for path, dirs, files in os.walk(folder):
         dirs.sort()
         files.sort()
@@ -83,14 +101,29 @@ def walk_autodoc(folder: str) -> str:
             indent = len(components)
             name = components[-1]
         else:
-            name = path
-        autodoc_markdowns.append(" " * indent + f"* [{name}]({path}/README.md)")
+            continue
 
-        autodoc_markdowns.extend(add_files(files, path, indent))
+        all_markdowns.extend(make_markdowns(name, path, files, indent))
 
-    autodoc_markdown = "\n".join(autodoc_markdowns)
+    return all_markdowns
 
-    return autodoc_markdown
+
+def get_folder_markdowns(folder: str) -> list:
+
+    files = list(sorted(os.listdir(folder)))
+    markdowns = make_markdowns(folder, folder, files)
+
+    return markdowns
+
+
+def make_markdowns(name, path, files, indent=0):
+    title = convert_name(name)
+
+    markdowns = []
+    markdowns.append(" " * indent + f"* [{title}]({path}/README.md)")
+    markdowns.extend(add_files(files, path, indent))
+
+    return markdowns
 
 
 def add_files(files: list, root: str, indent: int) -> list:
@@ -100,10 +133,33 @@ def add_files(files: list, root: str, indent: int) -> list:
         if file_name == "README.md" or not file_name.endswith(".md"):
             continue
         short_name = file_name.split(".")[0]
+        source = infer_source(root)
+        if short_name.title() in source:
+            short_name = short_name.title()
         file_markdown = indentation + f"  * [{short_name}]({root}/{file_name})"
         file_markdowns.append(file_markdown)
 
     return file_markdowns
+
+
+def infer_source(path):
+    if path == DIRNAME:
+        return docgen_lib.WANDB_DOCLIST
+    elif "data-types" in path:
+        return docgen_lib.WANDB_DATATYPES
+    elif "public-api" in path:
+        return docgen_lib.WANDB_API
+    else:
+        return []
+
+
+def convert_name(name):
+    if name in DIRNAMES_TO_TITLES.keys():
+        name = DIRNAMES_TO_TITLES[name]
+
+    name = name.replace("-", " ")
+
+    return name
 
 
 def rename_to_readme(directory):
@@ -168,7 +224,7 @@ def get_args():
         "--output_dir",
         type=str,
         default=os.getcwd(),
-        help="Folder into which to place folder library/ containing results.",
+        help="Folder into which to place folder {DIRNAME}/ containing results.",
     )
     return parser.parse_args()
 

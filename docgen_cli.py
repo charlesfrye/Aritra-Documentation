@@ -16,6 +16,8 @@ PATTERN = re.compile(r"(.*?\w) +(.*)")
 KEYWORDS = ["Options:", "Commands:"]
 TEMPLATE = "# {}\n\n{}\n\n{}\n\n{}\n\n{}"
 
+CLI_DIRNAME = "cli"
+
 
 def build(output_dir: str = None):
     """
@@ -31,7 +33,7 @@ def build(output_dir: str = None):
     if output_dir is None:
         output_dir = os.getcwd()
 
-    output_dir, output_file = prepare_dirs(output_dir, "cli")
+    output_dir, output_file = prepare_dirs(output_dir, CLI_DIRNAME)
 
     markdown_render("wandb", output_dir, output_file)
 
