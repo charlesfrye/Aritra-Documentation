@@ -17,7 +17,7 @@ python generate.py --help
 
 ### Outputs
 
-1. A folder named `library`. The files in the `library` folder are the generated markdown. Use the `--output_dir` option to change where this is saved; by default it is in the same folder as the code.
+1. A folder named `ref`. The files in the `ref` folder are the generated markdown. Use the `--output_dir` option to change where this is saved; by default it is in the same folder as the code.
 2. A `SUMMARY.md` file for creating a GitBook sidebar containing the automatically-generated docs. This is based on a provided template file \(by default, `_SUMMARY.md` from this repo\).
 
 ### Requirements
