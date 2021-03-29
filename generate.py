@@ -84,7 +84,8 @@ def walk_autodoc(folder: str) -> str:
     autodoc_markdowns = []
     autodoc_markdowns.extend(get_subfolder_markdowns(folder))
 
-    autodoc_markdowns.extend(get_folder_markdowns(folder))
+    top_markdown, *file_markdowns = get_folder_markdowns(folder)
+    autodoc_markdowns = [top_markdown] + autodoc_markdowns + file_markdowns
     autodoc_markdown = "\n".join(autodoc_markdowns)
 
     return autodoc_markdown

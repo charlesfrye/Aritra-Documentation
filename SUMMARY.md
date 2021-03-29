@@ -1,6 +1,7 @@
 # Table of Contents
 
 * [Documentation Generation](README.md)
+* [Reference Docs](ref/README.md)
   * [Command Line Interface](ref/cli/README.md)
    * [wandb agent](ref/cli/wandb-agent/README.md)
    * [wandb artifact](ref/cli/wandb-artifact/README.md)
@@ -46,7 +47,6 @@
     * [Run](ref/public-api/run.md)
     * [Runs](ref/public-api/runs.md)
     * [Sweep](ref/public-api/sweep.md)
-* [Reference Docs](ref/README.md)
   * [agent](ref/agent.md)
   * [Artifact](ref/artifact.md)
   * [config](ref/config.md)
