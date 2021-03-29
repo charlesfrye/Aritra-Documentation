@@ -125,7 +125,7 @@ def make_markdowns(name, path, files, indent=0):
     title = convert_name(name)
 
     markdowns = []
-    markdowns.append(" " * indent + f"* [{title}]({path}/README.md)")
+    markdowns.append("  " * indent + f"* [{title}]({path}/README.md)")
     markdowns.extend(add_files(files, path, indent))
 
     return markdowns
@@ -133,7 +133,7 @@ def make_markdowns(name, path, files, indent=0):
 
 def add_files(files: list, root: str, indent: int) -> list:
     file_markdowns = []
-    indentation = " " * indent
+    indentation = "  " * indent
     for file_name in files:
         if file_name == "README.md" or not file_name.endswith(".md"):
             continue
@@ -141,7 +141,7 @@ def add_files(files: list, root: str, indent: int) -> list:
         source = infer_source(root)
         if short_name.title() in source:
             short_name = short_name.title()
-        file_markdown = indentation + f" * [{short_name}]({root}/{file_name})"
+        file_markdown = indentation + f"  * [{short_name}]({root}/{file_name})"
         file_markdowns.append(file_markdown)
 
     return file_markdowns
