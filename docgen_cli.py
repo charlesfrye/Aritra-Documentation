@@ -224,6 +224,6 @@ def prepare_dirs(base_dir, subdir_name):
     Returns the directory and README paths.
     """
     subdir = os.path.join(base_dir, subdir_name)
-    os.mkdir(path=subdir)
+    os.makedirs(subdir, exist_ok=True)
     markdown_file = os.path.join(subdir, "README.md")
     return subdir, markdown_file

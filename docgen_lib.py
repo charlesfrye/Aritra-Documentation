@@ -98,8 +98,8 @@ def build_library_docs(git_hash, code_url_prefix, output_dir):
     #     pass
 
     build_docs(
-        name_pair=(DIRNAME, wandb),
-        output_dir=output_dir,
+        name_pair=("python", wandb),
+        output_dir=os.path.join(output_dir, DIRNAME),
         code_url_prefix=code_url_prefix,
         search_hints=False,
         gen_report=False,

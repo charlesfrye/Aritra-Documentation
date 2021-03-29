@@ -35,7 +35,7 @@ Start a new tracked run with `wandb.init()`.
     save_code=None,
     id=None,
     settings: Union[Settings, Dict[str, Any], None] = None
-) -> Union[<a href="../ref/Run.md"><code>ref.Run</code></a>, RunDisabled, None]</code></pre>
+) -> Union[<a href="../python/Run.md"><code>python.Run</code></a>, RunDisabled, None]</code></pre>
 
 
 

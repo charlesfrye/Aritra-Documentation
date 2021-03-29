@@ -299,12 +299,12 @@ call this method when your script exits.
 <a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L2069-L2118">View source</a>
 
 <pre><code>finish_artifact(
-    artifact_or_path: Union[<a href="../ref/Artifact.md"><code>ref.Artifact</code></a>, str],
+    artifact_or_path: Union[<a href="../python/Artifact.md"><code>python.Artifact</code></a>, str],
     name: Optional[str] = None,
     type: Optional[str] = None,
     aliases: Optional[List[str]] = None,
     distributed_id: Optional[str] = None
-) -> <a href="../ref/Artifact.md"><code>ref.Artifact</code></a></code></pre>
+) -> <a href="../python/Artifact.md"><code>python.Artifact</code></a></code></pre>
 
 Finish a non-finalized artifact as output of a run. Subsequent "upserts" with
 the same distributed ID will result in a new version
@@ -538,11 +538,11 @@ ValueError - if invalid data is passed
 <a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L1985-L2016">View source</a>
 
 <pre><code>log_artifact(
-    artifact_or_path: Union[<a href="../ref/Artifact.md"><code>ref.Artifact</code></a>, str],
+    artifact_or_path: Union[<a href="../python/Artifact.md"><code>python.Artifact</code></a>, str],
     name: Optional[str] = None,
     type: Optional[str] = None,
     aliases: Optional[List[str]] = None
-) -> <a href="../ref/Artifact.md"><code>ref.Artifact</code></a></code></pre>
+) -> <a href="../python/Artifact.md"><code>python.Artifact</code></a></code></pre>
 
 Declare an artifact as output of a run.
 
@@ -598,7 +598,7 @@ An `Artifact` object.
     name: str = None,
     include_fn: Callable[[str], bool] = (lambda path: path.endswith(&#x27;.py&#x27;)),
     exclude_fn: Callable[[str], bool] = (lambda path: os.sep + &#x27;wandb&#x27; + os.sep in path)
-) -> Optional[<a href="../ref/Artifact.md"><code>ref.Artifact</code></a>]</code></pre>
+) -> Optional[<a href="../python/Artifact.md"><code>python.Artifact</code></a>]</code></pre>
 
 log_code() saves the current state of your code to a W&B artifact.  By
 default it walks the current directory and logs all files that end with ".py".
@@ -847,12 +847,12 @@ policy (string): on of `live`, `now`, or `end`
 <a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L2018-L2067">View source</a>
 
 <pre><code>upsert_artifact(
-    artifact_or_path: Union[<a href="../ref/Artifact.md"><code>ref.Artifact</code></a>, str],
+    artifact_or_path: Union[<a href="../python/Artifact.md"><code>python.Artifact</code></a>, str],
     name: Optional[str] = None,
     type: Optional[str] = None,
     aliases: Optional[List[str]] = None,
     distributed_id: Optional[str] = None
-) -> <a href="../ref/Artifact.md"><code>ref.Artifact</code></a></code></pre>
+) -> <a href="../python/Artifact.md"><code>python.Artifact</code></a></code></pre>
 
 Declare (or append tp) a non-finalized artifact as output of a run. Note that you must call
 run.finish_artifact() to finalize the artifact. This is useful when distributed jobs

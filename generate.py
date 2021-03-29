@@ -18,6 +18,7 @@ DIRNAMES_TO_TITLES = {
     "cli": "Command Line Interface",
     "data-types": "Data Types",
     "public-api": "Import & Export API",
+    "python": "Python Library"
 }
 
 
@@ -30,13 +31,13 @@ def main(args):
     docgen_lib.build(git_hash, code_url_prefix, output_dir)
 
     # convert generate_lib output to GitBook format
-    rename_to_readme(output_dir)
-    library_dir = os.path.join(output_dir, DIRNAME)
-    filter_files(library_dir, ["all_symbols.md", "_api_cache.json"])
-    clean_names(library_dir)
+    ref_dir = os.path.join(output_dir, DIRNAME)
+    rename_to_readme(ref_dir)
+    filter_files(ref_dir, ["all_symbols.md", "_api_cache.json"])
+    clean_names(ref_dir)
 
     # Create the CLI docs
-    docgen_cli.build(library_dir)
+    docgen_cli.build(ref_dir)
 
     # fill the SUMMARY.md with generated doc files,
     #  based on template in _SUMMARY.md
@@ -145,6 +146,8 @@ def add_files(files: list, root: str, indent: int) -> list:
 
 def infer_source(path):
     if path == DIRNAME:
+        return []
+    elif "python" in path:
         return docgen_lib.WANDB_DOCLIST
     elif "data-types" in path:
         return docgen_lib.WANDB_DATATYPES
