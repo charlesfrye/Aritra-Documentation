@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/data_types.py#L209-L279)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/5759bab2d/wandb/sdk/data_types.py#L260-L336)
 
 
 
@@ -26,12 +26,12 @@ https://docs.scipy.org/doc/numpy/reference/generated/numpy.histogram.html
 #### Examples:
 
 Generate histogram from a sequence
-```
+```python
 wandb.Histogram([1,2,3])
 ```
 
 Efficiently initialize from np.histogram.
-```
+```python
 hist = np.histogram(data)
 wandb.Histogram(np_histogram=hist)
 ```

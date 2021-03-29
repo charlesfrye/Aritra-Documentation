@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/apis/public.py#L184-L523)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/5759bab2d/wandb/apis/public.py#L185-L554)
 
 
 
@@ -89,7 +89,7 @@ You can also set defaults for `entity`, `project`, and `run`.
 
 <h3 id="artifact"><code>artifact</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/apis/public.py#L502-L523">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/apis/public.py#L533-L554">View source</a>
 
 <pre><code>artifact(
     name, type=None
@@ -140,7 +140,7 @@ A `Artifact` object.
 
 <h3 id="artifact_type"><code>artifact_type</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/apis/public.py#L491-L494">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/apis/public.py#L522-L525">View source</a>
 
 <pre><code>artifact_type(
     type_name, project=None
@@ -151,7 +151,7 @@ A `Artifact` object.
 
 <h3 id="artifact_types"><code>artifact_types</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/apis/public.py#L486-L489">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/apis/public.py#L517-L520">View source</a>
 
 <pre><code>artifact_types(
     project=None
@@ -162,7 +162,7 @@ A `Artifact` object.
 
 <h3 id="artifact_versions"><code>artifact_versions</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/apis/public.py#L496-L500">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/apis/public.py#L527-L531">View source</a>
 
 <pre><code>artifact_versions(
     type_name, name, per_page=50
@@ -173,18 +173,18 @@ A `Artifact` object.
 
 <h3 id="create_run"><code>create_run</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/apis/public.py#L246-L249">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/apis/public.py#L247-L251">View source</a>
 
 <pre><code>create_run(
     **kwargs
 )</code></pre>
 
-
+Create a new run
 
 
 <h3 id="flush"><code>flush</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/apis/public.py#L277-L283">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/apis/public.py#L302-L308">View source</a>
 
 <pre><code>flush()</code></pre>
 
@@ -194,7 +194,7 @@ to get the latest values associated with the run.
 
 <h3 id="projects"><code>projects</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/apis/public.py#L340-L362">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/apis/public.py#L365-L387">View source</a>
 
 <pre><code>projects(
     entity=None, per_page=200
@@ -243,7 +243,7 @@ A `Projects` object which is an iterable collection of `Project` objects.
 
 <h3 id="reports"><code>reports</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/apis/public.py#L364-L395">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/apis/public.py#L389-L420">View source</a>
 
 <pre><code>reports(
     path=&#x27;&#x27;, name=None, per_page=50
@@ -299,7 +299,7 @@ A `Reports` object which is an iterable collection of `BetaReport` objects.
 
 <h3 id="run"><code>run</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/apis/public.py#L450-L466">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/apis/public.py#L481-L497">View source</a>
 
 <pre><code>run(
     path=&#x27;&#x27;
@@ -341,10 +341,10 @@ A `Run` object.
 
 <h3 id="runs"><code>runs</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/apis/public.py#L397-L448">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/apis/public.py#L422-L479">View source</a>
 
 <pre><code>runs(
-    path=&#x27;&#x27;, filters={}, order=&#x27;-created_at&#x27;, per_page=50
+    path=&#x27;&#x27;, filters=None, order=&#x27;-created_at&#x27;, per_page=50
 )</code></pre>
 
 Return a set of runs from a project that match the filters provided.
@@ -353,22 +353,27 @@ You can filter by `config.*`, `summary.*`, `state`, `entity`, `createdAt`, etc.
 
 #### Examples:
 
-Find runs in my_project config.experiment_name has been set to "foo"
+Find runs in my_project where config.experiment_name has been set to "foo"
 ```
-api.runs(path="my_entity/my_project", {"config.experiment_name": "foo"})
+api.runs(path="my_entity/my_project", filters={"config.experiment_name": "foo"})
 ```
 
-Find runs in my_project config.experiment_name has been set to "foo" or "bar"
+Find runs in my_project where config.experiment_name has been set to "foo" or "bar"
 ```
 api.runs(path="my_entity/my_project",
-    {"$or": [{"config.experiment_name": "foo"}, {"config.experiment_name": "bar"}]})
+    filters={"$or": [{"config.experiment_name": "foo"}, {"config.experiment_name": "bar"}]})
+```
+
+Find runs in my_project where config.experiment_name matches a regex (anchors are not supported)
+```
+api.runs(path="my_entity/my_project",
+    filters={"config.experiment_name": {"$regex": "b.*"}})
 ```
 
 Find runs in my_project sorted by ascending loss
 ```
-api.runs(path="my_entity/my_project", {"order": "+summary_metrics.loss"})
+api.runs(path="my_entity/my_project", order="+summary_metrics.loss")
 ```
-
 
 
 
@@ -425,7 +430,7 @@ A `Runs` object, which is an iterable collection of `Run` objects.
 
 <h3 id="sweep"><code>sweep</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/apis/public.py#L468-L484">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/apis/public.py#L499-L515">View source</a>
 
 <pre><code>sweep(
     path=&#x27;&#x27;
@@ -463,6 +468,17 @@ A `Sweep` object.
 
 </table>
 
+
+
+<h3 id="sync_tensorboard"><code>sync_tensorboard</code></h3>
+
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/apis/public.py#L253-L274">View source</a>
+
+<pre><code>sync_tensorboard(
+    root_dir, run_id=None, project=None, entity=None
+)</code></pre>
+
+Sync a local directory containing tfevent files to wandb
 
 
 

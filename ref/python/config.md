@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_config.py#L24-L263)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/5759bab2d/wandb/sdk/wandb_config.py#L23-L239)
 
 
 
@@ -32,7 +32,7 @@ See https://docs.wandb.com/library/config#file-based-configs.
 #### Examples:
 
 Basic usage
-```
+```python
 wandb.config.epochs = 4
 wandb.init()
 for x in range(wandb.config.epochs):
@@ -40,14 +40,14 @@ for x in range(wandb.config.epochs):
 ```
 
 Using wandb.init to set config
-```
+```python
 wandb.init(config={"epochs": 4, "batch_size": 32})
 for x in range(wandb.config.epochs):
     # train
 ```
 
 Nested configs
-```
+```python
 wandb.config['train']['epochs] = 4
 wandb.init()
 for x in range(wandb.config['train']['epochs']):
@@ -55,13 +55,13 @@ for x in range(wandb.config['train']['epochs']):
 ```
 
 Using absl flags
-```
+```python
 flags.DEFINE_string(‘model’, None, ‘model to run’) # name, default, help
 wandb.config.update(flags.FLAGS) # adds all absl flags to config
 ```
 
 Argparse flags
-```
+```python
 wandb.init()
 wandb.config.epochs = 4
 
@@ -73,7 +73,7 @@ wandb.config.update(args)
 ```
 
 Using TensorFlow flags (deprecated in tensorflow v2)
-```
+```python
 flags = tf.app.flags
 flags.DEFINE_string('data_dir', '/tmp/data')
 flags.DEFINE_integer('batch_size', 128, 'Batch size.')

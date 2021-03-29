@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L169-L2269)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/5759bab2d/wandb/sdk/wandb_run.py#L178-L2301)
 
 
 
@@ -232,7 +232,7 @@ Returns:
 
 <h3 id="alert"><code>alert</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L2220-L2256">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/sdk/wandb_run.py#L2252-L2288">View source</a>
 
 <pre><code>alert(
     title: str,
@@ -284,7 +284,7 @@ alert with this title.
 
 <h3 id="finish"><code>finish</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L1127-L1142">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/sdk/wandb_run.py#L1158-L1173">View source</a>
 
 <pre><code>finish(
     exit_code: int = None
@@ -296,7 +296,7 @@ call this method when your script exits.
 
 <h3 id="finish_artifact"><code>finish_artifact</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L2069-L2118">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/sdk/wandb_run.py#L2101-L2150">View source</a>
 
 <pre><code>finish_artifact(
     artifact_or_path: Union[<a href="../python/Artifact.md"><code>python.Artifact</code></a>, str],
@@ -312,30 +312,57 @@ the same distributed ID will result in a new version
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-artifact_or_path (str or Artifact): A path to the contents of this artifact,
+<code>artifact_or_path</code>
+</td>
+<td>
+(str or Artifact) A path to the contents of this artifact,
 can be in the following forms:
 - `/local/directory`
 - `/local/directory/file.txt`
 - `s3://bucket/path`
 You can also pass an Artifact object created by calling
 `wandb.Artifact`.
-name (str, optional): An artifact name. May be prefixed with entity/project.
+</td>
+</tr><tr>
+<td>
+<code>name</code>
+</td>
+<td>
+(str, optional) An artifact name. May be prefixed with entity/project.
 Valid names can be in the following forms:
 - name:version
 - name:alias
 - digest
 This will default to the basename of the path prepended with the current
 run id  if not specified.
-type (str): The type of artifact to log, examples include `dataset`, `model`
-aliases (list, optional): Aliases to apply to this artifact,
+</td>
+</tr><tr>
+<td>
+<code>type</code>
+</td>
+<td>
+(str) The type of artifact to log, examples include `dataset`, `model`
+</td>
+</tr><tr>
+<td>
+<code>aliases</code>
+</td>
+<td>
+(list, optional) Aliases to apply to this artifact,
 defaults to `["latest"]`
-distributed_id (string, optional): Unique string that all distributed jobs share. If None,
+</td>
+</tr><tr>
+<td>
+<code>distributed_id</code>
+</td>
+<td>
+(string, optional) Unique string that all distributed jobs share. If None,
 defaults to the run's group name.
 </td>
 </tr>
-
 </table>
 
 
@@ -355,37 +382,37 @@ An `Artifact` object.
 
 <h3 id="get_project_url"><code>get_project_url</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L678-L687">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/sdk/wandb_run.py#L693-L702">View source</a>
 
 <pre><code>get_project_url() -> Optional[str]</code></pre>
 
 Returns:
-    (str, optional): url for the W&B project associated with
-        the run or None if the run is offline
+    A url (str, optional) for the W&B project associated with
+    the run or None if the run is offline
 
 <h3 id="get_sweep_url"><code>get_sweep_url</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L689-L698">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/sdk/wandb_run.py#L704-L713">View source</a>
 
 <pre><code>get_sweep_url() -> Optional[str]</code></pre>
 
 Returns:
-    (str, optional): url for the sweep associated with the run
-        or None if there is no associated sweep or the run is offline.
+    A url (str, optional) for the sweep associated with the run
+    or None if there is no associated sweep or the run is offline.
 
 <h3 id="get_url"><code>get_url</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L667-L676">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/sdk/wandb_run.py#L682-L691">View source</a>
 
 <pre><code>get_url() -> Optional[str]</code></pre>
 
 Returns:
-    (str, optional): url for the W&B run or None if the run
-        is offline
+    A url (str, optional) for the W&B run or None if the run
+    is offline
 
 <h3 id="join"><code>join</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L1144-L1146">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/sdk/wandb_run.py#L1175-L1177">View source</a>
 
 <pre><code>join(
     exit_code: int = None
@@ -396,7 +423,7 @@ Deprecated alias for `finish()` - please use finish
 
 <h3 id="log"><code>log</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L877-L1025">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/sdk/wandb_run.py#L892-L1056">View source</a>
 
 <pre><code>log(
     data: Dict[str, Any],
@@ -407,22 +434,26 @@ Deprecated alias for `finish()` - please use finish
 
 Log a dict to the global run's history.
 
-`wandb.log` can be used to log everything from scalars to histograms, media
-and matplotlib plots.
+Use `wandb.log` to log data from runs, such as scalars, images, video,
+histograms, and matplotlib plots.
 
 The most basic usage is `wandb.log({'train-loss': 0.5, 'accuracy': 0.9})`.
-This will save a history row associated with the run with train-loss=0.5
-and `accuracy=0.9`. The history values can be plotted on app.wandb.ai or
-on a local server. The history values can also be downloaded through
-the wandb API.
+This will save a history row associated with the run with `train-loss=0.5`
+and `accuracy=0.9`. Visualize logged data in the workspace at wandb.ai,
+or locally on a self-hosted instance of the W&B app:
+https://docs.wandb.ai/self-hosted
 
-Logging a value will update the summary values for any metrics logged.
-The summary values will appear in the run table at app.wandb.ai or
-a local server. If a summary value is manually set with for example
-`wandb.run.summary["accuracy"] = 0.9` `wandb.log` will no longer automatically
-update the run's accuracy.
+Export data to explore in a Jupyter notebook, for example, with the API:
+https://docs.wandb.ai/ref/public-api
 
-Logging values don't have to be scalars. Logging any wandb object is supported.
+Each time you call wandb.log(), this adds a new row to history and updates
+the summary values for each key logged. In the UI, summary values show
+up in the run table to compare single values across runs. You might want
+to update summary manually to set the *best* value instead of the *last*
+value for a given metric. After you finish logging, you can set summary:
+`wandb.run.summary["accuracy"] = 0.9`.
+
+Logged values don't have to be scalars. Logging any wandb object is supported.
 For example `wandb.log({"example": wandb.Image("myimage.jpg")})` will log an
 example image which will be displayed nicely in the wandb UI. See
 https://docs.wandb.com/library/reference/data_types for all of the different
@@ -447,22 +478,43 @@ the data on the client side or you may get degraded performance.
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-row (dict, optional): A dict of serializable python objects i.e `str`,
+<code>row</code>
+</td>
+<td>
+(dict, optional) A dict of serializable python objects i.e `str`,
 `ints`, `floats`, `Tensors`, `dicts`, or `wandb.data_types`.
-commit (boolean, optional): Save the metrics dict to the wandb server
+</td>
+</tr><tr>
+<td>
+<code>commit</code>
+</td>
+<td>
+(boolean, optional) Save the metrics dict to the wandb server
 and increment the step.  If false `wandb.log` just updates the current
 metrics dict with the row argument and metrics won't be saved until
 `wandb.log` is called with `commit=True`.
-step (integer, optional): The global step in processing. This persists
+</td>
+</tr><tr>
+<td>
+<code>step</code>
+</td>
+<td>
+(integer, optional) The global step in processing. This persists
 any non-committed earlier steps but defaults to not committing the
 specified step.
-sync (boolean, True): This argument is deprecated and currently doesn't
+</td>
+</tr><tr>
+<td>
+<code>sync</code>
+</td>
+<td>
+(boolean, True) This argument is deprecated and currently doesn't
 change the behaviour of `wandb.log`.
 </td>
 </tr>
-
 </table>
 
 
@@ -522,20 +574,29 @@ For more examples, see https://docs.wandb.com/library/log
 <!-- Tabular view -->
 <table>
 <tr><th>Raises</th></tr>
+
 <tr>
 <td>
-wandb.Error - if called before `wandb.init`
-ValueError - if invalid data is passed
+<code>wandb.Error</code>
+</td>
+<td>
+if called before `wandb.init`
+</td>
+</tr><tr>
+<td>
+<code>ValueError</code>
+</td>
+<td>
+if invalid data is passed
 </td>
 </tr>
-
 </table>
 
 
 
 <h3 id="log_artifact"><code>log_artifact</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L1985-L2016">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/sdk/wandb_run.py#L2017-L2048">View source</a>
 
 <pre><code>log_artifact(
     artifact_or_path: Union[<a href="../python/Artifact.md"><code>python.Artifact</code></a>, str],
@@ -550,28 +611,49 @@ Declare an artifact as output of a run.
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-artifact_or_path (str or Artifact): A path to the contents of this artifact,
+<code>artifact_or_path</code>
+</td>
+<td>
+(str or Artifact) A path to the contents of this artifact,
 can be in the following forms:
 - `/local/directory`
 - `/local/directory/file.txt`
 - `s3://bucket/path`
 You can also pass an Artifact object created by calling
 `wandb.Artifact`.
-name (str, optional): An artifact name. May be prefixed with entity/project.
+</td>
+</tr><tr>
+<td>
+<code>name</code>
+</td>
+<td>
+(str, optional) An artifact name. May be prefixed with entity/project.
 Valid names can be in the following forms:
 - name:version
 - name:alias
 - digest
 This will default to the basename of the path prepended with the current
 run id  if not specified.
-type (str): The type of artifact to log, examples include `dataset`, `model`
-aliases (list, optional): Aliases to apply to this artifact,
+</td>
+</tr><tr>
+<td>
+<code>type</code>
+</td>
+<td>
+(str) The type of artifact to log, examples include `dataset`, `model`
+</td>
+</tr><tr>
+<td>
+<code>aliases</code>
+</td>
+<td>
+(list, optional) Aliases to apply to this artifact,
 defaults to `["latest"]`
 </td>
 </tr>
-
 </table>
 
 
@@ -591,7 +673,7 @@ An `Artifact` object.
 
 <h3 id="log_code"><code>log_code</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L608-L665">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/sdk/wandb_run.py#L623-L680">View source</a>
 
 <pre><code>log_code(
     root: str = &#x27;.&#x27;,
@@ -629,12 +711,12 @@ defaults to: `lambda path: False`
 #### Examples:
 
 Basic usage
-```
+```python
 run.log_code()
 ```
 
 Advanced usage
-```
+```python
 run.log_code("../", include_fn=lambda path: path.endswith(".py") or path.endswith(".ipynb"))
 ```
 
@@ -655,7 +737,7 @@ An `Artifact` object if code was logged
 
 <h3 id="plot_table"><code>plot_table</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L1149-L1164">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/sdk/wandb_run.py#L1180-L1195">View source</a>
 
 <pre><code>plot_table(
     vega_spec_name, data_table, fields, string_fields=None
@@ -713,7 +795,7 @@ the custom visualization needs
 
 <h3 id="project_name"><code>project_name</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L562-L564">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/sdk/wandb_run.py#L577-L579">View source</a>
 
 <pre><code>project_name() -> str</code></pre>
 
@@ -722,7 +804,7 @@ the custom visualization needs
 
 <h3 id="restore"><code>restore</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L1118-L1125">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/sdk/wandb_run.py#L1149-L1156">View source</a>
 
 <pre><code>restore(
     name: str,
@@ -812,7 +894,7 @@ if the file is not found or can't find run_path
 
 <h3 id="save"><code>save</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L1027-L1116">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/sdk/wandb_run.py#L1058-L1147">View source</a>
 
 <pre><code>save(
     glob_str: Optional[str] = None,
@@ -826,25 +908,40 @@ Ensure all files matching *glob_str* are synced to wandb with the policy specifi
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-glob_str (string): a relative or absolute path to a unix glob or regular
+<code>glob_str</code>
+</td>
+<td>
+(string) a relative or absolute path to a unix glob or regular
 path.  If this isn't specified the method is a noop.
-base_path (string): the base path to run the glob relative to
-policy (string): on of `live`, `now`, or `end`
+</td>
+</tr><tr>
+<td>
+<code>base_path</code>
+</td>
+<td>
+(string) the base path to run the glob relative to
+</td>
+</tr><tr>
+<td>
+<code>policy</code>
+</td>
+<td>
+(string) on of `live`, `now`, or `end`
 - live: upload the file as it changes, overwriting the previous version
 - now: upload the file once now
 - end: only upload file when the run ends
 </td>
 </tr>
-
 </table>
 
 
 
 <h3 id="upsert_artifact"><code>upsert_artifact</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L2018-L2067">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/sdk/wandb_run.py#L2050-L2099">View source</a>
 
 <pre><code>upsert_artifact(
     artifact_or_path: Union[<a href="../python/Artifact.md"><code>python.Artifact</code></a>, str],
@@ -861,30 +958,57 @@ need to all contribute to the same artifact.
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-artifact_or_path (str or Artifact): A path to the contents of this artifact,
+<code>artifact_or_path</code>
+</td>
+<td>
+(str or Artifact) A path to the contents of this artifact,
 can be in the following forms:
 - `/local/directory`
 - `/local/directory/file.txt`
 - `s3://bucket/path`
 You can also pass an Artifact object created by calling
 `wandb.Artifact`.
-name (str, optional): An artifact name. May be prefixed with entity/project.
+</td>
+</tr><tr>
+<td>
+<code>name</code>
+</td>
+<td>
+(str, optional) An artifact name. May be prefixed with entity/project.
 Valid names can be in the following forms:
 - name:version
 - name:alias
 - digest
 This will default to the basename of the path prepended with the current
 run id  if not specified.
-type (str): The type of artifact to log, examples include `dataset`, `model`
-aliases (list, optional): Aliases to apply to this artifact,
+</td>
+</tr><tr>
+<td>
+<code>type</code>
+</td>
+<td>
+(str) The type of artifact to log, examples include `dataset`, `model`
+</td>
+</tr><tr>
+<td>
+<code>aliases</code>
+</td>
+<td>
+(list, optional) Aliases to apply to this artifact,
 defaults to `["latest"]`
-distributed_id (string, optional): Unique string that all distributed jobs share. If None,
+</td>
+</tr><tr>
+<td>
+<code>distributed_id</code>
+</td>
+<td>
+(string, optional) Unique string that all distributed jobs share. If None,
 defaults to the run's group name.
 </td>
 </tr>
-
 </table>
 
 
@@ -904,7 +1028,7 @@ An `Artifact` object.
 
 <h3 id="use_artifact"><code>use_artifact</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L1933-L1983">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/sdk/wandb_run.py#L1965-L2015">View source</a>
 
 <pre><code>use_artifact(
     artifact_or_name, type=None, aliases=None
@@ -916,20 +1040,35 @@ the returned object to get the contents locally.
 <!-- Tabular view -->
 <table>
 <tr><th>Arguments</th></tr>
+
 <tr>
 <td>
-artifact_or_name (str or Artifact): An artifact name.
+<code>artifact_or_name</code>
+</td>
+<td>
+(str or Artifact) An artifact name.
 May be prefixed with entity/project. Valid names
 can be in the following forms:
 - name:version
 - name:alias
 - digest
 You can also pass an Artifact object created by calling `wandb.Artifact`
-type (str, optional): The type of artifact to use.
-aliases (list, optional): Aliases to apply to this artifact
+</td>
+</tr><tr>
+<td>
+<code>type</code>
+</td>
+<td>
+(str, optional) The type of artifact to use.
+</td>
+</tr><tr>
+<td>
+<code>aliases</code>
+</td>
+<td>
+(list, optional) Aliases to apply to this artifact
 </td>
 </tr>
-
 </table>
 
 
@@ -949,7 +1088,7 @@ An `Artifact` object.
 
 <h3 id="watch"><code>watch</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L1929-L1930">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/sdk/wandb_run.py#L1961-L1962">View source</a>
 
 <pre><code>watch(
     models, criterion=None, log=&#x27;gradients&#x27;, log_freq=100, idx=None
@@ -960,7 +1099,7 @@ An `Artifact` object.
 
 <h3 id="__enter__"><code>__enter__</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L2258-L2259">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/sdk/wandb_run.py#L2290-L2291">View source</a>
 
 <pre><code>__enter__() -> "Run"</code></pre>
 
@@ -969,7 +1108,7 @@ An `Artifact` object.
 
 <h3 id="__exit__"><code>__exit__</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/sdk/wandb_run.py#L2261-L2269">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/sdk/wandb_run.py#L2293-L2301">View source</a>
 
 <pre><code>__exit__(
     exc_type: Type[BaseException],

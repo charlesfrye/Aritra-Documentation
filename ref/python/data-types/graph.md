@@ -3,7 +3,7 @@
 <!-- Insert buttons and diff -->
 
 
-[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/data_types.py#L815-L973)
+[![](https://www.tensorflow.org/images/GitHub-Mark-32px.png)View source on GitHub](https://www.github.com/wandb/client/tree/5759bab2d/wandb/data_types.py#L1035-L1193)
 
 
 
@@ -35,7 +35,7 @@ Import a keras model:
 
 <h3 id="add_edge"><code>add_edge</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/data_types.py#L899-L903">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/data_types.py#L1119-L1123">View source</a>
 
 <pre><code>add_edge(
     from_node, to_node
@@ -46,7 +46,7 @@ Import a keras model:
 
 <h3 id="add_node"><code>add_node</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/data_types.py#L885-L897">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/data_types.py#L1105-L1117">View source</a>
 
 <pre><code>add_node(
     node=None, **node_kwargs
@@ -57,7 +57,7 @@ Import a keras model:
 
 <h3 id="from_keras"><code>from_keras</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/data_types.py#L905-L934">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/data_types.py#L1125-L1154">View source</a>
 
 <pre><code>@classmethod</code>
 <code>from_keras(
@@ -69,7 +69,7 @@ Import a keras model:
 
 <h3 id="pprint"><code>pprint</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/data_types.py#L879-L883">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/data_types.py#L1099-L1103">View source</a>
 
 <pre><code>pprint()</code></pre>
 
@@ -78,7 +78,7 @@ Import a keras model:
 
 <h3 id="__getitem__"><code>__getitem__</code></h3>
 
-<a target="_blank" href="https://www.github.com/wandb/client/tree/3a0def97afe1def2b1a59786b4f0bbcac3f5dc4c/wandb/data_types.py#L876-L877">View source</a>
+<a target="_blank" href="https://www.github.com/wandb/client/tree/5759bab2d/wandb/data_types.py#L1096-L1097">View source</a>
 
 <pre><code>__getitem__(
     nid
