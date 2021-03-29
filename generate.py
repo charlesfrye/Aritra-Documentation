@@ -7,6 +7,7 @@ python generate.py --help
 # TODO(charlesfrye): review docgen_lib __all__ issues
 import argparse
 import os
+import shutil
 
 import docgen_cli
 import docgen_lib
@@ -27,11 +28,13 @@ def main(args):
     output_dir = args.output_dir
     code_url_prefix = "/".join([args.repo, "tree", f"{git_hash}", args.prefix])
 
+    ref_dir = os.path.join(output_dir, DIRNAME)
+    shutil.rmtree(ref_dir)
+
     # Create the library docs
     docgen_lib.build(git_hash, code_url_prefix, output_dir)
 
     # convert generate_lib output to GitBook format
-    ref_dir = os.path.join(output_dir, DIRNAME)
     rename_to_readme(ref_dir)
     filter_files(ref_dir, ["all_symbols.md", "_api_cache.json"])
     clean_names(ref_dir)
@@ -100,7 +103,7 @@ def get_subfolder_markdowns(folder: str) -> list:
         is_subdir = "/" in path
         if is_subdir:
             components = path.split("/")
-            indent = len(components)
+            indent = len(components) - 1
             name = components[-1]
         else:
             continue
@@ -138,7 +141,7 @@ def add_files(files: list, root: str, indent: int) -> list:
         source = infer_source(root)
         if short_name.title() in source:
             short_name = short_name.title()
-        file_markdown = indentation + f"  * [{short_name}]({root}/{file_name})"
+        file_markdown = indentation + f" * [{short_name}]({root}/{file_name})"
         file_markdowns.append(file_markdown)
 
     return file_markdowns
@@ -147,12 +150,12 @@ def add_files(files: list, root: str, indent: int) -> list:
 def infer_source(path):
     if path == DIRNAME:
         return []
-    elif "python" in path:
-        return docgen_lib.WANDB_DOCLIST
     elif "data-types" in path:
         return docgen_lib.WANDB_DATATYPES
     elif "public-api" in path:
         return docgen_lib.WANDB_API
+    elif "python" in path:
+        return docgen_lib.WANDB_DOCLIST
     else:
         return []
 

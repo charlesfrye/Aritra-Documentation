@@ -5,6 +5,7 @@ from tensorflow_docs.api_generator import generate_lib
 import wandb
 
 DIRNAME = "ref"
+LIBRARY_DIRNAME = "python"
 
 # fmt: off
 # which datatypes are we documenting?
@@ -98,7 +99,7 @@ def build_library_docs(git_hash, code_url_prefix, output_dir):
     #     pass
 
     build_docs(
-        name_pair=("python", wandb),
+        name_pair=(LIBRARY_DIRNAME, wandb),
         output_dir=os.path.join(output_dir, DIRNAME),
         code_url_prefix=code_url_prefix,
         search_hints=False,
@@ -113,7 +114,7 @@ def build_datatype_docs(git_hash, code_url_prefix, output_dir):
 
     build_docs(
         name_pair=("data-types", wandb),
-        output_dir=os.path.join(output_dir, DIRNAME),
+        output_dir=os.path.join(output_dir, DIRNAME, LIBRARY_DIRNAME),
         code_url_prefix=code_url_prefix,
         search_hints=False,
         gen_report=False,
@@ -151,7 +152,7 @@ def build_api_docs(git_hash, code_url_prefix, output_dir):
 
     build_docs(
         name_pair=("public-api", wandb),
-        output_dir=os.path.join(output_dir, DIRNAME),
+        output_dir=os.path.join(output_dir, DIRNAME, LIBRARY_DIRNAME),
         code_url_prefix=code_url_prefix,
         search_hints=False,
         gen_report=False,
