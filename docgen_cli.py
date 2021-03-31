@@ -42,8 +42,8 @@ def markdown_render(command: str, output_dir: str, output_file: str) -> str:
     the commands nested in it.
 
     Args:
-        command (str): The command that is executed as `wandb command --help`
-        output_file (str): The file in which the markdown is written.
+        command: (str) The command that is executed as `wandb command --help`
+        output_file: (str) The file in which the markdown is written.
 
     Returns:
         str: The output directory
